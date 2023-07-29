@@ -52,7 +52,8 @@ bottom:"-80px",
     fontSize:"1rem",
     color:"rgb(117, 117, 117)",
     fontFamily:  '"Lato", "sans-serif"',
-    padding:"20px 0px 10px 20px "
+    padding:"20px 0px 10px 20px ",
+   
     
   };
 
@@ -94,7 +95,9 @@ bottom:"-80px",
 export const Story = () => {
   return (
     <Container sx={{marginTop:"150px"}}>
-        <Typography sx={{color:"black", fontSize:"2rem", fontWeight:"600"}}>
+        <Typography sx={{color:"rgb(117, 117, 117)", fontSize:"1.5rem", 
+        fontWeight:"600",textTransform:"uppercase",
+         marginBottom:"70px", display:"flex", justifyContent:"center"}}>
             Discover a few of our clients portfolios
         </Typography>
 

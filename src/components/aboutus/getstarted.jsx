@@ -1,5 +1,5 @@
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
-import { Box, CardContent, Container, Image, Typography, keyframes, styled} from '@mui/material'
+import { Box, CardContent, Container, Image, Typography, keyframes, styled,Button} from '@mui/material'
 import "./getstarted.css"
 
 import React from 'react'
@@ -72,10 +72,10 @@ export const Getstarted = () => {
     <Desc variant="body1" color="text.secondary">
     Discover the right solution that solves your problem using our cutting edge technology
     </Desc>
-    <Box 
+    <Button 
     className="beep-text"
     sx={{display:"flex", alignItems:"center",
-     color:"rgb(229, 95, 76)"
+     color:"rgb(208, 2, 27)"
     }}>
     <ArrowBack />
     <StyledButton
@@ -84,7 +84,7 @@ export const Getstarted = () => {
      
     </StyledButton>
     <ArrowForward/>
-    </Box>
+    </Button >
   </CardContent>
 
 <Box >

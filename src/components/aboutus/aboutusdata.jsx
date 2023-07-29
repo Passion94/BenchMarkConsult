@@ -18,6 +18,7 @@ const StyledLink = styled(Link)({
     marginTop:"10px",
     display:"flex",
     justifyContent:"center",
+    textTransform:"uppercase"
   });
 
 const AboutData = () => {

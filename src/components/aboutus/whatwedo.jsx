@@ -8,7 +8,7 @@ const Title = styled(Typography)({
     fontWeight: '900',
     justifyContent: 'center',
     marginBottom: '10px',
-    fontSize: '3rem',
+    fontSize: '1.5rem',
     fontFamily: 'Barlow Condensed',
     display:"flex",
     justifyContent:"center",
@@ -35,19 +35,18 @@ const Title = styled(Typography)({
 
 
   const StyledButton = styled(Button)({
-    // display:"flex",
-    // justifyContent:"center",
-    // alignItems:"center",
+   
     border:'1px solid rgb(229, 95, 76)', 
     marginTop: '10px',
-   color:"rgb(229, 95, 76)",
+   color:"white",
+   background:"red",
    fontSize:"1rem",
    fontWeight: '900',
    lineHeight:"17px",
    textDecoration:"none",
    textTransform:"uppercase",
    padding: "16px 20px",
-   backgroundColor:"transparent",
+  
    outline:"0px",
    transition: "all 0.3s ease 0s",
   
@@ -64,7 +63,7 @@ const StyledBox = styled(Box)({
 
 export const Whatwedo = () => {
   return (
-    <Container sx={{marginTop:'200px', marginBottom:"100px"}}>
+    <Container sx={{marginTop:'200px', marginBottom:"150px"}}>
         <Title>
             What we do
         </Title>
@@ -81,7 +80,7 @@ export const Whatwedo = () => {
         </StyledBox>
         <Box sx={{display:"flex", alignItems:"center", justifyContent:"space-around"}}>
         <StyledButton
-          variant="outline"
+          variant="contained"
          
         >
           Explore Our Services

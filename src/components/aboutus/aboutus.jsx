@@ -18,13 +18,14 @@ const ContainerBox = styled(Box)({
   
 });
 const Title = styled(Typography)({
-  color: 'teal',
+  color: 'rgb(117, 117, 117)',
   fontWeight: '600',
   display: 'flex',
   justifyContent: 'center',
   marginBottom: '10px',
-  fontSize: '30px',
-  fontFamily: 'Barlow Condensed'
+  fontSize: '1.5rem',
+  fontFamily: 'Barlow Condensed',
+  textTransform:"uppercase"
   
 });
 const Desc = styled(Typography)({
@@ -61,8 +62,8 @@ const AboutusCard = ({ title, image, description, readMoreLink }) => {
           {description}
         </Desc>
         <Button
-          variant="outline"
-          sx={{ border: '1px solid teal', marginTop: '10px', color: 'teal', fontSize: '10px' }}
+        
+          sx={{ marginTop: '10px', color: 'red', fontSize: '10px' }}
           href={readMoreLink}
           target="_blank"
           rel="noopener noreferrer"
