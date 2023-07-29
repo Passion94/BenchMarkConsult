@@ -1,0 +1,14 @@
+.beep-text {
+    animation: beepAnimation 1.5s infinite;
+  }
+  
+  @keyframes beepAnimation {
+    0%, 100% {
+      transform: scale(1); /* Initial and final state - normal size */
+    }
+    50% {
+      transform: scale(1.1); /* Middle state - larger size */
+      color: red; /* Change text color during the animation */
+    }
+  }
+  
