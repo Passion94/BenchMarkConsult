@@ -1,0 +1,111 @@
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: white;
+   
+
+   
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 50px
+   ;
+  }
+  
+  .menu {
+    display: flex;
+    gap: 20px;
+    z-index: 1;
+    
+  }
+  
+  .menu a {
+    text-decoration: none;
+    /* color: rgb(117, 117, 117); */
+    font-size: 16px;
+    font-weight: 900;
+    font-family: Montserrat;
+    text-transform: uppercase;
+    
+   
+  }
+  .menu a:hover{
+    color: rgb(208,2,27);
+  }
+  
+  /* Styles for the dropdown menu on small screens */
+  .menu.show {
+    flex-direction: column;
+    position: absolute;
+    top: 113px;
+    left: 0px;
+    background-color: #f0f0f0;
+    /* padding: 50px 20px; */
+    display: none;
+  }
+  
+  .menu.show a {
+    margin: 5px 0;
+  }
+ 
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+  }
+  
+  /* Styles for the menu icon on small screens */
+  .menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+  }
+  
+  /* Media query to show/hide the dropdown menu and menu icon on small screens */
+  @media screen and (max-width: 768px) {
+    .menu {
+      display: none;
+      width: 40%;
+      
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  
+    .menu.show {
+      display: flex;
+    }
+  }
+  @media screen and (max-width: 912px) {
+    .menu {
+      display: none;
+      width: 50%;
+      
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  
+    .menu.show {
+      display: flex;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .navigation {
+      
+      padding: 10px;
+      
+     
+  
+     
+    }
+   
+   
+  }

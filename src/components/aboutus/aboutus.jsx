@@ -1,23 +1,28 @@
 import React from 'react';
-import { Box, Button, CardContent, CardMedia, Container, Typography } from '@mui/material';
+import { Box, Button, CardContent, CardMedia, Container, Typography,ThemeProvider, createTheme } from '@mui/material';
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
 
 
-const ContainerBox = styled(Box)({
-  background:"white",
+
+
+
+
+const ContainerBox = styled(Box)(({ theme }) => ({
+  background: "white",
   boxSizing: "border-box",
-  boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)", /* x-offset y-offset blur spread color */
+  boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
   transition: "transform 0.3s",
-  '&:hover': {   // Changed onhover to ':hover'
-    background: "rgb(214, 235, 242)", // Added spaces between rgb values for consistency
-    transform: "scale(1.2)"
-  
-  }
-  
-});
-const Title = styled(Typography)({
+  '&:hover': {
+    background: "rgb(214, 235, 242)",
+    transform: "scale(1.2)",
+  },
+}));
+
+
+
+const Title = styled(Typography)(({ theme }) => ({
   color: 'rgb(117, 117, 117)',
   fontWeight: '600',
   display: 'flex',
@@ -25,9 +30,18 @@ const Title = styled(Typography)({
   marginBottom: '10px',
   fontSize: '1.5rem',
   fontFamily: 'Barlow Condensed',
-  textTransform:"uppercase"
-  
-});
+  textTransform: 'uppercase',
+
+  // Responsive styles using Material-UI breakpoints
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '1.2rem', // Adjust font size for small screens and above
+  },
+
+  [theme.breakpoints.down('xs')]: {
+    fontSize: '1rem', // Adjust font size for extra-small screens
+  },
+}));
+
 const Desc = styled(Typography)({
   justifyContent: "center",
   color: "rgb(58, 58, 58)",
@@ -39,14 +53,21 @@ const Desc = styled(Typography)({
   textOverflow: 'ellipsis',
   display: '-webkit-box',
   '-webkit-line-clamp': '4',
-  '-webkit-box-orient': 'vertical'
+  '-webkit-box-orient': 'vertical',
 });
+
+
+
+
+
+const theme = createTheme();
 
 
 const AboutusCard = ({ title, image, description, readMoreLink }) => {
   return (
+    <ThemeProvider theme={theme}>
     <ContainerBox>
-      <CardMedia
+    <CardMedia
         sx={{ borderRadius: '6px' }}
         component="img"
         alt={title}
@@ -74,23 +95,47 @@ const AboutusCard = ({ title, image, description, readMoreLink }) => {
 
       
     </ContainerBox>
+    </ThemeProvider>
   );
 };
 
+
+
+
+
+const ResponsiveContainer = styled(Container)(({ theme }) => ({
+  display: "flex",
+  gap: "30px",
+  alignItems:"center",
+
+  // Responsive styles using Material-UI breakpoints
+  [theme.breakpoints.down('md')]: {
+    flexDirection: 'column', // Change to a single column layout on medium screens and below
+    gap: '20px', // Reduce the gap between items on medium screens and below
+  },
+
+  [theme.breakpoints.down('sm')]: {
+    gap: '10px', // Further reduce the gap between items on small screens and below
+  },
+}));
+
 const Aboutus = ({ aboutData }) => {
   return (
-    <Container sx={{ display: "flex", gap: "30px" }}>
-      {aboutData.map((item, index) => (
-        <AboutusCard
-          key={index}
-          title={item.title}
-          image={item.image}
-          description={item.description}
-          readMoreLink={item.readMoreLink}
-        />
-      ))}
-    </Container>
+    <ThemeProvider theme={theme}>
+      <ResponsiveContainer>
+        {aboutData.map((item, index) => (
+          <AboutusCard
+            key={index}
+            title={item.title}
+            image={item.image}
+            description={item.description}
+            readMoreLink={item.readMoreLink}
+          />
+        ))}
+      </ResponsiveContainer>
+    </ThemeProvider>
   );
 };
+
 
 export default Aboutus;

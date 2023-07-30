@@ -1,14 +1,28 @@
+:root {
+  --initial-scale: 1;
+  --middle-scale: 1.1;
+  --beep-color: red;
+}
+
 .beep-text {
-    animation: beepAnimation 1.5s infinite;
+  animation: beepAnimation 1.5s infinite;
+}
+
+@keyframes beepAnimation {
+  0%, 100% {
+    transform: scale(var(--initial-scale)); /* Initial and final state - normal size */
+    color: inherit; /* Reset the text color */
   }
-  
-  @keyframes beepAnimation {
-    0%, 100% {
-      transform: scale(1); /* Initial and final state - normal size */
-    }
-    50% {
-      transform: scale(1.1); /* Middle state - larger size */
-      color: red; /* Change text color during the animation */
-    }
+  50% {
+    transform: scale(var(--middle-scale)); /* Middle state - larger size */
+    color: var(--beep-color); /* Change text color during the animation */
   }
-  
+}
+
+/* Responsive styles using Media Queries */
+@media screen and (max-width: 768px) {
+  :root {
+    --initial-scale: 0.8;
+    --middle-scale: 1.2;
+  }
+}

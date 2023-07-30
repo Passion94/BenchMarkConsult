@@ -1,11 +1,19 @@
 import React from 'react';
 import Aboutus from './aboutus'; // Replace './Aboutus' with the actual path to your Aboutus component
 import { Link } from 'react-router-dom';
-import { Typography, styled } from '@mui/material';
+import { Button, Container, Typography, styled } from '@mui/material';
 
-const StyledLink = styled(Link)({
+const StyledBtn = styled(Button)({
     textTransform:"uppercase",
-    textDecoration:"none"
+    textDecoration:"none",
+    marginTop:"70px",
+    fontSize:"1rem",
+   border:"1px solid rgb(229, 95, 76)",
+    fontWeight:"900",
+    padding:"16px 20px"
+   
+   
+  
   });
 
   const Title = styled(Typography)({
@@ -51,7 +59,11 @@ const AboutData = () => {
       <Aboutus aboutData={aboutData} />
       {/* Other components */}
     </div>
+    <Container sx={{display:"flex", justifyContent:"center"}}>
+     
+    <StyledBtn sx={{color:"rgb(229, 95, 76)"}}> View all Portfolios</StyledBtn>
     
+    </Container>
     </div>
   );
 };

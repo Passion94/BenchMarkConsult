@@ -1,7 +1,14 @@
 import { Box, Button, Container, Stack, Typography, styled } from '@mui/material'
 
 import React from 'react'
-import { Anime } from '../anime/anime'
+
+const MainContainer = styled(Container)({
+  marginTop:'200px', 
+  marginBottom:"250px"
+  
+});
+
+
 
 const Title = styled(Typography)({
     color: 'rgb(117, 117, 117)',
@@ -35,11 +42,9 @@ const Title = styled(Typography)({
 
 
   const StyledButton = styled(Button)({
-   
-    border:'1px solid rgb(229, 95, 76)', 
-    marginTop: '10px',
+   marginTop: '10px',
    color:"white",
-   background:"red",
+   background:"rgb(229, 95, 76)",
    fontSize:"1rem",
    fontWeight: '900',
    lineHeight:"17px",
@@ -50,7 +55,11 @@ const Title = styled(Typography)({
    outline:"0px",
    transition: "all 0.3s ease 0s",
   
-   
+   '&:hover':{
+    
+    background:"rgb(229, 55, 56)",
+    color:""
+   }
   });
 
  
@@ -63,7 +72,7 @@ const StyledBox = styled(Box)({
 
 export const Whatwedo = () => {
   return (
-    <Container sx={{marginTop:'200px', marginBottom:"150px"}}>
+    <MainContainer >
         <Title>
             What we do
         </Title>
@@ -85,15 +94,10 @@ export const Whatwedo = () => {
         >
           Explore Our Services
         </StyledButton>
-        {/* <StyledButton
-          variant="outline"
-         
-        >
-          View Our Works
-        </StyledButton> */}
+      
         </Box>
        
      
-    </Container>
+    </MainContainer>
   )
 }

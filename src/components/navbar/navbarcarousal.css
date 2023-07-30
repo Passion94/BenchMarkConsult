@@ -1,64 +1,80 @@
-
-.sliderContainer{
-overflow: hidden;
+/* Styles for the slider container */
+.sliderContainer {
+  overflow: hidden;
+  margin-top: 0px;
 }
 
-.slideBackground{
-   height: 600px;
-  
-   
-    
+/* Styles for each slide background */
+.slideBackground {
+  height: 600px;
 }
-.slideOne{
- 
-    background-color: rgb(3,5,25);
+
+.slideOne {
+  background-color: rgb(3, 5, 25);
 }
-.slideTwo{
-    background-color:rgb(57,78,143) ; 
+
+.slideTwo {
+  background-color: rgb(57, 78, 143);
 }
-.slideThree{
-    background-color:rgb(17,3,24) ; 
+
+.slideThree {
+  background-color: rgb(17, 3, 24);
 }
 
 /* Custom styles for the dots container */
 .slick-dots {
-    display: flex;
-    color: white;
-    font-size:1.2rem;
-   line-height:17px;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    opacity: 0.7;
-  }
-  
-  .slick-dots:hover {
-    opacity: 1;
-  }
-  
-  /* Custom styles for each dot */
-  .slick-dots li {
-    margin:0 60px; /* Add margin to create space between dots */
-    margin-top: 150px;
-   padding: 50px;
-   
-  
-    
+  display: flex;
+  color: white;
+  font-size: 1.2rem;
+  line-height: 17px;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  opacity: 0.7;
+}
+
+.slick-dots:hover {
+  opacity: 1;
+}
+
+/* Custom styles for each dot */
+.slick-dots li {
+  margin: 0 40px; /* Add margin to create space between dots */
+  margin-top: 100px;
+  padding: 30px;
   position: relative;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Increase the size of the dots */
+.slick-dots li button {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 80px;
+}
+
+/* Custom styles for the active dot */
+.slick-dots li.slick-active button {
+  background-color: white;
+  border: 2px solid rgb(3, 5, 25);
+  border-radius: 50%;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .slick-dots li {
+    margin: 0 20px; /* Adjust margin for smaller screens */
+    margin-top: 70px;
+    padding: 20px; /* Adjust padding for smaller screens */
   }
-  
-  /* Increase the size of the dots */
+
   .slick-dots li button {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 110px;
+    width: 10px; /* Adjust dot size for smaller screens */
+    height: 10px;
+    top: 60px; /* Adjust dot position for smaller screens */
   }
-  
-  /* Custom styles for the active dot */
- 
-  
+}
