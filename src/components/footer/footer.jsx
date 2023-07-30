@@ -5,6 +5,7 @@ const FooterContainer = styled(Box)(({ theme }) => ({
   marginTop: { xs: '100px', sm: '450px', md: '500px', lg: '250px' },
   background: 'black',
   color: 'white',
+ 
 
 }));
 
@@ -46,7 +47,7 @@ const FooterLinkContainer = styled(Box)(({ theme }) => ({
   gap: '8em',
   columnGap: '8em',
   paddingLeft: '4.5em',
-  paddingRight:"4.5em"
+ 
 }));
 
 const FooterLinks = styled(Box)(({ theme }) => ({
@@ -63,7 +64,7 @@ const CopyWrite = styled(Typography)(({ theme }) => ({
 export const Footer = () => {
   return (
     <FooterContainer>
-      <Container sx={{marginTop:"300px", padding:"40px"}}>
+      <Container sx={{marginTop:"300px", padding:"40px", overflow:"hidden"}}>
         <SectionOne>
           <Typography>
             <img src="/images/Logo.png" alt="Logo" />
@@ -75,17 +76,7 @@ export const Footer = () => {
         </SectionOne>
 
         <Box>
-          {/* <SectionTwo>
-            
-           
-            <Typography sx={{ color: 'rgb(117, 117, 117)' }}>
-              contact@benchmark.com
-              <br />
-              Chez Modality, 50 rue Bichat
-              75010 Paris
-              France
-            </Typography>
-          </SectionTwo> */}
+        
           <FooterLinkContainer>
             <FooterLinks>
             <SectionTwo>Sitemap</SectionTwo>

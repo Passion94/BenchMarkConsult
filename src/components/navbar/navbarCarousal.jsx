@@ -50,7 +50,7 @@ const Header = styled(Typography)(({ theme }) => ({
   paddingTop: '10px',
   opacity: '0.7',
   paddingLeft: '50px',
-  paddingRight: '50px', // Adjust paddingRight to create some space on both sides
+  paddingRight: '715px', // Adjust paddingRight to create some space on both sides
 
   // Responsive styles using Material-UI breakpoints
   [theme.breakpoints.down('md')]: {
@@ -79,7 +79,7 @@ const Desc = styled(Typography)(({ theme }) => ({
   fontFamily: 'Archivo Narrow',
   opacity: '0.7',
   paddingLeft: '50px',
-  paddingRight: '50px', // Adjust paddingRight to create some space on both sides
+  paddingRight: '715px', // Adjust paddingRight to create some space on both sides
 
   // Responsive styles using Material-UI breakpoints
   [theme.breakpoints.down('sm')]: {
