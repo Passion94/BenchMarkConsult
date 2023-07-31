@@ -46,7 +46,7 @@
   }
   .swatch div .animeText{
     font-weight: 600;
-    color: white;
+    color: black;
   }
   
   .swatch div:before {
@@ -63,33 +63,36 @@
   }
   
   .swatch div:nth-child(1) {
-    background-color: var(--purple);
+    background-color: var(--green);
     animation: my-animation-purple 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+   
   }
   
   .swatch div:nth-child(2) {
-    background-color: var(--blue);
+    background-color: transparent;
     animation: my-animation-blue 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
   }
   
   .swatch div:nth-child(3) {
-    background-color: var(--green);
+    background-color: transparent;
     animation: my-animation-green 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
   }
   
   .swatch div:nth-child(4) {
-    background-color: var(--yellow);
+    background-color: transparent;
     animation: my-animation-yellow 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
   }
   
   .swatch div:nth-child(5) {
-    background-color: var(--orange);
+    background-color: transparent;
     animation: my-animation-orange 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+    
   }
   
   .swatch div:nth-child(6) {
     background-color: var(--red);
     animation: my-animation-red 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+    
   }
   
   /* Keyframes */

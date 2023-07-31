@@ -5,12 +5,12 @@ import './anime.css';
 export const Anime = () => {
   return (
     <div class="swatch">
-  <div> <span className="animeText">System architecture</span></div>
-  <div><span className="animeText">Artificial intelligence</span></div>
-  <div><span className="animeText">Web & Mobile application development</span></div>
-  <div><span className="animeText">Quality Assurance and control</span></div>
-  <div><span className="animeText"> API development</span></div>
-  <div><span className="animeText">Project management</span></div>
+  <div> <span className="animeText">Rapid Prototyping</span></div>
+  <div><span className="animeText">complex information design</span></div>
+  <div><span className="animeText">large dataset processing</span></div>
+  <div><span className="animeText">Software engineering</span></div>
+  <div><span className="animeText">  data journalism</span></div>
+  <div><span className="animeText">product strategy</span></div>
 </div>
   )
 }

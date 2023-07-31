@@ -25,7 +25,8 @@ const paperStyle = {
 };
 
 const mainContainerStyle = {
-  marginTop: "200px"
+  marginTop: "200px",
+  
 };
 
 const mainHeaderStyle = {
