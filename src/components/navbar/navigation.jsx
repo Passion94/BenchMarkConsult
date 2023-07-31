@@ -10,8 +10,8 @@ const StyledLink = styled(Link)(({ to }) => ({
   color: to === "/contact" ? 'white' : 'rgb(117, 117, 117)',
   backgroundColor: to === "/contact" ? 'rgb(208, 2, 27)' : 'transparent',
   borderRadius: to === "/contact" ? '2px' : '0px',
-  padding: to === "/contact" ? '30px 20px 20px 20px' : '20px 20px 20px 20px',
-  lineHeight: to === "/contact" ? '20px' : '40px',
+  padding: to === "/contact" ? '20px 10px 20px 10px' : '20px 20px 20px 20px',
+  lineHeight: to === "/contact" ? '35px' : '40px',
   transition: 'color 0.3s, background-color 0.3s, border 0.3s', // Add a transition for smoother hover effect
 
   '&:hover': {

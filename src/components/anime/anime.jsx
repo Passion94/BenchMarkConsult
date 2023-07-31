@@ -1,16 +1,18 @@
 import React from 'react'
 import './anime.css';
+import { Box } from '@mui/material';
 
 
 export const Anime = () => {
   return (
-    <div class="swatch">
-  <div> <span className="animeText">Rapid Prototyping</span></div>
-  <div><span className="animeText">complex information design</span></div>
-  <div><span className="animeText">large dataset processing</span></div>
-  <div><span className="animeText">Software engineering</span></div>
-  <div><span className="animeText">  data journalism</span></div>
-  <div><span className="animeText">product strategy</span></div>
-</div>
+    <Box class="swatch">
+  <div> <span className="animeText">CID</span></div>
+  <div><span className="animeText">SE</span></div>
+  <div><span className="animeText">LDP</span></div>
+  <div><span className="animeText">RP</span></div>
+  <div><span className="animeText">DJ</span></div>
+  <div><span className="animeText">PD</span></div>
+</Box>
   )
 }
+// product strategy Software engineering large dataset processing complex information design Rapid Prototyping  data journalism
