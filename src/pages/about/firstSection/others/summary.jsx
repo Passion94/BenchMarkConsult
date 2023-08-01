@@ -2,20 +2,56 @@ import { Box, CardContent, CardMedia, Container, Typography, styled } from '@mui
 import React from 'react';
 import { Anime } from '../../../../components/anime/anime';
 
+
+
+const Header = styled(Typography)({
+  color: 'rgb(117, 117, 117)',
+  fontWeight: '400',
+  display:"flex",
+  justifyContent: 'center',
+  paddingLeft:"25px",
+  fontSize: 'clamp(16px, 5vw, 44px)',
+  fontFamily: 'Barlow Condensed',
+  marginTop:"10px",
+  
+ 
+  
+});
+
+
+
 const Desc = styled(Typography)({
   fontWeight: '400',
   color: 'black',
-  marginBottom: '5%',
-  fontSize: 'clamp(8px, 3vw, 16px)',
-});
+  marginBottom:"5%",
+  fontSize: 'clamp(16px, 5vw, 16px)',
+  paddingLeft:"25px",
+  paddingRight:"25px",
+   // Responsive styles using media queries
+  
+'@media (max-width: 768px)': {
+  fontSize: 'clamp(16px, 5vw, 32px)',
+  paddingLeft: '20px',
+  paddingRight: '10px',
+},
+'@media (max-width: 480px)': {
+  fontSize: 'clamp(8px, 2vw, 12px)',
+  paddingLeft: '5px',
+  paddingRight: '5px',
+},
+'@media (min-width: 280px)': {
+  // fontSize: 'clamp(8px, 2vw, 12px)',
+  paddingLeft: '25px',
+  paddingRight: '25px',
+},
+})
 
 const trackDatas = [
   { id: 1, rate: '100', description: "Completed projects" },
   { id: 2, rate: '100', description: "Clients" },
   { id: 3, rate: '10', description: "Years in business" },
-  { id: 4, rate: '100', description: "Working professionals" },
-  { id: 4, rate: '20', description: "Core Team members" },
-  { id: 4, rate: '15', description: "Strategic partnership" }
+  { id: 5, rate: '20', description: "Core Team members" },
+  { id: 6, rate: '15', description: "Strategic partnership" }
   
 ];
 
@@ -34,14 +70,14 @@ export const Summary = () => {
       <Box sx={{ marginTop: "330px", padding: "50px" }}>
         <Anime />
       </Box>
-      <Box>
+      <Container>
         <Desc sx={{ marginTop: "250px" }}>
           Our team bridges the gap between typically segmented skills,
           such as rapid prototyping, complex information design, large dataset processing,
           Software engineering, data journalism, business analytics and product strategy.
         </Desc>
         <CardMedia
-          sx={{ borderRadius: '6px', marginTop: "100px", width: "300px" }}
+          sx={{ borderRadius: '2px', marginTop: "100px", width: "300px",display:"flex", alignItems:"center", justifyContent:"center" }}
           component="img"
           alt="learn"
           height="200px"
@@ -55,20 +91,20 @@ export const Summary = () => {
             clients in creating a market-dominant product
           </Desc>
         </CardContent>
-      </Box>
+      </Container>
       <Container sx={{paddingBottom:"20px"}}>
-        <Typography variant="h4" sx={{ padding: "16px 20px" }}>
+        <Header variant="h4">
           Track Records
-        </Typography>
+        </Header>
         <Box sx={{display:"flex", gap:"10px", marginBottom:"20px", flexWrap:"wrap"}}>
         {trackDatas.map((item) => (
           <Track key={item.id} rate={item.rate} description={item.description} />
         ))}
         </Box>
-        <Typography>
+        <Desc >
         We have a track record that demonstrates a history of success and reliability.
          A proven achievements , expertise and credibility in business
-        </Typography>
+        </Desc >
       </Container>
     </div>
   );

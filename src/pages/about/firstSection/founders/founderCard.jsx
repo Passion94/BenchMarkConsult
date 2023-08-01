@@ -23,7 +23,25 @@ const StyledBtn = styled(Button)({
     color: 'black',
     marginBottom:"5%",
     fontSize: 'clamp(8px, 3vw, 16px)',
-    paddingLeft:"25px"
+    paddingLeft:"25px",
+    paddingRight:"25px",
+     // Responsive styles using media queries
+    
+  '@media (max-width: 768px)': {
+    fontSize: 'clamp(8px, 2.5vw, 14px)',
+    paddingLeft: '20px',
+    paddingRight: '10px',
+  },
+  '@media (max-width: 480px)': {
+    fontSize: 'clamp(8px, 2vw, 12px)',
+    paddingLeft: '5px',
+    paddingRight: '5px',
+  },
+  '@media (min-width: 280px)': {
+    // fontSize: 'clamp(8px, 2vw, 12px)',
+    paddingLeft: '25px',
+    paddingRight: '25px',
+  },
   })
   const Header = styled(Typography)({
     color: 'rgb(117, 117, 117)',
@@ -89,7 +107,7 @@ const FounderCard = () => {
   ];
 
   return (
-    <Box  sx={{padding:"0 0px 0px 50px"}}>
+    <Box  sx={{padding: {sm:"0px ", md:"0px 20px 0px 0px", lg:"0 0px 0px 50px"}}}>
         <Title> About</Title>
         <Header> We work remotely</Header>
         <Desc>When wireless is perfectly applied the whole earth will

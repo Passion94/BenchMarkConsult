@@ -1,170 +1,173 @@
-/* Variables */
 :root {
-    --red: #F73F52;
-    --orange: #FF9000;
-    --yellow: #FBD400;
-    --green: #9ED763;
-    --blue: #6730EC;
-    --purple: #815A8F;
-    --white: #FFFFFF;
-    --rebeccapurple: #663399;
-  }
-  
-  /* Styles */
-  /* Uncomment this section if you want to set a background color for the body */
-  /*
-  body {
-    background: var(--rebeccapurple);
-  }
-  */
-  
-  .swatch {
-    display: block;
-    text-align: center;
-    position: relative;
-    /* margin-top: -100px; */
-  }
-  
-  .swatch div {
-    width: 9%;
-    height: 250px;
-    position: absolute;
-    top: 0;
-    border-radius: 0px;
-    border-top: 2px solid rgba(0, 0, 0, 0.2);
-    border-left: 3px solid rgba(255, 255, 255, 0.2);
-    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
-    text-align: center;
-    box-sizing: border-box;
-    transform-origin: center 100%;
-    display: inline-block;
-    backface-visibility: hidden;
-    margin-left: -50px;
+  --red: #F73F52;
+  --orange: #FF9000;
+  --yellow: #FBD400;
+  --green: #9ED763;
+  --blue: #6730EC;
+  --purple: #815A8F;
+  --white: #FFFFFF;
+  --rebeccapurple: #663399;
+}
+
+/* Styles */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.swatch {
+  display: block;
+  text-align: center;
+  position: relative;
+}
+
+.swatch div {
+  width: 9%;
+  height: 250px;
+  position: absolute;
+  top: 0;
+  border-radius: 0px;
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+  border-left: 3px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+  text-align: center;
+  box-sizing: border-box;
+  transform-origin: center 100%;
+  display: inline-block;
+  backface-visibility: hidden;
+  margin-left: -50px;
+  transform: rotate(0);
+}
+
+.swatch div .animeText {
+  font-weight: 600;
+  color: black;
+}
+
+.swatch div:before {
+  width: 16px;
+  height: 16px;
+  content: "";
+  background-color: var(--white);
+  display: inline-block;
+  border-radius: 8px;
+  bottom: 10px;
+  position: absolute;
+  margin-left: 10px;
+}
+
+.swatch div:nth-child(1) {
+  background-color: var(--green);
+  animation: my-animation-purple 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+}
+
+.swatch div:nth-child(2) {
+  background-color: transparent;
+  animation: my-animation-blue 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+}
+
+.swatch div:nth-child(3) {
+  background-color: transparent;
+  animation: my-animation-green 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+}
+
+.swatch div:nth-child(4) {
+  background-color: transparent;
+  animation: my-animation-yellow 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+}
+
+.swatch div:nth-child(5) {
+  background-color: transparent;
+  animation: my-animation-orange 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+}
+
+.swatch div:nth-child(6) {
+  background-color: var(--red);
+  animation: my-animation-red 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+}
+
+/* Keyframes */
+@keyframes my-animation-purple {
+  0% {
     transform: rotate(0);
-    
-    
   }
-  .swatch div .animeText{
-    font-weight: 600;
-    color: black;
+  30%, 70% {
+    transform: rotate(-65deg);
   }
-  
-  .swatch div:before {
-    width: 16px;
-    height: 16px;
-    content: "";
-    background-color: var(--white);
-    display: inline-block;
-    border-radius: 8px;
-    bottom: 10px;
-    position: absolute;
-    margin-left: 10px;
-    
+  90%, 10% {
+    transform: rotate(0);
   }
-  
-  .swatch div:nth-child(1) {
-    background-color: var(--green);
-    animation: my-animation-purple 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
-   
+}
+
+@keyframes my-animation-blue {
+  0% {
+    transform: rotate(0);
   }
-  
-  .swatch div:nth-child(2) {
-    background-color: transparent;
-    animation: my-animation-blue 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  30%, 70% {
+    transform: rotate(-40deg);
   }
-  
-  .swatch div:nth-child(3) {
-    background-color: transparent;
-    animation: my-animation-green 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  90%, 10% {
+    transform: rotate(0);
   }
-  
-  .swatch div:nth-child(4) {
-    background-color: transparent;
-    animation: my-animation-yellow 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+}
+
+@keyframes my-animation-green {
+  0% {
+    transform: rotate(0);
   }
-  
-  .swatch div:nth-child(5) {
-    background-color: transparent;
-    animation: my-animation-orange 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
-    
+  30%, 70% {
+    transform: rotate(-15deg);
   }
-  
-  .swatch div:nth-child(6) {
-    background-color: var(--red);
-    animation: my-animation-red 5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
-    
+  90%, 10% {
+    transform: rotate(0);
   }
-  
-  /* Keyframes */
-  @keyframes my-animation-purple {
-    0% {
-      transform: rotate(0);
-    }
-    30%, 70% {
-      transform: rotate(-65deg);
-    }
-    90%, 10% {
-      transform: rotate(0);
-    }
+}
+
+@keyframes my-animation-yellow {
+  0% {
+    transform: rotate(0);
   }
-  
-  @keyframes my-animation-blue {
-    0% {
-      transform: rotate(0);
-    }
-    30%, 70% {
-      transform: rotate(-40deg);
-    }
-    90%, 10% {
-      transform: rotate(0);
-    }
+  30%, 70% {
+    transform: rotate(15deg);
   }
-  
-  @keyframes my-animation-green {
-    0% {
-      transform: rotate(0);
-    }
-    30%, 70% {
-      transform: rotate(-15deg);
-    }
-    90%, 10% {
-      transform: rotate(0);
-    }
+  90%, 10% {
+    transform: rotate(0);
   }
-  
-  @keyframes my-animation-yellow {
-    0% {
-      transform: rotate(0);
-    }
-    30%, 70% {
-      transform: rotate(15deg);
-    }
-    90%, 10% {
-      transform: rotate(0);
-    }
+}
+
+@keyframes my-animation-orange {
+  0% {
+    transform: rotate(0);
   }
-  
-  @keyframes my-animation-orange {
-    0% {
-      transform: rotate(0);
-    }
-    30%, 70% {
-      transform: rotate(40deg);
-    }
-    90%, 10% {
-      transform: rotate(0);
-    }
+  30%, 70% {
+    transform: rotate(40deg);
   }
-  
-  @keyframes my-animation-red {
-    0% {
-      transform: rotate(0);
-    }
-    30%, 70% {
-      transform: rotate(65deg);
-    }
-    90%, 10% {
-      transform: rotate(0);
-    }
+  90%, 10% {
+    transform: rotate(0);
   }
-  
+}
+
+@keyframes my-animation-red {
+  0% {
+    transform: rotate(0);
+  }
+  30%, 70% {
+    transform: rotate(65deg);
+  }
+  90%, 10% {
+    transform: rotate(0);
+  }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .swatch div {
+    width: 30%;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .swatch div {
+    width: 40
+  }}

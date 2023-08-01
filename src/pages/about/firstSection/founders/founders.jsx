@@ -58,14 +58,14 @@ const theme = createTheme();
 const FounderCard = ({ title, image, description, readMoreLink }) => {
   return (
     <ThemeProvider theme={theme}>
-    <ContainerBox>
+    <ContainerBox sx={{width:{xs:"100%", sm:"50%", md:"50%", lg:"40%"} }}>
     <CardMedia
-        sx={{ borderRadius: '6px' }}
+        sx={{ borderRadius: '6px'}}
         component="img"
         alt={title}
-        height="200px"
-        width="300px"
-        flexWrap="wrap"
+        height="40%"
+       
+        // flexWrap="wrap"
         image={image}
       />
       <CardContent

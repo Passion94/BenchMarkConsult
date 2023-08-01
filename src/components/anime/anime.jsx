@@ -5,7 +5,7 @@ import { Box } from '@mui/material';
 
 export const Anime = () => {
   return (
-    <Box class="swatch">
+    <Box className="swatch">
   <div> <span className="animeText">CID</span></div>
   <div><span className="animeText">SE</span></div>
   <div><span className="animeText">LDP</span></div>

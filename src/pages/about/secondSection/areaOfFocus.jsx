@@ -1,10 +1,10 @@
-import { Box, CardMedia, Icon, Typography, styled } from '@mui/material'
+import { Box, CardMedia, Container, Icon, Typography, styled } from '@mui/material'
 import React from 'react'
 
 
 
 
-const Title = styled(Typography)({
+const Title = styled(Container)({
     color: 'rgb(117, 117, 117)',
     fontWeight: '400',
     justifyContent: 'flex-Start',
@@ -15,30 +15,57 @@ const Title = styled(Typography)({
     
     
   });
+  const Desc = styled(Typography)({
+    fontWeight: '400',
+    color: 'black',
+    marginBottom:"5%",
+    fontSize: 'clamp(18px, 5vw, 18px)',
+   
+    lineHeight:"24px",
+    display:"flex",
+    alignItemsL:"center",
+     // Responsive styles using media queries
+    
+  '@media (max-width: 768px)': {
+    fontSize: 'clamp(16px, 5vw, 32px)',
+    paddingLeft: '20px',
+    paddingRight: '10px',
+  },
+  '@media (max-width: 480px)': {
+    fontSize: 'clamp(8px, 2vw, 12px)',
+    paddingLeft: '5px',
+    paddingRight: '5px',
+  },
+  '@media (min-width: 280px)': {
+    // fontSize: 'clamp(8px, 2vw, 12px)',
+    paddingLeft: '25px',
+    paddingRight: '25px',
+  },
+  })
 
 
 const trackDatas = [
     { id: 1, symbol: 'AccountBalanceIcon ',description: "Education" },
     { id: 2, symbol: 'Ac', description: " Finance" },
     { id: 3, symbol: '10', description: "Media" },
-    { id: 5, symbol: '100', description: "Healthcare" },
-    { id: 6, symbol: '20', description: "Exploration" },
-    { id: 7, symbol: '15', description: "Consumer Services" },
-    { id: 8, symbol: '15', description: "Agriculture" },
-    { id: 9, symbol: '15', description: "NGO/CSO" },
-    { id: 7, symbol: '15', description: "Aerospace and Aviation" },
-    { id: 7, symbol: '15', description: "Gaming industry" },
-    { id: 7, symbol: '15', description: "Automotive" },
-    { id: 7, symbol: '15', description: "Research" },
+    { id: 4, symbol: '100', description: "Healthcare" },
+    { id: 5, symbol: '20', description: "Exploration" },
+    { id: 6, symbol: '15', description: "Consumer Services" },
+    { id: 7, symbol: '15', description: "Agriculture" },
+    { id: 8, symbol: '15', description: "NGO/CSO" },
+    { id: 9, symbol: '15', description: "Aerospace and Aviation" },
+    { id: 10, symbol: '15', description: "Gaming industry" },
+    { id: 11, symbol: '15', description: "Automotive" },
+    { id: 12, symbol: '15', description: "Research" },
 
   ];
   
   const Track = ({ symbol, description }) => {
     return (
-      <Box sx={{padding: "16px 20px", background:"white", height:"60%", width:"15%" }}>
+      <Container sx={{padding: "16px 20px", background:"white", height:"50%", width:{xs:"100%", sm:"70%", md:'20%'}}}>
         <Icon>{symbol}</Icon>
-        <Typography sx={{color:"black", fontSize:".9em", fontWeight:"600"}}>{description}</Typography>
-      </Box>
+        <Desc >{description}</Desc>
+      </Container >
     );
   };
   
@@ -48,12 +75,12 @@ const trackDatas = [
 export const AreaOfFocus = () => {
   return (
     <div>
-        <Title> We have worked extensively in the following sectors</Title>
-       <Box sx={{display:"flex", gap:"10px", marginBottom:"20px", flexWrap:"wrap"}}>
+        <Title> We have experience in the following sectors</Title>
+       <Container sx={{display:"flex", justifyContent:"center" , alignItems:"center", flexDirection:{xs:"column",sm:"column", md:"row"}, gap:"10px", marginBottom:"20px", flexWrap:"wrap"}}>
         {trackDatas.map((item) => (
           <Track key={item.id} rate={item.symbol} description={item.description} />
         ))}
-        </Box>
+        </Container>
       
     </div>
   )
