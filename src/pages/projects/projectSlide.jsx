@@ -1,25 +1,25 @@
-import { Button, CardContent, Typography, styled } from '@mui/material';
+import { Button, CardContent, Container, Typography, styled } from '@mui/material';
 import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import './navbarcarousal.css';
+import './projectSlide.css';
 
 
 
 
 
 
-const Title = styled(Typography)(({ theme }) => ({
+const Title = styled(Container)(({ theme }) => ({
   color: 'white',
   fontWeight: '600',
   justifyContent: 'center',
-  marginBottom: '10px',
-  fontSize: '1.5rem',
+  
+  fontSize: '1.2rem',
   fontFamily: 'Barlow Condensed',
   marginTop: '10px',
   opacity: '0.8',
-  paddingLeft: '50px',
+ 
 
   // Responsive styles using Material-UI breakpoints
   [theme.breakpoints.down('md')]: {
@@ -28,35 +28,33 @@ const Title = styled(Typography)(({ theme }) => ({
   },
 
   [theme.breakpoints.down('sm')]: {
-    fontSize: '1.2rem',
-    paddingLeft: '20px',
-    marginBottom: '5px',
+    fontSize: '.7rem',
+    // paddingLeft: '20px',
+    // marginBottom: '5px',
   },
 
   [theme.breakpoints.down('xs')]: {
-    fontSize: '1rem',
+    fontSize: '.7rem',
     paddingLeft: '10px',
     marginBottom: '3px',
   },
 }));
 
-const Header = styled(Typography)(({ theme }) => ({
+const Header = styled(Container)(({ theme }) => ({
   color: 'white',
   fontWeight: '900',
   justifyContent: 'center',
-  marginBottom: '10px',
-  fontSize: '3rem',
-  fontFamily: '"Tiempos Headline", serif',
+ 
+  fontSize: '1rem',
+  fontFamily: 'Barlow Condensed',
   paddingTop: '10px',
   opacity: '0.7',
-  paddingLeft: '50px',
-  paddingRight: '400px', // Adjust paddingRight to create some space on both sides
+ 
 
   // Responsive styles using Material-UI breakpoints
   [theme.breakpoints.down('md')]: {
-    fontSize: '1rem',
-    paddingRight: '10px',
-    
+    fontSize: '.7rem',
+    paddingRight: '30px',
   },
 
   [theme.breakpoints.down('sm')]: {
@@ -66,63 +64,39 @@ const Header = styled(Typography)(({ theme }) => ({
   },
 
   [theme.breakpoints.down('xs')]: {
-    fontSize: '1rem',
+    fontSize: '.7rem',
     paddingRight: '10px',
     marginBottom: '3px',
   },
 }));
 
-const Desc = styled(Typography)(({ theme }) => ({
+const Desc = styled(Container)(({ theme }) => ({
   color: 'white',
   marginBottom: '10px',
-  fontSize: '1.5rem',
+  fontSize: '1rem',
   lineHeight: '36px',
   fontFamily: 'Archivo Narrow',
   opacity: '0.7',
-  paddingLeft: '50px',
-  paddingRight: '400px', // Adjust paddingRight to create some space on both sides
+ 
 
   // Responsive styles using Material-UI breakpoints
   [theme.breakpoints.down('sm')]: {
     width: '80%', // Adjust width for small screens and above
-    fontSize: '1.2rem',
+    fontSize: '.7rem',
     lineHeight: '30px',
-    paddingLeft: '30px', // Adjust padding for the left side on small screens
-    paddingRight: '30px', // Adjust padding for the right side on small screens
+    // paddingLeft: '30px', // Adjust padding for the left side on small screens
+    // paddingRight: '30px', // Adjust padding for the right side on small screens
   },
 
   [theme.breakpoints.down('xs')]: {
     width: '100%', // Adjust width for extra-small screens
-    fontSize: '1rem',
+    fontSize: '.7rem',
     lineHeight: '24px',
-    paddingLeft: '10px', // Adjust padding for the left side on extra-small screens
-    paddingRight: '10px', // Adjust padding for the right side on extra-small screens
+    // paddingLeft: '10px', // Adjust padding for the left side on extra-small screens
+    // paddingRight: '10px', // Adjust padding for the right side on extra-small screens
   },
 }));
 
-const StyledButton = styled('button')(({ theme }) => ({
-  border: '1px solid white',
-  marginTop: '10px',
-  color: 'white',
-  fontSize: '1rem',
-  fontWeight: '900',
-  lineHeight: '17px',
-  textDecoration: 'none',
-  textTransform: 'uppercase',
-  padding: '16px 20px',
-  backgroundColor: 'transparent',
-  outline: '0px',
-  transition: 'all 0.3s ease 0s',
-  opacity: '0.5',
-  cursor: 'pointer',
-  marginLeft: '50px',
-
-  // Add responsive styles using Material-UI breakpoints
-  [theme.breakpoints.down('xs')]: {
-    fontSize: '0.9rem', // Adjust font size for extra-small screens
-    padding: '12px 16px', // Adjust padding for extra-small screens
-  },
-}));
 
 // ... Your component code ...
 
@@ -131,7 +105,7 @@ const StyledButton = styled('button')(({ theme }) => ({
     
   
     
-const NavbarCarousal = () => {
+const ProjectSlide = () => {
     const dotTexts = ['Services', 'Resources', 'Portfolio'];
     const customPaging = (i) => (
         // Add your custom content (text) for each dot here
@@ -142,16 +116,18 @@ const NavbarCarousal = () => {
   
 
   const settings = {
-    dots: true, // Show navigation dots
+    dots: false, // Show navigation dots
     customPaging,
     infinite: true, // Loop the carousel
     speed: 500, // Transition speed in milliseconds
-    slidesToShow: 1, // Number of slides to show at once
+    slidesToShow: 2, // Number of slides to show at once
     slidesToScroll: 1, // Number of slides to scroll per interaction
     autoplay: true, // Auto play the carousel
     autoplaySpeed: 2000, // Time between slides in autoplay mode
-    fade: true, // Use fade effect for transition
+    fade: false, // Use fade effect for transition
     cssEase: 'linear', // Specify the CSS easing for the fade animation
+    wheel:true,
+    
    
 
     responsive: [
@@ -173,10 +149,10 @@ const NavbarCarousal = () => {
 
 
   return (
-    <Slider {...settings} className='sliderContainer'>
+    <Slider {...settings} className='prosliderContainer'>
       {/* Your carousel slides */}
     
-      <CardContent  className=' slideBackground slideOne '>
+      <CardContent  className=' proslideBackground proslideOne '>
         <Title>
             Services we offer
         </Title>
@@ -188,36 +164,23 @@ const NavbarCarousal = () => {
           veritatis sit repellendus doloribus, laborum hic ad aperiam soluta nobis pariatur
            ratione ullam? Doloremque perferendis officiis commodi tempore!
         </Desc>
-        <StyledButton
-          variant="outline"
-          
-         
-        >
-          Get a quote
-        </StyledButton>
+       
       </CardContent>
-      <CardContent  className='slideBackground slideTwo'>
+      <CardContent  className='proslideBackground proslideTwo'>
         <Title>
-          Resources
+         Rail road Industrialization Architecture in India
         </Title>
         <Header>
-            Get access to every resurces needed for the growths
+            Establishing a complete system for the automative rails
         </Header>
         <Desc variant="body1" color="text.secondary">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam repellat et illo
           veritatis sit repellendus doloribus, laborum hic ad aperiam soluta nobis pariatur
            ratione ullam? Doloremque perferendis officiis commodi tempore!
         </Desc>
-        <StyledButton
-        
-          variant="outline"
-         
-         
-        >
-          View Resources
-        </StyledButton>
+      
       </CardContent>
-      <CardContent  className='slideBackground slideThree'>
+      <CardContent  className='proslideBackground proslideThree'>
         <Title>
             Our Clients stories
         </Title>
@@ -229,13 +192,7 @@ const NavbarCarousal = () => {
           veritatis sit repellendus doloribus, laborum hic ad aperiam soluta nobis pariatur
            ratione ullam? Doloremque perferendis officiis commodi tempore!
         </Desc>
-        <StyledButton
-        
-          
-         
-        >
-          Read More
-        </StyledButton>
+      
       </CardContent>
       {/* Add more slides as needed */}
       
@@ -243,4 +200,4 @@ const NavbarCarousal = () => {
   );
 };
 
-export default NavbarCarousal;
+export default ProjectSlide;

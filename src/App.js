@@ -17,7 +17,7 @@ import "./App.css"
 import { AllFooterContents } from "./components/footer/allFooterContents";
 import ServicesPage from "./pages/services/servicesPage";
 import ResourcesPage from "./pages/resources/resourcesPage";
-import ProjectPage from "./pages/projects/projectPage";
+import { ProjectPage } from './pages/projects/projectPage';
 
 
 
@@ -36,7 +36,7 @@ function App() {
         <Route path="/aboutus" element={<About/>} />
         <Route path="/services" element={<ServicesPage/>} />
         {/* <Route path="/resources" element={<ResourcesPage/>} /> */}
-        {/* <Route path="/project" element={<ProjectPage/>} /> */}
+        <Route path="/project" element={<ProjectPage/>} />
         
       </Routes>
       <AllFooterContents />

@@ -1,0 +1,36 @@
+/* Styles for the slider container */
+.prosliderContainer {
+    overflow: hidden;
+    margin-top: 0px;
+    cursor: grab; 
+
+  }
+  
+  /* Styles for each slide background */
+  .proslideBackground {
+    height: 300px;
+  }
+  
+  .proslideOne {
+    background-color: rgb(3, 5, 25);
+    
+  }
+  
+  .proslideTwo {
+    background-color: rgb(57, 78, 143);
+    
+  }
+  
+  .proslideThree {
+    background-color: rgb(17, 3, 24);
+    
+  }
+  
+  /* Custom styles for the dots container */
+ 
+  
+ 
+  /* Custom styles for each dot */
+  
+ 
+
