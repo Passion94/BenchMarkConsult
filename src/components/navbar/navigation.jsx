@@ -56,7 +56,7 @@ const Navigation = () => {
 
   return (
     <nav className="navigation">
-      <div className="logo"><img src='images/logo.png'/></div>
+      <div className="logo"><img src='images/Logo.png'/></div>
       <div className={`menu ${showMenu ? 'show' : ''}`}>
       {NavItems.map((item,index) =>
 < StyledLink key={index} to={item.link}>
