@@ -1,12 +1,6 @@
-import { Box, Container, Typography } from "@mui/material";
+
 
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import NavbarCarousal from "./components/navbar/navbarCarousal";
-import { Aboutus } from "./components/aboutus/aboutus";
-import { Whatwedo } from "./components/aboutus/whatwedo";
-import { Getstarted } from "./components/aboutus/getstarted";
-import AboutData from "./components/aboutus/aboutusdata";
-import { Story } from "./pages/story/story";
 
 import Navigation from "./components/navbar/navigation";
 
@@ -18,6 +12,8 @@ import { AllFooterContents } from "./components/footer/allFooterContents";
 import ServicesPage from "./pages/services/servicesPage";
 import ResourcesPage from "./pages/resources/resourcesPage";
 import { ProjectPage } from './pages/projects/projectPage';
+import ClientStories from "./pages/clientStory/clientStories";
+
 
 
 
@@ -37,6 +33,8 @@ function App() {
         <Route path="/services" element={<ServicesPage/>} />
         {/* <Route path="/resources" element={<ResourcesPage/>} /> */}
         <Route path="/project" element={<ProjectPage/>} />
+        {/* <Route path="/story" element={<ClientStories/>} /> */}
+        
         
       </Routes>
       <AllFooterContents />

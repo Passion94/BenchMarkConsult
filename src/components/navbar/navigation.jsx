@@ -41,7 +41,7 @@ const NavItems=[
     {Id:3, Name:"Services", link:"/services"},
     {Id:4, Name:"Project", link:"/project"},
     {Id:5, Name:"Resources", link:"/resources"},
-    {Id:6, Name:"Stories", link:"/story"},
+    // {Id:6, Name:"Stories", link:"/story"},
     {Id:7, Name:"Contact Us", link:"/contact"},
 
   ]
