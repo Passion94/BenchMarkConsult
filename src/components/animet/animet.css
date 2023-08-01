@@ -26,15 +26,15 @@
 	margin-top: 300px;
 }
 
-.animation-container .lightning-container {
+/* .animation-container .lightning-container {
 	position: absolute;
 	top: -50%;
 	left: 0;
 	display: flex;
 	transform: translateY(-50%);
-}
+} */
 
-.animation-container .lightning-container .lightning {
+/* .animation-container .lightning-container .lightning {
 	position: absolute;
 	display: block;
 	height: 12px;
@@ -46,7 +46,7 @@
 	animation-iteration-count: infinite;
 	animation-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950);
 	animation-direction: alternate;
-}
+} */
 
 .animation-container .lightning-container .lightning.white {
 	background-color: white;

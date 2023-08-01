@@ -77,7 +77,8 @@ export const Summary = () => {
           Software engineering, data journalism, business analytics and product strategy.
         </Desc>
         <CardMedia
-          sx={{ borderRadius: '2px', marginTop: "100px", width: "300px",display:"flex", alignItems:"center", justifyContent:"center" }}
+          sx={{ borderRadius: '2px', marginTop: "100px", width: "300px",
+          display:"flex", alignItems:"center", justifyContent:"center", boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)' }}
           component="img"
           alt="learn"
           height="200px"

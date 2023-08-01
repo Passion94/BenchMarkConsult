@@ -5,7 +5,7 @@ import { Box } from '@mui/material'
 
 export const FirstSection = () => {
   return (
-    <Box sx={{display:{xs:"row", sm:"row", md:"flex"}, background:"rgba(51, 153, 255, 0.2)"}}>
+    <Box sx={{display:{xs:"row", sm:"row", md:"flex"}}}>
       <Founders/>
       <Summary/>
     </Box>

@@ -1,7 +1,10 @@
 import React from 'react';
 import { Container, Grid, Typography, styled } from '@mui/material';
+import { Animet } from '../../components/animet/animet';
+import { Work } from '@mui/icons-material';
+import { WorkProcess } from './workProcess';
 
-const Section = styled('div')(({ theme }) => ({
+const SectionOne = styled('div')(({ theme }) => ({
   padding: theme.spacing(4),
 }));
 
@@ -30,11 +33,15 @@ const ServicesPage = () => {
       title: 'Cloud Solutions',
       description: 'Move your business to the cloud and harness the power of scalability.',
     },
+   
     // Add more services here
   ];
 
   return (
-    <Section>
+    <div>
+
+        
+    <SectionOne>
       <Container maxWidth="lg">
         <Typography variant="h2" gutterBottom>
           Our Services
@@ -53,7 +60,11 @@ const ServicesPage = () => {
           ))}
         </Grid>
       </Container>
-    </Section>
+     
+    </SectionOne>
+
+    {/* <WorkProcess/> */}
+    </div>
   );
 };
 

@@ -62,8 +62,9 @@ const trackDatas = [
   
   const Track = ({ symbol, description }) => {
     return (
-      <Container sx={{padding: "16px 20px", background:"white", height:"50%", width:{xs:"100%", sm:"70%", md:'20%'}}}>
-        <Icon>{symbol}</Icon>
+      <Container sx={{padding: "16px 20px", background:"white",
+       height:"50%", width:{xs:"100%", sm:"70%", md:'20%',  boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',}}}>
+        {/* <Icon>{symbol}</Icon> */}
         <Desc >{description}</Desc>
       </Container >
     );
@@ -76,7 +77,7 @@ export const AreaOfFocus = () => {
   return (
     <div>
         <Title> We have experience in the following sectors</Title>
-       <Container sx={{display:"flex", justifyContent:"center" , alignItems:"center", flexDirection:{xs:"column",sm:"column", md:"row"}, gap:"10px", marginBottom:"20px", flexWrap:"wrap"}}>
+       <Container sx={{display:"flex", justifyContent:"center" , alignItems:"center", flexDirection:{xs:"column",sm:"column", md:"row"}, gap:"10px", paddingBottom:"60px" ,marginBottom:"20px", flexWrap:"wrap"}}>
         {trackDatas.map((item) => (
           <Track key={item.id} rate={item.symbol} description={item.description} />
         ))}
