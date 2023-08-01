@@ -7,13 +7,17 @@ import { Whatwedo } from "./components/aboutus/whatwedo";
 import { Getstarted } from "./components/aboutus/getstarted";
 import AboutData from "./components/aboutus/aboutusdata";
 import { Story } from "./pages/story/story";
-import { Footer } from "./components/footer/footer";
+
 import Navigation from "./components/navbar/navigation";
 
 import { FirstSection } from "./pages/about/firstSection/firstSection";
 import { About } from "./pages/about/about";
 import { Home } from "./pages/home/home";
 import "./App.css"
+import { AllFooterContents } from "./components/footer/allFooterContents";
+import ServicesPage from "./pages/services/servicesPage";
+import ResourcesPage from "./pages/resources/resourcesPage";
+import ProjectPage from "./pages/projects/projectPage";
 
 
 
@@ -30,9 +34,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/aboutus" element={<About/>} />
+        <Route path="/services" element={<ServicesPage/>} />
+        {/* <Route path="/resources" element={<ResourcesPage/>} /> */}
+        {/* <Route path="/project" element={<ProjectPage/>} /> */}
         
       </Routes>
-      <Footer />
+      <AllFooterContents />
     </Router>
 
 

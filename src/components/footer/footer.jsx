@@ -1,6 +1,7 @@
 import { Box, Button, Container, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
+
 const FooterContainer = styled(Box)(({ theme }) => ({
   marginTop: { xs: '100px', sm: '450px', md: '500px', lg: '250px' },
   background: 'black',
@@ -64,7 +65,8 @@ const CopyWrite = styled(Typography)(({ theme }) => ({
 export const Footer = () => {
   return (
     <FooterContainer>
-      <Container sx={{marginTop:"300px", padding:"40px", overflow:"hidden"}}>
+       
+      <Container sx={{marginTop:"0px", padding:"40px", overflow:"hidden"}}>
         <SectionOne>
           <Typography>
             <img src="/images/Logo.png" alt="Logo" />

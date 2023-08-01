@@ -114,11 +114,11 @@ const FounderCard = () => {
            be converted into a huge brain, which in fact it is, all things being 
            particles of a real and rhythmic whole. We shall be able to communicate 
            with one another instantly, irrespective of distance.
-           <Typography sx={{fontWeight:"600"}}>
+           <Desc sx={{fontWeight:"600", fontStyle:"italic"}}>
            Nikola Tesla
 
 
-           </Typography>
+           </Desc>
            
            </Desc>
 

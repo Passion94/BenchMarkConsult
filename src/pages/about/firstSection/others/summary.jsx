@@ -92,7 +92,7 @@ export const Summary = () => {
           </Desc>
         </CardContent>
       </Container>
-      <Container sx={{paddingBottom:"20px"}}>
+      {/* <Container sx={{paddingBottom:"20px"}}>
         <Header variant="h4">
           Track Records
         </Header>
@@ -105,7 +105,7 @@ export const Summary = () => {
         We have a track record that demonstrates a history of success and reliability.
          A proven achievements , expertise and credibility in business
         </Desc >
-      </Container>
+      </Container> */}
     </div>
   );
 };
