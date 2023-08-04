@@ -158,7 +158,7 @@ const Desc = styled(Typography)(({ theme }) => ({
     width: '100%', // Adjust width for extra-small screens
     fontSize: '1rem',
     lineHeight: '24px',
-    paddingLeft: '10px', // Adjust padding for the left side on extra-small screens
+    paddingLeft: '0px', // Adjust padding for the left side on extra-small screens
     paddingRight: '10px', // Adjust padding for the right side on extra-small screens
   },
 }));
@@ -223,7 +223,7 @@ export const Getstarted = () => {
     </Button >
   </StyledCardContent >
 
-<Container sx={{marginLeft:{sm:"-35px", md:"0px"}}}>
+<Container sx={{marginLeft:{xs:"-10px", sm:"-35px", md:"0px"}}}>
      <img
       src="https://www.technologyhq.org/wp-content/uploads/2021/02/it-services.jpg"
       alt="Image"

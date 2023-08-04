@@ -54,8 +54,9 @@ const Navigation = () => {
 
   return (
     <Box className="navigation">
-     
-      <Box><img className="logo" src='images/Logo.png'/></Box>
+     <Container sx={{display:"flex" }}
+     maxWidth="xl">
+      <Box ><img className="logo" src='images/Logo.png'/></Box>
       <div className={`menu ${showMenu ? 'show' : ''}`}>
       {NavItems.map((item,index) =>
 < StyledLink key={index} to={item.link}>
@@ -69,7 +70,7 @@ const Navigation = () => {
         <span></span>
         <span></span>
       </div>
-     
+      </Container>
     </Box>
   );
 };

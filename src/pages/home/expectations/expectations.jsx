@@ -85,7 +85,7 @@ const Header = styled(Typography)(({ theme }) => ({
   paddingTop: '10px',
   lineHeight: '26px',
   fontFamily: '"Tiempos Headline", serif',
-  fontWeight: 'normal',
+  
   fontStyle: 'normal',
   textTransform: 'uppercase',
   lineHeight: '46px',
