@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectSlide from './projectSlide';
 import { Projectinfo } from './projectinfo';
-import { Container, Typography, styled } from '@mui/material';
+import { Box, Container, Typography, styled } from '@mui/material';
 import { All } from './all';
 
 
@@ -13,8 +13,8 @@ const Desc = styled(Typography)({
   color: 'black',
   marginBottom:"5%",
   fontSize: 'clamp(8px, 3vw, 16px)',
-  paddingLeft:"25px",
-  paddingRight:"25px",
+  // paddingLeft:"25px",
+  // paddingRight:"25px",
    // Responsive styles using media queries
   
 '@media (max-width: 768px)': {
@@ -63,7 +63,7 @@ export const ProjectPage = () => {
   return (
 
    
-    <Container >
+    <Box sx={{padding:"50px"}}>
        <Title >
       Our projects
     </Title >
@@ -78,6 +78,6 @@ export const ProjectPage = () => {
      versions of Lorem Ipsum
     </Desc>
       {components.map((component) => component)}
-    </Container>
+    </Box>
   );
 };

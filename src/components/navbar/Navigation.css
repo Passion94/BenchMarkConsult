@@ -1,111 +1,173 @@
 .navigation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: white;
-   
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+  padding: .8rem; /* Use relative units for padding */
+  font-family: Lato, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-kerning: normal;
+  font-feature-settings: "kern","liga","clig","calt";
+  font-feature-settings: "kern","liga","clig","calt";
+  -webkit-text-size-adjust: 100%;
+}
 
-   
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    padding-left: 50px
-   ;
-  }
-  
+.logo {
+  width: 170px;
+  height: 50px;
+  margin-right: 18.5rem; /* Use relative units for margin */
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 13.7px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 40px;
+  padding: 4px 16px;
+}
+
+/* Styles for the dropdown menu on small screens */
+.menu.show {
+  flex-direction: column;
+  position: absolute;
+  top: 85px; /* Adjust the position */
+  left: 0;
+  background-color: #f0f0f0;
+  display: none;
+  z-index: 1;
+  width: 40%;
+}
+
+.menu.show a {
+  margin: 5px 0;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Styles for the menu icon on small screens */
+.menu-icon span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+}
+
+/* Media query to show/hide the dropdown menu and menu icon on small screens */
+@media screen and (max-width: 1024px) {
   .menu {
-    display: flex;
-    /* gap: 10px; */
-    z-index: 1;
-    
+      display: flex;
   }
-  
-  .menu a {
-    text-decoration: none;
-    /* color: rgb(117, 117, 117); */
-    font-size: 16px;
-    font-weight: 900;
-    font-family: Montserrat;
-    text-transform: uppercase;
-    
-   
-  }
-  .menu a:hover{
-    color: rgb(208,2,27);
-  }
-  
-  /* Styles for the dropdown menu on small screens */
-  .menu.show {
-    flex-direction: column;
-    position: absolute;
-    top: 113px;
-    left: 0px;
-    background-color: #f0f0f0;
-    /* padding: 50px 20px; */
-    display: none;
-  }
-  
-  .menu.show a {
-    margin: 5px 0;
-  }
- 
   .menu-icon {
-    display: none;
-    cursor: pointer;
-  }
-  
-  /* Styles for the menu icon on small screens */
-  .menu-icon span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 5px 0;
-  }
-  
-  /* Media query to show/hide the dropdown menu and menu icon on small screens */
-  @media screen and (max-width: 768px) {
-    .menu {
       display: none;
-      width: 40%;
-      
-    }
-  
-    .menu-icon {
-      display: block;
-    }
-  
-    .menu.show {
-      display: flex;
-    }
   }
-  @media screen and (max-width: 912px) {
-    .menu {
+  .menu.show {
+      display: flex;
+  }
+  /* Adjust the padding on smaller screens */
+  .navigation {
+      padding: 1rem;
+  }
+  .logo {
+    width: 170px;
+    height: 50px;
+    margin-right: 6rem; /* Use relative units for margin */
+  }
+}
+@media screen and (max-width: 912px) {
+  .menu {
       display: none;
-      width: 50%;
       
-    }
-  
-    .menu-icon {
+  }
+  .menu-icon {
       display: block;
-    }
-  
-    .menu.show {
+  }
+  .menu.show {
       display: flex;
-    }
+      
   }
-  @media screen and (max-width: 1024px) {
-    .navigation {
-      
-      padding: 10px;
-      
-     
+  .logo {
+    width: 170px;
+    height: 50px;
+    margin-right: 30rem; /* Use relative units for margin */
+  }
+  .navigation {
+    padding: 1rem;
+    justify-content: space-around;
+}
+ 
   
-     
-    }
-   
-   
+  /* Adjust the padding on smaller screens */
+ 
+}
+
+
+/* Add additional media queries if needed for other screen sizes */
+@media screen and (max-width: 768px) {
+  /* Styles for smaller screens */
+  .menu {
+      display: none;
+      
   }
+  .menu-icon {
+      display: block;
+  }
+  .menu.show {
+      display: flex;
+  }
+  .logo {
+    width: 170px;
+    height: 50px;
+    margin-right: 25rem; /* Use relative units for margin */
+  }
+
+}
+
+@media screen and (max-width: 540px) {
+  /* Styles for smaller screens */
+  .menu {
+      display: none;
+      
+  }
+  .menu-icon {
+      display: block;
+  }
+  .menu.show {
+      display: flex;
+  }
+  .logo {
+    width: 170px;
+    height: 50px;
+    margin-right: 20rem; /* Use relative units for margin */
+  }
+
+}
+@media screen and (max-width: 500px) {
+  /* Styles for smaller screens */
+  .menu {
+      display: none;
+      
+  }
+  .menu-icon {
+      display: block;
+  }
+  .menu.show {
+      display: flex;
+  }
+  .logo {
+    width: 170px;
+    height: 50px;
+    margin-right: 5rem; /* Use relative units for margin */
+  }
+
+}

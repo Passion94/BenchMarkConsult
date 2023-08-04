@@ -2,7 +2,6 @@
 
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 
-import Navigation from "./components/navbar/navigation";
 
 import { FirstSection } from "./pages/about/firstSection/firstSection";
 import { About } from "./pages/about/about";
@@ -13,6 +12,8 @@ import ServicesPage from "./pages/services/servicesPage";
 import ResourcesPage from "./pages/resources/resourcesPage";
 import { ProjectPage } from './pages/projects/projectPage';
 import ClientStories from "./pages/clientStory/clientStories";
+import Navigation from './components/navbar/navigation';
+
 
 
 
@@ -37,7 +38,7 @@ function App() {
         
         
       </Routes>
-      <AllFooterContents />
+      {/* <AllFooterContents /> */}
     </Router>
 
 

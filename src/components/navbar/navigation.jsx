@@ -1,28 +1,26 @@
 import React, { useState } from 'react';
 import './Navigation.css'; // Import the CSS file for styling
 import { Link } from 'react-router-dom';
-import { AppBar, styled } from '@mui/material';
+import { AppBar, Box, Container, styled } from '@mui/material';
 
 
 
 const StyledLink = styled(Link)(({ to }) => ({
   textDecoration: 'none',
-  color: to === "/contact" ? 'white' : 'rgb(117, 117, 117)',
-  backgroundColor: to === "/contact" ? 'rgb(208, 2, 27)' : 'transparent',
-  borderRadius: to === "/contact" ? '2px' : '0px',
-  padding: to === "/contact" ? '20px 10px 20px 10px' : '20px 20px 20px 20px',
-  lineHeight: to === "/contact" ? '35px' : '40px',
+  color:  'rgb(8,16,103)',
+  height: "40px",
+  backgroundColor: to === "/contact" ? 'rgb(46,234,250)' : 'transparent',
   transition: 'color 0.3s, background-color 0.3s, border 0.3s', // Add a transition for smoother hover effect
 
   '&:hover': {
-    color: to === "/contact" ? 'red' : 'rgb(208, 2, 27)',
+    color:'rgb(46,234,250)',
     backgroundColor: to === "/contact" ? 'white' : 'transparent',
-    border: to === "/contact" ? '1px solid red' : '0px',
+   
   },
 
   // Media query for smaller screens
   '@media screen and (max-width: 768px)': {
-    padding: '15px 10px', // Adjust the padding for smaller screens
+    // padding: '15px 10px', // Adjust the padding for smaller screens
     lineHeight: '30px', // Adjust the line height for smaller screens
     fontSize: '14px', // Adjust the font size for smaller screens
   },
@@ -37,12 +35,12 @@ const StyledLink = styled(Link)(({ to }) => ({
 const NavItems=[
   
   {Id:1, Name:"Home", link:"/"},
-    {Id:2, Name:"About US", link:"/aboutus"},
+    {Id:2, Name:"About ", link:"/aboutus"},
     {Id:3, Name:"Services", link:"/services"},
     {Id:4, Name:"Project", link:"/project"},
     {Id:5, Name:"Resources", link:"/resources"},
     // {Id:6, Name:"Stories", link:"/story"},
-    {Id:7, Name:"Contact Us", link:"/contact"},
+    {Id:7, Name:"Contact ", link:"/contact"},
 
   ]
 
@@ -55,8 +53,8 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="navigation">
-      <div className="logo"><img src='images/Logo.png'/></div>
+    <Box className="navigation">
+      <Box><img className="logo" src='images/Logo.png'/></Box>
       <div className={`menu ${showMenu ? 'show' : ''}`}>
       {NavItems.map((item,index) =>
 < StyledLink key={index} to={item.link}>
@@ -70,7 +68,7 @@ const Navigation = () => {
         <span></span>
         <span></span>
       </div>
-    </nav>
+    </Box>
   );
 };
 

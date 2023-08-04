@@ -4,7 +4,7 @@ import { Box } from '@mui/material'
 
 export const SecondSection = () => {
   return (
-    <Box >
+    <Box>
         <AreaOfFocus/>
     </Box>
   )

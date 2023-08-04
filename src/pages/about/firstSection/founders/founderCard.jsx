@@ -20,11 +20,12 @@ const StyledBtn = styled(Button)({
 
   const Desc = styled(Typography)({
     fontWeight: '400',
+    width:"40%",
     color: 'black',
     marginBottom:"5%",
     fontSize: 'clamp(8px, 3vw, 16px)',
-    paddingLeft:"25px",
-    paddingRight:"25px",
+    // paddingLeft:"25px",
+    // paddingRight:"25px",
      // Responsive styles using media queries
     
   '@media (max-width: 768px)': {

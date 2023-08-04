@@ -8,37 +8,66 @@ import { Link } from 'react-router-dom';
 
 
 
-const MainContainer = styled(Container)(({ theme }) => ({
+const MainContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
-  paddingTop: '200px',
+  justifyContent:"flex-start",
+  padding: '100px 30px 100px 50px',
+  gap:"100px",
+  overflow:"hidden",
+  
+
 
   // Responsive styles using Material-UI breakpoints
-  [theme.breakpoints.down('sm')]: {
-    paddingTop: '100px',
+  [theme.breakpoints.down('lg')]: {
+    gap:"15px",
+    padding: '10% 1.5% 9%  0px ',
+    // paddingTop: '100px',
+    // flexDirection: 'column', // Stack elements vertically on small screens
+    // textAlign: 'center', // Center text on small screens
+  },
+  [theme.breakpoints.down('md')]: {
+    gap:"10px",
+    padding: '100px 5px 80px 70px',
+    // paddingTop: '100px',
     flexDirection: 'column', // Stack elements vertically on small screens
     textAlign: 'center', // Center text on small screens
+  },
+ 
+ 
+  [theme.breakpoints.down('sm')]: {
+    // paddingTop: '10px',
+    justifyContent:"flex-start",
+    marginRight:"20px",
+    // flexDirection: 'column', // Stack elements vertically on small screens
+    textAlign: 'center', // Center text on small screens
+    marginLeft:"-35px",
   },
 }));
 
 const StyledCardContent = styled(CardContent)(({ theme }) => ({
-  width: '50%',
-  padding: '0 140px 0 0',
+  // width: '50%',
+  // padding: '0 140px 0 0',
 
   // Responsive styles using Material-UI breakpoints
   [theme.breakpoints.down('lg')]: {
-    width: '60%',
-    padding: '0 100px 0 0',
+    width: '100%',
+    padding: '0 0px 0 25px',
+    
+    // marginLeft:"20px",
   },
 
   [theme.breakpoints.down('md')]: {
-    width: '70%',
-    padding: '0 80px 0 0',
+    width: '100%',
+    padding: '0 100px 0 50px',
+    marginLeft:"20px",
+   
   },
 
   [theme.breakpoints.down('sm')]: {
-    width: '80%',
-    padding: '0 60px 0 0',
+    width: '100%',
+    padding: '0 0px 0 0',
+    marginLeft:"0px",
   },
 
   [theme.breakpoints.down('xs')]: {
@@ -47,80 +76,128 @@ const StyledCardContent = styled(CardContent)(({ theme }) => ({
   },
 }));
 
+
+
+
+
+
+
+
+
+
 const Title = styled(Typography)({
-  color: 'rgb(117, 117, 117)',
-  fontWeight: '600',
+  fontWeight: '900',
   justifyContent: 'center',
-  marginBottom: '10px',
-  fontSize: '1.5rem',
-  fontFamily: 'Barlow Condensed',
-  marginTop: '10px',
-  textTransform: 'uppercase',
+  marginBottom: '30px',
+  fontSize: '1eem',
+  color:'rgb(8,16,103)'
 });
 
 const Header = styled(Typography)(({ theme }) => ({
-  color: 'black',
+  color:'rgb(8,16,103)',
   fontWeight: '900',
   justifyContent: 'center',
-  marginBottom: '10px',
-  fontSize: '3rem',
-  fontFamily: '"Tiempos Headline", serif',
+  marginBottom: '30px',
+  fontSize: '3em',
   paddingTop: '10px',
+  lineHeight:"26px",
+  fontFamily: '"Tiempos Headline", serif',
+  fontWeight: "normal",
+  fontStyle: "normal",
+  textTransform:"uppercase",
+  lineHeight: "46px",
+ 
+ 
 
   // Responsive styles using Material-UI breakpoints
   [theme.breakpoints.down('md')]: {
-    fontSize: '2.5rem',
+    fontSize: '1rem',
+    paddingRight: '10px',
+    
   },
 
   [theme.breakpoints.down('sm')]: {
-    fontSize: '2rem',
+    fontSize: '.7rem',
+    paddingRight: '20px',
+    marginBottom: '5px',
+    marginLeft:"-10px"
   },
 
   [theme.breakpoints.down('xs')]: {
-    fontSize: '1.5rem',
+    fontSize: '1rem',
+    paddingRight: '10px',
+    marginBottom: '3px',
+    marginLeft:"0px"
   },
 }));
 
-const Desc = styled(Typography)({
-  // width: '100%',
-  color: 'black',
-  marginBottom: '10px',
-  fontSize: '1.5rem',
+
+const Desc = styled(Typography)(({ theme }) => ({
+  color:'rgb(8,16,103)',
+  width:"100%",
+  fontWeight:"400",
+  marginBottom: '30px',
+  fontSize: '1.5em',
   lineHeight: '36px',
   fontFamily: 'Archivo Narrow',
-  display:"flex",
-  alignItems:"center",
- justifyContent:"center"
-});
-
-const StyledButton = styled(Link)(({ theme }) => ({
-  display: 'inline-block',
-  marginTop: '0px',
-  color: 'rgb(229, 95, 76)',
-  fontSize: '1rem',
-  fontWeight: '900',
-  textDecoration: 'none',
-  textTransform: 'uppercase',
-  backgroundColor: 'transparent',
-  fontFamily: 'Archivo Narrow',
-  letterSpacing: '0.2em',
-  fontFamily: 'Lato, sans-serif',
-  fontKerning: 'normal',
+  // opacity: '0.7',
+  // paddingLeft: '42px',
+  // Adjust paddingRight to create some space on both sides
 
   // Responsive styles using Material-UI breakpoints
   [theme.breakpoints.down('sm')]: {
-    fontSize: '0.9rem',
-    marginLeft:"50px"
+    width: '100%', // Adjust width for small screens and above
+    fontSize: '1.2rem',
+    lineHeight: '30px',
+     // Adjust padding for the left side on small screens
+    marginLeft:"0px",
+    
+  },
+
+  [theme.breakpoints.down('xs')]: {
+    width: '100%', // Adjust width for extra-small screens
+    fontSize: '1rem',
+    lineHeight: '24px',
+    paddingLeft: '10px', // Adjust padding for the left side on extra-small screens
+    paddingRight: '10px', // Adjust padding for the right side on extra-small screens
   },
 }));
 
+const StyledButton = styled('button')(({ theme }) => ({
+  
+  marginTop: '10px',
+  color:'rgb(8,16,103)',
+  fontSize: '1em',
+  fontWeight: '900',
+  lineHeight: '17px',
+  textDecoration: 'none',
+  textTransform: 'uppercase',
+  padding: '16px 20px',
+  backgroundColor: 'transparent',
+  border:"1px solid rgb(8,16,103)",
+  
+  transition: 'all 0.3s ease 0s',
+ 
+  cursor: 'pointer',
+  // marginLeft: '42px',
+  [theme.breakpoints.down('sm')]: {
+    
+    marginLeft:"-20px"
+  },
+  // Add responsive styles using Material-UI breakpoints
+  [theme.breakpoints.down('xs')]: {
+    fontSize: '0.9rem', // Adjust font size for extra-small screens
+    padding: '12px 16px', // Adjust padding for extra-small screens
+  },
+}));
 
 
 
 
 export const Getstarted = () => {
   return (
-    <MainContainer >
+    <Box sx={{  background:"rgb(218, 249, 254)",}}>
+    <MainContainer  className='getStartedmainContainer'>
         <StyledCardContent   >
     <Title>
     Discover your solution
@@ -138,26 +215,23 @@ export const Getstarted = () => {
     // }}
     >
     
-    <StyledButton
-    >
-      <ArrowBack />
-      Get in touch
-      <ArrowForward/>
-    </StyledButton>
+    <StyledButton variant="outline">Get in touch</StyledButton>
     
     </Button >
   </StyledCardContent >
 
-<Box >
+<Container sx={{marginLeft:{sm:"-35px", md:"0px"}}}>
      <img
       src="https://www.technologyhq.org/wp-content/uploads/2021/02/it-services.jpg"
       alt="Image"
       height="350px"
       width="100%"
+
       
     />
     
-  </Box>
+  </Container>
   </MainContainer>
+  </Box>
   )
 }

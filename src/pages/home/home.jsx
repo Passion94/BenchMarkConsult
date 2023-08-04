@@ -4,17 +4,21 @@ import { Getstarted } from '../../components/aboutus/getstarted'
 import { Whatwedo } from '../../components/aboutus/whatwedo'
 import AboutData from '../../components/aboutus/aboutusdata'
 import { Story } from '../story/story'
+import Expectations from './expectations/expectations'
+
 
 export const Home = () => {
   return (
     <div>
      <NavbarCarousal/>
+     {/* <Expectations/> */}
+
      <Getstarted/>
-     <Whatwedo/> 
     
-      <AboutData/>
-  
-     <Story/>
+      {/* <AboutData/> */}
+      
+     {/* <Whatwedo/> 
+     <Story/>  */}
     </div>
   )
 }

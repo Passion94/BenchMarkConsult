@@ -69,7 +69,7 @@ export const Footer = () => {
       <Container sx={{marginTop:"0px", padding:"40px", overflow:"hidden"}}>
         <SectionOne>
           <Typography>
-            <img src="/images/Logo.png" alt="Logo" />
+            <img className="logo" src="/images/Logo.png" alt="Logo" />
           </Typography>
           {/* <Typography>
             Subscribe to our newsletter:
