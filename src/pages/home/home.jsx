@@ -5,20 +5,23 @@ import { Whatwedo } from '../../components/aboutus/whatwedo'
 import AboutData from '../../components/aboutus/aboutusdata'
 import { Story } from '../story/story'
 import Expectations from './expectations/expectations'
+import { Box, Container } from '@mui/material'
+
 
 
 export const Home = () => {
   return (
-    <div>
+    <Box>
      <NavbarCarousal/>
-     {/* <Expectations/> */}
+     
 
      <Getstarted/>
+     <Expectations/>
     
       {/* <AboutData/> */}
       
      {/* <Whatwedo/> 
      <Story/>  */}
-    </div>
+    </Box>
   )
 }
