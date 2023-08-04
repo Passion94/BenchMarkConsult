@@ -54,6 +54,7 @@ const Navigation = () => {
 
   return (
     <Box className="navigation">
+     
       <Box><img className="logo" src='images/Logo.png'/></Box>
       <div className={`menu ${showMenu ? 'show' : ''}`}>
       {NavItems.map((item,index) =>
@@ -68,6 +69,7 @@ const Navigation = () => {
         <span></span>
         <span></span>
       </div>
+     
     </Box>
   );
 };

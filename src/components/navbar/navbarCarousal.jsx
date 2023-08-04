@@ -200,24 +200,36 @@ const NavbarCarousal = () => {
 
   return (
     <div className='sliderContainer'  >
+      
      <Slider ref={sliderRef} {...settings}  style={{overflow:"hidden"}} >
       {slides.map((slide, index) => (
+       
         <Box key={index} className={`slideBackground slide${index + 1}`}>
+           <Container
+        maxWidth="xl">
           <Title>{slide.title}</Title>
           <Header >{slide.header}</Header>
           <Desc variant="body1">{slide.description}</Desc>
           <StyledButton variant="outline">{slide.buttonLabel}</StyledButton>
+          </Container>
         </Box >
+        
       ))}
+      
     </Slider>
+    
      <div className='carousel-dots'>
      
      {dotTexts.map((text, index) => (
        <div key={index} className='carousel-dot' onClick={() => handleDotClick(index)}>
          {text}
+        
        </div>
+        
      ))}
+
    </div>
+   
  </div>
   );
 };
