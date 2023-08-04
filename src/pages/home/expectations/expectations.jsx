@@ -57,12 +57,12 @@ const Title = styled(Typography)(({ theme }) => ({
 
   [theme.breakpoints.down('lg')]: {
     fontSize: '1.3em',
-    paddingLeft: "30px",
+    paddingLeft: "40px",
   },
 
   [theme.breakpoints.down('md')]: {
     fontSize: '1em',
-    paddingLeft: "20px",
+    paddingLeft: "40px",
   },
 
   [theme.breakpoints.down('sm')]: {
@@ -215,9 +215,9 @@ const Expectations = () => {
     <WhatWrap >
    
       <Header >What to expect from us</Header>
-      <Title sx={{opacity:".5", display:"flex", paddingLeft:{sm:"10px", md:"150px",lg:"250px"}}}>Expertise, Solutions, Guidance.</Title>
-      <Box sx={{display:"flex", justifyContent:"center", padding:"0px 200px 0px 0px", marginLeft:{sm:"0px", md:"0px",lg:"330px"}}}>
-      <Container  >
+      <Title sx={{opacity:".5", display:"flex", paddingLeft:{sm:"10px", md:"100px",lg:"100px"}}}>Expertise, Solutions, Guidance.</Title>
+      <Box sx={{display:"flex", justifyContent:"center", padding:{xs:"0px 100px 0px 0px", sm:"0px 100px 0px 100px", md:"0px 100px 0px 200px", lg:"0px 100px 0px 200px"}, marginLeft:{sm:"0px", md:"0px",lg:"100px"}}}>
+      <Container >
         {items.map((item) => (
           <Box key={item.id} sx={{position:"relative"}}>
             <span style={{display:"flex"}}>
@@ -228,7 +228,7 @@ const Expectations = () => {
             <Desc
               showFullText={showFullText}>{item.description}</Desc>
               <KeyboardArrowDownOutlinedIcon
-              sx={{position:"absolute", right:"-90px", bottom:"0px", display:{xs:"none",sm:"block", md:"block"},
+              sx={{position:"absolute", right:"-90px", bottom:"0px", display:{xs:"block",sm:"block", md:"block"},
               border:"1px solid rgb(75,75,221)", borderRadius:"5px", background:"rgb(46,234,250)", fontWeight:"900", color:"rgb(75,75,221)"}}
               
               
