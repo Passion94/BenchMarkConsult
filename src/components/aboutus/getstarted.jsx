@@ -138,7 +138,7 @@ const Desc = styled(Typography)(({ theme }) => ({
   fontWeight:"400",
   marginBottom: '30px',
   fontSize: '1.5em',
-  lineHeight: '36px',
+  lineHeight: '46px',
   fontFamily: 'Archivo Narrow',
   // opacity: '0.7',
   // paddingLeft: '42px',
@@ -166,14 +166,15 @@ const Desc = styled(Typography)(({ theme }) => ({
 const StyledButton = styled('button')(({ theme }) => ({
   
   marginTop: '10px',
-  color:'rgb(8,16,103)',
+  border:"1px solid rgb(75,75,221)",
+  color:'rgb(46,234,250)',
   fontSize: '1em',
   fontWeight: '900',
   lineHeight: '17px',
   textDecoration: 'none',
   textTransform: 'uppercase',
   padding: '16px 20px',
-  backgroundColor: 'transparent',
+  backgroundColor: 'rgb(8,16,103)',
   border:"1px solid rgb(8,16,103)",
   
   transition: 'all 0.3s ease 0s',
