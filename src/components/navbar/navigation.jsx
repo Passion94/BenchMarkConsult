@@ -21,7 +21,7 @@ const StyledLink = styled(Link)(({ to }) => ({
   // Media query for smaller screens
   '@media screen and (max-width: 768px)': {
     // padding: '15px 10px', // Adjust the padding for smaller screens
-    lineHeight: '30px', // Adjust the line height for smaller screens
+    lineHeight: '10px', // Adjust the line height for smaller screens
     fontSize: '14px', // Adjust the font size for smaller screens
   },
 
@@ -60,7 +60,7 @@ const Navigation = () => {
       <div className={`menu ${showMenu ? 'show' : ''}`}>
       {NavItems.map((item,index) =>
 < StyledLink key={index} to={item.link}>
-{item.image }
+{/* {item.image } */}
   {item.Name}</ StyledLink>
 
 )}

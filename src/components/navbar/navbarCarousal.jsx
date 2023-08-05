@@ -15,10 +15,15 @@ const Title = styled(Typography)(({ theme }) => ({
   fontWeight: '900',
   justifyContent: 'center',
   marginBottom: '30px',
-  fontSize: '1rem',
-  [theme.breakpoints.down('sm')]: {
-   
+  fontSize: '1em',
+ 
+  [theme.breakpoints.down('md')]: {
+    fontSize: '1.5em',
     marginLeft:"-20px"
+  },
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '1em',
+   
   },
   
 }));
@@ -28,7 +33,7 @@ const Header = styled(Typography)(({ theme }) => ({
   fontWeight: '900',
   justifyContent: 'center',
   marginBottom: '30px',
-  fontSize: '3em',
+  fontSize: '2.5em',
   paddingTop: '10px',
   lineHeight:"26px",
   fontFamily: '"Tiempos Headline", serif',
@@ -37,18 +42,20 @@ const Header = styled(Typography)(({ theme }) => ({
   textTransform:"uppercase",
  
  
+ 
 
   // Responsive styles using Material-UI breakpoints
   [theme.breakpoints.down('md')]: {
-    fontSize: '1rem',
+    fontSize: '2rem',
     paddingRight: '10px',
+    marginLeft:"-20px"
     
   },
 
   [theme.breakpoints.down('sm')]: {
-    fontSize: '.7rem',
+    fontSize: '1.7rem',
     paddingRight: '20px',
-    marginBottom: '5px',
+    marginBottom: '20px',
     marginLeft:"-20px"
   },
 
@@ -56,36 +63,49 @@ const Header = styled(Typography)(({ theme }) => ({
     fontSize: '1rem',
     paddingRight: '10px',
     marginBottom: '3px',
+    
   },
 }));
 
 const Desc = styled(Typography)(({ theme }) => ({
   color: 'white',
-  width:"50%",
+  
   fontWeight:"400",
   marginBottom: '30px',
   fontSize: '1.5em',
   lineHeight: '36px',
   fontFamily: 'Archivo Narrow',
+  padding:" 0 350px 0 0",
+ 
   // opacity: '0.7',
   // paddingLeft: '42px',
   // Adjust paddingRight to create some space on both sides
 
   // Responsive styles using Material-UI breakpoints
-  [theme.breakpoints.down('sm')]: {
-    width: '80%', // Adjust width for small screens and above
-    fontSize: '1.2rem',
-    lineHeight: '30px',
+  [theme.breakpoints.down('md')]: {
+    padding:" 0 70px 0 0",
+    fontSize: '1.5em',
+    lineHeight: '36px',
+    marginLeft:"-20px",
      // Adjust padding for the left side on small screens
-    marginLeft:"-20px"
+    
+  },
+  [theme.breakpoints.down('sm')]: {
+    fontWeight:"normal",
+    fontSize: '1.5em',
+    padding:"0 40px 0px 0"
+    
   },
 
   [theme.breakpoints.down('xs')]: {
-    width: '100%', // Adjust width for extra-small screens
-    fontSize: '1rem',
+    padding:"0 15px 0px 0",
+    fontSize: '2rem',
     lineHeight: '24px',
-    paddingLeft: '10px', // Adjust padding for the left side on extra-small screens
-    paddingRight: '10px', // Adjust padding for the right side on extra-small screens
+    paddingLeft: '0px', // Adjust padding for the left side on extra-small screens
+    paddingRight: '0px', // Adjust padding for the right side on extra-small screens
+    display:"flex",
+    justifyContent:"center",
+    marginLeft:"0px"
   },
 }));
 
@@ -105,14 +125,23 @@ const StyledButton = styled('button')(({ theme }) => ({
  
   cursor: 'pointer',
   // marginLeft: '42px',
-  [theme.breakpoints.down('sm')]: {
+
+  [theme.breakpoints.down('md')]: {
     
     marginLeft:"-20px"
   },
+  [theme.breakpoints.down('sm')]: {
+    
+    marginTop:"5px" // Adjust padding for extra-small screens
+
+  },
+ 
   // Add responsive styles using Material-UI breakpoints
   [theme.breakpoints.down('xs')]: {
     fontSize: '0.9rem', // Adjust font size for extra-small screens
-    padding: '12px 16px', // Adjust padding for extra-small screens
+    padding: '12px 16px',
+    marginTop:"5px" // Adjust padding for extra-small screens
+
   },
 }));
 

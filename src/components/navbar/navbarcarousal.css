@@ -12,7 +12,7 @@
 
 .carousel-dots {
   display: flex;
-  gap: 90px;
+  gap: 125px;
   font-weight: 600;
   justify-content: center;
   margin-top: 0px;
@@ -60,6 +60,7 @@ Styles for the slider container
 
 .slide1 {
   background-color: rgb(3, 5, 25);
+  
 }
 
 .slide2 {
@@ -83,7 +84,17 @@ Styles for the slider container
 
 
 
-
+.carousel-dots {
+  display: flex;
+  gap: 125px;
+  font-weight: 600;
+  justify-content: center;
+  
+  margin-top: -40px;
+  text-transform: uppercase;
+  font-size: 14px;
+  
+}
 
 
 
@@ -94,16 +105,95 @@ Styles for the slider container
   
 }
 
+
+@media (max-width: 2256px) {
+  .carousel-dots {
+    
+    gap: 123px;
+   
+    
+  }
+    
+}
+@media (max-width: 1920px) {
+  .carousel-dots {
+    
+    gap: 117px;
+    
+  }
+  .carousel-dot {
+    cursor: pointer;
+    margin: 0 0 ;
+    margin-left: 0px;
+    margin-right: 20px;
+    
+    color: white;
+    z-index: 1;
+   
+  }
+    
+}
+@media (max-width: 1440px) {
+  .carousel-dots {
+    
+    gap: 105px;
+    
+  }
+  .carousel-dot {
+    cursor: pointer;
+    margin: 0 0 ;
+    margin-left: px;
+    margin-right: 7px;
+    
+    color: white;
+    z-index: 1;
+   
+  }
+    
+}
+@media (max-width: 1366px) {
+  .carousel-dots {
+    
+    gap: 102px;
+    
+  }
+  .carousel-dot {
+    cursor: pointer;
+    margin: 0 0 ;
+    margin-left: px;
+    margin-right: 0px;
+    
+    color: white;
+    z-index: 1;
+   
+  }
+    
+}
+
+
+
+
 @media (max-width: 1280px) {
   .carousel-dots {
     font-weight: 600;
-    gap: 80px;
+    gap: 85px;
     font-size: 14px;
     
+  }
+  .carousel-dot {
+    cursor: pointer;
+    margin: 0 0 ;
+    margin-left:0px;
+    margin-right: 3px;
+    
+    color: white;
+    z-index: 1;
+   
   }
   .slideBackground{
     padding-top: 100px;
     padding-left: 40px;
+    
     
   }
     
@@ -111,7 +201,7 @@ Styles for the slider container
 @media (max-width: 1024px) {
   .carousel-dots {
     font-weight: 600;
-    gap: 25px;
+    gap: 27px;
     font-size: 14px;
     
   }
@@ -140,13 +230,14 @@ Styles for the slider container
   }
 }
 /* Show the dots for smaller screens */
-@media (max-width: 820px) {
+@media (max-width: 810px) {
+ 
 
   .slick-dots {
     display: flex; /* Show dots on small screens */
     margin-top: -20px; /* Adjust the margin for smaller screens */
     justify-content: center; /* Center the dots horizontally */
-    gap: 50px; /* Add some space between dots */
+    gap: 0px; /* Add some space between dots */
   }
 
     .slick-dots li button {
@@ -158,16 +249,16 @@ Styles for the slider container
    font-weight: 900;
    
     color: white;
-    margin-top: 0px;
+    
     margin-top: -100px;
-    background-color: transparent; /* Make the dots transparent */
+    background-color: white; /* Make the dots transparent */
     border: 2px solid white;
   
     
   }
   .slick-dots.active{
     color: grey;
-    background-color: #333;
+    background-color: grey;
   }
   .carousel-dots {
     
@@ -189,13 +280,31 @@ display: none;
   .slideBackground{
     padding-top: 100px;
     height: 550px;
-    padding-left: 37px;
+    padding-left: 57px;
     
   }
 
  
+}
+@media (max-width: 540px) {
+
+  .slideBackground{
+    padding-top: 100px;
+    height: 550px;
+    padding-left: 40px;
+    
+  }
 
  
+}
+@media (max-width: 414px) {
+
+  .slick-dots {
+    display: flex; /* Show dots on small screens */
+    margin-top: 200px; /* Adjust the margin for smaller screens */
+    justify-content: center; /* Center the dots horizontally */
+    gap: 0px; /* Add some space between dots */
+  }
 
  
 }

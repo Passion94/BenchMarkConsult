@@ -21,7 +21,7 @@ const MainContainer = styled(Box)(({ theme }) => ({
   // Responsive styles using Material-UI breakpoints
   [theme.breakpoints.down('lg')]: {
     gap:"15px",
-    padding: '10% 1.5% 9%  0px ',
+    
     // paddingTop: '100px',
     // flexDirection: 'column', // Stack elements vertically on small screens
     // textAlign: 'center', // Center text on small screens
@@ -51,7 +51,7 @@ const StyledCardContent = styled(CardContent)(({ theme }) => ({
 
   // Responsive styles using Material-UI breakpoints
   [theme.breakpoints.down('lg')]: {
-    width: '100%',
+    // width: '100%',
     padding: '0 0px 0 25px',
     
     // marginLeft:"20px",
@@ -59,14 +59,14 @@ const StyledCardContent = styled(CardContent)(({ theme }) => ({
 
   [theme.breakpoints.down('md')]: {
     width: '100%',
-    padding: '0 100px 0 50px',
-    marginLeft:"20px",
+    padding: '0 20px 0 17px',
+    marginLeft:"0px",
    
   },
 
   [theme.breakpoints.down('sm')]: {
-    width: '100%',
-    padding: '0 0px 0 0',
+    
+    padding: '0 0px 0 27px',
     marginLeft:"0px",
   },
 
@@ -85,51 +85,74 @@ const StyledCardContent = styled(CardContent)(({ theme }) => ({
 
 
 
-const Title = styled(Typography)({
-  fontWeight: '900',
+
+
+const Title = styled(Typography)(({ theme }) => ({
+  fontWeight: 900,
   justifyContent: 'center',
   marginBottom: '30px',
-  fontSize: '1eem',
-  color:'rgb(8,16,103)'
-});
+  fontSize: '1em',
+  color: 'rgb(8, 16, 103)',
+  [theme.breakpoints.down('md')]: {
+    fontSize: '1.5em',
+  },
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '1em',
+   
+  },
+ 
+}));
+
+
 
 const Header = styled(Typography)(({ theme }) => ({
   color:'rgb(8,16,103)',
   fontWeight: '900',
   justifyContent: 'center',
   marginBottom: '30px',
-  fontSize: '3em',
+  fontSize: '2.5em',
   paddingTop: '10px',
-  lineHeight:"26px",
+ 
   fontFamily: '"Tiempos Headline", serif',
   fontWeight: "normal",
   fontStyle: "normal",
   textTransform:"uppercase",
-  lineHeight: "46px",
+  lineHeight:"46px",
+ 
  
  
 
   // Responsive styles using Material-UI breakpoints
   [theme.breakpoints.down('md')]: {
-    fontSize: '1rem',
+    fontSize: '2rem',
     paddingRight: '10px',
+    lineHeight:"26px",
+    fontWeight: '900',
     
   },
 
   [theme.breakpoints.down('sm')]: {
-    fontSize: '.7rem',
+    fontSize: '1.7rem',
     paddingRight: '20px',
-    marginBottom: '5px',
-    marginLeft:"-10px"
+    marginBottom: '15px',
+    marginLeft:"-10px",
+    fontWeight: '900',
   },
 
   [theme.breakpoints.down('xs')]: {
     fontSize: '1rem',
     paddingRight: '10px',
     marginBottom: '3px',
-    marginLeft:"0px"
+    marginLeft:"0px",
+    fontWeight: '900',
   },
 }));
+
+
+
+
+
+
 
 
 const Desc = styled(Typography)(({ theme }) => ({
@@ -145,21 +168,35 @@ const Desc = styled(Typography)(({ theme }) => ({
   // Adjust paddingRight to create some space on both sides
 
   // Responsive styles using Material-UI breakpoints
+
+
+
+  [theme.breakpoints.down('md')]: {
+    fontSize: '1.5em',
+    fontWeight:"400",
+
+    
+  },
+
   [theme.breakpoints.down('sm')]: {
     width: '100%', // Adjust width for small screens and above
-    fontSize: '1.2rem',
+    fontSize: '1.5em',
     lineHeight: '30px',
+    fontWeight:"400",
      // Adjust padding for the left side on small screens
     marginLeft:"0px",
+    
     
   },
 
   [theme.breakpoints.down('xs')]: {
     width: '100%', // Adjust width for extra-small screens
     fontSize: '1rem',
+    fontWeight:"400",
     lineHeight: '24px',
     paddingLeft: '0px', // Adjust padding for the left side on extra-small screens
     paddingRight: '10px', // Adjust padding for the right side on extra-small screens
+    
   },
 }));
 
@@ -201,7 +238,7 @@ export const Getstarted = () => {
     <Box sx={{  background:"rgb(218, 249, 254)",}}>
       <Container 
       maxWidth="xl">
-    <MainContainer  className='getStartedmainContainer'>
+    <div  className='getStartedmainContainer'>
         <StyledCardContent   >
     <Title>
     Discover your solution
@@ -224,18 +261,19 @@ export const Getstarted = () => {
     </Button >
   </StyledCardContent >
 
-<Container sx={{marginLeft:{xs:"-10px", sm:"-35px", md:"0px"}}}>
+<Container >
      <img
       src="https://www.technologyhq.org/wp-content/uploads/2021/02/it-services.jpg"
       alt="Image"
-      height="350px"
-      width="100%"
+      
+      
+      className='getImage'
 
       
     />
     
   </Container>
-  </MainContainer>
+  </div>
 
   </Container>
   </Box>
