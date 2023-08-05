@@ -24,13 +24,14 @@ const WhatWrap = styled(Box)(({ theme }) => ({
   },
 
   [theme.breakpoints.down('md')]: {
-    marginLeft: "30px",
-    padding: "40px",
+    marginLeft: "10px",
+    padding: "0px",
   },
 
   [theme.breakpoints.down('sm')]: {
     marginLeft: "0px",
-    padding: "10px",
+    padding: "0px",
+    paddingRight:"20px",
   },
 
   [theme.breakpoints.down('xs')]: {
@@ -148,11 +149,14 @@ const Desc = styled(Typography)(({ theme, showFullText }) => ({
   [theme.breakpoints.down('md')]: {
     fontSize: '1.2em',
     lineHeight: '24px',
+    
+    
   },
 
   [theme.breakpoints.down('sm')]: {
     fontSize: '1.1em',
     lineHeight: '20px',
+
 
   },
 
@@ -216,7 +220,7 @@ const Expectations = () => {
    
       <Header >What to expect from us</Header>
       <Title sx={{opacity:".5", display:"flex", paddingLeft:{sm:"40px", md:"100px",lg:"100px"}}}>Expertise, Solutions, Guidance.</Title>
-      <Box sx={{display:"flex", justifyContent:"center", padding:{xs:"0px 65px 0px 0px", sm:"0px 100px 0px 100px", md:"0px 100px 0px 200px", lg:"0px 100px 0px 200px"}, marginLeft:{sm:"0px", md:"0px",lg:"100px"}}}>
+      <Box sx={{display:"flex", justifyContent:"center", padding:{xs:"0px 30px 0px 0px", sm:"0px 100px 0px 100px", md:"0px 100px 0px 200px", lg:"0px 100px 0px 200px"}, marginLeft:{sm:"0px", md:"0px",lg:"100px"}}}>
       <Container >
         {items.map((item) => (
           <Box key={item.id} sx={{position:"relative"}}>
