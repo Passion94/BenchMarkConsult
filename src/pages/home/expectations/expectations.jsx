@@ -13,7 +13,7 @@ import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDown
 
 const WhatWrap = styled(Box)(({ theme }) => ({
   marginTop: "100px",
-  padding: "40px",
+  padding: "42px",
 
   [theme.breakpoints.down('xl')]: {
     marginLeft: "20px",
@@ -215,8 +215,8 @@ const Expectations = () => {
     <WhatWrap >
    
       <Header >What to expect from us</Header>
-      <Title sx={{opacity:".5", display:"flex", paddingLeft:{sm:"10px", md:"100px",lg:"100px"}}}>Expertise, Solutions, Guidance.</Title>
-      <Box sx={{display:"flex", justifyContent:"center", padding:{xs:"0px 100px 0px 0px", sm:"0px 100px 0px 100px", md:"0px 100px 0px 200px", lg:"0px 100px 0px 200px"}, marginLeft:{sm:"0px", md:"0px",lg:"100px"}}}>
+      <Title sx={{opacity:".5", display:"flex", paddingLeft:{sm:"40px", md:"100px",lg:"100px"}}}>Expertise, Solutions, Guidance.</Title>
+      <Box sx={{display:"flex", justifyContent:"center", padding:{xs:"0px 65px 0px 0px", sm:"0px 100px 0px 100px", md:"0px 100px 0px 200px", lg:"0px 100px 0px 200px"}, marginLeft:{sm:"0px", md:"0px",lg:"100px"}}}>
       <Container >
         {items.map((item) => (
           <Box key={item.id} sx={{position:"relative"}}>
@@ -228,7 +228,7 @@ const Expectations = () => {
             <Desc
               showFullText={showFullText}>{item.description}</Desc>
               <KeyboardArrowDownOutlinedIcon
-              sx={{position:"absolute", right:"-90px", bottom:"0px", display:{xs:"block",sm:"block", md:"block"},
+              sx={{position:"absolute", right:"-40px", bottom:"-30px", display:{xs:"block",sm:"block", md:"block"},
               border:"1px solid rgb(75,75,221)", borderRadius:"5px", background:"rgb(46,234,250)", fontWeight:"900", color:"rgb(75,75,221)"}}
               
               

@@ -95,9 +95,12 @@ const Title = styled(Typography)(({ theme }) => ({
   color: 'rgb(8, 16, 103)',
   [theme.breakpoints.down('md')]: {
     fontSize: '1.5em',
+    paddingLeft:"14px",
   },
   [theme.breakpoints.down('sm')]: {
     fontSize: '1em',
+    marginLeft:"-10px",
+    paddingLeft:"0px",
    
   },
  
@@ -126,17 +129,19 @@ const Header = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down('md')]: {
     fontSize: '2rem',
     paddingRight: '10px',
-    lineHeight:"26px",
+    lineHeight:"46px",
     fontWeight: '900',
+    paddingLeft:"14px",
     
   },
 
   [theme.breakpoints.down('sm')]: {
-    fontSize: '1.7rem',
+    fontSize: '1.5rem',
     paddingRight: '20px',
     marginBottom: '15px',
     marginLeft:"-10px",
     fontWeight: '900',
+    paddingLeft: '0px', 
   },
 
   [theme.breakpoints.down('xs')]: {
@@ -174,8 +179,8 @@ const Desc = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down('md')]: {
     fontSize: '1.5em',
     fontWeight:"400",
-
-    
+lineHeight:"26px",
+    paddingLeft:"14px",
   },
 
   [theme.breakpoints.down('sm')]: {
@@ -184,7 +189,8 @@ const Desc = styled(Typography)(({ theme }) => ({
     lineHeight: '30px',
     fontWeight:"400",
      // Adjust padding for the left side on small screens
-    marginLeft:"0px",
+    marginLeft:"-10px",
+    paddingLeft: '0px', 
     
     
   },
@@ -195,7 +201,7 @@ const Desc = styled(Typography)(({ theme }) => ({
     fontWeight:"400",
     lineHeight: '24px',
     paddingLeft: '0px', // Adjust padding for the left side on extra-small screens
-    paddingRight: '10px', // Adjust padding for the right side on extra-small screens
+    paddingRight: '0px', // Adjust padding for the right side on extra-small screens
     
   },
 }));
@@ -213,7 +219,7 @@ const StyledButton = styled('button')(({ theme }) => ({
   padding: '16px 20px',
   backgroundColor: 'rgb(8,16,103)',
   border:"1px solid rgb(8,16,103)",
-  
+  marginBottom:"20px",
   transition: 'all 0.3s ease 0s',
  
   cursor: 'pointer',
