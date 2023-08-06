@@ -1,15 +1,25 @@
+
+
+
+
+
 .navigation {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   background-color: white;
   padding: .8rem; /* Use relative units for padding */
-  font-family: Lato, sans-serif;
+  font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   font-kerning: normal;
   font-feature-settings: "kern","liga","clig","calt";
   font-feature-settings: "kern","liga","clig","calt";
   -webkit-text-size-adjust: 100%;
+  position: fixed;
+  margin-bottom: 50px;
+  z-index: 1;
+  width: 100%;
+ 
 }
 
 .logo {
@@ -40,7 +50,7 @@
   position: absolute;
   top: 85px; /* Adjust the position */
   left: 0;
-  background-color: #f0f0f0;
+  background-color: white;
   display: none;
   z-index: 1;
   width: 40%;
@@ -62,7 +72,7 @@
   display: block;
   width: 25px;
   height: 3px;
-  background-color: #333;
+  background-color: white;
   margin: 5px 0;
 }
 

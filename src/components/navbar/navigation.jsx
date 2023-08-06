@@ -13,11 +13,11 @@ const StyledLink = styled(Link)(({ to }) => ({
   // padding: to === "/contact" ? '20px 20px' : '0px',
   transition: 'color 0.3s, background-color 0.3s, border 0.3s', // Add a transition for smoother hover effect
 borderRadius:"3px",
-  // '&:hover': {
-  //   color:'rgb(46,234,250)',
-  //   backgroundColor: to === "/contact" ? 'white' : 'transparent',
+  '&:hover': {
+    color: to === "/contact" ? ' (46, 234, 200)' : 'rgb(46,234,200)',
+    backgroundColor: to === "/contact" ? ' (46, 234, 200)' : 'transparent',
    
-  // },
+  },
 
   // Media query for smaller screens
   '@media screen and (max-width: 768px)': {
@@ -54,8 +54,9 @@ const Navigation = () => {
   };
 
   return (
-    <Box className="navigation">
-     <Container sx={{display:"flex" }}
+    <Box sx={{positiion:"relative"}}>
+    <Box className="navigation" >
+     <Container sx={{display:"flex"}}
      maxWidth="xl">
       <Box ><img className="logo" src='images/Logo.png'/></Box>
       <div className={`menu ${showMenu ? 'show' : ''}`}>
@@ -72,6 +73,7 @@ const Navigation = () => {
         <span></span>
       </div>
       </Container>
+    </Box>
     </Box>
   );
 };

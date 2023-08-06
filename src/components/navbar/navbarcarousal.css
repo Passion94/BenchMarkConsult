@@ -15,8 +15,8 @@
   gap: 125px;
   font-weight: 600;
   justify-content: center;
-  margin-top: 0px;
-  margin-top: -50px;
+  margin-top: -100px;
+ 
   text-transform: uppercase;
   font-size: 14px;
   
@@ -25,7 +25,7 @@
 .carousel-dot {
   cursor: pointer;
   margin: 0 10px;
-  
+   
   color: white;
   z-index: 1;
  
@@ -47,37 +47,113 @@
 Styles for the slider container
 .sliderContainer {
   overflow: hidden;
-  margin-top: 0px;
+ 
 }
 
 
 .slideBackground{
-  padding-top: 100px;
-  height: 550px;
+  padding-top: 20%;
+  height: 600px;
   padding-left: 57px;
+  position: relative;
   
 }
 
 .slide1 {
   background-color: rgb(3, 5, 25);
-  
+  background-image: url('https://www.zdnet.com/a/img/resize/62aba7026e29813a4316681c24993e1dcac1bab5/2021/07/19/865e8155-eece-4ada-9b67-e21679c8d237/software-engineering-shutterstock-699634498.jpg?auto=webp&width=1280');
+ position: relative;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.slide1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value to control darkness */
 }
 
 .slide2 {
   background-color: rgb(57, 78, 143);
+  background-image: url("https://blog.planview.com/wp-content/uploads/2020/01/Top-6-Software-Development-Methodologies.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+ 
+
+}
+
+.slide2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value to control darkness */
 }
 
 .slide3 {
   background-color: rgb(3, 5, 25);
+  background-image: url("https://media.foundit.in/career-advice/wp-content/uploads/2021/10/system-design-interview-questions.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+
 }
+
+.slide3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value to control darkness */
+}
+
 .slide4 {
   background-color: rgb(17, 3, 24);
+  background-image: url("https://www.herzing.edu/sites/default/files/styles/fp_640_288/public/2021-03/Is%20Data%20Analytics%20Right%20for%20Me.jpg.webp?itok=z1OUL5je");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  
   
 }
+
+.slide4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value to control darkness */
+}
+
 .slide5 {
   background-color: rgb(57, 78, 143);
-  
+  background-image: url("https://www.theforage.com/blog/wp-content/uploads/2022/12/what-is-cybersecurity.jpg");
+  background-repeat: no-repeat; 
+  position: relative;
+
 }
+
+.slide5::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value to control darkness */
+}
+
 
 
 
@@ -191,7 +267,7 @@ Styles for the slider container
    
   }
   .slideBackground{
-    padding-top: 100px;
+   
     padding-left: 40px;
     
     
@@ -206,7 +282,7 @@ Styles for the slider container
     
   }
   .slideBackground{
-    padding-top: 100px;
+    
     padding-left: 40px;
     
   }
@@ -224,8 +300,9 @@ Styles for the slider container
     
   }
   .slideBackground{
-    padding-top: 100px;
+   
     padding-left: 60px;
+    height: 650px;
     
   }
 }
@@ -250,7 +327,7 @@ Styles for the slider container
    
     color: white;
     
-    margin-top: -100px;
+    margin-top: -50px;
     background-color: white; /* Make the dots transparent */
     border: 2px solid white;
   
@@ -267,8 +344,8 @@ display: none;
 
  
   .slideBackground{
-    padding-top: 100px;
-    height: 550px;
+    
+    height: 700px;
     padding-left: 40px;
     
   }
@@ -278,8 +355,8 @@ display: none;
 @media (max-width: 768px) {
 
   .slideBackground{
-    padding-top: 100px;
-    height: 550px;
+    
+   padding-top: 25%;
     padding-left: 57px;
     
   }
@@ -289,8 +366,8 @@ display: none;
 @media (max-width: 540px) {
 
   .slideBackground{
-    padding-top: 100px;
-    height: 550px;
+    padding-top: 30%;
+    height: 750px;
     padding-left: 40px;
     
   }
@@ -306,5 +383,10 @@ display: none;
     gap: 0px; /* Add some space between dots */
   }
 
- 
+  .slideBackground{
+    padding-top: 33%;
+    height: 800px;
+    
+    
+  }
 }
