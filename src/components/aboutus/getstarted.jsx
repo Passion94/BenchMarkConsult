@@ -241,7 +241,7 @@ const StyledButton = styled('button')(({ theme }) => ({
 export const Getstarted = () => {
   return (
     
-    <Box sx={{  background:"rgb(218, 249, 254)",}}>
+    <Box>
       <Container 
       maxWidth="xl">
     <div  className='getStartedmainContainer'>

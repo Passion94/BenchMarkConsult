@@ -3,14 +3,18 @@ import './Navigation.css'; // Import the CSS file for styling
 import { Link } from 'react-router-dom';
 import { AppBar, Box, Container, styled } from '@mui/material';
 
-
+const Bod= styled(Box)(({ to }) => ({
+  padding: to === "/contact" ? '20px 20px' : '0px',
+  backgroundColor: to === "/contact" ? 'rgb(46,234,250)' : 'transparent',
+}))
 
 const StyledLink = styled(Link)(({ to }) => ({
   textDecoration: 'none',
   color:  'rgb(8,16,103)',
   height: "40px",
-  backgroundColor: to === "/contact" ? 'rgb(46,234,250)' : 'transparent',
-  // padding: to === "/contact" ? '20px 20px' : '0px',
+  // backgroundColor: to === "/contact" ? 'rgb(46,234,250)' : 'transparent',
+  
+  padding: to === "/contact" ? '20px 20px' : '0px',
   transition: 'color 0.3s, background-color 0.3s, border 0.3s', // Add a transition for smoother hover effect
 borderRadius:"3px",
   '&:hover': {
@@ -20,10 +24,12 @@ borderRadius:"3px",
   },
 
   // Media query for smaller screens
-  '@media screen and (max-width: 768px)': {
+  '@media screen and (max-width: 912px)': {
     // padding: '15px 10px', // Adjust the padding for smaller screens
     lineHeight: '10px', // Adjust the line height for smaller screens
     fontSize: '14px', // Adjust the font size for smaller screens
+   
+    
   },
 
   // Add more media queries and responsive styles as needed for other screen sizes
@@ -61,10 +67,11 @@ const Navigation = () => {
       <Box ><img className="logo" src='images/Logo.png'/></Box>
       <div className={`menu ${showMenu ? 'show' : ''}`}>
       {NavItems.map((item,index) =>
+      <Bod>
 < StyledLink key={index} to={item.link}>
 {/* {item.image } */}
   {item.Name}</ StyledLink>
-
+  </Bod>
 )}
       </div>
       <div className="menu-icon" onClick={toggleMenu}>
