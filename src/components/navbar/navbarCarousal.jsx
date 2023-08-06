@@ -53,7 +53,7 @@ const Header = styled(Typography)(({ theme }) => ({
   // Responsive styles using Material-UI breakpoints
   [theme.breakpoints.down('md')]: {
     // fontSize: '2rem',
-    paddingRight: '10px',
+    paddingRight: '80px',
     marginLeft:"-20px"
     
   },
@@ -91,7 +91,7 @@ const Desc = styled(Typography)(({ theme }) => ({
 
   // Responsive styles using Material-UI breakpoints
   [theme.breakpoints.down('md')]: {
-    padding:" 0 70px 0 0",
+    padding:" 0 100px 0 0",
     // fontSize: '1.5em',
     lineHeight: '36px',
     marginLeft:"-20px",
@@ -101,7 +101,7 @@ const Desc = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
     fontWeight:"normal",
     // fontSize: '1.5em',
-    padding:"0 40px 0px 0"
+    padding:"0 60px 0px 0"
     
   },
 
@@ -250,7 +250,7 @@ const NavbarCarousal = () => {
      <Slider ref={sliderRef} {...settings}  style={{overflow:"hidden"}} >
      {slides && slides.map((slide, index) => (
   <Box key={index} className={`slideBackground slide${index + 1}`}>
-    <div className="dark-overlay"></div>
+    
     <Container maxWidth="xl">
       <Title>{slide.title}</Title>
       <Header>{slide.header}</Header>

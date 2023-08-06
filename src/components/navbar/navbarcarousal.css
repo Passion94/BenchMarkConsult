@@ -230,13 +230,13 @@ position: relative;
 @media (max-width: 1366px) {
   .carousel-dots {
     
-    gap: 102px;
+    gap: 100px;
     
   }
   .carousel-dot {
     cursor: pointer;
     margin: 0 0 ;
-    margin-left: px;
+    margin-left: 0gitpx;
     margin-right: 0px;
     
     color: white;
