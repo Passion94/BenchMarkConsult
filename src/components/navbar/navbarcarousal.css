@@ -103,6 +103,7 @@ Styles for the slider container
 background-repeat: no-repeat;
 background-size: cover;
 position: relative;
+background-size: cover;
 
 }
 
@@ -123,6 +124,7 @@ position: relative;
   background-size: cover;
   position: relative;
   
+  background-size: cover;
   
 }
 
@@ -141,6 +143,8 @@ position: relative;
   background-image: url("https://www.theforage.com/blog/wp-content/uploads/2022/12/what-is-cybersecurity.jpg");
   background-repeat: no-repeat; 
   position: relative;
+  width: 100%;
+  background-size: cover;
 
 }
 
@@ -180,21 +184,88 @@ position: relative;
   display: none;
   
 }
-
-
-@media (max-width: 2256px) {
+@media (max-width: 3840px) {
+  .slideBackground{
+    padding-top: 20%;
+    height: 600px;
+    padding-left: 80px;
+    position: relative;
+    
+  }
+  .carousel-dot {
+    cursor: pointer;
+    margin: 0 -10px;
+    margin-left: 30px;
+     
+    color: white;
+    z-index: 1;
+   
+  }
   .carousel-dots {
     
-    gap: 123px;
+    gap: 133px;
+    margin-left: 35px;
    
     
   }
     
 }
-@media (max-width: 1920px) {
+@media (max-width: 3200px) {
+  .slideBackground{
+    padding-top: 20%;
+    height: 600px;
+    padding-left: 78px;
+    position: relative;
+    
+  }
+  .carousel-dot {
+    cursor: pointer;
+    margin: 0 -10px;
+    margin-left: 30px;
+     
+    color: white;
+    z-index: 1;
+   
+  }
   .carousel-dots {
     
-    gap: 117px;
+    gap: 133px;
+    margin-left: 21px;
+   
+    
+  }
+    
+}
+
+@media (max-width: 2736px) {
+  .carousel-dots {
+    
+    gap: 133px;
+    margin-left: 18px;
+   
+    
+  }
+    
+}
+
+@media (max-width: 2256px) {
+  .carousel-dots {
+    
+    gap: 128px;
+    margin-left: -10px;
+  }
+  .slideBackground{
+    padding-top: 20%;
+    height: 600px;
+    padding-left: 74px;
+    position: relative;
+    
+  }
+}
+@media (max-width: 1920px) {
+  .carousel-dots {
+    margin-left: 17px;
+    gap: 120px;
     
   }
   .carousel-dot {
@@ -207,25 +278,37 @@ position: relative;
     z-index: 1;
    
   }
+  .slideBackground{
+    padding-top: 20%;
+    height: 600px;
+    padding-left: 75px;
+    position: relative;
     
+  }
 }
 @media (max-width: 1440px) {
   .carousel-dots {
     
-    gap: 105px;
+    gap: 129px;
     
   }
   .carousel-dot {
     cursor: pointer;
     margin: 0 0 ;
-    margin-left: px;
-    margin-right: 7px;
+    margin-left: -13px;
+    margin-right: 0px;
     
     color: white;
     z-index: 1;
    
   }
+  .slideBackground{
+    padding-top: 20%;
+    height: 600px;
+    padding-left: 68px;
+    position: relative;
     
+  }
 }
 @media (max-width: 1366px) {
   .carousel-dots {
