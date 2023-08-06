@@ -271,6 +271,8 @@ const NavbarCarousal = () => {
     
       
     </Slider>
+    <Container 
+    maxWidth= "xl">
     
      <div className='carousel-dots'>
      
@@ -283,7 +285,7 @@ const NavbarCarousal = () => {
      ))}
 
    </div>
-   
+   </Container>
  </div>
   );
 };
