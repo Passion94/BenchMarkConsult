@@ -10,21 +10,28 @@ import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDown
 
 
 
-const ArrowButton = styled(KeyboardArrowDownOutlinedIcon)(({ arrowDirection }) => ({
+const ArrowButton = styled(KeyboardArrowDownOutlinedIcon)(({theme, arrowDirection }) => ({
   transform: arrowDirection ? 'rotate(180deg)' : 'rotate(0deg)',
   position: 'absolute',
-  right: '280px',
+  right: '25%', // Adjust the right position as needed
   bottom: '-3px',
-  display: { xs: 'block', sm: 'block', md: 'block' },
+  display: 'block', // Display is already defined based on breakpoints
   border: '1px solid rgb(75, 75, 221)',
   height: '20px',
   width: '35px',
   borderRadius: '15px',
-  
   color: 'rgb(75, 75, 221)',
   cursor: 'pointer',
   transition: 'transform 0.3s ease',
+  [theme.breakpoints.down('lg')]: {
+    right: '5%',
+  },
+  [theme.breakpoints.down('md')]: {
+    right: '5%',
+  },
+ 
 }));
+
 
 
 
@@ -39,18 +46,18 @@ const WhatWrap = styled(Box)(({ theme }) => ({
   },
 
   [theme.breakpoints.down('lg')]: {
-    padding: " 42px 0px 42px 40px" ,
+    padding: " 42px 30px 42px 40px" ,
   },
 
   [theme.breakpoints.down('md')]: {
-    padding: " 42px 80px 42px 60px" ,
+    // padding: " 42px 80px 42px 60px" ,
     padding: "0px",
   },
 
   [theme.breakpoints.down('sm')]: {
-    marginLeft: "0px",
+    marginLeft: "40px",
     padding: "0px",
-    paddingRight:"20px",
+    paddingRight:"0px",
   },
 
   [theme.breakpoints.down('xs')]: {
@@ -232,13 +239,13 @@ const Oxbor = styled(Box)(({ theme }) => ({
     padding: "0 335px", // Keep the same padding for xl screens
   },
   [theme.breakpoints.down('lg')]: {
-    padding: "0px 100px 0px 200px", // Adjust padding for lg screens
+    padding: "0px 100px 0px 170px", // Adjust padding for lg screens
   },
   [theme.breakpoints.down('md')]: {
-    padding: "0px 100px", // Adjust padding for md screens
+    padding: "0px 120px", // Adjust padding for md screens
   },
   [theme.breakpoints.down('sm')]: {
-    padding: "0px 20px", // Adjust padding for sm screens
+    padding: "0px 0px", // Adjust padding for sm screens
   },
   [theme.breakpoints.down('xs')]: {
     padding: "0px 10px", // Adjust padding for xs screens
