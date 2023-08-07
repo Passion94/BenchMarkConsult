@@ -480,6 +480,17 @@ display: none;
 
  
 }
+@media (max-width: 640px) {
+
+  .slideBackground{
+    
+   padding-top: 25%;
+    padding-left: 33px;
+    
+  }
+
+ 
+}
 
 @media (max-width: 600px) {
 

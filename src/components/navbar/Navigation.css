@@ -370,6 +370,45 @@
   }
 
 }
+@media screen and (max-width: 480px) {
+  /* Styles for smaller screens */
+ 
+ 
+ 
+  .logo {
+    width: 170px;
+    height: 50px;
+    margin-right: 14rem;
+    margin-left: 0px; /* Use relative units for margin */
+  }
+
+}
+@media screen and (max-width: 414px) {
+  /* Styles for smaller screens */
+ 
+ 
+ 
+  .logo {
+    width: 170px;
+    height: 50px;
+    margin-right: 10rem;
+    margin-left: 0px; /* Use relative units for margin */
+  }
+
+}
+@media screen and (max-width: 412px) {
+  /* Styles for smaller screens */
+ 
+ 
+ 
+  .logo {
+    width: 170px;
+    height: 50px;
+    margin-right: 10rem;
+    margin-left: 0px; /* Use relative units for margin */
+  }
+
+}
 @media screen and (max-width: 400px) {
   /* Styles for smaller screens */
  

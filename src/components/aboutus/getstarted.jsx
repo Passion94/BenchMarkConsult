@@ -66,7 +66,7 @@ const StyledCardContent = styled(CardContent)(({ theme }) => ({
 
   [theme.breakpoints.down('sm')]: {
     
-    padding: '0 0px 0 27px',
+    padding: '0 50px 0 27px',
     marginLeft:"0px",
   },
 
@@ -181,6 +181,7 @@ const Desc = styled(Typography)(({ theme }) => ({
     fontWeight:"400",
 lineHeight:"26px",
     paddingLeft:"14px",
+    
   },
 
   [theme.breakpoints.down('sm')]: {
@@ -191,6 +192,7 @@ lineHeight:"26px",
      // Adjust padding for the left side on small screens
     marginLeft:"-10px",
     paddingLeft: '0px', 
+   
     
     
   },
