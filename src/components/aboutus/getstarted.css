@@ -7,13 +7,65 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 100px 30px 100px 50px;
+    padding: 100px 10px 100px 40px;
     gap: 100px;
     overflow: hidden;
 }
+@media (max-width: 3840px) {
+    .getStartedmainContainer{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 100px 10px 100px 70px;
+        gap: 120px;
+        overflow: hidden;
+    }
+
+    .getImage{
+       
+    width: 100%;
+    }
+  
+   
+  }
+  @media (max-width: 3200px) {
+    .getStartedmainContainer{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 100px 0px 100px 65px;
+        gap: 120px;
+        overflow: hidden;
+    }
+
+    .getImage{
+       
+    width: 100%;
+    }
+  
+   
+  }
+  @media (max-width: 2256px) {
+    .getStartedmainContainer{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 100px 18px 100px 61px;
+        gap: 120px;
+        overflow: hidden;
+    }
+
+    .getImage{
+       
+    width: 100%;
+    }
+  
+   
+  }
 
 
-@media (max-width: 1920px) {
+
+  @media (max-width: 1920px) {
 
     .getImage{
        
@@ -22,13 +74,60 @@
   
    
   }
+  @media (max-width: 1600px) {
+
+    .getImage{
+       
+    width: 95%;
+    }
+    .getStartedmainContainer{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 100px 18px 100px 57px;
+        gap: 120px;
+        overflow: hidden;
+    }
+   
+  }
+  @media (max-width: 1440px) {
+
+    .getImage{
+       
+    width: 95%;
+    }
+    .getStartedmainContainer{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 100px 18px 100px 49px;
+        gap: 120px;
+        overflow: hidden;
+    }
+   
+  }
   @media (max-width: 1366px) {
 
     .getImage{
        
     width: 100%;
     }
-  
+    @media (max-width: 1600px) {
+
+        .getImage{
+           
+        width: 95%;
+        }
+        .getStartedmainContainer{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 100px 18px 100px 40px;
+            gap: 120px;
+            overflow: hidden;
+        }
+       
+      }
    
   }
   @media (max-width: 1280px) {

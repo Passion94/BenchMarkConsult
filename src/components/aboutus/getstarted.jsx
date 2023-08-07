@@ -52,7 +52,7 @@ const StyledCardContent = styled(CardContent)(({ theme }) => ({
   // Responsive styles using Material-UI breakpoints
   [theme.breakpoints.down('lg')]: {
     // width: '100%',
-    padding: '0 0px 0 25px',
+    // padding: '0 0px 0 20px',
     
     // marginLeft:"20px",
   },
@@ -216,7 +216,7 @@ const StyledButton = styled('button')(({ theme }) => ({
   lineHeight: '17px',
   textDecoration: 'none',
   textTransform: 'uppercase',
-  padding: '16px 20px',
+  padding: '16px 22px',
   backgroundColor: 'rgb(8,16,103)',
   border:"1px solid rgb(8,16,103)",
   marginBottom:"20px",

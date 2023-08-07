@@ -269,6 +269,28 @@
   }
 
 }
+@media screen and (max-width: 712px) {
+  /* Styles for smaller screens */
+  .menu {
+      display: none;
+      padding-left: 70px;
+      
+  }
+  .menu-icon {
+      display: block;
+      margin-top: 1rem;
+  }
+  .menu.show {
+      display: flex;
+  }
+  .logo {
+    width: 170px;
+    height: 50px;
+    margin-right: 24rem; /* Use relative units for margin */
+    margin-left: 1.7rem;
+  }
+
+}
 @media screen and (max-width: 640px) {
   /* Styles for smaller screens */
   .menu {
