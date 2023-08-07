@@ -1,0 +1,16 @@
+@media (max-width: 1280px) {
+    .custom-header-lg {
+      line-height: 32px;
+      color: red;
+      /* Add any other styles you want */
+    }
+  }
+
+  @media (max-width: 960px) {
+    .custom-header-md {
+      line-height: 28px;
+      padding-left: 20px;
+      color: red;
+      /* Add any other styles you want */
+    }
+  }

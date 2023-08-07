@@ -42,20 +42,21 @@ const WhatWrap = styled(Box)(({ theme }) => ({
 
 
   [theme.breakpoints.down('xl')]: {
-    padding: " 42px 30px 42px 4.5%" ,
+    padding: " 42px 30px 42px 4.3%" ,
   },
 
   [theme.breakpoints.down('lg')]: {
-    padding: " 42px 30px 42px 40px" ,
+    padding: " 42px 30px 42px 2%px" ,
   },
 
   [theme.breakpoints.down('md')]: {
-    // padding: " 42px 80px 42px 60px" ,
-    padding: "0px",
+    padding: " 42px 10px 42px 0px" ,
+    // padding: "0px",
+    
   },
 
   [theme.breakpoints.down('sm')]: {
-    marginLeft: "40px",
+    marginLeft: "0px",
     padding: "0px",
     paddingRight:"0px",
   },
@@ -63,6 +64,9 @@ const WhatWrap = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down('xs')]: {
     marginLeft: "0px",
     padding: "0px",
+  },
+  [theme.breakpoints.down('769')]: {
+    paddingLeft:"22px"
   },
 }));
 
@@ -75,16 +79,18 @@ const Title = styled(Typography)(({ theme }) => ({
  
 
   [theme.breakpoints.down('xl')]: {
-    fontSize: '1.2em',
+    fontSize: '1em',
   },
 
   [theme.breakpoints.down('lg')]: {
     fontSize: '1em',
     
+    
   },
 
   [theme.breakpoints.down('md')]: {
     fontSize: '1em',
+    composes: 'custom-header-md'
     
   },
 
@@ -95,6 +101,7 @@ const Title = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down('xs')]: {
     fontSize: '1em',
   },
+ 
 }));
 
 
@@ -108,7 +115,7 @@ const TitleOne = styled(Typography)(({ theme }) => ({
 
 
   [theme.breakpoints.down('xl')]: {
-    fontSize: '1.2em',
+    fontSize: '1em',
   },
 
   [theme.breakpoints.down('lg')]: {
@@ -123,6 +130,7 @@ const TitleOne = styled(Typography)(({ theme }) => ({
 
   [theme.breakpoints.down('sm')]: {
     fontSize: '1em',
+    paddingLeft: "10px",
   },
 
   [theme.breakpoints.down('xs')]: {
@@ -147,28 +155,29 @@ const Header = styled(Typography)(({ theme }) => ({
   lineHeight: '46px',
 
   [theme.breakpoints.down('xl')]: {
-    fontSize: '2.5em',
+    fontSize: '2em',
     lineHeight: '36px',
   },
 
   [theme.breakpoints.down('lg')]: {
-    fontSize: '2.2em',
+   
     lineHeight: '32px',
+    padding:"0px 0px 0px 10px"
   },
 
   [theme.breakpoints.down('md')]: {
-    fontSize: '1.8em',
+   
     lineHeight: '28px',
     paddingLeft:"20px",
   },
 
   [theme.breakpoints.down('sm')]: {
-    fontSize: '1.6em',
+    
     lineHeight: '24px',
   },
 
   [theme.breakpoints.down('xs')]: {
-    fontSize: '1.4em',
+    
     lineHeight: '20px',
   },
 }));
@@ -223,6 +232,7 @@ const Desc = styled(Typography)(({ theme, showFullText }) => ({
   [theme.breakpoints.down('sm')]: {
     fontSize: '1.1em',
     lineHeight: '20px',
+    padding:"0px",
 
 
   },
@@ -242,7 +252,7 @@ const Oxbor = styled(Box)(({ theme }) => ({
     padding: "0px 100px 0px 170px", // Adjust padding for lg screens
   },
   [theme.breakpoints.down('md')]: {
-    padding: "0px 120px", // Adjust padding for md screens
+    padding: "0px 40px 0px 30px", // Adjust padding for md screens
   },
   [theme.breakpoints.down('sm')]: {
     padding: "0px 0px", // Adjust padding for sm screens
@@ -302,9 +312,9 @@ const Expectations = () => {
     <Container
     maxWidth='xl'
     >
-    <WhatWrap >
+    <WhatWrap className='whatWarp'>
    
-      <Header >What can you expect from <br/><span style={{color:"rgb(75,75,221)"}}>cooperation</span> with Solvd?</Header>
+      <Header >What can you expect from <br/><span style={{color:"rgb(75,75,221)"}}>cooperation</span> with Prehood?</Header>
       <TitleOne>Expertise, Solutions, Guidance.</TitleOne>
       <Box >
       <Container >
