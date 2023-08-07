@@ -2,7 +2,7 @@ import { Box, Container,  List, ListItem, ListItemText, Typography, keyframes, s
 import React from 'react';
 import { useState } from 'react';
 import "./expectations.css"
-import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
+import CircleIcon from '@mui/icons-material/Circle';
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
 
 
@@ -13,14 +13,14 @@ import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDown
 const ArrowButton = styled(KeyboardArrowDownOutlinedIcon)(({ arrowDirection }) => ({
   transform: arrowDirection ? 'rotate(180deg)' : 'rotate(0deg)',
   position: 'absolute',
-  right: '-40px',
-  bottom: '-30px',
+  right: '280px',
+  bottom: '-3px',
   display: { xs: 'block', sm: 'block', md: 'block' },
   border: '1px solid rgb(75, 75, 221)',
   height: '20px',
-  width: '20px',
+  width: '35px',
   borderRadius: '15px',
-  background: 'rgb(46, 234, 250)',
+  
   color: 'rgb(75, 75, 221)',
   cursor: 'pointer',
   transition: 'transform 0.3s ease',
@@ -31,18 +31,19 @@ const ArrowButton = styled(KeyboardArrowDownOutlinedIcon)(({ arrowDirection }) =
 
 const WhatWrap = styled(Box)(({ theme }) => ({
   marginTop: "100px",
-  padding: "42px",
+  padding: " 42px 77px",
+
 
   [theme.breakpoints.down('xl')]: {
-    marginLeft: "20px",
+    padding: " 42px 30px 42px 4.5%" ,
   },
 
   [theme.breakpoints.down('lg')]: {
-    marginLeft: "40px",
+    padding: " 42px 0px 42px 40px" ,
   },
 
   [theme.breakpoints.down('md')]: {
-    marginLeft: "10px",
+    padding: " 42px 80px 42px 60px" ,
     padding: "0px",
   },
 
@@ -59,16 +60,45 @@ const WhatWrap = styled(Box)(({ theme }) => ({
 }));
 
   
-
-
-
-
 const Title = styled(Typography)(({ theme }) => ({
   fontWeight: '600',
   marginBottom: '10px',
   fontSize: '1em', // You can use '1.5rem' for better responsiveness across different devices
-  color: 'rgb(75,75,221)',
+  color: 'rgb(75, 75, 221)',
+ 
+
+  [theme.breakpoints.down('xl')]: {
+    fontSize: '1.2em',
+  },
+
+  [theme.breakpoints.down('lg')]: {
+    fontSize: '1em',
+    
+  },
+
+  [theme.breakpoints.down('md')]: {
+    fontSize: '1em',
+    
+  },
+
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '1em',
+  },
+
+  [theme.breakpoints.down('xs')]: {
+    fontSize: '1em',
+  },
+}));
+
+
+
+const TitleOne = styled(Typography)(({ theme }) => ({
+  fontWeight: '600',
+  marginBottom: '10px',
+  fontSize: '1em', // You can use '1.5rem' for better responsiveness across different devices
+  color: 'rgb(75, 75, 221)',
   paddingLeft: "40px",
+
 
   [theme.breakpoints.down('xl')]: {
     fontSize: '1.2em',
@@ -159,13 +189,12 @@ const Desc = styled(Typography)(({ theme, showFullText }) => ({
   fontSize: '.8em',
   lineHeight: '24px',
   fontFamily: 'Archivo Narrow',
-  paddingLeft: '65px',
   overflow: 'hidden',
   textOverflow: 'ellipsis',
   display: '-webkit-box',
   WebkitLineClamp: showFullText ? 'none' : 2, // Show all lines if showFullText is true
   WebkitBoxOrient: 'vertical',
- 
+ paddingLeft:"53px",
 
   [theme.breakpoints.down('xl')]: {
     fontSize: '1.1em',
@@ -197,13 +226,30 @@ const Desc = styled(Typography)(({ theme, showFullText }) => ({
   },
 }));
 
-  
+const Oxbor = styled(Box)(({ theme }) => ({
+  padding: "0 335px",
+  [theme.breakpoints.down('xl')]: {
+    padding: "0 335px", // Keep the same padding for xl screens
+  },
+  [theme.breakpoints.down('lg')]: {
+    padding: "0px 100px 0px 200px", // Adjust padding for lg screens
+  },
+  [theme.breakpoints.down('md')]: {
+    padding: "0px 100px", // Adjust padding for md screens
+  },
+  [theme.breakpoints.down('sm')]: {
+    padding: "0px 20px", // Adjust padding for sm screens
+  },
+  [theme.breakpoints.down('xs')]: {
+    padding: "0px 10px", // Adjust padding for xs screens
+  },
+}));
+
 
 
 
 
  
-
 
 const Expectations = () => {
     
@@ -252,14 +298,14 @@ const Expectations = () => {
     <WhatWrap >
    
       <Header >What can you expect from <br/><span style={{color:"rgb(75,75,221)"}}>cooperation</span> with Solvd?</Header>
-      <Title sx={{opacity:".5", fontWeight:"normal" ,display:"flex", paddingLeft:{sm:"40px", md:"100px",lg:"100px"}}}>Expertise, Solutions, Guidance.</Title>
-      <Box sx={{display:"flex", justifyContent:"center", padding:{xs:"0px 30px 0px 0px", sm:"0px 100px 0px 100px", md:"0px 100px 0px 200px", lg:"0px 100px 0px 200px"}, marginLeft:{sm:"0px", md:"0px",lg:"100px"}}}>
+      <TitleOne>Expertise, Solutions, Guidance.</TitleOne>
+      <Box >
       <Container >
         {items.map((item) => (
-          <Box key={item.id} sx={{position:"relative"}}>
-            <span style={{display:"flex"}}>
-            <ExpandCircleDownIcon
-             sx={{padding:" 0 0px 0 0", color:"rgb(75,75,221)"}}/><Title >{item.title}</Title>
+          <Oxbor key={item.id} sx={{position:"relative"}}>
+            <span style={{display:"flex", gap:"30px"}}>
+            <CircleIcon
+             sx={{padding:" 0 0px 0 0", height:"12px", width:"12px", color:"rgb(75,75,221)", border:"5px solid white", borderRadius:"30px"}}/><Title >{item.title}</Title>
             </span>
            
             <Desc
@@ -268,7 +314,7 @@ const Expectations = () => {
                 arrowDirection={arrowDirection}
                 onClick={toggleShowFullText}
               />
-          </Box>
+          </Oxbor>
         ))}
       </Container >
       </Box>
