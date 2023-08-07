@@ -8,42 +8,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const MainContainer = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent:"flex-start",
-  padding: '100px 30px 100px 50px',
-  gap:"100px",
-  overflow:"hidden",
-  
 
-
-  // Responsive styles using Material-UI breakpoints
-  [theme.breakpoints.down('lg')]: {
-    gap:"15px",
-    
-    // paddingTop: '100px',
-    // flexDirection: 'column', // Stack elements vertically on small screens
-    // textAlign: 'center', // Center text on small screens
-  },
-  [theme.breakpoints.down('md')]: {
-    gap:"10px",
-    padding: '100px 5px 80px 70px',
-    // paddingTop: '100px',
-    flexDirection: 'column', // Stack elements vertically on small screens
-    textAlign: 'center', // Center text on small screens
-  },
- 
- 
-  [theme.breakpoints.down('sm')]: {
-    // paddingTop: '10px',
-    justifyContent:"flex-start",
-    marginRight:"20px",
-    // flexDirection: 'column', // Stack elements vertically on small screens
-    textAlign: 'center', // Center text on small screens
-    marginLeft:"-35px",
-  },
-}));
 
 const StyledCardContent = styled(CardContent)(({ theme }) => ({
   // width: '50%',
@@ -113,7 +78,7 @@ const Header = styled(Typography)(({ theme }) => ({
   fontWeight: '900',
   justifyContent: 'center',
   marginBottom: '30px',
-  fontSize: '2.5em',
+  fontSize: '2em',
   paddingTop: '10px',
  
   fontFamily: '"Tiempos Headline", serif',
