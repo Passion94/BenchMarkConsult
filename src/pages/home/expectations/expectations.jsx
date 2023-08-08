@@ -250,7 +250,7 @@ const Desc = styled(Typography)(({ theme, showFullText }) => ({
   display: '-webkit-box',
   WebkitLineClamp: showFullText ? 'none' : 2, // Show all lines if showFullText is true
   WebkitBoxOrient: 'vertical',
- paddingLeft:"53px",
+ paddingLeft:"38px",
 
   [theme.breakpoints.down('xl')]: {
     fontSize: '1.1em',
@@ -324,27 +324,27 @@ const Expectations = () => {
       title: 'Honesty and respect for your opinion',
       description: 'Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are. Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are',
     },
-    // {
-    //     id: 2,
-    //     title: 'Honesty and respect for your opinion',
-    //     description: 'Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are.',
-    //   },
-    //   {
-    //     id: 3,
-    //     title: 'Honesty and respect for your opinion',
-    //     description: 'Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are.',
-    //   },
-    //   {
-    //     id: 4,
-    //     title: 'Honesty and respect for your opinion',
-    //     description: 'Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are.',
-    //   },
-    //   {
-    //     id: 5,
-    //     title: 'Honesty and respect for your opinion',
-    //     description: 'Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are.',
-    //   },
-    // Add other items as needed
+    {
+        id: 2,
+        title: 'Honesty and respect for your opinion',
+        description: 'Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are.',
+      },
+      {
+        id: 3,
+        title: 'Honesty and respect for your opinion',
+        description: 'Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are.',
+      },
+      {
+        id: 4,
+        title: 'Honesty and respect for your opinion',
+        description: 'Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are.',
+      },
+      {
+        id: 5,
+        title: 'Honesty and respect for your opinion',
+        description: 'Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are.',
+      },
+   
   ];
 
   return (
