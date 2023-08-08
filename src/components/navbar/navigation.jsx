@@ -13,6 +13,8 @@ const StyledLink = styled(Link)(({ to }) => ({
   color:  'rgb(8,16,103)',
   height: "40px",
   color: to === "/contact" ? 'red' : 'rgb(8,16,103)',
+  fontWeight: to === "/contact" ? '900' : '700',
+  
   // backgroundColor: to === "/contact" ? 'rgb(46,234,250)' : 'transparent',
   
   padding: to === "/contact" ? '20px 20px' : '0px',

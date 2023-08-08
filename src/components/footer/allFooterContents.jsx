@@ -6,7 +6,7 @@ export const AllFooterContents = () => {
   return (
     <div>
          <FooterJoin/>
-        <Footer/>
+        {/* <Footer/> */}
        
     </div>
   )

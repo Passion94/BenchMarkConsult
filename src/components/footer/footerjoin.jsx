@@ -40,26 +40,27 @@ const StyledButton = styled('button')(({ theme }) => ({
 const Desc = styled(Typography)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
+  justifyContent:"center",
   color: 'rgb(8, 16, 103)',
-  fontSize: 'clamp(16px, 5vw, 44px)',
+  fontSize: '1.5em',
   fontWeight: 600,
   marginBottom: '50px',
   lineHeight: '36px',
   wordSpacing: '0.2em',
   fontFamily: '"Tiempos Headline", serif',
   paddingTop: '10px',
-  padding: '0 150px 0 100px',
+ 
   [theme.breakpoints.down('lg')]: {
-    fontSize: 'clamp(16px, 6vw, 38px)',
-    padding: '0 100px 0 80px',
+   
+   
   },
   [theme.breakpoints.down('md')]: {
-    fontSize: 'clamp(16px, 7vw, 32px)',
-    padding: '0 50px 0 60px',
+   
+   
   },
   [theme.breakpoints.down('sm')]: {
-    fontSize: 'clamp(16px, 9vw, 26px)',
-    padding: '0 30px 0 40px',
+    fontSize: '1em',
+    // padding: '0 30px 0 40px',
   },
   [theme.breakpoints.down('xs')]: {
     fontSize: 'clamp(16px, 10vw, 20px)',
