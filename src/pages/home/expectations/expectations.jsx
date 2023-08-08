@@ -17,19 +17,24 @@ const ArrowButton = styled(KeyboardArrowDownOutlinedIcon)(({theme, arrowDirectio
   bottom: '-3px',
   display: 'block', // Display is already defined based on breakpoints
   border: '1px solid rgb(75, 75, 221)',
-  height: '20px',
-  width: '35px',
+  height: '15px',
+  width: '30px',
   borderRadius: '15px',
   color: 'rgb(75, 75, 221)',
   cursor: 'pointer',
-  transition: 'transform 0.3s ease',
+  // transition: 'transform 0.3s ease',
   [theme.breakpoints.down('lg')]: {
     right: '5%',
   },
   [theme.breakpoints.down('md')]: {
-    right: '5%',
+    right: '0%',
   },
- 
+  [theme.breakpoints.down('sm')]: {
+    right: '2%',
+  },
+  [theme.breakpoints.down('xs')]: {
+    right: '3%',
+  },
 }));
 
 
@@ -38,15 +43,15 @@ const ArrowButton = styled(KeyboardArrowDownOutlinedIcon)(({theme, arrowDirectio
 
 const WhatWrap = styled(Box)(({ theme }) => ({
   marginTop: "100px",
-  padding: " 42px 77px",
+  padding: " 42px 5.9%",
 
-
+ 
   [theme.breakpoints.down('xl')]: {
-    padding: " 42px 30px 42px 4.3%" ,
+    padding: " 42px 30px 42px 0%" ,
   },
 
   [theme.breakpoints.down('lg')]: {
-    padding: " 42px 30px 42px 2%px" ,
+    padding: " 42px 30px 42px 0%px" ,
   },
 
   [theme.breakpoints.down('md')]: {
@@ -56,7 +61,7 @@ const WhatWrap = styled(Box)(({ theme }) => ({
   },
 
   [theme.breakpoints.down('sm')]: {
-    marginLeft: "0px",
+    marginLeft: "-30px",
     padding: "0px",
     paddingRight:"0px",
   },
@@ -65,8 +70,34 @@ const WhatWrap = styled(Box)(({ theme }) => ({
     marginLeft: "0px",
     padding: "0px",
   },
+  [theme.breakpoints.down('3201')]: {
+    paddingLeft: " 6%" ,
+  },
+  [theme.breakpoints.down('1921')]: {
+    paddingLeft: " 5%" ,
+  },
+  [theme.breakpoints.down('1367')]: {
+    paddingLeft: " 4.3%" ,
+  },
+  [theme.breakpoints.down('1281')]: {
+    paddingLeft: " 4%" ,
+  },
+  [theme.breakpoints.down('1025')]: {
+    paddingLeft: " 1%" ,
+  },
+  [theme.breakpoints.down('913')]: {
+    paddingLeft: " 4%" ,
+  },
+  [theme.breakpoints.down('821')]: {
+    paddingLeft: " 0px" ,
+  },
   [theme.breakpoints.down('769')]: {
-    paddingLeft:"22px"
+    paddingLeft:"22px",
+    
+  },
+  [theme.breakpoints.down('361')]: {
+    paddingLeft:"25px",
+    
   },
 }));
 
@@ -90,12 +121,13 @@ const Title = styled(Typography)(({ theme }) => ({
 
   [theme.breakpoints.down('md')]: {
     fontSize: '1em',
-    composes: 'custom-header-md'
+    // composes: 'custom-header-md'
     
   },
 
   [theme.breakpoints.down('sm')]: {
     fontSize: '1em',
+    lineHeight:"36px",
   },
 
   [theme.breakpoints.down('xs')]: {
@@ -108,10 +140,11 @@ const Title = styled(Typography)(({ theme }) => ({
 
 const TitleOne = styled(Typography)(({ theme }) => ({
   fontWeight: '600',
-  marginBottom: '10px',
+  marginBottom: '20px',
   fontSize: '1em', // You can use '1.5rem' for better responsiveness across different devices
   color: 'rgb(75, 75, 221)',
-  paddingLeft: "40px",
+  paddingLeft: "20%",
+  opacity: ".5",
 
 
   [theme.breakpoints.down('xl')]: {
@@ -126,11 +159,12 @@ const TitleOne = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down('md')]: {
     fontSize: '1em',
     paddingLeft: "40px",
+    paddingLeft: "20%",
   },
 
   [theme.breakpoints.down('sm')]: {
     fontSize: '1em',
-    paddingLeft: "10px",
+    paddingLeft: "7%",
   },
 
   [theme.breakpoints.down('xs')]: {
@@ -149,7 +183,7 @@ const Header = styled(Typography)(({ theme }) => ({
   paddingTop: '10px',
   lineHeight: '26px',
   fontFamily: '"Tiempos Headline", serif',
-  
+  paddingRight:"60%",
   fontStyle: 'normal',
   
   lineHeight: '46px',
@@ -160,20 +194,26 @@ const Header = styled(Typography)(({ theme }) => ({
   },
 
   [theme.breakpoints.down('lg')]: {
-   
+    
     lineHeight: '32px',
-    padding:"0px 0px 0px 10px"
+    padding:"0px 0px 0px 10px",
+    paddingRight:"45%",
+    paddingLeft:"3.3%",
   },
 
   [theme.breakpoints.down('md')]: {
    
     lineHeight: '28px',
     paddingLeft:"20px",
+    paddingRight:"10%",
   },
 
   [theme.breakpoints.down('sm')]: {
     
-    lineHeight: '24px',
+    lineHeight: '36px',
+    paddingRight:"10px",
+    paddingRight:"20%",
+    paddingRight:"5%",
   },
 
   [theme.breakpoints.down('xs')]: {
@@ -232,7 +272,7 @@ const Desc = styled(Typography)(({ theme, showFullText }) => ({
   [theme.breakpoints.down('sm')]: {
     fontSize: '1.1em',
     lineHeight: '20px',
-    padding:"0px",
+    padding:" 0 35px 0 33px",
 
 
   },
@@ -314,13 +354,13 @@ const Expectations = () => {
     >
     <WhatWrap className='whatWarp'>
    
-      <Header >What can you expect from <br/><span style={{color:"rgb(75,75,221)"}}>cooperation</span> with Prehood?</Header>
+      <Header >What can you expect from <span style={{color:"rgb(75,75,221)"}}>cooperation</span> with Prehood?</Header>
       <TitleOne>Expertise, Solutions, Guidance.</TitleOne>
       <Box >
       <Container >
         {items.map((item) => (
           <Oxbor key={item.id} sx={{position:"relative"}}>
-            <span style={{display:"flex", gap:"30px"}}>
+            <span style={{display:"flex", gap:"3%"}}>
             <CircleIcon
              sx={{padding:" 0 0px 0 0", height:"12px", width:"12px", color:"rgb(75,75,221)", border:"5px solid white", borderRadius:"30px"}}/><Title >{item.title}</Title>
             </span>
