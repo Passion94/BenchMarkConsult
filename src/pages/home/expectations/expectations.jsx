@@ -9,6 +9,45 @@ import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDown
 
 
 
+const items = [
+  {
+    id: 1,
+    title: 'Honesty and respect for your opinion',
+    description: 'Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are. Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are',
+  },
+
+  {
+    id: 2,
+    title: 'Honesty and respect for your opinion',
+    description: 'Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are. Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are',
+  },
+  {
+    id: 3,
+    title: 'Honesty and respect for your opinion',
+    description: 'Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are. Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are',
+  },
+  {
+    id: 4,
+    title: 'Honesty and respect for your opinion',
+    description: 'Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are. Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are',
+  },
+  {
+    id: 5,
+    title: 'Honesty and respect for your opinion',
+    description: 'Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are. Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are',
+  },
+  {
+    id: 6,
+    title: 'Honesty and respect for your opinion',
+    description: 'Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are. Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are',
+  },
+];
+
+
+
+
+
+
 
 const ArrowButton = styled(KeyboardArrowDownOutlinedIcon)(({theme, arrowDirection }) => ({
   transform: arrowDirection ? 'rotate(180deg)' : 'rotate(0deg)',
@@ -308,45 +347,24 @@ const Oxbor = styled(Box)(({ theme }) => ({
 
  
 
+
 const Expectations = () => {
     
-  const [showFullText, setShowFullText] = useState(false);
-  const [arrowDirection, setArrowDirection] = useState(false);
-
-  const toggleShowFullText = () => {
-    setShowFullText((prev) => !prev);
-    setArrowDirection((prev) => !prev);
+  // const [showFullText, setShowFullText] = useState(false);
+  // const [arrowDirection, setArrowDirection] = useState(false);
+  const [openStates, setOpenStates] = useState(new Array(items.length).fill(false));
+  const toggleShowFullText = (index) => {
+    setOpenStates((prevStates) =>
+      prevStates.map((prevState, i) => (i === index ? !prevState : false))
+    );
   };
-  
-  const items = [
-    {
-      id: 1,
-      title: 'Honesty and respect for your opinion',
-      description: 'Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are. Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are',
-    },
-    {
-        id: 2,
-        title: 'Honesty and respect for your opinion',
-        description: 'Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are.',
-      },
-      {
-        id: 3,
-        title: 'Honesty and respect for your opinion',
-        description: 'Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are.',
-      },
-      {
-        id: 4,
-        title: 'Honesty and respect for your opinion',
-        description: 'Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are.',
-      },
-      {
-        id: 5,
-        title: 'Honesty and respect for your opinion',
-        description: 'Solvd software engineering company keeps workflows transparent to our clients and we appreciate and listen to our clients opinions. Throughout all phases of a project, well keep you updated on the decisions we make, so youre involved in the process every step of the way, and from wherever you are.',
-      },
-   
-  ];
 
+  // const toggleShowFullText = () => {
+  //   setShowFullText((prev) => !prev);
+  //   setArrowDirection((prev) => !prev);
+  // };
+  
+ 
   return (
     <Box>
     <Container
@@ -357,20 +375,27 @@ const Expectations = () => {
       <Header >What can you expect from <span style={{color:"rgb(75,75,221)"}}>cooperation</span> with Prehood?</Header>
       <TitleOne>Expertise, Solutions, Guidance.</TitleOne>
       <Box >
-      <Container >
-        {items.map((item) => (
-          <Oxbor key={item.id} sx={{position:"relative"}}>
-            <span style={{display:"flex", gap:"3%"}}>
-            <CircleIcon
-             sx={{padding:" 0 0px 0 0", height:"12px", width:"12px", color:"rgb(75,75,221)", border:"5px solid white", borderRadius:"30px"}}/><Title >{item.title}</Title>
+      <Container>
+              {items.map((item, index) => (
+                <Oxbor key={item.id} sx={{ position: "relative" }}>
+                  <span style={{ display: "flex", gap: "3%" }}>
+                    <CircleIcon
+                      sx={{
+                        padding: "0 0px 0 0",
+                        height: "12px",
+                        width: "12px",
+                        color: "rgb(75,75,221)",
+                        border: "5px solid white",
+                        borderRadius: "30px",
+                      }}
+                    />
+             <Title >{item.title}</Title>
             </span>
-           
-            <Desc
-              showFullText={showFullText}>{item.description}</Desc>
-              <ArrowButton
-                arrowDirection={arrowDirection}
-                onClick={toggleShowFullText}
-              />
+            <Desc showFullText={openStates[index]}>{item.description}</Desc>
+                  <ArrowButton
+                    arrowDirection={openStates[index]}
+                    onClick={() => toggleShowFullText(index)}
+                  />
           </Oxbor>
         ))}
       </Container >
