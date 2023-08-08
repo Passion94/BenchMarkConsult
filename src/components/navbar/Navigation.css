@@ -58,6 +58,7 @@
   display: none;
   z-index: 1;
   width: 40%;
+  height: 1500px;
  border-radius: 5px;
   /* height: 800px; */
 }
