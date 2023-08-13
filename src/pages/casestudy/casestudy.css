@@ -1,0 +1,31 @@
+.caseImage{
+
+border-right:10px solid white;
+width: 100%;
+}
+
+
+@media (max-width: 1024px) {
+    
+
+    .caseImage{
+        height: 340px;
+        
+        width: 90%;
+        }
+        
+
+    }
+    @media (max-width: 912px) {
+    
+
+        .caseImage{
+            height: 400px;
+            
+            width: 100%;
+            border: none;
+            }
+            
+    
+        }
+  

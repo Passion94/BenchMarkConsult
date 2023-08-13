@@ -81,7 +81,7 @@ const ArrowButton = styled(KeyboardArrowDownOutlinedIcon)(({theme, arrowDirectio
 
 
 const WhatWrap = styled(Box)(({ theme }) => ({
-  marginTop: "100px",
+  marginTop: "50px",
   padding: " 42px 5.9%",
 
  
@@ -219,7 +219,7 @@ const Header = styled(Typography)(({ theme }) => ({
   fontWeight: '900',
   marginBottom: '30px',
   fontSize: '2em',
-  paddingTop: '10px',
+  // paddingTop: '10px',
   lineHeight: '26px',
   fontFamily: '"Tiempos Headline", serif',
   paddingRight:"60%",
@@ -366,7 +366,7 @@ const Expectations = () => {
   
  
   return (
-    <Box>
+    <Box >
     <Container
     maxWidth='xl'
     >
