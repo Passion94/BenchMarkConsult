@@ -67,13 +67,7 @@ const ContentContainer = styled(Container)(({ theme }) => ({
     borderRight: "10px solid rgb(46, 234, 250)",
     
   },
-  [theme.breakpoints.down("913")]: {
-  display:"block",
-  width:"86%",
-  marginLeft: "7.3%",
-  paddingTop:"30px",
-  paddingBottom:"30px",
-  },
+ 
   [theme.breakpoints.down("913")]: {
     display:"block",
     width:"86%",
@@ -155,6 +149,74 @@ const ContentContainer = styled(Container)(({ theme }) => ({
 
 
 
+const Title = styled(Typography)(({ theme }) => ({
+  fontWeight: 900,
+  paddingLeft:"4.9%",
+  justifyContent: 'center',
+  marginBottom: '70px',
+  fontSize: '2em',
+  color: 'rgb(8, 16, 103)',
+  [theme.breakpoints.down('md')]: {
+    fontSize: '2em',
+    paddingLeft:"150px",
+  },
+  [theme.breakpoints.down('sm')]: {
+    // fontSize: '1em',
+    // marginLeft:"-10px",
+    // paddingLeft:"0px",
+   
+  },
+  [theme.breakpoints.down('1367')]: {
+    paddingLeft:"4.6%",
+   
+  },
+  [theme.breakpoints.down('1281')]: {
+    paddingLeft:"3.8%",
+   
+  },
+  [theme.breakpoints.down('1025')]: {
+    paddingLeft:"4.2%",
+   
+  },
+  [theme.breakpoints.down('913')]: {
+    paddingLeft:"7.5%",
+   
+  },
+  [theme.breakpoints.down('821')]: {
+    paddingLeft:"2.4%",
+   
+  },
+  [theme.breakpoints.down('810')]: {
+    paddingLeft:"2.4%",
+   
+  },
+  [theme.breakpoints.down('769')]: {
+    paddingLeft:"6.3%",
+   
+  },
+  [theme.breakpoints.down('641')]: {
+    paddingLeft:"3%",
+   
+  },
+  [theme.breakpoints.down('602')]: {
+    paddingLeft:"7.2%",
+   
+  },
+    [theme.breakpoints.down('541')]: {
+    paddingLeft:"3.5%",
+   
+  }
+  ,
+    [theme.breakpoints.down('415')]: {
+    paddingLeft:"4.2%",
+   
+  }
+  ,
+    [theme.breakpoints.down('376')]: {
+    paddingLeft:"4.8%",
+   
+  }
+}));
 
 
 
@@ -313,8 +375,12 @@ export const Casestudy = () => {
       <Container
       maxWidth="xl"
       >
+        
+        <Title> Check our Case studies</Title>
         <ContentContainer>
+        
         <SecContentContainer>
+         
       <Header> Structural development and system analytics</Header>
       <Desc> Structural development and system analytics
           Structural development and system analytics</Desc>
