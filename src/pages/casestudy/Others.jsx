@@ -173,29 +173,35 @@ const BoxOne = styled(Box)(({ theme }) => ({
       fontWeight: '600',
       marginBottom: '30px',
       fontSize: '1em',
-      lineHeight: '24px',
-      padding:"15px 10px",
+      lineHeight: '20px',
+      padding:"15px 15px",
       fontFamily: 'Archivo Narrow',
+      [theme.breakpoints.down('1025')]: {
+        lineHeight:"30px",
+        padding:"20px",
+    
+         },
       [theme.breakpoints.down('913')]: {
         fontSize: '.95em',
-    
+        padding:"10px",
          },
          [theme.breakpoints.down('801')]: {
           fontSize: '1.5em',
-          lineHeight:"36px",
+         lineHeight:"36px",
           padding:"20px 15px",
       
            },
            [theme.breakpoints.down('602')]: {
             fontSize: '1em',
-            lineHeight:"36px",
-            padding:"15px 20px",
+            lineHeight:"30px",
+            
+           
         
              },
              [theme.breakpoints.down('415')]: {
               fontSize: '1em',
               lineHeight:"24px",
-              padding:"5px 10px",
+              padding:"10px 10px",
           
                },
 
