@@ -369,6 +369,130 @@ const Header = styled(Typography)(({ theme }) => ({
     },
   }));
 
+
+
+
+
+
+  const CaseStudyTwo= styled(Box)(({ theme }) => ({
+   display:"flex",
+   flexWrap:"wrap",
+   alignItems:"center",
+   justifyContent:"center",
+    columnGap:"47px",
+    marginTop:"70px",
+     marginLeft:"-110px",
+     [theme.breakpoints.down('1441')]: {
+      marginLeft:"-10px",
+      columnGap:"50px",
+    },
+     [theme.breakpoints.down('1367')]: {
+      marginLeft:"45px",
+      columnGap:"50px",
+  
+    },
+   
+    
+    [theme.breakpoints.down('1281')]: {
+     marginLeft:"19px",
+     gap:"5px",
+    
+ 
+   },
+   [theme.breakpoints.down('1025')]: {
+    marginLeft:"53px",
+   columnGap:"70px",
+   rowGap:"80px"
+   
+
+  },
+  [theme.breakpoints.down('913')]: {
+    marginLeft:"24px",
+   columnGap:"47px",
+   rowGap:"80px"
+   
+
+  },
+ 
+  [theme.breakpoints.down('811')]: {
+    marginLeft:"8px",
+   columnGap:"25px",
+   rowGap:"90px"
+   
+
+  },
+
+  [theme.breakpoints.down('801')]: {
+    marginLeft:"20px",
+   columnGap:"0px",
+   rowGap:"90px"
+   
+
+  },
+
+  [theme.breakpoints.down('769')]: {
+    marginLeft:"105px",
+   columnGap:"0px",
+   rowGap:"90px"
+   
+
+  },
+  [theme.breakpoints.down('713')]: {
+    marginLeft:"140px",
+   columnGap:"0px",
+   rowGap:"90px"
+   
+
+  },
+  [theme.breakpoints.down('641')]: {
+    marginLeft:"130px",
+    columnGap:"0px",
+    rowGap:"90px"
+
+     },
+
+  [theme.breakpoints.down('602')]: {
+    marginLeft:"60px",
+   columnGap:"0px",
+   rowGap:"90px"
+   
+
+  },
+  [theme.breakpoints.down('541')]: {
+    marginLeft:"78px",
+   columnGap:"0px",
+   rowGap:"90px"
+   
+
+  },
+
+  [theme.breakpoints.down('415')]: {
+    marginLeft:"50px",
+    columnGap:"0px",
+    rowGap:"90px"
+
+     },
+
+     [theme.breakpoints.down('394')]: {
+      marginLeft:"20px",
+      columnGap:"0px",
+      rowGap:"90px"
+  
+       },
+     [theme.breakpoints.down('391')]: {
+      marginLeft:"25px",
+      columnGap:"0px",
+      rowGap:"90px"
+  
+       },
+       [theme.breakpoints.down('376')]: {
+        marginLeft:"19px",
+        columnGap:"0px",
+        rowGap:"90px"
+    
+         },
+  }))
+
 export const Casestudy = () => {
   return (
     <Box sx={{marginTop:"150px"}}>
@@ -393,12 +517,12 @@ export const Casestudy = () => {
            src='https://media.istockphoto.com/id/511061090/photo/business-office-building-in-london-england.jpg?s=612x612&w=0&k=20&c=nYAn4JKoCqO1hMTjZiND1PAIWoABuy1BwH1MhaEoG6w='/>
         
         </ContentContainer>
-        <Box sx={{display:"flex", gap:"50px", marginLeft:"60px"}}>
+        <CaseStudyTwo>
         <Others/>
         <Others/>
         <Others/>
         
-        </Box>
+        </CaseStudyTwo>
         </Container>
        
     </Box>
