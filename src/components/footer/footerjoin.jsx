@@ -9,7 +9,7 @@ import React from 'react'
 const StyledButton = styled('button')(({ theme }) => ({
   border: '0px',
   marginTop: '10px',
-  color: 'rgb(8,16,103)', 
+  color: 'white', 
   fontSize: '.8em',
   fontWeight: '900',
   fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
@@ -17,7 +17,7 @@ const StyledButton = styled('button')(({ theme }) => ({
   textDecoration: 'none',
   textTransform: 'uppercase',
   padding: '16px 22px',
-  backgroundColor: 'rgb(46,234,250)',
+  backgroundColor: '#00CC66',
   outline: '0px',
   transition: 'all 0.3s ease 0s',
 

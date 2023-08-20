@@ -173,7 +173,7 @@ const StyledButton = styled('button')(({ theme }) => ({
   
   marginTop: '10px',
   color:'white',
-  fontSize: '.8em',
+  fontSize: '.9em',
   fontWeight: '900',
   fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
   lineHeight: '17px',
