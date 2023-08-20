@@ -18,6 +18,8 @@ const Title = styled(Typography)(({ theme }) => ({
   marginBottom: '30px',
   fontSize: '1em',
   zIndex:"1",
+  fontStyle: "normal",
+  textTransform:"uppercase",
   position:'relative',
   fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
  
@@ -76,10 +78,10 @@ const Header = styled(Typography)(({ theme }) => ({
 const Desc = styled(Typography)(({ theme }) => ({
   color: 'white',
   
-  fontWeight:"400",
+  fontWeight:"500",
   marginBottom: '30px',
-  fontSize: '1.5em',
-  lineHeight: '36px',
+  fontSize: '1.2em',
+  lineHeight: '46px',
   fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
   padding:" 0 355px 0 0",
   zIndex:"1",
@@ -115,6 +117,13 @@ const Desc = styled(Typography)(({ theme }) => ({
     justifyContent:"center",
     marginLeft:"0px"
   },
+  [theme.breakpoints.down('415')]: {
+    
+    fontSize:".9em",
+
+    
+  },
+ 
 }));
 
 const StyledButton = styled('button')(({ theme }) => ({

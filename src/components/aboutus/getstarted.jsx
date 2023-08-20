@@ -51,6 +51,8 @@ const Title = styled(Typography)(({ theme }) => ({
   marginBottom: '30px',
   fontSize: '1em',
   color: 'black',
+  fontStyle:"normal",
+  textTransform:"uppercase",
   [theme.breakpoints.down('md')]: {
     fontSize: '1.5em',
     paddingLeft:"14px",
@@ -72,13 +74,13 @@ const Header = styled(Typography)(({ theme }) => ({
 
   justifyContent: 'center',
   marginBottom: '30px',
-  fontSize: '2em',
+  fontSize: '2.5em',
   paddingTop: '10px',
  
   fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
   
   fontStyle: "normal",
-  textTransform:"uppercase",
+  textTransform:"initial",
   lineHeight:"46px",
  
  
@@ -122,9 +124,9 @@ const Header = styled(Typography)(({ theme }) => ({
 const Desc = styled(Typography)(({ theme }) => ({
   color:'black',
   width:"100%",
-  fontWeight:"400",
+  fontWeight:"500",
   marginBottom: '30px',
-  fontSize: '1.5em',
+  fontSize: '1.2em',
   lineHeight: '46px',
   fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
   // opacity: '0.7',

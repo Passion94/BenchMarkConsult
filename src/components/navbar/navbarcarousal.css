@@ -288,7 +288,7 @@ background-size: cover;
   .slideBackground{
     padding-top: 9%;
     height: 600px;
-   
+   padding-left: 69px;
     position: relative;
     
   }
