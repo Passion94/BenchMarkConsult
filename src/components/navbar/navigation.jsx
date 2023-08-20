@@ -44,7 +44,7 @@ const ContactLink = styled(Link)(({ to }) => ({
   fontWeight: "700",
   color:"white",
   
-  background:"linear-gradient(to right, rgb(8, 16, 103), rgb(46, 234, 250))" ,
+  background:"#00CC66",
   fontSize: "1em",
   fontWeight: "700",
   textTransform: "uppercase",

@@ -1,0 +1,36 @@
+.slider{
+    position:relative; 
+    top:44px;
+     left:-70px;
+     
+}
+
+.caseslideimg{
+   width:460px;
+    height:345px;
+}
+
+@media (max-width: 1024px) {
+    .slider{
+        
+        position:relative; 
+    top:0px;
+     left:0px;
+        }
+       
+}
+@media (max-width: 601px) {
+    .caseslideimg{
+        width:360px;
+         height:245px;
+     }
+       
+}
+
+@media (max-width: 393px) {
+    .caseslideimg{
+        width:320px;
+         height:225px;
+     }
+       
+}

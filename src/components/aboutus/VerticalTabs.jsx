@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import Radio from '@mui/material/Radio';
 import { styled } from '@mui/material';
 import "./verticaltabs.css";
+import { blue, green } from '@mui/material/colors';
 
 
 
@@ -171,6 +172,9 @@ function VerticalTabs() {
           label={
             <Box display="flex" alignItems="center" sx={{paddingBottom:"0px"}} >
               <Radio checked={value === 0} sx={{marginLeft:"-36px",  color:"white",
+              '&.Mui-checked': {
+                color: green[500], // Change the color when checked to green[500]
+              },
              '@media (max-width: 641px)': {
               marginLeft:"0px"
             }
@@ -184,7 +188,11 @@ function VerticalTabs() {
         
           label={
             <Box display="flex" alignItems="center" sx={{paddingBottom:"10px"}} >
-              <Radio checked={value === 1}  sx={{marginLeft:"0px",  color:"white"}} />
+              <Radio checked={value === 1}  sx={{marginLeft:"0px",  color:"white",
+            '&.Mui-checked': {
+              color: green[500], // Change the color when checked to green[500]
+            },
+            }} />
               <RadioText>System Analysis and Design</RadioText>
             </Box>
           }
@@ -194,6 +202,9 @@ function VerticalTabs() {
           label={
             <Box display="flex" alignItems="center" sx={{paddingBottom:"10px"}}  >
               <Radio checked={value === 2}  sx={{marginLeft:"-50px",  color:"white",
+              '&.Mui-checked': {
+                color: green[500], // Change the color when checked to green[500]
+              },
             '@media (max-width: 641px)': {
               marginLeft:"0px"
             }
@@ -208,6 +219,9 @@ function VerticalTabs() {
           label={
             <Box display="flex" alignItems="center" sx={{paddingBottom:"10px"}} >
               <Radio checked={value === 3} sx={{marginLeft:"-104px", color:"white",
+              '&.Mui-checked': {
+                color: green[500], // Change the color when checked to green[500]
+              },
             '@media (max-width: 641px)': {
               marginLeft:"0px"
             }

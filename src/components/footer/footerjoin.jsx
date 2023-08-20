@@ -7,16 +7,16 @@ import React from 'react'
 
 
 const StyledButton = styled('button')(({ theme }) => ({
-  border: '1px solid rgb(75,75,221) ',
+  border: '0px',
   marginTop: '10px',
   color: 'rgb(8,16,103)', 
-  fontSize: '1em',
+  fontSize: '.8em',
   fontWeight: '900',
   fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
   lineHeight: '17px',
   textDecoration: 'none',
   textTransform: 'uppercase',
-  padding: '16px 20px',
+  padding: '16px 22px',
   backgroundColor: 'rgb(46,234,250)',
   outline: '0px',
   transition: 'all 0.3s ease 0s',

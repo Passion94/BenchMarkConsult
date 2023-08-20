@@ -4,7 +4,9 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './navbarcarousal.css';
-import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
+
+import CircleIcon from '@mui/icons-material/Circle';
+
 
 
 
@@ -39,13 +41,13 @@ const Header = styled(Typography)(({ theme }) => ({
   fontWeight: '900',
   justifyContent: 'center',
   marginBottom: '30px',
-  fontSize: '2em',
+  fontSize: '2.5em',
   paddingTop: '10px',
   lineHeight:"46px",
   fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
   fontWeight: "normal",
   fontStyle: "normal",
-  textTransform:"uppercase",
+  textTransform:"initial",
   zIndex:"1",
   position:'relative',
  
@@ -129,13 +131,14 @@ const Desc = styled(Typography)(({ theme }) => ({
 const StyledButton = styled('button')(({ theme }) => ({
   border: '1px solid white',
   marginTop: '10px',
+  borderRadius:'3px',
   color: 'rgb(46,234,250)',
   fontSize: '.8em',
   fontWeight: '900',
   lineHeight: '17px',
   textDecoration: 'none',
   textTransform: 'uppercase',
-  padding: '16px 20px',
+  padding: '16px 22px',
   backgroundColor: 'transparent',
   outline: '0px',
   transition: 'all 0.3s ease 0s',
@@ -268,12 +271,26 @@ const NavbarCarousal = () => {
       <Desc variant="body1">{slide.description}</Desc>
       {slide.subcategory && (
         <Box sx={{paddingLeft:"5%"}}>
-          <Desc><span style={{display:"flex", alignItems:"center", gap:"1%"}}><KeyboardDoubleArrowDownIcon  />{slide.subcategory.one}</span></Desc>
-          <Desc><span style={{display:"flex", alignItems:"center", gap:"1%"}}><KeyboardDoubleArrowDownIcon  />{slide.subcategory.two}</span></Desc>
-          <Desc><span style={{display:"flex", alignItems:"center", gap:"1%"}}><KeyboardDoubleArrowDownIcon  />{slide.subcategory.three}</span></Desc>
+          <Desc><span style={{display:"flex", alignItems:"center", gap:"1%"}}>
+            <CircleIcon
+                      sx={{ padding: "0 0px 0 0", height: "15px", width: "15px",color: "#00CC66",  
+                        border: "5px solid white",borderRadius: "30px",
+                        }}/>
+                        {slide.subcategory.one}</span></Desc>
+          <Desc><span style={{display:"flex", alignItems:"center", gap:"1%"}}><CircleIcon
+                      sx={{ padding: "0 0px 0 0", height: "15px", width: "15px",color: "#00CC66",  
+                        border: "5px solid white",borderRadius: "30px",
+                        }}/>
+                        {slide.subcategory.two}</span></Desc>
+          <Desc><span style={{display:"flex", alignItems:"center", gap:"1%"}}>
+            <CircleIcon
+                      sx={{ padding: "0 0px 0 0", height: "15px", width: "15px",color: "#00CC66",  
+                        border: "5px solid white",borderRadius: "30px",
+                        }}/>
+                        {slide.subcategory.three}</span></Desc>
         </Box>
       )}
-      <StyledButton variant="outline">{slide.buttonLabel}</StyledButton>
+      <StyledButton >{slide.buttonLabel}</StyledButton>
     </Container>
   </Box>
 ))}
