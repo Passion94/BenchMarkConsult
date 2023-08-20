@@ -17,8 +17,8 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        padding: 100px 10px 100px 70px;
-        gap: 120px;
+        padding: 100px 45px 100px 70px;
+        gap: 80px;
         overflow: hidden;
     }
 
@@ -30,14 +30,7 @@
    
   }
   @media (max-width: 3200px) {
-    .getStartedmainContainer{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 100px 0px 100px 65px;
-        gap: 120px;
-        overflow: hidden;
-    }
+   
 
     .getImage{
        
@@ -47,14 +40,7 @@
    
   }
   @media (max-width: 2256px) {
-    .getStartedmainContainer{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 100px 18px 100px 61px;
-        gap: 120px;
-        overflow: hidden;
-    }
+  
 
     .getImage{
        
@@ -67,10 +53,17 @@
 
 
   @media (max-width: 1920px) {
-
+    .getStartedmainContainer{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 100px 43px 100px 70px;
+        gap: 80px;
+        overflow: hidden;
+    }
     .getImage{
        
-    width: 95%;
+    width: 100%;
     }
   
    
@@ -79,30 +72,23 @@
 
     .getImage{
        
-    width: 95%;
+    width: 100%;
     }
-    .getStartedmainContainer{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 100px 18px 100px 57px;
-        gap: 120px;
-        overflow: hidden;
-    }
+    
    
   }
   @media (max-width: 1440px) {
 
     .getImage{
        
-    width: 95%;
+    width: 100%;
     }
     .getStartedmainContainer{
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        padding: 100px 18px 100px 49px;
-        gap: 120px;
+        padding: 100px 25px 100px 49px;
+        gap: 80px;
         overflow: hidden;
     }
    
@@ -117,8 +103,8 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        padding: 100px 10px 100px 40px;
-        gap: 100px;
+        padding: 100px 12px 100px 40px;
+        gap: 80px;
         overflow: hidden;
     }
 }
@@ -126,19 +112,22 @@
 
     .getImage{
        
-    width: 98%;
+    width: 100%;
     }
     .getStartedmainContainer{
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        padding: 100px 20px 100px 28px;
-        gap: 97px;
-        overflow: hidden;
+        padding: 100px 0px 100px 24px;
+        gap: 80px;
+       
     }
    
   }
-  @media (max-width: 1024px) {
+
+
+
+  @media (max-width: 1080px) {
 
     .getImage{
        
@@ -148,8 +137,26 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        padding: 100px 0px 100px 25px;
-        gap: 85px;
+        padding: 100px 0px 100px 0px;
+        gap: 10px;
+        margin-left: -5px;
+        
+        
+    }
+}
+  @media (max-width: 1024px) {
+
+    .getImage{
+       
+    width: 103%;
+    }
+    .getStartedmainContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 100px 0px 100px 15px;
+        gap: 40px;
+        margin-left: 0px;
         
     }
 }
@@ -157,32 +164,48 @@
 
     .getImage{
        height: 340px;
-    width: 100%;
+    width: 104%;
     }
     .getStartedmainContainer{
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        padding: 100px 30px 100px 45px;
-        gap: 20px;
-        overflow: hidden;
+        padding: 100px 0px 100px 12px;
+        gap: 10px;
+       
     }
 }
 
 @media (max-width: 820px) {
 
     .getImage{
-       width: 101%;
+       width: 106%;
    
     }
     .getStartedmainContainer{
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        padding: 100px 10px 100px 0px;
+        padding: 100px 0px 100px 0px;
         gap: 0px;
-        overflow: hidden;
-        margin-left: -15px;
+      
+        margin-left: -25px;
+    }
+}
+
+@media (max-width: 810px) {
+
+    .getImage{
+       
+   width: 100%;
+    }
+    .getStartedmainContainer{
+        display: block;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 100px 35px 100px 5px;
+        gap: 0px;
+        
     }
 }
 
@@ -190,15 +213,15 @@
 
     .getImage{
        
-   
+   width: 100%;
     }
     .getStartedmainContainer{
         display: block;
         align-items: center;
         justify-content: flex-start;
-        padding: 100px 30px 100px 0px;
+        padding: 100px 25px 100px 12.5px;
         gap: 0px;
-        overflow: hidden;
+        
     }
 }
 @media (max-width: 768px) {
@@ -211,7 +234,7 @@
         display: block;
         align-items: center;
         justify-content: flex-start;
-        padding: 100px 30px 100px 25px;
+        padding: 100px 30px 100px 13px;
         gap: 0px;
         overflow: hidden;
     }
@@ -226,9 +249,9 @@
         display: block;
         align-items: center;
         justify-content: flex-start;
-        padding: 100px 44px 100px 25px;
+        padding: 100px 24px 100px 13px;
         gap: 0px;
-        overflow: hidden;
+       
     }
 }
 
@@ -238,9 +261,9 @@
         display: block;
         align-items: center;
         justify-content: flex-start;
-        padding: 100px 45px 100px 0px;
+        padding: 100px 5px 100px 0px;
         gap: 0px;
-        overflow: hidden;
+        margin-left: -28px;
     }
 }
 
@@ -250,9 +273,9 @@
         display: block;
         align-items: center;
         justify-content: flex-start;
-        padding: 100px 30px 100px 27px;
+        padding: 100px 0px 100px 4px;
         gap: 0px;
-        overflow: hidden;
+        /* margin-left: -28px; */
     }
 }
 
@@ -262,11 +285,30 @@
         display: block;
         align-items: center;
         justify-content: flex-start;
-        padding: 100px 10px 100px 15px;
+        padding: 100px 0px 100px 15px;
         gap: 0px;
-        overflow: hidden;
+        
+    }
+    .getImage{
+        
+        padding-left: 11px;
+    
+     }
+}
+
+@media (max-width: 480px) {
+
+    
+    .getStartedmainContainer{
+        display: block;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 100px 0px 100px 5px;
+      
+        
     }
 }
+
 @media (max-width: 414px) {
 
     .getImage{
@@ -277,11 +319,45 @@
         display: block;
         align-items: center;
         justify-content: flex-start;
-        padding: 100px 15px 100px 14px;
+        padding: 100px 0px 100px 7px;
         gap: 0px;
         overflow: hidden;
     }
 }
+
+@media (max-width: 393px) {
+
+    .getImage{
+       width: 100%;
+   
+    }
+    .getStartedmainContainer{
+        display: block;
+        align-items: center;
+        
+        padding: 100px 0px 100px 5px;
+       
+        
+    }
+}
+
+@media (max-width: 375px) {
+
+    .getImage{
+       width: 100%;
+   
+    }
+    .getStartedmainContainer{
+        display: block;
+        align-items: center;
+        
+        padding: 100px 0px 100px 3px;
+       
+        
+    }
+}
+
+
 
 @media (max-width: 360px) {
 
@@ -292,10 +368,10 @@
     .getStartedmainContainer{
         display: block;
         align-items: center;
-        justify-content: flex-start;
-        padding: 100px 27px 100px 14px;
+        
+        padding: 100px 0px 100px 0px;
         gap: 0px;
-        overflow: hidden;
+        
     }
 }
 

@@ -222,7 +222,7 @@ const Title = styled(Typography)(({ theme }) => ({
 
 
 const SecContentContainer = styled(Container)(({ theme }) => ({
-backgroundColor:"rgb(75, 75, 221)",
+background:"linear-gradient(to right, rgb(8, 16, 103), rgb(46, 234, 250))",
 borderRight:"10px solid white",
 // width:"500px"
 height:"410px",

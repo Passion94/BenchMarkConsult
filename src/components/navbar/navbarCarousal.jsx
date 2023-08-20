@@ -19,7 +19,7 @@ const Title = styled(Typography)(({ theme }) => ({
   fontSize: '1em',
   zIndex:"1",
   position:'relative',
-  fontFamily:"Lato, sans-serif",
+  fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
  
   [theme.breakpoints.down('md')]: {
     fontSize: '1.5em',
@@ -40,7 +40,7 @@ const Header = styled(Typography)(({ theme }) => ({
   fontSize: '2em',
   paddingTop: '10px',
   lineHeight:"46px",
-  fontFamily: '"Tiempos Headline", serif',
+  fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
   fontWeight: "normal",
   fontStyle: "normal",
   textTransform:"uppercase",
@@ -80,8 +80,8 @@ const Desc = styled(Typography)(({ theme }) => ({
   marginBottom: '30px',
   fontSize: '1.5em',
   lineHeight: '36px',
-  fontFamily: 'Archivo Narrow',
-  padding:" 0 350px 0 0",
+  fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
+  padding:" 0 355px 0 0",
   zIndex:"1",
   position:'relative',
  
@@ -91,7 +91,7 @@ const Desc = styled(Typography)(({ theme }) => ({
 
   // Responsive styles using Material-UI breakpoints
   [theme.breakpoints.down('md')]: {
-    padding:" 0 100px 0 0",
+    padding:" 0 50px 0 0",
     // fontSize: '1.5em',
     lineHeight: '36px',
     marginLeft:"-20px",
@@ -132,7 +132,7 @@ const StyledButton = styled('button')(({ theme }) => ({
   transition: 'all 0.3s ease 0s',
   zIndex:"1",
   position:'relative',
-  fontFamily:"Lato , sans-serif",
+  fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
  
   cursor: 'pointer',
   // marginLeft: '42px',
@@ -206,12 +206,12 @@ const slides = [
 const NavbarCarousal = () => {
  
   const sliderRef = useRef(null);
-  const dotTexts = [ 'What we do','Software development', 'System analysis and design',
-   'AI & Data analytics', 'Cyber security'];
+  const dotTexts = ['What we do', 'Software development', 'System analysis and design', 'AI & Data analytics', 'Cyber security'];
+  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   const handleDotClick = (index) => {
-    // Change the active slide to the specified index
     sliderRef.current.slickGoTo(index);
+    setActiveSlideIndex(index);
   };
 
   const settings = {
@@ -225,7 +225,9 @@ const NavbarCarousal = () => {
     autoplaySpeed: 5000, // Time between slides in autoplay mode
     fade: true, // Use fade effect for transition
     cssEase: 'linear', // Specify the CSS easing for the fade animation
-   
+    beforeChange: (current, next) => {
+      setActiveSlideIndex(next);
+    },
 
     responsive: [
       {
@@ -274,17 +276,17 @@ const NavbarCarousal = () => {
     <Container 
     maxWidth= "xl">
     
-     <div className='carousel-dots'>
-     
-     {dotTexts.map((text, index) => (
-       <div key={index} className='carousel-dot' onClick={() => handleDotClick(index)}>
-         {text}
-        
-       </div>
-        
-     ))}
-
-   </div>
+    <div className='carousel-dots'>
+          {dotTexts.map((text, index) => (
+            <div
+              key={index}
+              className={`carousel-dot ${index === activeSlideIndex ? 'active' : ''}`}
+              onClick={() => handleDotClick(index)}
+            >
+              {text}
+            </div>
+          ))}
+        </div>
    </Container>
  </div>
   );

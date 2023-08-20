@@ -12,6 +12,7 @@ const StyledButton = styled('button')(({ theme }) => ({
   color: 'rgb(8,16,103)', 
   fontSize: '1em',
   fontWeight: '900',
+  fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
   lineHeight: '17px',
   textDecoration: 'none',
   textTransform: 'uppercase',
@@ -19,6 +20,7 @@ const StyledButton = styled('button')(({ theme }) => ({
   backgroundColor: 'rgb(46,234,250)',
   outline: '0px',
   transition: 'all 0.3s ease 0s',
+
  
   cursor: 'pointer',
   // marginLeft: '42px',
@@ -47,7 +49,7 @@ const Desc = styled(Typography)(({ theme }) => ({
   marginBottom: '50px',
   lineHeight: '36px',
   wordSpacing: '0.2em',
-  fontFamily: '"Tiempos Headline", serif',
+  fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
   paddingTop: '10px',
  
   [theme.breakpoints.down('lg')]: {

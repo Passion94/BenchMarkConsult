@@ -11,33 +11,25 @@ import { Link } from 'react-router-dom';
 
 
 const StyledCardContent = styled(CardContent)(({ theme }) => ({
-  // width: '50%',
-  // padding: '0 140px 0 0',
+  
 
-  // Responsive styles using Material-UI breakpoints
-  [theme.breakpoints.down('lg')]: {
+
+  
+ 
+ 
+
+
+  [theme.breakpoints.down('811')]: {
     // width: '100%',
-    // padding: '0 0px 0 20px',
-    
-    // marginLeft:"20px",
-  },
-
-  [theme.breakpoints.down('md')]: {
-    width: '100%',
-    padding: '0 20px 0 17px',
-    marginLeft:"0px",
+    // padding: '0 20px 0 17px',
+    marginLeft:"-7px",
    
   },
-
-  [theme.breakpoints.down('sm')]: {
-    
-    padding: '0 50px 0 27px',
-    marginLeft:"0px",
-  },
-
-  [theme.breakpoints.down('xs')]: {
-    width: '100%',
-    padding: '0 20px 0 20px',
+  [theme.breakpoints.down('541')]: {
+    // width: '100%',
+    // padding: '0 20px 0 17px',
+    marginLeft:"20px",
+   
   },
 }));
 
@@ -54,10 +46,11 @@ const StyledCardContent = styled(CardContent)(({ theme }) => ({
 
 const Title = styled(Typography)(({ theme }) => ({
   fontWeight: 900,
+  fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
   justifyContent: 'center',
   marginBottom: '30px',
   fontSize: '1em',
-  color: 'rgb(8, 16, 103)',
+  color: 'black',
   [theme.breakpoints.down('md')]: {
     fontSize: '1.5em',
     paddingLeft:"14px",
@@ -74,15 +67,16 @@ const Title = styled(Typography)(({ theme }) => ({
 
 
 const Header = styled(Typography)(({ theme }) => ({
-  color:'rgb(8,16,103)',
+  color:'black',
   fontWeight: '900',
+
   justifyContent: 'center',
   marginBottom: '30px',
   fontSize: '2em',
   paddingTop: '10px',
  
-  fontFamily: '"Tiempos Headline", serif',
-  fontWeight: "normal",
+  fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
+  
   fontStyle: "normal",
   textTransform:"uppercase",
   lineHeight:"46px",
@@ -102,7 +96,7 @@ const Header = styled(Typography)(({ theme }) => ({
 
   [theme.breakpoints.down('sm')]: {
     fontSize: '1.5rem',
-    paddingRight: '20px',
+    paddingRight: '0px',
     marginBottom: '15px',
     marginLeft:"-10px",
     fontWeight: '900',
@@ -111,7 +105,7 @@ const Header = styled(Typography)(({ theme }) => ({
 
   [theme.breakpoints.down('xs')]: {
     fontSize: '1rem',
-    paddingRight: '10px',
+    paddingRight: '0px',
     marginBottom: '3px',
     marginLeft:"0px",
     fontWeight: '900',
@@ -126,13 +120,13 @@ const Header = styled(Typography)(({ theme }) => ({
 
 
 const Desc = styled(Typography)(({ theme }) => ({
-  color:'rgb(8,16,103)',
+  color:'black',
   width:"100%",
   fontWeight:"400",
   marginBottom: '30px',
   fontSize: '1.5em',
   lineHeight: '46px',
-  fontFamily: 'Archivo Narrow',
+  fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
   // opacity: '0.7',
   // paddingLeft: '42px',
   // Adjust paddingRight to create some space on both sides
@@ -176,21 +170,21 @@ lineHeight:"26px",
 const StyledButton = styled('button')(({ theme }) => ({
   
   marginTop: '10px',
-  border:"1px solid rgb(75,75,221)",
-  color:'rgb(8,16,103)',
+  color:'white',
   fontSize: '1em',
   fontWeight: '900',
+  fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
   lineHeight: '17px',
   textDecoration: 'none',
   textTransform: 'uppercase',
   padding: '16px 22px',
-  backgroundColor: 'rgb(46,234,250)',
-  border:"1px solid rgb(8,16,103)",
+  background: 'linear-gradient(to right, rgb(8, 16, 103), rgb(46, 234, 250))',
+  border:"none",
   marginBottom:"20px",
   transition: 'all 0.3s ease 0s',
  
   cursor: 'pointer',
-  // marginLeft: '42px',
+  marginLeft: '-8px',
   [theme.breakpoints.down('sm')]: {
     
     marginLeft:"-20px"
@@ -199,6 +193,12 @@ const StyledButton = styled('button')(({ theme }) => ({
   [theme.breakpoints.down('xs')]: {
     fontSize: '0.9rem', // Adjust font size for extra-small screens
     padding: '12px 16px', // Adjust padding for extra-small screens
+  },
+  [theme.breakpoints.down('821')]: {
+    marginLeft: '7px',
+  },
+  [theme.breakpoints.down('541')]: {
+    marginLeft: '-18px',
   },
 }));
 

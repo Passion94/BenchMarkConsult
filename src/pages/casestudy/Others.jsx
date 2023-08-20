@@ -8,7 +8,7 @@ const BoxOne = styled(Box)(({ theme }) => ({
  
   height:"200px", 
   width:"200px",
-   background:"black",
+   background:"linear-gradient(to right, rgb(8, 16, 103), rgb(46, 234, 250))",
    position:"absolute",
    right:"-50px",
    [theme.breakpoints.down('1025')]: {

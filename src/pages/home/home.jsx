@@ -10,19 +10,21 @@ import { Casestudy } from '../casestudy/Casestudy'
 
 
 
+
 export const Home = () => {
   return (
     <Box>
-      
-     <NavbarCarousal/>
+      <Box sx={{ backgroundColor: "rgb(0, 77, 64)"}}>
+      <NavbarCarousal/>
+     <Whatwedo/> 
+      </Box>
      
-
      <Getstarted/>
      <Expectations/> 
      <Casestudy/>
       {/* <AboutData/>
       
-      <Whatwedo/> 
+     
      <Story/>  */}
     </Box>
   )

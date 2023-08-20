@@ -1,5 +1,5 @@
 body{
-    font-family: Lato, sans-serif;
+    font-family: 'Ubuntu',Helvetica,Arial,sans-serif;
     font-size: 16px;
     line-height: 26px;
     color: rgb(58, 58, 58);
@@ -9,6 +9,6 @@ body{
     -ms-font-feature-settings: "kern","liga","clig","calt";
     -webkit-font-feature-settings: "kern","liga","clig","calt";
     font-feature-settings: "kern","liga","clig","calt";
-    background: whitesmoke;
+    background: #F7F7F7;
     margin: 0 auto;
 }
