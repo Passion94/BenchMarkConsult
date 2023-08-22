@@ -114,7 +114,7 @@ export const SectionOneText = () => {
 At Prehood, our work philosophy is built on the pillars of communication,
 collaboration, and critical thinking. We believe that successful software
 development and consultancy go beyond technical expertise – they thrive
-on effective teamwork, innovative problem-solving, and transparent client relationships.
+on effective teamwork, innovative problem-solvings, and transparent client relationships.
 </Desc>
 
     </Container>
