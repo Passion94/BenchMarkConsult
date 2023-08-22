@@ -17,7 +17,6 @@ const Header = styled(Typography)(({ theme }) => ({
     paddingTop: '10px',
    
     fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
-    // fontWeight: "normal",
     fontStyle: "normal",
     textTransform:"uppercase",
     lineHeight:"46px",
@@ -37,13 +36,14 @@ const Header = styled(Typography)(({ theme }) => ({
   }));
   const TitleOne = styled(Typography)(({ theme }) => ({
     fontWeight: '500',
-    
-    marginBottom: '65px',
     fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
+    
+    textTransform:"initial",
+    marginBottom: '65px',
     fontSize: '.8em', // You can use '1.5rem' for better responsiveness across different devices
     color: '#9F9F9F',
     // opacity: ".5",
-    textTransform:"initial",
+    
     [theme.breakpoints.down('1025')]: {
       display:"flex",
       justifyContent:"center",

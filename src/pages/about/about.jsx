@@ -1,14 +1,24 @@
 import React from 'react'
-import { FirstSection } from './firstSection/firstSection'
-import { SecondSection } from './secondSection/secondSection'
 
+import { HowWeWorkCircle } from './Howwework/HowWeWorkCircle'
+import { HowWeWorkContent } from './Howwework/HowWeWorkContent'
+import { SectionOne } from './Howwework/sectionOne/SectionOne'
+import { Box, Container } from '@mui/material'
 
-export const 
-About = () => {
+export const About = () => {
   return (
-    <div>
-        <FirstSection/>
-        <SecondSection/>
+  
+  <Box sx={{background:""}}>
+    
+    <SectionOne/>
+    <div style={{marginTop:"20px",display:"flex", alignItems:"center", gap:"300px", height:"100vh",
+     background:" rgb(0, 77, 64)"}}> 
+     {/* <Container maxWidth="xl">
+       <HowWeWorkCircle/>
+       <HowWeWorkContent/>
+       </Container> */}
     </div>
+    
+    </Box>
   )
 }

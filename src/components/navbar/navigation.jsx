@@ -13,6 +13,7 @@ const StyledLink = styled(Link)(({ to }) => ({
   height: "40px",
   color: to === "/contact" ? 'white' : 'black',
   fontWeight: to === "/contact" ? '900' : '700',
+  zIndex:"1",
   
   // backgroundColor: to === "/contact" ? 'red' : 'transparent',
   
@@ -70,6 +71,7 @@ const NavCont = styled(Container)(({ theme }) => ({
   alignItems:"center",
   justifyContent:"space-around",
   gap: "75px",
+  zIndex:"1",
   [theme.breakpoints.down('1025')]: {
     gap: "45px",
   },
@@ -145,7 +147,7 @@ const Navigation = () => {
   };
 
   return (
-    <Box sx={{positiion:"relative"}}>
+    <Box sx={{positiion:"relative", zIndex:"1"}}>
     <Box className="navigation" >
      <NavCont 
      maxWidth="xl">

@@ -1,0 +1,24 @@
+.SectionOneContainer {
+    background-image:url('https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Maps_Blog_hero_022x.png');
+    background-size:cover;
+   background-repeat:no-repeat;
+   background-color: rgb(3, 5, 25);
+   position: relative;
+   margin-top: 80px;
+   background-attachment: fixed;
+   top: 0;
+   width: 100%;
+   padding-top: 150px;
+     z-index: -1;
+  }
+  
+  /* .SectionOneContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+  }
+   */
