@@ -3,6 +3,7 @@ import SectionOneImage from './SectionOneImage'
 import { SectionOneText } from './SectionOneText'
 import { Box, Container, Typography, styled } from '@mui/material'
 import "./sectionOne.css"
+import { OurVision } from '../sectionTwo/OurVision'
 
 const SectionOneContainer = styled(Container)(({ theme }) => ({
     display:"flex",
@@ -214,6 +215,7 @@ export const SectionOne = () => {
 <SectionOneText/>
 </SectionOneContainer>
 </SectionContainerBox>
+<OurVision/>
     </Box>
    
   )

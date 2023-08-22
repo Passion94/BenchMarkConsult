@@ -27,6 +27,7 @@ const Desc = styled(ImageListItemBar)(({ theme }) => ({
 const ImageListCont = styled(ImageList)(({ theme }) => ({
   width: 1350,
    height: 500,
+   
    [theme.breakpoints.down('1025')]: {
     width: 900,
    height: 380,
