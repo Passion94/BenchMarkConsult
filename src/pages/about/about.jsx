@@ -11,12 +11,12 @@ export const About = () => {
   <Box sx={{background:""}}>
     
     <SectionOne/>
-    <div style={{marginTop:"20px",display:"flex", alignItems:"center", gap:"300px", height:"100vh",
+    <div style={{marginTop:"20px",display:"flex", alignItems:"center", gap:"300px",
      background:" rgb(0, 77, 64)"}}> 
-     {/* <Container maxWidth="xl">
+     <Container maxWidth="xl">
        <HowWeWorkCircle/>
        <HowWeWorkContent/>
-       </Container> */}
+       </Container>
     </div>
     
     </Box>

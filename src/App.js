@@ -11,7 +11,7 @@ import ResourcesPage from "./pages/resources/resourcesPage";
 import { ProjectPage } from './pages/projects/projectPage';
 import ClientStories from "./pages/clientStory/clientStories";
 import Navigation from './components/navbar/navigation';
-import { About } from './pages/about/About';
+import { About } from './pages/about/about';
 
 
 
