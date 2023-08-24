@@ -4,7 +4,26 @@ import "./case.css";
 import { KeyboardArrowRight as KeyboardArrowRightIcon, KeyboardArrowLeft as KeyboardArrowLeftIcon } from '@mui/icons-material';
 
 
-
+export const slides = [
+  {id:1,
+    imageSrc: 'https://www.wondriumdaily.com/wp-content/uploads/2022/11/Probability-In-Quantum-Mechanics_QBS_Featured.jpg',
+    text: 'Edtify',
+    keyword:"SAAS, Education",
+    desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  { id:2,
+    imageSrc: 'https://cloudfront-us-east-2.images.arcpublishing.com/reuters/FGIPIBIUY5J33BOE7NP5KEIQYM.jpg',
+    text: 'Afridemics',
+    keyword:"SAAS, Utility",
+    desc:"Second Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  { id:3,
+    imageSrc: 'https://hips.hearstapps.com/hmg-prod/images/mid-adult-woman-drinking-water-at-park-during-sunny-royalty-free-image-1646152435.jpg?crop=1xw:0.84375xh;center,top&resize=1200:*',
+    text: 'Ait Ghana',
+    keyword:"SAAS, Education",
+    desc:"Third Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+];
 
 
 const Header = styled(Typography)(({ theme }) => ({
@@ -60,6 +79,7 @@ const Header = styled(Typography)(({ theme }) => ({
     display:"flex",
      gap:"485px", 
      position:"absolute",
+     alignItems:"center",
       top:'170px',
        left:"-39px",
         cursor:"pointer",
@@ -118,11 +138,13 @@ const Header = styled(Typography)(({ theme }) => ({
   }));
 
 
-const Slide = ({ imageSrc, text, keyword }) => (
+const Slide = ({ imageSrc, text, keyword, desc }) => (
   <div className="slide">
     <img src={imageSrc} alt="Slide" className='caseslideimg'/>
     <Header>{text}</Header>
     <TitleOne>{keyword}</TitleOne>
+    
+    
   </div>
 );
 
@@ -145,14 +167,16 @@ const ImageTextSlider = ({ slides }) => {
     <div className="slider" >
       
         <ArrowiconContainer >
-        <KeyboardArrowLeftIcon onClick={prevSlide} sx={{borderRadius:"30px", color:"white", border:"1px solid green", background:"#00CC66"}}/>
-      <KeyboardArrowRightIcon onClick={nextSlide} sx={{borderRadius:"30px", color:"white", border:"1px solid green",  background:"#00CC66"}}/>
+        <KeyboardArrowLeftIcon onClick={prevSlide} sx={{borderRadius:"30px", color:"black", border:"1px solid green", background:" #D0FFFF"}}/>
+      <KeyboardArrowRightIcon onClick={nextSlide} sx={{borderRadius:"30px", color:"black", border:"1px solid green",  background:" #D0FFFF"}}/>
         </ArrowiconContainer >
           
       <Slide
         imageSrc={slides[currentSlideIndex].imageSrc}
         text={slides[currentSlideIndex].text}
         keyword={slides[currentSlideIndex].keyword}
+        desc={slides[currentSlideIndex].desc}
+
       />
 {/* <StyledButton>View all</StyledButton> */}
     </div>
@@ -160,23 +184,7 @@ const ImageTextSlider = ({ slides }) => {
 };
 
 const CaseCard= () => {
-  const slides = [
-    {id:1,
-      imageSrc: 'https://www.wondriumdaily.com/wp-content/uploads/2022/11/Probability-In-Quantum-Mechanics_QBS_Featured.jpg',
-      text: 'Edtify',
-      keyword:"SAAS, Education",
-    },
-    { id:2,
-      imageSrc: 'https://cloudfront-us-east-2.images.arcpublishing.com/reuters/FGIPIBIUY5J33BOE7NP5KEIQYM.jpg',
-      text: 'Afridemics',
-      keyword:"SAAS, Utility",
-    },
-    { id:3,
-      imageSrc: 'https://hips.hearstapps.com/hmg-prod/images/mid-adult-woman-drinking-water-at-park-during-sunny-royalty-free-image-1646152435.jpg?crop=1xw:0.84375xh;center,top&resize=1200:*',
-      text: 'Ait Ghana',
-      keyword:"SAAS, Education",
-    },
-  ];
+
 
   return (
     <Container className="">
@@ -187,3 +195,4 @@ const CaseCard= () => {
 };
 
 export default CaseCard;
+

@@ -8,10 +8,14 @@ import "./App.css";
 import { AllFooterContents } from "./components/footer/allFooterContents";
 import ServicesPage from "./pages/services/servicesPage";
 import ResourcesPage from "./pages/resources/resourcesPage";
-import { ProjectPage } from './pages/projects/projectPage';
+
 import ClientStories from "./pages/clientStory/clientStories";
 import Navigation from './components/navbar/navigation';
 import { About } from './pages/about/about';
+import { Project } from './pages/projects/Project';
+
+import ProjectCaseStudy from './pages/projects/sectionTwo/ProjectCaseStudy';
+
 
 
 
@@ -32,7 +36,8 @@ function App() {
         <Route path="/aboutus" element={<About/>} />
         <Route path="/services" element={<ServicesPage/>} />
         <Route path="/resources" element={<ResourcesPage/>} />
-        <Route path="/project" element={<ProjectPage/>} />
+        <Route path="/projects/:projectId"element={<ProjectCaseStudy/>} />
+        <Route path="/project" element={<Project/>} />
         {/* <Route path="/story" element={<ClientStories/>} /> */}
         
         

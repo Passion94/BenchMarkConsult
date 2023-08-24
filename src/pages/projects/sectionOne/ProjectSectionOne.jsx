@@ -1,9 +1,12 @@
 import React from 'react'
-import SectionOneImage from './SectionOneImage'
-import { SectionOneText } from './SectionOneText'
+
+
 import { Box, Container, Typography, styled } from '@mui/material'
-import "./sectionOne.css"
-import { OurVision } from './OurVision'
+
+
+import ProjectSectionOneImage from './ProjectSectionOneImage'
+import { ProjectSectionOneText } from './ProjectSectionOneText';
+import { SectionOne } from '../../about/Howwework/sectionOne/SectionOne';
 
 const SectionOneContainer = styled(Container)(({ theme }) => ({
     display:"flex",
@@ -14,6 +17,7 @@ const SectionOneContainer = styled(Container)(({ theme }) => ({
     zIndex:"-1",
     paddingBottom:"50px",
     width:"1338px", 
+    
     
     [theme.breakpoints.down('1441')]: {
         
@@ -201,7 +205,7 @@ const SectionOneContainer = styled(Container)(({ theme }) => ({
   }));
 
 
-export const SectionOne = () => {
+export const ProjectSectionOne = () => {
   return (
     <Box className="SectionOneContainer">
         
@@ -210,12 +214,12 @@ export const SectionOne = () => {
         </Box>
        <SectionContainerBox  >
         <SectionOneContainer maxWidth="xl">
-
-<SectionOneImage />
-<SectionOneText/>
+       
+<ProjectSectionOneImage />
+<ProjectSectionOneText/>
 </SectionOneContainer>
 </SectionContainerBox>
-<OurVision/>
+
 
     </Box>
    

@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Box, Container, Typography, styled } from '@mui/material'
 import CaseCard from './CaseCard'
+import { slides } from './CaseCard';
 
 
 
@@ -49,72 +50,72 @@ const Header = styled(Typography)(({ theme }) => ({
     display:"flex",
     gap:"170px",
     alignItems:"center",
-    padding:" 100px 20px 100px 60px",
-     background:"rgb(0, 77, 64)",
+    padding:" 50px 20px 50px 60px",
+     background:"transparent",
 
      [theme.breakpoints.down('1441')]: {
       
       gap:"150px",
-      padding:"100px 0px 100px 40px ",
+      padding:"50 0px 50px 40px ",
     },
     [theme.breakpoints.down('1367')]: {
       
       gap:"150px",
-      padding:"100px 0px 100px 30px ",
+      padding:"50px 0px 50px 30px ",
     },
     [theme.breakpoints.down('1281')]: {
       
       gap:"150px",
-      padding:"100px 0px 100px 16px ",
+      padding:"50px 0px 50px 16px ",
     },
     [theme.breakpoints.down('1025')]: {
       flexDirection:"column",
       gap:"0px",
-      padding:"100px 0px 100px 6px ",
+      padding:"50px 0px 50px 6px ",
     },
     [theme.breakpoints.down('913')]: {
       
       
-      padding:"100px 0px 100px 3px ",
+      padding:"50px 0px 50px 3px ",
     },
     [theme.breakpoints.down('821')]: {
       
-      padding:"100px 0px 100px 0px ",
+      padding:"50px 0px 50px 0px ",
       marginLeft:"-16px",
     },
     [theme.breakpoints.down('811')]: {
       
-      padding:"100px 0px 100px 0px ",
+      padding:"50px 0px 50px 0px ",
       marginLeft:"-20px",
     },
     [theme.breakpoints.down('801')]: {
       
-      padding:"100px 0px 100px 0px ",
+      padding:"50px 0px 50px 0px ",
       marginLeft:"-14px",
     },
     [theme.breakpoints.down('602')]: {
       
-      padding:"100px 0px 100px 0px ",
+      padding:"50px 0px 50px 0px ",
       marginLeft:"-26px",
     },
     [theme.breakpoints.down('541')]: {
       
-      padding:"100px 0px 100px 0px ",
+      padding:"50px 0px 50px 0px ",
       marginLeft:"-3.5px",
     },
     [theme.breakpoints.down('481')]: {
       
-      padding:"100px 0px 100px 0px ",
+      padding:"50px 0px 50px 0px ",
       marginLeft:"-14px",
     },
     [theme.breakpoints.down('415')]: {
       
-      padding:"100px 0px 100px 0px ",
+      padding:"50px 0px 50px 0px ",
       marginLeft:"-10px",
     },
     [theme.breakpoints.down('413')]: {
       
-      padding:"100px 0px 100px 0px ",
+      padding:"50px 0px 50px 0px ",
       marginLeft:"-13px",
     },
   }));
@@ -142,10 +143,13 @@ const Header = styled(Typography)(({ theme }) => ({
     // marginLeft: '42px',
   
   }));
+  
 
 export const CaseOne = () => {
+  const slideIndex = 0; // Index of the slide you want to access
+  const desc = slides[slideIndex].desc;
   return (
-    <Box sx={{ background:"rgb(0, 77, 64)"}}>
+    <Box sx={{ background:"RGB(45, 45, 191)"}}>
 <Container
 maxWidth="xl">
 
@@ -154,12 +158,7 @@ maxWidth="xl">
         <Container
         >
             <Header>Portfolio</Header>
-       <Desc>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-        when an unknown printer took a galley of type and scrambled it to make a type
-         specimen book. It has survived not only five centuries, but also the leap into 
-         electronic typesetting, remaining essentially unchanged. 
-            </Desc> 
+       <Desc>{desc}</Desc> 
 
         </Container>
         <Box >

@@ -6,7 +6,7 @@ import AboutData from '../../components/aboutus/aboutusdata'
 import { Story } from '../story/story'
 import Expectations from './expectations/expectations'
 import { Box, Container } from '@mui/material'
-import { Casestudy } from '../casestudy/Casestudy'
+
 import { CaseOne } from '../casestudy/CaseOne'
 
 

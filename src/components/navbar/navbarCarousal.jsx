@@ -129,17 +129,17 @@ const Desc = styled(Typography)(({ theme }) => ({
 }));
 
 const StyledButton = styled('button')(({ theme }) => ({
-  border: '1px solid white',
+  border: '1px solid rgb(46,234,250)',
   marginTop: '10px',
   borderRadius:'3px',
-  color: '#00CC66',
+  color: 'rgb(46,234,250)',
   fontSize: '.8em',
   fontWeight: '900',
   lineHeight: '17px',
   textDecoration: 'none',
   textTransform: 'uppercase',
   padding: '12px 22px',
-  backgroundColor: 'transparent',
+  backgroundColor: 'transparent', 
   outline: '0px',
   transition: 'all 0.3s ease 0s',
   zIndex:"1",
@@ -273,19 +273,19 @@ const NavbarCarousal = () => {
         <Box sx={{paddingLeft:"5%"}}>
           <Desc><span style={{display:"flex", alignItems:"center", gap:"1%"}}>
             <CircleIcon
-                      sx={{ padding: "0 0px 0 0", height: "15px", width: "15px",color: "#00CC66",  
-                        border: "5px solid white",borderRadius: "30px",
+                      sx={{ padding: "0 0px 0 0", height: "15px", width: "15px",color: "rgb(46,234,250)",  
+                        border: "4px solid white",borderRadius: "30px",
                         }}/>
                         {slide.subcategory.one}</span></Desc>
           <Desc><span style={{display:"flex", alignItems:"center", gap:"1%"}}><CircleIcon
-                      sx={{ padding: "0 0px 0 0", height: "15px", width: "15px",color: "#00CC66",  
-                        border: "5px solid white",borderRadius: "30px",
+                      sx={{ padding: "0 0px 0 0", height: "15px", width: "15px",color: "rgb(46,234,250)",  
+                        border: "4px solid white",borderRadius: "30px",
                         }}/>
                         {slide.subcategory.two}</span></Desc>
           <Desc><span style={{display:"flex", alignItems:"center", gap:"1%"}}>
             <CircleIcon
-                      sx={{ padding: "0 0px 0 0", height: "15px", width: "15px",color: "#00CC66",  
-                        border: "5px solid white",borderRadius: "30px",
+                      sx={{ padding: "0 0px 0 0", height: "15px", width: "15px",color: "rgb(46,234,250)",  
+                        border: "4px solid white",borderRadius: "30px",
                         }}/>
                         {slide.subcategory.three}</span></Desc>
         </Box>

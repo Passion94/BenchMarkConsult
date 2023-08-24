@@ -5,7 +5,7 @@ import React from 'react'
 
 
 const Header = styled(Typography)(({ theme }) => ({
-    color:'black',
+    color:'#403F3F',
     fontWeight: '900',
     display:"flex",
     paddingTop:"10px",
@@ -78,7 +78,7 @@ const Header = styled(Typography)(({ theme }) => ({
   }));
 
   const Desc = styled(Typography)(({ theme }) => ({
-    color: 'black',
+    color: '#403F3F',
    
     fontWeight: 500, /* Remove quotes around 500 */
     
@@ -104,11 +104,11 @@ const Header = styled(Typography)(({ theme }) => ({
 
 
 
-export const SectionOneText = () => {
+export const ProjectCaseText = () => {
   return (
     <Container sx={{position:"relative"}}>
 <Header>
-   Our Approach
+   Our Projects
 </Header>
 <Desc>
 At Prehood, our work philosophy is built on the pillars of communication,

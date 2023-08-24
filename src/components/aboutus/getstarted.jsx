@@ -172,7 +172,7 @@ lineHeight:"26px",
 const StyledButton = styled('button')(({ theme }) => ({
   
   marginTop: '10px',
-  color:'white',
+  color:'black',
   fontSize: '.9em',
   fontWeight: '900',
   fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
@@ -180,7 +180,7 @@ const StyledButton = styled('button')(({ theme }) => ({
   textDecoration: 'none',
   textTransform: 'uppercase',
   padding: '16px 22px',
-  background:"#00CC66",
+  background:"rgb(46,234,250)",
   borderRadius:'3px',
   border:"none",
   marginBottom:"20px",

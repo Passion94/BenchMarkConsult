@@ -46,11 +46,11 @@ const ArrowButton = styled(KeyboardArrowDownOutlinedIcon)(({theme, arrowDirectio
   right: '-4%', // Adjust the right position as needed
   bottom: '3px',
   display: 'block', // Display is already defined based on breakpoints
-  border: '1px solid #00CC66',
+  border: '1px solid RGB(45, 45, 191)',
   height: '18px',
   minWidth: '30px',
   borderRadius: '15px',
-  color: '#00CC66',
+  color: 'RGB(45, 45, 191)',
   cursor: 'pointer',
   '&:hover':{
     backgroundColor:"#D0FFFF"
@@ -752,7 +752,7 @@ const Expectations = () => {
     >
     <WhatWrap >
    
-      <Header >What can you expect from <span style={{color:"#00CC66"}}>cooperation</span> with Prehood?</Header>
+      <Header >What can you expect from <span style={{color:"RGB(45, 45, 191)"}}>cooperation</span> with Prehood?</Header>
       <TitleOne>Responsiveness. Proficiency. Courage.</TitleOne>
       <Box >
       <Container sx={{position:"relative"}}>
@@ -765,10 +765,10 @@ const Expectations = () => {
             }}>
                     <CircleIcon
                       sx={{
-                        padding: "0 0px 0 0",
+                        padding: "0 0px 0 0", 
                         height: "15px",
                         width: "15px",
-                        color: "#00CC66",  
+                        color: "RGB(45, 45, 191)",  
                         border: "10px solid white",
                         borderRadius: "30px",
                         '@media (max-width: 641px)': {

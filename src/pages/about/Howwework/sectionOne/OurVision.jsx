@@ -5,23 +5,48 @@ import React from 'react'
 const VisionCont = styled(Box)(({ theme }) => ({
     paddingLeft:"170px",
      marginTop:"100px",
+     background:"white",
+     backgroundImage:"url('https://apicms.thestar.com.my/uploads/images/2022/10/16/1778120.jpg')",
+    
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '300px',
+    backgroundPosition: '2292px 80px',
+     
+    [theme.breakpoints.down('3201')]: {
+      backgroundPosition: '1974px 80px',
+    },
+    [theme.breakpoints.down('2737')]: {
+      backgroundPosition: '1744px 80px',
+    },
+    [theme.breakpoints.down('2257')]: {
+      backgroundPosition: '1503px 80px',
+    },
+    [theme.breakpoints.down('1921')]: {
+      backgroundPosition: '1326px 80px',
+    },
      [theme.breakpoints.down('1601')]: {
         paddingLeft:"119px",
+        backgroundPosition: '1175px 100px',
       },
       [theme.breakpoints.down('1441')]: {
         paddingLeft:"68px",
+        backgroundPosition: '1050px 100px',
       },
       [theme.breakpoints.down('1367')]: {
         paddingLeft:"57px",
+        backgroundPosition: '987px 100px',
       },
       [theme.breakpoints.down('1281')]: {
         paddingLeft:"40px",
+        backgroundPosition: '917px 100px',
       },
       [theme.breakpoints.down('1025')]: {
         paddingLeft:"31px",
+        backgroundSize: '270px',
+        backgroundPosition: '718px 120px',
       },
-      [theme.breakpoints.down('1025')]: {
-        paddingLeft:"31px",
+      [theme.breakpoints.down('913')]: {
+        backgroundPosition: '718px 520px',
       },
       [theme.breakpoints.down('821')]: {
         paddingLeft:"8px",
@@ -47,6 +72,10 @@ const VisionCont = styled(Box)(({ theme }) => ({
         paddingLeft:"13px",
         marginLeft:"0px"
       },
+      [theme.breakpoints.down('481')]: {
+        paddingLeft:"5px",
+        marginLeft:"0px"
+      },
       [theme.breakpoints.down('415')]: {
         paddingLeft:"6px",
         marginLeft:"0px"
@@ -64,7 +93,7 @@ const VisionCont = styled(Box)(({ theme }) => ({
 const Header = styled(Typography)(({ theme }) => ({
     color:'black',
     fontWeight: '900',
-    
+    paddingTop:"30px",
     marginBottom: '30px',
     fontSize: '1em',
    
@@ -197,15 +226,18 @@ export const OurVision = () => {
 
     <VisionCont >
 
-        <Container maxWidth="xl" sx={{}}>
-        
+        <Container maxWidth="xl">
+       
        <Header>Our Vision</Header>
-       <Title> Empowering <span style={{color:"#00CC66", display:"inline-block"}}> Innovation </span>  through Technology Excellence</Title> 
+       <Title> Empowering <span style={{color:"RGB(45, 45, 191)", display:"inline-block"}}> Innovation </span>  through Technology Excellence</Title> 
        <Desc >
-      We are a driving force behind transformative technological <span style={{color:"#00CC66", display:"inline-block"}}>innovations </span> that empower businesses across industries.We strive to provide cutting-edge software 
+      We are a driving force behind transformative technological <span style={{color:"RGB(45, 45, 191)", display:"inline-block"}}>innovations </span> that empower businesses across industries.We strive to provide cutting-edge software 
       solutions that inspire progress, growth, and enduring success.
         </Desc >
+       
+        
         </Container>
+        
     </VisionCont>
   )
 }
