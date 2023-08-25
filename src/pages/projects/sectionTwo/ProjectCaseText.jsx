@@ -1,13 +1,27 @@
-import { Container, Typography, styled } from '@mui/material'
-import React from 'react'
+import * as React from 'react';
+
+import { Box, Container, Typography} from '@mui/material'
+
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+import ImageListItemBar from '@mui/material/ImageListItemBar';
+
+
+import { styled } from '@mui/material';
+
+
+
+
+
 
 
 
 
 const Header = styled(Typography)(({ theme }) => ({
-    color:'#403F3F',
+    color:'white',
     fontWeight: '900',
     display:"flex",
+    justifyContent:"center",
     paddingTop:"10px",
    paddingBottom:"30px",
     fontSize: '2.4em',
@@ -16,7 +30,7 @@ const Header = styled(Typography)(({ theme }) => ({
     fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
     fontStyle: "normal",
     textTransform:"initial",
-    lineHeight:"46px",
+    lineHeight:"36px",
     
     [theme.breakpoints.down('769')]: {
      position:'absolute',
@@ -76,9 +90,13 @@ const Header = styled(Typography)(({ theme }) => ({
       fontSize:"1.5em",
       },
   }));
-
+  const ImageListCont = styled(ImageList)(({ theme }) => ({
+   
+     
+    
+  }));
   const Desc = styled(Typography)(({ theme }) => ({
-    color: '#403F3F',
+    color: 'white',
    
     fontWeight: 500, /* Remove quotes around 500 */
     
@@ -100,23 +118,71 @@ const Header = styled(Typography)(({ theme }) => ({
   },
   }));
   
+  const itemData = [
+    {
+      summary: "At Prehood, our work philosophy is built on the pillars of communication, collaboration, and critical thinking. We believe that successful software development and consultancy go beyond technical expertise – they thrive on effective teamwork, innovative problem-solving, and transparent client relationships.",
+      gallery: [
+        {
+          img: 'https://www.impellam.com/-/media/impellam-group/blog-images/apsco-blob-header-(1).png',
+          title: 'Technical expertise',
+          rows: 2,
+          cols: 2,
+          featured: true,
+        },
+        {
+          img: 'https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/05/Image-6.jpg',
+          title: 'Communication',
+         
+        },
+        {
+          img: 'https://kissflow.com/hubfs/Feature-Image-Business-Collaboration.jpg',
+          title: 'Collaboration',
+          
+        },
+       
+      ],
+      milestone:{
 
+      }
+    },
+  ];
+  
 
 
 
 export const ProjectCaseText = () => {
   return (
-    <Container sx={{position:"relative"}}>
+    <Container sx={{background:"red"}}>
+     
+    <Box>
 <Header>
-   Our Projects
+ summary
 </Header>
 <Desc>
-At Prehood, our work philosophy is built on the pillars of communication,
-collaboration, and critical thinking. We believe that successful software
-development and consultancy go beyond technical expertise – they thrive
-on effective teamwork, innovative problem-solvings, and transparent client relationships.
+{itemData[0].summary}
 </Desc>
-
+<Box >
+<Header>Gallery</Header>
+         <ImageListCont >
+      <ImageListItem key="Subheader" cols={1}>
+       
+      </ImageListItem>
+      {itemData[0].gallery.map((galleryItem) => (
+            <ImageListItem key={galleryItem.title} cols={galleryItem.cols || 1}>
+              <img
+                src={galleryItem.img}
+                alt={galleryItem.title}
+                loading="lazy"
+              />
+             
+          <Desc
+            title={galleryItem.title}
+            />
+        </ImageListItem>
+      ))}
+    </ImageListCont>
+    </Box>
+</Box>
     </Container>
   )
 }

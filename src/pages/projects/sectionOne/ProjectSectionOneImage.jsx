@@ -153,7 +153,7 @@ export default function ProjectSectionOneImage() {
 const itemData = [
   {
     img: 'https://www.impellam.com/-/media/impellam-group/blog-images/apsco-blob-header-(1).png',
-    title: 'Technical expertise',
+    title: 'Planning',
    
     rows: 2,
     cols: 2,
@@ -161,18 +161,18 @@ const itemData = [
   },
   {
     img: 'https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/05/Image-6.jpg',
-    title: 'Communication',
+    title: 'Design',
     
   },
   {
     img: 'https://kissflow.com/hubfs/Feature-Image-Business-Collaboration.jpg',
-    title: 'Collaboration',
+    title: 'Testing',
    
     
   },
   {
     img: 'https://www.simplilearn.com/ice9/free_resources_article_thumb/Top_Artificial_Intelligence_Stats_You_Should_Know_About_in_2021.jpg',
-    title: 'Critical thinking',
+    title: 'Deployment',
    
     cols: 2,
   },

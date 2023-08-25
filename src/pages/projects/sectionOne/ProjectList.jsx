@@ -225,8 +225,12 @@ const ProjectDesc = styled(Typography)(({ theme }) => ({
 marginTop:"-5px",
   color:"#b8bec5",
   fontSize: '1em',
- 
+  
   fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
+  [theme.breakpoints.down('602')]: {
+    marginBottom:"30px", 
+    
+},
  
 }));
 const ProjectCardContainer= styled(Typography)(({ theme }) => ({
@@ -285,6 +289,7 @@ const ProjectCardContainer= styled(Typography)(({ theme }) => ({
   gap:"0px",
   flexDirection:"column",
   marginLeft:"-2px",
+  
 },
 [theme.breakpoints.down('541')]: {
   paddingLeft:"0px",
