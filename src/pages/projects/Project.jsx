@@ -1,14 +1,19 @@
 import React from 'react'
-import { ProjectSectionOne } from './sectionOne/ProjectSectionOne'
 
-import ProjectList from './sectionTwo/ProjectList'
+
+import ProjectList from './sectionOne/ProjectList'
+import { ProjectSectionOne } from './sectionOne/ProjectSectionOne'
+import { Box } from '@mui/material'
 
 export const Project = () => {
   return (
     <div >
+<Box >
+<ProjectSectionOne/>
 
-        <ProjectSectionOne/>
-        <ProjectList/>
+</Box>
+       
+        
     </div>
   )
 }

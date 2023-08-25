@@ -106,7 +106,7 @@ const Header = styled(Typography)(({ theme }) => ({
 
 export const ProjectSectionOneText = () => {
   return (
-    <Container sx={{position:"relative"}}>
+    <Container >
 <Header>
    Our Projects
 </Header>

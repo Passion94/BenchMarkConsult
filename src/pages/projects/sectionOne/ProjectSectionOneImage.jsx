@@ -3,8 +3,9 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import ListSubheader from '@mui/material/ListSubheader';
-
-import { styled } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
+import InfoIcon from '@mui/icons-material/Info';
+import { Typography, styled } from '@mui/material';
 
 
 const Desc = styled(ImageListItemBar)(({ theme }) => ({
@@ -94,9 +95,20 @@ const ImageListCont = styled(ImageList)(({ theme }) => ({
    
   },
 }));
-const Listsubheader = styled(ListSubheader)(({ theme }) => ({
+const Listsubheader = styled(Typography)(({ theme }) => ({
  display:"flex", 
  justifyContent:"center",
+ 
+ background:"white",
+ padding:"10px 20px",
+ fontWeight: '500',
+ 
+ fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
+ fontSize: '.9em', 
+ color: '#9F9F9F',
+ 
+ 
+ textTransform:"uppercase",
   
  [theme.breakpoints.down('541')]: {
   fontSize: ".8em",
@@ -122,11 +134,12 @@ export default function ProjectSectionOneImage() {
       </ImageListItem>
       {itemData.map((item) => (
         <ImageListItem key={item.img} >
-          <img maxWidth="50px"
+          <img
             src={`${item.img}?w=248&fit=crop&auto=format`}
             srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
             alt={item.title}
             loading="lazy"
+            style={{maxWidth:"297.5px", maxHeight:"168px"}}
           />
           <Desc
             title={item.title}
@@ -139,75 +152,29 @@ export default function ProjectSectionOneImage() {
 
 const itemData = [
   {
-    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTisOQCAq6TrAsUQ9bY40h8UQpzovo5sePt-A&usqp=CAU',
-    title: 'Scope ',
+    img: 'https://www.impellam.com/-/media/impellam-group/blog-images/apsco-blob-header-(1).png',
+    title: 'Technical expertise',
    
-    rows: 1,
-    cols: 1,
-    featured: false,
+    rows: 2,
+    cols: 2,
+    featured: true,
   },
   {
-    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW7aSj_aCnTF-B6v3yh4YBGTBS6QhvfaOh4g&usqp=CAU',
-    title: 'Planning',
+    img: 'https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/05/Image-6.jpg',
+    title: 'Communication',
     
   },
   {
     img: 'https://kissflow.com/hubfs/Feature-Image-Business-Collaboration.jpg',
-    title: ' Implementation',
+    title: 'Collaboration',
    
     
   },
   {
     img: 'https://www.simplilearn.com/ice9/free_resources_article_thumb/Top_Artificial_Intelligence_Stats_You_Should_Know_About_in_2021.jpg',
-    title: 'Monitoring',
+    title: 'Critical thinking',
    
     cols: 2,
   },
-  // {
-  //   img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-  //   title: 'Hats',
-  //   author: '@hjrc33',
-  //   cols: 2,
-  // },
-  // {
-  //   img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-  //   title: 'Honey',
-  //   author: '@arwinneil',
-  //   rows: 2,
-  //   cols: 2,
-  //   featured: true,
-  // },
-  // {
-  //   img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-  //   title: 'Basketball',
-  //   author: '@tjdragotta',
-  // },
-  // {
-  //   img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
-  //   title: 'Fern',
-  //   author: '@katie_wasserman',
-  // },
-  // {
-  //   img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
-  //   title: 'Mushrooms',
-  //   author: '@silverdalex',
-  //   rows: 2,
-  //   cols: 2,
-  // },
-  // {
-  //   img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
-  //   title: 'Tomato basil',
-  //   author: '@shelleypauls',
-  // },
-  // {
-  //   img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
-  //   title: 'Sea star',
-  //   author: '@peterlaster',
-  // },
-  // {
-  //   img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
-  //   title: 'Bike',
-  //   author: '@southside_customs',
-  //   cols: 2,
-  // },
+  
 ];

@@ -2,11 +2,13 @@ import React from 'react'
 
 
 import { Box, Container, Typography, styled } from '@mui/material'
-
-
-import ProjectSectionOneImage from './ProjectSectionOneImage'
+import ProjectSectionOneImage from './ProjectSectionOneImage';
 import { ProjectSectionOneText } from './ProjectSectionOneText';
-import { SectionOne } from '../../about/Howwework/sectionOne/SectionOne';
+import { OurVision } from '../../about/Howwework/sectionOne/OurVision';
+import ProjectList from './ProjectList';
+
+
+
 
 const SectionOneContainer = styled(Container)(({ theme }) => ({
     display:"flex",
@@ -17,6 +19,7 @@ const SectionOneContainer = styled(Container)(({ theme }) => ({
     zIndex:"-1",
     paddingBottom:"50px",
     width:"1338px", 
+    
     
     
     [theme.breakpoints.down('1441')]: {
@@ -214,13 +217,13 @@ export const ProjectSectionOne = () => {
         </Box>
        <SectionContainerBox  >
         <SectionOneContainer maxWidth="xl">
-       
+
 <ProjectSectionOneImage />
 <ProjectSectionOneText/>
 </SectionOneContainer>
 </SectionContainerBox>
 
-
+<ProjectList/>
     </Box>
    
   )

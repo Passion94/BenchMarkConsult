@@ -1,8 +1,8 @@
 import React, { useState }  from 'react';
-import { Box, Button, Card, CardActionArea, CardContent, CardMedia, Typography, styled } from '@mui/material';
+import { Box, Button, Card, CardActionArea, CardContent, CardMedia, Container, Typography, styled } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-
+import { ProjectSectionOne } from './ProjectSectionOne';
 
 
 const Header = styled(Typography)(({ theme }) => ({
@@ -11,7 +11,7 @@ const Header = styled(Typography)(({ theme }) => ({
     fontWeight: '900',
     display:"flex",
     justifyContent:"center",
-    marginBottom: '30px',
+    marginBottom: '50px',
     fontSize: '1em',
    
     fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
@@ -27,7 +27,7 @@ const Header = styled(Typography)(({ theme }) => ({
     },
     [theme.breakpoints.down('482')]: {
         fontSize: '.8em',
-        marginBottom: '15px',
+        marginBottom: '50px',
     },
    
    
@@ -201,13 +201,14 @@ const ProjectName = styled(Typography)(({ theme }) => ({
   fontWeight: '900',
   display:"flex",
   justifyContent:"flex-start",
-  marginBottom: '0px',
-  fontSize: '1em',
+  margin: '0px',
+  
+  fontSize: '1.2em',
  
   fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
   // fontWeight: "normal",
   fontStyle: "normal",
-  textTransform:"uppercase",
+  textTransform:"initial",
   lineHeight:"26px",
   [theme.breakpoints.down('913')]: {
     
@@ -220,39 +221,190 @@ const ProjectName = styled(Typography)(({ theme }) => ({
      
   },
 }));
-
-
-
-const StyledButton = styled('button')(({ theme }) => ({
-  
-  marginTop: '10px',
-  marginBottom:"30px",
-  border:"0px",
-  color:'black',
-  borderRadius:'3px',
-  fontSize: '.8em',
-  fontWeight: '900',
-  lineHeight: '17px',
-  textDecoration: 'none',
-  textTransform: 'uppercase',
-  padding: '16px 22px',
-  background:"rgb(46,234,250)",
-  border:"none",
-  outline:"none",
+const ProjectDesc = styled(Typography)(({ theme }) => ({
+marginTop:"-5px",
+  color:"#b8bec5",
+  fontSize: '1em',
  
-  transition: 'all 0.3s ease 0s',
   fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
-  cursor: 'pointer',
-  // marginLeft: '42px',
+ 
+}));
+const ProjectCardContainer= styled(Typography)(({ theme }) => ({
+  display:"flex",
+  alignItems:"center",
+  gap:"127.5px",
+  flexWrap:"wrap", 
+  paddingLeft:"20px",
+  justifyContent:"center",
+  [theme.breakpoints.down('1601')]: {
+    paddingLeft:"19.5px",
+    
+},
+  [theme.breakpoints.down('1441')]: {
+    paddingLeft:"19.5px",
+    gap:"90px",
+},
+[theme.breakpoints.down('1367')]: {
+  paddingLeft:"19.5px",
+  gap:"65px",
+},
+[theme.breakpoints.down('1281')]: {
+  paddingLeft:"19px",
+  gap:"36.7px",
+},
+[theme.breakpoints.down('1025')]: {
+  paddingLeft:"19px",
+  gap:"32px",
+},
+[theme.breakpoints.down('913')]: {
+  paddingLeft:"20px",
+  gap:"45px",
+},
+[theme.breakpoints.down('821')]: {
+  paddingLeft:"5px",
+  gap:"30px",
+},
+[theme.breakpoints.down('821')]: {
+  paddingLeft:"5px",
+  gap:"25px",
+},
+[theme.breakpoints.down('801')]: {
+  paddingLeft:"5px",
+  gap:"30px",
+},
+[theme.breakpoints.down('769')]: {
+  paddingLeft:"5px",
+  gap:"30px",
+},
+[theme.breakpoints.down('641')]: {
+  paddingLeft:"2px",
+  gap:"20px",
+},
+[theme.breakpoints.down('602')]: {
+  paddingLeft:"0px",
+  gap:"0px",
+  flexDirection:"column",
+  marginLeft:"-2px",
+},
+[theme.breakpoints.down('541')]: {
+  paddingLeft:"0px",
+  gap:"0px",
+  flexDirection:"column",
+  marginLeft:"0px",
+},
+[theme.breakpoints.down('481')]: {
+  paddingLeft:"3px",
+  gap:"0px",
+  
+},
+[theme.breakpoints.down('481')]: {
+  paddingLeft:"3px",
+  gap:"0px",
+  flexDirection:"column",
+  marginLeft:"0px",
+},
+[theme.breakpoints.down('394')]: {
+  paddingLeft:"0px",
+  gap:"0px",
+  flexDirection:"column",
+  
+},
+[theme.breakpoints.down('361')]: {
+  paddingLeft:"0px",
+  gap:"0px",
+  flexDirection:"column",
+  marginLeft:"-3px",
+  
+},
+}));
+const ProjectCardMedia = styled(CardMedia)(({ theme }) => ({
+  height:"245px",
+  width:"360px",
+  [theme.breakpoints.down('1025')]: {
+    height:"175px",
+    width:"290px",
+    
+},
+[theme.breakpoints.down('913')]: {
+  height:"230px",
+  width:"390px",
+  
+},
+[theme.breakpoints.down('821')]: {
+  height:"230px",
+  width:"365px",
+  
+},
+[theme.breakpoints.down('801')]: {
+  height:"230px",
+  width:"350px",
+  
+},
+[theme.breakpoints.down('769')]: {
+  height:"230px",
+  width:"335px",
+  
+},
 
+[theme.breakpoints.down('641')]: {
+  height:"370px",
+  width:"605px", 
+  
+},
+[theme.breakpoints.down('602')]: {
+  height:"370px",
+  width:"557px", 
+  
+},
+[theme.breakpoints.down('541')]: {
+  height:"300px",
+  width:"485px",  
+  
+},
+[theme.breakpoints.down('481')]: {
+  height:"300px",
+  
+  
+  
+  width:"445px", 
+  
+},
+[theme.breakpoints.down('415')]: {
+  height:"300px",
+  width:"376px",  
+  
+},
+[theme.breakpoints.down('394')]: {
+  height:"300px",
+  width:"359px",   
+  
+},
+[theme.breakpoints.down('385')]: {
+        
+  width:"350px",  
+},
+[theme.breakpoints.down('376')]: {
+        
+  width:"343px",  
+},
+[theme.breakpoints.down('361')]: {
+  
+  width:"336px",  
+},
+
+ 
 }));
 
 
 
 
 
+
+
+
+
 function ProjectList() {
-  const cardsPerPage = 6;
+  const cardsPerPage = 12;
 
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(cardData.length / cardsPerPage);
@@ -265,37 +417,38 @@ function ProjectList() {
   };
 
   return (
-    <Box sx={{marginTop:"0px",  background:"RGB(45, 45, 191) ", paddingBottom:"200px"}}>
-     
+    <Box sx={{marginTop:"100px",  background:"RGB(45, 45, 191) ", padding:"50px 0px"}}>
+      <Container
+      maxWidth="xl"
+      >
       <Header>Explore how organizations have succeeded with us:</Header>
-      <Box sx={{display:"flex", gap:"30px", flexWrap:"wrap", justifyContent:"center"}}>
+      <ProjectCardContainer >
         {cardData.slice(startIndex, endIndex).map((card, index) => (
           <Link key={index} to={`/projects/${card.id}`}>
-            <Card sx={{ maxWidth: 360, background:"transparent", border:"none", boxShadow:"none" }}>
+            <Card sx={{ maxWidth: 660, background:"transparent", border:"none", boxShadow:"none" }}>
               <CardActionArea>
-                <CardMedia
+                <ProjectCardMedia
                   component="img"
-                  height="245"
-                  width="360"
+                  
                   image={card.image}
                   alt="Lizard"
                 />
-                <CardContent sx={{background:"transparent"}}>
+                <CardContent sx={{background:"transparent", marginLeft:"-15px"}}>
                   <ProjectName gutterBottom component="div">
                     {card.title}
                   </ProjectName>
-                  <Typography variant="body2" color="text.secondary" color="white">
+                  <ProjectDesc variant="body2">
                     {card.description}
-                  </Typography>
+                  </ProjectDesc>
                 </CardContent>
               </CardActionArea>
             </Card>
           </Link>
         ))}
-      </Box>
+      </ProjectCardContainer>
       <Box sx={{ display: "flex", justifyContent: "center", marginTop: "20px" }}>
         {Array.from({ length: totalPages }, (_, index) => (
-          <Button
+          <Button sx={{marginTop:"50px"}}
             key={index}
             onClick={() => handlePageChange(index + 1)}
             variant={index + 1 === currentPage ? "contained" : "outlined"}
@@ -304,6 +457,7 @@ function ProjectList() {
           </Button>
         ))}
       </Box>
+      </Container>
     </Box>
   );
 }
