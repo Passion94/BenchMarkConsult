@@ -91,8 +91,9 @@ const Header = styled(Typography)(({ theme }) => ({
       },
   }));
   const ImageListCont = styled(ImageList)(({ theme }) => ({
-   
-     
+   paddingLeft:"20px",
+     width:"1000px",
+     height:"800px"
     
   }));
   const Desc = styled(Typography)(({ theme }) => ({
@@ -152,7 +153,7 @@ const Header = styled(Typography)(({ theme }) => ({
 
 export const ProjectCaseText = () => {
   return (
-    <Container sx={{background:"red"}}>
+    <Container sx={{background:"rgb(45, 45, 191)"}}>
      
     <Box>
 <Header>
@@ -168,11 +169,11 @@ export const ProjectCaseText = () => {
        
       </ImageListItem>
       {itemData[0].gallery.map((galleryItem) => (
-            <ImageListItem key={galleryItem.title} cols={galleryItem.cols || 1}>
-              <img
+            <ImageListItem key={galleryItem.title} cols={galleryItem.cols || 1} >
+              <img 
                 src={galleryItem.img}
                 alt={galleryItem.title}
-                loading="lazy"
+                loading="lazy" 
               />
              
           <Desc

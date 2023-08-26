@@ -121,7 +121,7 @@ const Header = styled(Typography)(({ theme }) => ({
   }));
   
   const StyledButton = styled('button')(({ theme }) => ({
-  
+ 
     marginTop: '10px',
     marginBottom:"30px",
     border:"1px solid rgb(75,75,221)",
@@ -157,15 +157,19 @@ maxWidth="xl">
     <PortfoliContCont >
         <Container
         >
-            <Header>Portfolio</Header>
+            <Header>Case Study</Header>
        <Desc>{desc}</Desc> 
 
         </Container>
         <Box >
     <CaseCard/>
         </Box>
-       
+        
     </PortfoliContCont >
+    <Container sx={{ display:"flex",justifyContent:"center",}}>
+    <StyledButton>Explore all our case study</StyledButton>
+    </Container>
+    
     </Container>
     </Box>
   )

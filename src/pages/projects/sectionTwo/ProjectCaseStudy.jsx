@@ -1,17 +1,15 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import { styled, useTheme } from '@mui/material/styles';
-import AppBar from '@mui/material/AppBar';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { ProjectSectionOne } from '../sectionOne/ProjectSectionOne';
-import ProjectSectionOneImage from '../sectionOne/ProjectSectionOneImage';
 
 import { ProjectCaseText } from './ProjectCaseText';
 import { Container, ImageList, ImageListItemBar } from '@mui/material';
+import { CaseOne } from '../../casestudy/CaseOne';
+import "../../about/Howwework/sectionOne/sectionOne.css"
 
 
 
@@ -81,13 +79,38 @@ const Header = styled(Typography)(({ theme }) => ({
   fontWeight: '900',
   display:"flex",
   justifyContent:"center",
-  flexDirection:"column",
-  marginBottom: '30px',
-  fontSize: '1em',
-  paddingTop: '10px',
+  // flexDirection:"column",
+  marginTop:"50px",
+  
+  fontSize: '1.2em',
+ 
  
   fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
   // fontWeight: "normal",
+  fontStyle: "normal",
+  textTransform:"initial",
+  lineHeight:"46px",
+  [theme.breakpoints.down('415')]: {
+    
+    fontSize:".8em",
+
+    
+  },
+ 
+}));
+const TabHeader = styled(Tab)(({ theme }) => ({
+  color:'white',
+  fontWeight: '900',
+  display:"flex",
+  justifyContent:"center",
+  flexDirection:"column",
+  marginBottom: '30px',
+  marginTop:"30px",
+  fontSize: '1em',
+ 
+ 
+  fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
+  
   fontStyle: "normal",
   textTransform:"initial",
   lineHeight:"46px",
@@ -145,40 +168,52 @@ const Desc = styled(Typography)(({ theme }) => ({
   },
  
 }));
+const TabDescContainer = styled(Container)(({ theme }) => ({
+  color:'white',
+  fontWeight:"500",
+  fontSize: '1em',
+  lineHeight: '36px',
+ 
+  fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
 
-const ImageListCont = styled(ImageList)(({ theme }) => ({
-  width: 1350,
-   height: 500,
-   marginBottom:"150px",
+
+  [theme.breakpoints.down('415')]: {
+    
+    fontSize:".9em",
+
+    
+  },
+ 
+}));
+
+const ContentContainer = styled(Container)(({ theme }) => ({
+   marginTop: "150px",
+    display:"flex", 
+    justifyContent:"center", 
+    paddingBottom:"150px",
+    [theme.breakpoints.down('1441')]: {
+      paddingLeft:"40px"
+     },
    
-   [theme.breakpoints.down('1025')]: {
-    width: 900,
-   height: 380,
+   [theme.breakpoints.down('1367')]: {
+  //  paddingLeft:"40px"
   },
   [theme.breakpoints.down('913')]: {
-    width: 800,
-   height: 350,
+  
   },
   [theme.breakpoints.down('811')]: {
-    width: 870,
-   height: 350,
+    
   },
   [theme.breakpoints.down('769')]: {
-    width: 600,
-   height: 500,
-   paddingTop:"50px",
+   
    
   },
   [theme.breakpoints.down('641')]: {
-    width: 500,
-   height: 450,
-   paddingTop:"50px",
+    
    
   },
   [theme.breakpoints.down('602')]: {
-    width: 458,
-   height: 450,
-   paddingTop:"50px",
+   
    
   },
   [theme.breakpoints.down('541')]: {
@@ -244,9 +279,10 @@ const ProjectCaseStudy = () => {
   ];
 
   return (
-    <div style={{ marginTop: "150px", display:"flex", justifyContent:"center"}}>
-      <Container sx={{ background:"white", padding:"60px 0px ", border:"5px solid red" }}>
-        <Container sx={{background:" RGB(45, 45, 191)"}} >
+    <Box className="SectionOneContainer">
+    <ContentContainer >
+      <Container sx={{ background:"rgb(45, 45, 191)", padding:"60px 0px ", border:"5px solid rgb(46,234,250)" }}>
+        <Container sx={{background:" rgb(45, 45, 191)"}} >
           
      <Title>{project.title}</Title>
      
@@ -266,29 +302,35 @@ const ProjectCaseStudy = () => {
        
   
       {/* Other project details... */}
-      <h1>Explore the Case Study intrisic details</h1>
+      <Header>Explore the Case Study intrinsic details</Header>
       <Box sx={{ width: '100%'}}>
         
         <Container sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
             {tabs.map((tabLabel, index) => (
-              <Tab key={index} label={tabLabel} />
+              <TabHeader key={index} label={tabLabel} sx={{color:"white"}} />
             ))}
           </Tabs>
         </Container>
         
         {tabs.map((_, index) => (
   value === index && (
-    <Container key={index} >
-      <h2>{tabs[index]}</h2>
+    <TabDescContainer key={index}sx={{color:"white"}}>
+      <Header>{tabs[index]}</Header>
       {/* Display content for each tab */}
       {project.tabContent[tabs[index].toLowerCase()]} {/* Access specific tab content */}
-    </Container>
+    </TabDescContainer>
   )
 ))}</Box>
       
       </Container>
-    </div>
+      
+    </ContentContainer>
+    <Box sx={{background:"rgb(45, 45, 191)"}}>
+    <Header sx={{paddingTop:"50px"}}>Explore more of our Case study</Header>
+    <CaseOne/>
+    </Box>
+    </Box>
   );
 };
 
