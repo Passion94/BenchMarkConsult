@@ -7,6 +7,7 @@ import { Story } from '../story/story'
 import Expectations from './expectations/expectations'
 import { Box, Container } from '@mui/material'
 
+
 import { CaseOne } from '../casestudy/CaseOne'
 
 
@@ -15,7 +16,7 @@ import { CaseOne } from '../casestudy/CaseOne'
 export const Home = () => {
   return (
     <Box>
-      <Box sx={{ backgroundColor: "rgb(0, 77, 64)"}}>
+      <Box sx={{ backgroundColor: "#1a237e"}}>
       <NavbarCarousal/>
      <Whatwedo/> 
       </Box>

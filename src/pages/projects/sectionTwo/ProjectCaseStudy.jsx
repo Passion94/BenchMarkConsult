@@ -279,10 +279,11 @@ const ProjectCaseStudy = () => {
   ];
 
   return (
-    <Box className="SectionOneContainer">
-    <ContentContainer >
-      <Container sx={{ background:"rgb(45, 45, 191)", padding:"60px 0px ", border:"5px solid rgb(46,234,250)" }}>
-        <Container sx={{background:" rgb(45, 45, 191)"}} >
+    <Box>
+    <Box className="SectionOneContainer" sx={{marginBottom:"-50px"}}>
+    <ContentContainer  >
+      <Container sx={{ background:"#1a237e", padding:"60px 0px " }}>
+        <Container  >
           
      <Title>{project.title}</Title>
      
@@ -326,7 +327,9 @@ const ProjectCaseStudy = () => {
       </Container>
       
     </ContentContainer>
-    <Box sx={{background:"rgb(45, 45, 191)"}}>
+    
+    </Box>
+    <Box sx={{background:"#1a237e"}}>
     <Header sx={{paddingTop:"50px"}}>Explore more of our Case study</Header>
     <CaseOne/>
     </Box>

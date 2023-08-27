@@ -14,7 +14,7 @@ const SectionOneContainer = styled(Container)(({ theme }) => ({
     display:"flex",
     gap:"20px",
     marginTop:"100px",
-    background:"rgb(46,234,250)",
+    background:"#1a237e",
     paddingTop:"50px", 
     zIndex:"-1",
     paddingBottom:"50px",

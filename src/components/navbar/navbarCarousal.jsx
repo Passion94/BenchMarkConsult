@@ -83,7 +83,7 @@ const Desc = styled(Typography)(({ theme }) => ({
   fontWeight:"500",
   marginBottom: '30px',
   fontSize: '1.2em',
-  lineHeight: '46px',
+  lineHeight: '26px',
   fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
   padding:" 0 355px 0 0",
   zIndex:"1",
@@ -168,6 +168,15 @@ const StyledButton = styled('button')(({ theme }) => ({
   },
 }));
 
+const SubcategoryItem = styled(Typography)(({ theme }) => ({
+  color: "white",
+  fontWeight: "500",
+  fontSize: "1.2em",
+  display: "flex",
+  alignItems: "center",
+  gap: "1%",
+}));
+
 // ... Your component code ...
 
 
@@ -189,24 +198,30 @@ const slides = [
       three:"Web application development"
       }
     },
-  { id:3,
-    title: 'Services ',
-    header: 'System analysis and design',
-    description: ' Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,',
-    buttonLabel: 'learn more',
-  },
-  {id:4,
+
+  {id:3,
     title: 'Services ',
     header: 'AI & Data analytics',
     description: ' Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,',
     buttonLabel: 'learn more',
-    
+    subcategory:{
+      one:"Artificial intelligence/Machine Learning",
+      two:"Data Science",
+      three:"Data Analysis",
+      four:"Data Analysis"
+      }
   },
-  {id:5,
+  {id:4,
     title: 'Services ',
     header: 'Cyber Security',
     description: ' Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,',
     buttonLabel: 'Read More',
+    subcategory:{
+      one:"Security assessments and audits",
+      two:"Cybersecurity strategy development",
+      three:"Threat detection and incident response",
+      four:"Data protection and encryption"
+      }
 
     
   },
@@ -218,7 +233,7 @@ const slides = [
 const NavbarCarousal = () => {
  
   const sliderRef = useRef(null);
-  const dotTexts = ['What we do', 'Software development', 'System analysis and design', 'AI & Data analytics', 'Cyber security'];
+  const dotTexts = ['What we do', 'Software development', 'AI & Data analytics', 'Cyber security'];
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   const handleDotClick = (index) => {
@@ -259,50 +274,35 @@ const NavbarCarousal = () => {
   
 
   return (
-    <div className='sliderContainer'  >
-      
-     <Slider ref={sliderRef} {...settings}  style={{overflow:"hidden"}} >
-     {slides && slides.map((slide, index) => (
-  <Box key={index} className={`slideBackground slide${index + 1}`}>
-    
-    <Container maxWidth="xl">
-      <Title>{slide.title}</Title>
-      <Header>{slide.header}</Header>
-      <Desc variant="body1">{slide.description}</Desc>
-      {slide.subcategory && (
-        <Box sx={{paddingLeft:"5%"}}>
-          <Desc><span style={{display:"flex", alignItems:"center", gap:"1%"}}>
-            <CircleIcon
-                      sx={{ padding: "0 0px 0 0", height: "15px", width: "15px",color: "rgb(46,234,250)",  
-                        border: "4px solid white",borderRadius: "30px",
-                        }}/>
-                        {slide.subcategory.one}</span></Desc>
-          <Desc><span style={{display:"flex", alignItems:"center", gap:"1%"}}><CircleIcon
-                      sx={{ padding: "0 0px 0 0", height: "15px", width: "15px",color: "rgb(46,234,250)",  
-                        border: "4px solid white",borderRadius: "30px",
-                        }}/>
-                        {slide.subcategory.two}</span></Desc>
-          <Desc><span style={{display:"flex", alignItems:"center", gap:"1%"}}>
-            <CircleIcon
-                      sx={{ padding: "0 0px 0 0", height: "15px", width: "15px",color: "rgb(46,234,250)",  
-                        border: "4px solid white",borderRadius: "30px",
-                        }}/>
-                        {slide.subcategory.three}</span></Desc>
-        </Box>
-      )}
-      <StyledButton >{slide.buttonLabel}</StyledButton>
-    </Container>
-  </Box>
-))}
-
-        
-    
-      
-    </Slider>
-    <Container 
-    maxWidth= "xl">
-    
-    <div className='carousel-dots'>
+    <div className='sliderContainer'>
+      <Slider ref={sliderRef} {...settings} style={{ overflow: "hidden" }}>
+        {slides && slides.map((slide, index) => (
+          <Box key={index} className={`slideBackground slide${index + 1}`}>
+            <Container maxWidth="xl">
+              <Title>{slide.title}</Title>
+              <Header>{slide.header}</Header>
+              <Desc variant="body1">{slide.description}</Desc>
+              {slide.subcategory && (
+                <Box sx={{ paddingLeft: "5%" }}>
+                  {Object.values(slide.subcategory).map((item, subIndex) => (
+                    <Desc key={subIndex}>
+                      <span style={{ display: "flex", alignItems: "center", gap: "1%" }}>
+                        <CircleIcon
+                          sx={{ padding: "0 0px 0 0", height: "10px", width: "10px", color: "rgb(46,234,250)",  
+                            border: "2px solid white", borderRadius: "30px" }}/>
+                        {item}
+                      </span>
+                    </Desc>
+                  ))}
+                </Box>
+              )}
+              <StyledButton>{slide.buttonLabel}</StyledButton>
+            </Container>
+          </Box>
+        ))}
+      </Slider>
+      <Container maxWidth="xl">
+        <div className='carousel-dots'>
           {dotTexts.map((text, index) => (
             <div
               key={index}
@@ -313,11 +313,15 @@ const NavbarCarousal = () => {
             </div>
           ))}
         </div>
-   </Container>
- </div>
+      </Container>
+    </div>
   );
 };
 
 export default NavbarCarousal;
+
+
+
+
 
 

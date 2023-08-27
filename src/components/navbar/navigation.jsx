@@ -43,9 +43,9 @@ const ContactLink = styled(Link)(({ to }) => ({
  
   
   fontWeight: "700",
-  color:"black",
+  color:"white",
   
-  background:"rgb(46,234,250)",
+  background:"#5c6bc0",
   fontSize: "1em",
   fontWeight: "700",
   textTransform: "uppercase",

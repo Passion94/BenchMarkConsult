@@ -2,7 +2,7 @@ import React, { useState }  from 'react';
 import { Box, Button, Card, CardActionArea, CardContent, CardMedia, Container, Typography, styled } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-import { ProjectSectionOne } from './ProjectSectionOne';
+
 
 
 const Header = styled(Typography)(({ theme }) => ({
@@ -200,7 +200,7 @@ const ProjectName = styled(Typography)(({ theme }) => ({
   color:'white',
   fontWeight: '900',
   display:"flex",
-  justifyContent:"flex-start",
+  justifyContent:"center",
   margin: '0px',
   
   fontSize: '1.2em',
@@ -225,7 +225,8 @@ const ProjectDesc = styled(Typography)(({ theme }) => ({
 marginTop:"-5px",
   color:"#b8bec5",
   fontSize: '1em',
-  
+  display:"flex",
+  justifyContent:"center",
   fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
   [theme.breakpoints.down('602')]: {
     marginBottom:"30px", 
@@ -235,6 +236,7 @@ marginTop:"-5px",
 }));
 const ProjectCardContainer= styled(Typography)(({ theme }) => ({
   display:"flex",
+  
   alignItems:"center",
   gap:"127.5px",
   flexWrap:"wrap", 
@@ -324,7 +326,9 @@ const ProjectCardContainer= styled(Typography)(({ theme }) => ({
 }));
 const ProjectCardMedia = styled(CardMedia)(({ theme }) => ({
   height:"245px",
-  width:"360px",
+  width:"245px",
+  border:"2px solid white",
+  borderRadius:"50%",
   [theme.breakpoints.down('1025')]: {
     height:"175px",
     width:"290px",
@@ -408,7 +412,7 @@ const ProjectCardMedia = styled(CardMedia)(({ theme }) => ({
 
 
 
-function ProjectList() {
+function AllCaseStudy() {
   const cardsPerPage = 12;
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -426,7 +430,7 @@ function ProjectList() {
       <Container
       maxWidth="xl"
       >
-      <Header>Explore how organizations have succeeded with us:</Header>
+      <Header>Explore our case study</Header>
       <ProjectCardContainer >
         {cardData.slice(startIndex, endIndex).map((card, index) => (
           <Link key={index} to={`/projects/${card.id}`}>
@@ -467,4 +471,4 @@ function ProjectList() {
   );
 }
 
-export default ProjectList;
+export default AllCaseStudy;

@@ -2,6 +2,8 @@ import { Box, Button, Container, Stack, Typography, styled } from '@mui/material
 
 import React from 'react'
 import VerticalTabs from './VerticalTabs';
+import {purple} from '@mui/material/colors';
+import { Link } from 'react-router-dom';
 
 const MainContainer = styled(Box)(({ theme }) => ({
   marginTop:'12px', 
@@ -22,7 +24,7 @@ const MainContainer = styled(Box)(({ theme }) => ({
   },
   [theme.breakpoints.down('1367')]: {
     
-    padding:"50px 10px 50px 31px ",
+    padding:"50px 0px 50px 32.5px ",
     
   },
   [theme.breakpoints.down('1281')]: {
@@ -236,7 +238,7 @@ const StyledBox = styled(Box)({
 
 export const Whatwedo = () => {
   return (
-    <Box sx={{backgroundColor: "RGB(45, 45, 191)"}}>
+    <Box sx={{background: "#1a237e"}}>
     <Container maxWidth="xl">
     <MainContainer >
       
@@ -261,12 +263,12 @@ export const Whatwedo = () => {
         
         </StyledBox>
         <Box >
-        <StyledButton
+        <Link to="services"><StyledButton
           variant="contained"
          
         >
           Explore Our Services
-        </StyledButton>
+        </StyledButton> </Link>
        
       
       

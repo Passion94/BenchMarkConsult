@@ -7,64 +7,62 @@ import Box from '@mui/material/Box';
 import Radio from '@mui/material/Radio';
 import { styled } from '@mui/material';
 import "./verticaltabs.css";
-import { blue, green, cyan } from '@mui/material/colors';
+import { cyan } from '@mui/material/colors';
 
 
 
 
+const RadioContainer = styled(Box)({
+  display: "flex",
+  alignItems: "center",
+});
 const RadioText = styled(Typography)(({ theme }) => ({
-color: "white",
-letterSpacing: "normal",
-textTransform:"initial",
-fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
-fontWeight:"900",
-fontSize:"1.2em",
-lineHeight:"36px",
-[theme.breakpoints.down('641')]: {
-   display:"none"
-  
-},
-  
+  color: "white",
+  letterSpacing: "normal",
+  textTransform: "initial",
+  fontFamily: "Ubuntu, Helvetica, Arial, sans-serif",
+  fontWeight: "900",
+  fontSize: "1.2em",
+  width: "250px", // Set a fixed width for the label container
+  lineHeight: "24px",
+  marginTop:"20px",
+  marginLeft: "10px", // Add margin between radio button and text
+  [theme.breakpoints.down('641')]: {
+    display: "none",
+  },
 }));
+
 
 const RadioTextOne = styled(Typography)(({ theme }) => ({
   color: "white",
   letterSpacing: "normal",
-  textTransform:"initial",
-  fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
-  fontWeight:"900",
-  fontSize:"1.2em",
-  lineHeight:"36px",
-  display:"none",
+  textTransform: "initial",
+  fontFamily: "Ubuntu, Helvetica, Arial, sans-serif",
+  fontWeight: "900",
+  fontSize: "1.2em",
+  width: "100px", // Set a fixed width for the label container
+  paddingLeft: "10px", // Add some padding for better spacing
+  // lineHeight: "26px",
+  display: "none",
   [theme.breakpoints.down('641')]: {
-     
-    display:"block"
+    display: "block",
   },
-    
-  }));
-const VertBox = styled(Typography)(({ theme }) => ({
+}));
 
-  flexGrow: 1,
-  bgcolor: 'transparent', 
+const VertBox = styled(Typography)(({ theme }) => ({
+  bgcolor: 'transparent',
   color: "white",
   display: 'flex',
   alignItems: "center",
-  height: 424, 
-  width: "700px",
- 
- 
+  maxHeight: 424,
+  width: "710px", // Adjust this width as needed
   [theme.breakpoints.down('1081')]: {
-    
-    marginLeft:"-28px"
+    marginLeft: "-28px"
   },
   [theme.breakpoints.down('641')]: {
-    
     width: "380px",
   },
-
-
 }));
-
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -75,11 +73,12 @@ function TabPanel(props) {
       hidden={value !== index}
       id={`vertical-tabpanel-${index}`}
       aria-labelledby={`vertical-tab-${index}`}
+      className="tab-content" /* Apply the CSS class here */
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+        <Box sx={{ }}>
+          {children}
         </Box>
       )}
     </div>
@@ -100,57 +99,67 @@ function a11yProps(index) {
 }
 
 const tabLabels = [
-  "Software Development",
-  "System Analysis and Design",
-  "AI and Data Analytics",
-  "Cyber Security",
+  "Project Management and Strategic Planning",
+  "Software Development and Custom Solutions",
+  "AI and Data Analytics/Business Intelligence",
+  "Cybersecurity and Risk Management",
+  "Technology Infrastructure and Management",
+  "IT Training and Skill Development",
+  
 ];
+
 const tabPanelContents = [
   [
-    "Api Development",
-    "Mobile Development",
-    "Web Application Development"
+    "Project planning and execution and execution",
+    "Scope, time, and budget management",
+    "Project risk assessment and mitigation",
+    "Stakeholder communication and coordination",
+    "IT Strategy and Planning",
+    "IT roadmapping and strategic planning",
+    "Technology alignment with business goals",
+    "Digital transformation strategy",
+    "IT architecture assessment and design",
+
   ],
   [
-    "Requirements Elicitation",
-    "Data Modeling",
-    "Prototyping",
-    "System Architecture",
-    "Class and Object Modeling",
-    "Testing Strategy",
-    "Integration",
-    "Version Control",
-    "User Training",
-    "Project Management"
+    "Application development (web, mobile, desktop)",
+    "Custom software solutions",
+    "Software integration and APIs",
+    "Legacy system modernization",
+    "Software Testing and Quality Assurance",
+    "User Experience (UX) and User Interface (UI) Design:",
   ],
   [
-    "Data Strategy, Assessment",
-    "Data Cleaning, Enrichment",
-    "Predictive Modeling",
-    "Machine Learning Solutions",
-    "Computer Vision Applications",
-    "Custom Analytics Solutions",
-    "AI Strategy and Implementation",
-    "Model Evaluation and Validation",
-    "Deployment and Integration",
-    "Data Governance",
-    "Consultation",
-    "Client Collaboration and Support"
+    "Artificial intelligence/Machine Learning",
+    "Data Science",
+    "Data Analysis",
+    "Data Engineering",
+    "Data Policy/Governance",
   ],
   [
-    "Risk Assessment and Analysis",
-    "Security Audits and Assessments",
-    "Security Architecture Design",
-    "Network Security",
-    "Endpoint Security",
-    "Vulnerability Management",
-    "Security Awareness Training",
-    "Data Protection and Encryption",
-    "Identity and Access Management",
-    "Security Monitoring and Analytics",
-    "Cloud Security"
-  ]
+    "Security assessments and audits",
+    "Cybersecurity strategy development",
+    "Threat detection and incident response",
+    "Data protection and encryption",
+  ],
+  [
+    "Network design, implementation, and management",
+    "Server and data center management",
+    "Cloud computing strategy and migration",
+    "Virtualization and containerization solutions",
+  ],
+  [
+    "Technology training for employees",
+    "Certification preparation courses",
+    "IT skills workshops",
+    
+  ],
 ];
+
+
+
+
+
 
 function VerticalTabs() {
   const [value, setValue] = useState(0);
@@ -166,79 +175,37 @@ function VerticalTabs() {
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs example"
-        sx={{ borderRight: 1, borderColor: 'divider', alignItems: 'center' }}
+        sx={{ borderColor: 'divider', alignItems: 'center' }}
       >
-        <Tab
-          label={
-            <Box display="flex" alignItems="center" sx={{paddingBottom:"0px"}} >
-              <Radio checked={value === 0} sx={{marginLeft:"-36px",  color:"white",
-              '&.Mui-checked': {
-                color: cyan[500], // Change the color when checked to green[500]
-              },
-             '@media (max-width: 641px)': {
-              marginLeft:"0px"
-            }
-            }}/>
-              <RadioText>Software Development</RadioText>
-            </Box>
-          }
-          {...a11yProps(0)}
-        />
-        <Tab 
-        
-          label={
-            <Box display="flex" alignItems="center" sx={{paddingBottom:"10px"}} >
-              <Radio checked={value === 1}  sx={{marginLeft:"0px",  color:"white",
-            '&.Mui-checked': {
-              color: cyan[500], // Change the color when checked to green[500]
-            },
-            }} />
-              <RadioText>System Analysis and Design</RadioText>
-            </Box>
-          }
-          {...a11yProps(1)}
-        />
-        <Tab
-          label={
-            <Box display="flex" alignItems="center" sx={{paddingBottom:"10px"}}  >
-              <Radio checked={value === 2}  sx={{marginLeft:"-50px",  color:"white",
-              '&.Mui-checked': {
-                color: cyan[500], // Change the color when checked to green[500]
-              },
-            '@media (max-width: 641px)': {
-              marginLeft:"0px"
-            }
-            }} />
-              <RadioText>AI and Data Analytics</RadioText>
-              
-            </Box>
-          }
-          {...a11yProps(2)}
-        />
+        {tabLabels.map((label, index) => (
           <Tab
-          label={
-            <Box display="flex" alignItems="center" sx={{paddingBottom:"10px"}} >
-              <Radio checked={value === 3} sx={{marginLeft:"-104px", color:"white",
-              '&.Mui-checked': {
-                color: cyan[500], // Change the color when checked to green[500]
-              },
-            '@media (max-width: 641px)': {
-              marginLeft:"0px"
+            key={index}
+            label={
+              <RadioContainer>
+                <Radio
+                  checked={value === index}
+                  sx={{
+                    margin: "0px",
+                    position: "sticky",
+                    top: "0px",
+                    color: "white",
+                    '&.Mui-checked': {
+                      color: cyan[500],
+                    },
+                  }}
+                />
+                <RadioText>{label}</RadioText>
+              </RadioContainer>
             }
-            }} />
-              <RadioText>Cyber Security</RadioText>
-            </Box>
-          }
-          {...a11yProps(4)}
-        />
-        {/* ... Repeat for other tabs */}
+            {...a11yProps(index)}
+          />
+        ))}
       </Tabs>
-      
+
       {tabPanelContents.map((content, index) => (
         <TabPanel key={index} value={value} index={index}>
-          <></>
           <ul>
-          <RadioTextOne>{tabLabels[index]}</RadioTextOne>
+            <RadioTextOne>{tabLabels[index]}</RadioTextOne>
             {content.map((item, itemIndex) => (
               <li key={itemIndex} className='listitemswhatwedo'>{item}</li>
             ))}
@@ -250,3 +217,7 @@ function VerticalTabs() {
 }
 
 export default VerticalTabs;
+
+
+
+

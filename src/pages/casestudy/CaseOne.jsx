@@ -3,6 +3,7 @@ import React from 'react'
 import { Box, Container, Typography, styled } from '@mui/material'
 import CaseCard from './CaseCard'
 import { slides } from './CaseCard';
+import { Link } from 'react-router-dom';
 
 
 
@@ -124,7 +125,7 @@ const Header = styled(Typography)(({ theme }) => ({
  
     marginTop: '10px',
     marginBottom:"30px",
-    border:"1px solid rgb(75,75,221)",
+    border:"none",
     color:'white',
     borderRadius:'3px',
     fontSize: '.8em',
@@ -133,7 +134,7 @@ const Header = styled(Typography)(({ theme }) => ({
     textDecoration: 'none',
     textTransform: 'uppercase',
     padding: '16px 22px',
-    background:"#00CC66",
+    background:"#5c6bc0",
     border:"none",
     outline:"none",
    
@@ -149,7 +150,7 @@ export const CaseOne = () => {
   const slideIndex = 0; // Index of the slide you want to access
   const desc = slides[slideIndex].desc;
   return (
-    <Box sx={{ background:"RGB(45, 45, 191)"}}>
+    <Box sx={{ background:"#1a237e",}}>
 <Container
 maxWidth="xl">
 
@@ -167,7 +168,7 @@ maxWidth="xl">
         
     </PortfoliContCont >
     <Container sx={{ display:"flex",justifyContent:"center",}}>
-    <StyledButton>Explore all our case study</StyledButton>
+    <Link to="/casestudy"> <StyledButton>Explore all our case study</StyledButton></Link>
     </Container>
     
     </Container>

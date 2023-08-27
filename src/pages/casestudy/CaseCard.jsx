@@ -187,7 +187,7 @@ const CaseCard= () => {
 
 
   return (
-    <Container className="">
+    <Container className="" >
      
       <ImageTextSlider slides={slides} />
     </Container>

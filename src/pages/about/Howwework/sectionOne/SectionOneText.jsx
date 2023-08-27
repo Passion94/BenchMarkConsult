@@ -5,7 +5,7 @@ import React from 'react'
 
 
 const Header = styled(Typography)(({ theme }) => ({
-    color:'black',
+    color:'white',
     fontWeight: '900',
     display:"flex",
     paddingTop:"10px",
@@ -78,7 +78,7 @@ const Header = styled(Typography)(({ theme }) => ({
   }));
 
   const Desc = styled(Typography)(({ theme }) => ({
-    color: 'black',
+    color: 'white',
    
     fontWeight: 500, /* Remove quotes around 500 */
     

@@ -46,7 +46,7 @@ const ArrowButton = styled(KeyboardArrowDownOutlinedIcon)(({theme, arrowDirectio
   right: '-4%', // Adjust the right position as needed
   bottom: '3px',
   display: 'block', // Display is already defined based on breakpoints
-  border: '1px solid RGB(45, 45, 191)',
+  border: '1px solid white',
   height: '18px',
   minWidth: '30px',
   borderRadius: '15px',
@@ -124,8 +124,8 @@ const WhatWrap = styled(Box)(({ theme }) => ({
   position: 'relative', // Ensure the container is relatively positioned
   marginTop: '50px',
   padding: '42px 2%',
-  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-  backgroundAttachment: 'local',
+  backgroundColor: 'transparent',
+  // backgroundAttachment: 'local',
   overflow: 'hidden', // Hide overflow from the container
 
 
@@ -138,10 +138,10 @@ const WhatWrap = styled(Box)(({ theme }) => ({
     left: "-15px",
     width: '100%',
     height: '100%',
-    backgroundImage: 'url("images/expectationbackground.png")',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: '300px',
-    backgroundPosition: '20px 10px',
+    // backgroundImage: 'url("images/expectationbackground.png")',
+    // backgroundRepeat: 'no-repeat',
+    // backgroundSize: '300px',
+    // backgroundPosition: '20px 10px',
     zIndex: -1, // Place the background behind the content
   },
 
@@ -157,7 +157,7 @@ const WhatWrap = styled(Box)(({ theme }) => ({
       left: "24px",
       width: '100%',
       height: '100%',
-      backgroundImage: 'url("images/expectationbackground.png")',
+      // backgroundImage: 'url("images/expectationbackground.png")',
       backgroundRepeat: 'no-repeat',
       backgroundSize: '300px',
       backgroundPosition: '20px 10px',
@@ -204,7 +204,7 @@ const WhatWrap = styled(Box)(({ theme }) => ({
       left: "0px",
       width: '100%',
       height: '100%',
-      backgroundImage: 'url("images/expectationbackground.png")',
+      // backgroundImage: 'url("images/expectationbackground.png")',
       backgroundRepeat: 'no-repeat',
       backgroundSize: '300px',
       backgroundPosition: '20px 10px',
@@ -225,7 +225,7 @@ const WhatWrap = styled(Box)(({ theme }) => ({
       left: "-12px",
       width: '100%',
       height: '100%',
-      backgroundImage: 'url("images/expectationbackground.png")',
+      // backgroundImage: 'url("images/expectationbackground.png")',
       backgroundRepeat: 'no-repeat',
       backgroundSize: '300px',
       backgroundPosition: '20px 10px',
@@ -241,7 +241,7 @@ const WhatWrap = styled(Box)(({ theme }) => ({
       left: "-25px",
       width: '100%',
       height: '100%',
-      backgroundImage: 'url("images/expectationbackground.png")',
+      // backgroundImage: 'url("images/expectationbackground.png")',
       backgroundRepeat: 'no-repeat',
       backgroundSize: '300px',
       backgroundPosition: '20px 10px',
@@ -257,7 +257,7 @@ const WhatWrap = styled(Box)(({ theme }) => ({
       left: "-55px",
       width: '100%',
       height: '100%',
-      backgroundImage: 'url("images/expectationbackground.png")',
+      // backgroundImage: 'url("images/expectationbackground.png")',
       backgroundRepeat: 'no-repeat',
       backgroundSize: '300px',
       backgroundPosition: '20px 10px',
@@ -419,7 +419,7 @@ const Title = styled(Typography)(({ theme }) => ({
   fontWeight: '900',
   marginBottom: '10px',
   fontSize: '1.2em', // You can use '1.5rem' for better responsiveness across different devices
-  color: '#403F3F',
+  color: 'white',
   letterSpacing:"normal",
   fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
  
@@ -449,7 +449,8 @@ const TitleOne = styled(Typography)(({ theme }) => ({
   marginBottom: '65px',
   fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
   fontSize: '.9em', // You can use '1.5rem' for better responsiveness across different devices
-  color: '#9F9F9F',
+  color: 'white',
+  // #9F9F9F
   paddingLeft: "24%",
   // opacity: ".5",
   textTransform:"uppercase",
@@ -513,7 +514,7 @@ const TitleOne = styled(Typography)(({ theme }) => ({
 
 
 const Header = styled(Typography)(({ theme }) => ({
-  color: '#403F3F',
+  color: 'white',
   fontWeight: '600',
   marginBottom: '30px',
   fontSize: '2.4em',
@@ -587,7 +588,7 @@ const Desc = styled(Typography)(({ theme, showFullText }) => ({
   maxHeight: showFullText ? '1000px' : '48px', 
   transition: 'max-height 1s ease-in-out',
   padding:"0px 0px 5px 0px",
-  color: '#403F3F',
+  color: 'white',
   fontWeight: '400',
   marginBottom: '30px',
   fontSize: '.93em',
@@ -752,7 +753,7 @@ const Expectations = () => {
     >
     <WhatWrap >
    
-      <Header >What can you expect from <span style={{color:"RGB(45, 45, 191)"}}>cooperation</span> with Prehood?</Header>
+      <Header >What can you expect from <span style={{color:""}}>cooperation</span> with Prehood?</Header>
       <TitleOne>Responsiveness. Proficiency. Courage.</TitleOne>
       <Box >
       <Container sx={{position:"relative"}}>
@@ -769,7 +770,7 @@ const Expectations = () => {
                         height: "15px",
                         width: "15px",
                         color: "RGB(45, 45, 191)",  
-                        border: "10px solid white",
+                        border: "5px solid white",
                         borderRadius: "30px",
                         '@media (max-width: 641px)': {
                           marginBottom:"20px",

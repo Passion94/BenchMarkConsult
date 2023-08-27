@@ -153,7 +153,7 @@ const Header = styled(Typography)(({ theme }) => ({
 
 export const ProjectCaseText = () => {
   return (
-    <Container sx={{background:"rgb(45, 45, 191)"}}>
+    <Container>
      
     <Box>
 <Header>

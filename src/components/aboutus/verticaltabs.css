@@ -6,6 +6,12 @@ line-height: 36px;
 letter-spacing: normal;
 
 }
+/* verticaltabs.css */
+.tab-content {
+    max-height: 450px; /* Set a fixed max height for tab content */
+    overflow-y: auto; /* Add vertical scroll if content exceeds max height */
+  }
+  
 
 @media (max-width: 640px) {
     .listitemswhatwedo{

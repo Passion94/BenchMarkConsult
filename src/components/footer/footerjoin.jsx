@@ -1,5 +1,7 @@
 import { Box, Button, Container, Typography, styled } from '@mui/material'
 import React from 'react'
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -9,7 +11,7 @@ import React from 'react'
 const StyledButton = styled('button')(({ theme }) => ({
   border: '0px',
   marginTop: '10px',
-  color: 'black', 
+  color: 'white', 
   fontSize: '.8em',
   fontWeight: '900',
   fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
@@ -17,7 +19,7 @@ const StyledButton = styled('button')(({ theme }) => ({
   textDecoration: 'none',
   textTransform: 'uppercase',
   padding: '16px 22px',
-  backgroundColor: ' rgb(46,234,250)',
+  backgroundColor: ' #5c6bc0',
   outline: '0px',
   transition: 'all 0.3s ease 0s',
 
@@ -43,7 +45,7 @@ const Desc = styled(Typography)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent:"center",
-  color: 'rgb(8, 16, 103)',
+  color: 'white',
   fontSize: '1.5em',
   fontWeight: 600,
   marginBottom: '50px',
@@ -82,12 +84,13 @@ export const FooterJoin = () => {
             Ready to Kickstart your project ?
         </Desc>
         <Box sx={{display:"flex", alignItems:"center", justifyContent:"space-around"}}>
-        <StyledButton
+       <Link to="services"><StyledButton
           variant="contained"
          
         >
           Explore Our Services
         </StyledButton>
+        </Link> 
         </Box>
         </Container>
     </Box>

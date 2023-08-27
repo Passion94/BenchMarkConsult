@@ -5,8 +5,8 @@ import React from 'react'
 const VisionCont = styled(Box)(({ theme }) => ({
     paddingLeft:"170px",
      marginTop:"100px",
-     background:"white",
-     backgroundImage:"url('https://apicms.thestar.com.my/uploads/images/2022/10/16/1778120.jpg')",
+     background:"#1a237e",
+    //  backgroundImage:"url('https://apicms.thestar.com.my/uploads/images/2022/10/16/1778120.jpg')",
     
     backgroundRepeat: 'no-repeat',
     backgroundSize: '300px',
@@ -91,7 +91,7 @@ const VisionCont = styled(Box)(({ theme }) => ({
   }));
 
 const Header = styled(Typography)(({ theme }) => ({
-    color:'black',
+    color:'white',
     fontWeight: '900',
     paddingTop:"30px",
     marginBottom: '30px',
@@ -112,7 +112,7 @@ const Header = styled(Typography)(({ theme }) => ({
    
   }));
   const Title = styled(Typography)(({ theme }) => ({
-    color:'black',
+    color:'white',
     paddingRight:"52%",
     fontWeight:"500",
     marginBottom: '30px',
@@ -173,7 +173,7 @@ const Header = styled(Typography)(({ theme }) => ({
   }));
   
   const Desc = styled(Typography)(({ theme }) => ({
-    color:'black',
+    color:'white',
     fontWeight:"500",
     paddingRight:"52%",
     paddingBottom: '100px',
@@ -229,9 +229,9 @@ export const OurVision = () => {
         <Container maxWidth="xl">
        
        <Header>Our Vision</Header>
-       <Title> Empowering <span style={{color:"RGB(45, 45, 191)", display:"inline-block"}}> Innovation </span>  through Technology Excellence</Title> 
+       <Title> Empowering <span style={{color:"white", display:"inline-block"}}> Innovation </span>  through Technology Excellence</Title> 
        <Desc >
-      We are a driving force behind transformative technological <span style={{color:"RGB(45, 45, 191)", display:"inline-block"}}>innovations </span> that empower businesses across industries.We strive to provide cutting-edge software 
+      We are a driving force behind transformative technological <span style={{color:"white", display:"inline-block"}}>innovations </span> that empower businesses across industries.We strive to provide cutting-edge software 
       solutions that inspire progress, growth, and enduring success.
         </Desc >
        

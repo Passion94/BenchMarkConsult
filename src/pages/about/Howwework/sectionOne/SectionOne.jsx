@@ -9,7 +9,7 @@ const SectionOneContainer = styled(Container)(({ theme }) => ({
     display:"flex",
     gap:"20px",
     marginTop:"100px",
-    background:"rgb(46,234,250)",
+    background:"#1a237e",
     paddingTop:"50px", 
     zIndex:"-1",
     paddingBottom:"50px",
@@ -120,7 +120,8 @@ const SectionOneContainer = styled(Container)(({ theme }) => ({
   }));
 
   const Header = styled(Typography)(({ theme }) => ({
-    color: 'black',
+    color: 'white',
+    background:"#1a237e",
     padding:"50px 0px",
     display:"flex",
     justifyContent:"center",
