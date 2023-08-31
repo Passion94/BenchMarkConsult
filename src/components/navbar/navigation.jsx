@@ -136,9 +136,9 @@ const Navigation = () => {
       <div className={`menu ${showMenu ? 'show' : ''}`}>
       {NavItems.map((item,index) =>
       <Bod>
-< Button  key={index} to={item.link}>
+<Link key={index}  to={item.link}>< Button  >
 {/* {item.image } */}
-  {item.Name}</Button>
+  {item.Name}</Button></Link>
  
   </Bod>
 )}
