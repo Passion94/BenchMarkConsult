@@ -1,7 +1,8 @@
-import { Box, Container, Typography, styled } from '@mui/material';
+import { Box, Button, Container, Typography, styled } from '@mui/material';
 import React, { useState } from 'react';
 import "./case.css";
 import { KeyboardArrowRight as KeyboardArrowRightIcon, KeyboardArrowLeft as KeyboardArrowLeftIcon } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 
 export const slides = [
@@ -27,18 +28,9 @@ export const slides = [
 
 
 const Header = styled(Typography)(({ theme }) => ({
-    color:'white',
-    fontWeight: '900',
+  
     display:"flex",
-    
-   
-    fontSize: '1em',
-    paddingTop: '10px',
-   
-    fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
-    fontStyle: "normal",
-    textTransform:"uppercase",
-    lineHeight:"46px",
+
     [theme.breakpoints.down('1025')]: {
       justifyContent:"center",
       
@@ -54,20 +46,13 @@ const Header = styled(Typography)(({ theme }) => ({
    
   }));
   const TitleOne = styled(Typography)(({ theme }) => ({
-    fontWeight: '500',
-    fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
-    
     textTransform:"initial",
-    marginBottom: '65px',
-    fontSize: '.8em', // You can use '1.5rem' for better responsiveness across different devices
     color: '#9F9F9F',
-    // opacity: ".5",
+    
     
     [theme.breakpoints.down('1025')]: {
       display:"flex",
       justifyContent:"center",
-      
-  
       
     },
   }))
@@ -113,36 +98,14 @@ const Header = styled(Typography)(({ theme }) => ({
         },
   }));
 
-  const StyledButton = styled('button')(({ theme }) => ({
-  
-    marginTop: '10px',
-    marginBottom:"30px",
-    border:"1px solid rgb(75,75,221)",
-    color:'white',
-    borderRadius:'3px',
-    fontSize: '.8em',
-    fontWeight: '900',
-    lineHeight: '17px',
-    textDecoration: 'none',
-    textTransform: 'uppercase',
-    padding: '16px 22px',
-    background:"#00CC66",
-    border:"none",
-    outline:"none",
-   
-    transition: 'all 0.3s ease 0s',
-    fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
-    cursor: 'pointer',
-    
-  
-  }));
+
 
 
 const Slide = ({ imageSrc, text, keyword, desc }) => (
   <div className="slide">
     <img src={imageSrc} alt="Slide" className='caseslideimg'/>
-    <Header>{text}</Header>
-    <TitleOne>{keyword}</TitleOne>
+    <Header variant='h2'>{text}</Header>
+    <TitleOne variant='body1'>{keyword}</TitleOne>
     
     
   </div>
@@ -167,8 +130,8 @@ const ImageTextSlider = ({ slides }) => {
     <div className="slider" >
       
         <ArrowiconContainer >
-        <KeyboardArrowLeftIcon onClick={prevSlide} sx={{borderRadius:"30px", color:"black", border:"1px solid green", background:" #D0FFFF"}}/>
-      <KeyboardArrowRightIcon onClick={nextSlide} sx={{borderRadius:"30px", color:"black", border:"1px solid green",  background:" #D0FFFF"}}/>
+        <KeyboardArrowLeftIcon onClick={prevSlide} sx={{borderRadius:"30px",  border:"1px solid green"}}/>
+      <KeyboardArrowRightIcon onClick={nextSlide} sx={{borderRadius:"30px",  border:"1px solid green",  }}/>
         </ArrowiconContainer >
           
       <Slide
@@ -178,7 +141,7 @@ const ImageTextSlider = ({ slides }) => {
         desc={slides[currentSlideIndex].desc}
 
       />
-{/* <StyledButton>View all</StyledButton> */}
+<Link to="/casestudy"><Button variant='contained'>Explore all our case study</Button></Link>
     </div>
   );
 };

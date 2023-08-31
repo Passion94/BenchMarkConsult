@@ -10,17 +10,25 @@
   font-size: 24px;
 }
 
+
 .carousel-dots {
   display: flex;
   gap: 125px;
   font-weight: 600;
   justify-content: center;
-  margin-top: -100px;
-
- 
+  
+  margin-top: -90px;
   text-transform: uppercase;
   font-size: 14px;
- 
+  
+}
+
+
+
+/* Increase the size of the dots */
+.slick-dots li button {
+
+  display: none;
   
 }
 
@@ -65,10 +73,11 @@ Styles for the slider container
 
 
 .slideBackground{
-  padding-top: 20%;
-  height: 600px;
+  padding-top: 3%;
+  height: 700px;
   padding-left: 57px;
   position: relative;
+ 
   
 }
 
@@ -87,7 +96,8 @@ Styles for the slider container
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value to control darkness */
+  background-color: rgba(0, 0, 0, 0.5);  /* Adjust the alpha value to control darkness */
+ 
 }
 
 .slide2 {
@@ -177,31 +187,13 @@ background-size: cover;
 
 
 
-.carousel-dots {
-  display: flex;
-  gap: 125px;
-  font-weight: 600;
-  justify-content: center;
-  
-  margin-top: -40px;
-  text-transform: uppercase;
-  font-size: 14px;
-  
-}
 
-
-
-/* Increase the size of the dots */
-.slick-dots li button {
-
-  display: none;
-  
-}
 @media (max-width: 3840px) {
   .slideBackground{
     padding-top: 4%;
-    height: 600px;
-    padding-left: 87px;
+    height: 800px;
+    padding-left: 197px;
+    
     position: relative;
     
   }
@@ -216,8 +208,8 @@ background-size: cover;
   }
   .carousel-dots {
     
-    gap: 139px;
-    margin-left: 0px;
+    gap: 244px;
+    margin-left: -6px;
    
     
   }
@@ -226,9 +218,7 @@ background-size: cover;
 @media (max-width: 3200px) {
   .slideBackground{
     padding-top: 4.5%;
-    height: 600px;
-    
-    position: relative;
+   
     
   }
   
@@ -240,9 +230,9 @@ background-size: cover;
 
   .slideBackground{
     padding-top: 5%;
-    height: 600px;
    
-    position: relative;
+   
+   ;
     
   }
 }
@@ -251,34 +241,38 @@ background-size: cover;
   
   .slideBackground{
     padding-top: 6%;
-    height: 600px;
    
-    position: relative;
+   
+    
     
   }
 }
-@media (max-width: 1920px) {
-  
- 
-  .slideBackground{
-    padding-top: 7%;
-    height: 600px;
-   
-    position: relative;
-    
-  }
-}
+
 @media (max-width: 1600px) {
   
  
   .slideBackground{
     padding-top: 7.5%;
-    height: 600px;
+    
+    padding-left: 130px;
    
-    position: relative;
+  }
+  .carousel-dot {
+    cursor: pointer;
+    margin: 0 0px;
+    margin-left: 0px;
+     
+    color: white;
+    z-index: 1;
+   
+  }
+  .carousel-dots {
+    
+    gap: 248px;
+    margin-left: -2px;
+   
     
   }
-
   
 }
 
@@ -287,14 +281,13 @@ background-size: cover;
  
   .slideBackground{
     padding-top: 9%;
-    height: 600px;
-   padding-left: 69px;
-    position: relative;
+    padding-left: 80px;
+   
     
   }
   .carousel-dots {
-    
-    gap: 120px;
+    margin-left: -5px;
+    gap: 224px;
     
   }
   .carousel-dot {
@@ -313,7 +306,7 @@ background-size: cover;
 @media (max-width: 1366px) {
   .carousel-dots {
     
-    gap: 108px;
+    gap: 205px;
     
   }
   .carousel-dot {
@@ -328,8 +321,8 @@ background-size: cover;
   }
   .slideBackground{
     padding-top: 9.5%;
-    height: 600px;
-    padding-left: 55px;
+    
+    padding-left: 68px;
     position: relative;
     
   }
@@ -341,15 +334,16 @@ background-size: cover;
 @media (max-width: 1280px) {
   .carousel-dots {
     font-weight: 600;
-    gap: 67px;
+    gap: 173px;
     font-size: 14px;
+    margin-left: -15px;
     
   }
   .carousel-dot {
     cursor: pointer;
     margin: 0 10 ;
-    margin-left:-3px;
-    margin-right: 23px;
+    margin-left:12px;
+    margin-right: 2px;
     
     color: white;
     z-index: 1;
@@ -357,7 +351,7 @@ background-size: cover;
   }
   .slideBackground{
    
-    padding-left: 43px;
+    padding-left: 54px;
     
     
   }
@@ -367,22 +361,22 @@ background-size: cover;
 @media screen and (max-width: 1080px) {
   .slideBackground{
     
-    padding-left: 12px;
+    padding-left: 22.7px;
     
   }
   .carousel-dot {
     cursor: pointer;
     margin: 0 0 ;
-    margin-left:0px;
-    margin-right: 0px;
     
+    margin-left:9px;
+    margin-right: 0px;
     color: white;
     z-index: 1;
    
   }
   .carousel-dots {
     font-weight: 600;
-    gap: 63px;
+    gap: 137px;
     font-size: 14px;
     
   }

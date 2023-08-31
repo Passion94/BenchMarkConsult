@@ -62,6 +62,26 @@ const ServicesPage = () => {
       </Container>
      
     </SectionOne>
+    <div className="project-page">
+        <h1>IT Consulting Project Page</h1>
+        <p>This project is a web app that provides IT consulting services to businesses of all sizes. The app allows businesses to post their IT needs, and consultants can then submit proposals to provide those services. The app also includes a messaging system so that businesses and consultants can communicate directly.</p>
+        <ul>
+          <li>Post IT needs: Businesses can post their IT needs, including the type of IT services they need, their budget, and their timeline.</li>
+          <li>Submit proposals: Consultants can submit proposals to provide the IT services that businesses need.</li>
+          <li>Messaging system: Businesses and consultants can communicate directly through the app's messaging system.</li>
+          <li>Payment processing: The app can integrate with payment processors to make it easy for businesses to pay for IT consulting services.</li>
+        </ul>
+        <p>The benefits of using this app include:</p>
+        <ul>
+          <li>Save time and money: The app can save businesses time and money by streamlining the IT consulting process.</li>
+          <li>Get the best possible service: Businesses can be confident that they are getting the best possible service by comparing proposals from multiple consultants.</li>
+          <li>Build relationships: The app can help businesses build relationships with trusted consultants who can provide them with ongoing IT consulting services.</li>
+        </ul>
+        <p>To get started, sign up for a free trial today!</p>
+        <div className="cta">
+          <a href="/signup">Sign Up for Free Trial</a>
+        </div>
+        </div>
 
     {/* <WorkProcess/> */}
     </div>
@@ -69,3 +89,9 @@ const ServicesPage = () => {
 };
 
 export default ServicesPage;
+
+
+
+
+
+

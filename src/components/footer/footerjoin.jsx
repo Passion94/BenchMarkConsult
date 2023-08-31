@@ -84,12 +84,12 @@ export const FooterJoin = () => {
             Ready to Kickstart your project ?
         </Desc>
         <Box sx={{display:"flex", alignItems:"center", justifyContent:"space-around"}}>
-       <Link to="services"><StyledButton
+       <Link to="services"><Button
           variant="contained"
          
         >
           Explore Our Services
-        </StyledButton>
+        </Button>
         </Link> 
         </Box>
         </Container>

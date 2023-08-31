@@ -69,7 +69,7 @@ const Title = styled(Typography)(({ theme }) => ({
 
 
 const Header = styled(Typography)(({ theme }) => ({
-  color:'white',
+  color:'black',
   fontWeight: '900',
 
   justifyContent: 'center',
@@ -122,7 +122,7 @@ const Header = styled(Typography)(({ theme }) => ({
 
 
 const Desc = styled(Typography)(({ theme }) => ({
-  color:'white',
+  color:'black',
   width:"100%",
   fontWeight:"500",
   marginBottom: '30px',
@@ -216,25 +216,20 @@ export const Getstarted = () => {
       maxWidth="xl">
     <div  className='getStartedmainContainer'>
         <StyledCardContent   >
-    <Title>
+    <Typography variant='h2'>
     Discover your solution
-    </Title>
-    <Header>
+    </Typography>
+    <Typography variant='h1'>
     Discover the solution to your unique challenge
-    </Header>
-    <Desc variant="body1" color="text.secondary">
+    </Typography>
+    <Typography variant="body1" >
     Discover the right solution that solves your problem using our cutting edge technology
-    </Desc>
-    <Button 
-    className="beep-text"
-    // sx={{display:"flex", alignItems:"center",
-    //  color:"rgb(208, 2, 27)"
-    // }}
-    >
+    </Typography>
+   
     
-    <StyledButton variant="outline">Get in touch</StyledButton>
+    <Link to=''><Button variant="contained" >Get in touch</Button></Link>
     
-    </Button >
+    
   </StyledCardContent >
 
 <Container >

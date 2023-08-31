@@ -85,7 +85,7 @@ const Desc = styled(Typography)(({ theme }) => ({
   fontSize: '1.2em',
   lineHeight: '26px',
   fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
-  padding:" 0 355px 0 0",
+  padding:" 0 600px 0 0",
   zIndex:"1",
   position:'relative',
  
@@ -94,22 +94,22 @@ const Desc = styled(Typography)(({ theme }) => ({
   // Adjust paddingRight to create some space on both sides
 
   // Responsive styles using Material-UI breakpoints
-  [theme.breakpoints.down('md')]: {
-    padding:" 0 50px 0 0",
+  [theme.breakpoints.down('1081')]: {
+    padding:" 0 300px 0 0",
     // fontSize: '1.5em',
     lineHeight: '36px',
-    marginLeft:"-20px",
+   
      // Adjust padding for the left side on small screens
     
   },
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down('')]: {
     fontWeight:"normal",
     // fontSize: '1.5em',
     padding:"0 60px 0px 0"
     
   },
 
-  [theme.breakpoints.down('xs')]: {
+  [theme.breakpoints.down('')]: {
     padding:"0 15px 0px 0",
     // fontSize: '2rem',
     lineHeight: '24px',
@@ -278,25 +278,25 @@ const NavbarCarousal = () => {
       <Slider ref={sliderRef} {...settings} style={{ overflow: "hidden" }}>
         {slides && slides.map((slide, index) => (
           <Box key={index} className={`slideBackground slide${index + 1}`}>
-            <Container maxWidth="xl">
-              <Title>{slide.title}</Title>
-              <Header>{slide.header}</Header>
-              <Desc variant="body1">{slide.description}</Desc>
+            <Container maxWidth="xl" >
+              <Title variant='h2'>{slide.title}</Title >
+              <Header variant='h1'>{slide.header}</Header>
+              <Desc  variant="h3" sx={{color:"white"}}>{slide.description}</Desc>
               {slide.subcategory && (
                 <Box sx={{ paddingLeft: "5%" }}>
                   {Object.values(slide.subcategory).map((item, subIndex) => (
-                    <Desc key={subIndex}>
+                    <Desc  variant='h3' key={subIndex}>
                       <span style={{ display: "flex", alignItems: "center", gap: "1%" }}>
                         <CircleIcon
-                          sx={{ padding: "0 0px 0 0", height: "10px", width: "10px", color: "rgb(46,234,250)",  
-                            border: "2px solid white", borderRadius: "30px" }}/>
+                          sx={{ padding: "0 0px 0 0", height: "15px", width: "15px", color: "#4B4BDD",  
+                            border: "4px solid white", borderRadius: "30px" }}/>
                         {item}
                       </span>
-                    </Desc>
+                    </Desc >
                   ))}
                 </Box>
               )}
-              <StyledButton>{slide.buttonLabel}</StyledButton>
+              <Button variant='contained'>{slide.buttonLabel}</Button>
             </Container>
           </Box>
         ))}

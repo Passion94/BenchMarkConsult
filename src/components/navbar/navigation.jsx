@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Navigation.css'; // Import the CSS file for styling
 import { Link } from 'react-router-dom';
-import { AppBar, Box, Container, styled } from '@mui/material';
+import { AppBar, Box, Button, Container, Typography, styled } from '@mui/material';
 
 const Bod= styled(Box)(({ to }) => ({
   // padding: to === "/contact" ? '30px 30px' : '0px',
@@ -11,66 +11,47 @@ const Bod= styled(Box)(({ to }) => ({
 const StyledLink = styled(Link)(({ to }) => ({
   textDecoration: 'none',
   height: "40px",
-  color: to === "/contact" ? 'white' : 'black',
+  
   fontWeight: to === "/contact" ? '900' : '700',
   zIndex:"1",
-  
-  // backgroundColor: to === "/contact" ? 'red' : 'transparent',
-  
+  lineHeight:"36px",
+  marginBottom:'0px',
   // padding: to === "/contact" ? '50px 30px' : '0px',
-  transition: 'color 0.3s, background-color 0.3s, border 0.3s', // Add a transition for smoother hover effect
 borderRadius:"3px",
   '&:hover': {
-    color: to === "/contact" ? ' (46, 234, 200)' : 'rgb(46,234,200)',
-    backgroundColor: to === "/contact" ? ' (46, 234, 200)' : 'transparent',
-   
+   color:"#00e5ff",
   },
-
-  // Media query for smaller screens
   '@media screen and (max-width: 912px)': {
     // padding: '15px 10px', // Adjust the padding for smaller screens
     lineHeight: '10px', // Adjust the line height for smaller screens
     fontSize: '14px', // Adjust the font size for smaller screens
    
-    
   },
-
-  // Add more media queries and responsive styles as needed for other screen sizes
 }));
 
-const ContactLink = styled(Link)(({ to }) => ({
-  textDecoration: 'none',
+const ContactLink = styled(Button)(({ to }) => ({
+
  
-  
-  fontWeight: "700",
-  color:"white",
-  
   background:"#5c6bc0",
-  fontSize: "1em",
-  fontWeight: "700",
-  textTransform: "uppercase",
-  lineHeight: "40px",
-  padding: "4px 25px",
-  fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
+  
+ 
 
   transition: 'color 0.3s, background-color 0.3s, border 0.3s', // Add a transition for smoother hover effect
-borderRadius:"3px",
+
   '&:hover': {
-    color: to === "/contact" ? ' (46, 234, 200)' : 'rgb(46,234,200)',
+   color:"#00e5ff",
     backgroundColor: to === "/contact" ? ' (46, 234, 200)' : 'transparent',
    
   },
   '@media screen and (max-width: 913px)': {
-   display:"none"
-   
-    
+   display:"none" 
   },
 }));
 const NavCont = styled(Container)(({ theme }) => ({
   display:"flex",
   alignItems:"center",
   justifyContent:"space-around",
-  gap: "75px",
+  gap: "55px",
   zIndex:"1",
   [theme.breakpoints.down('1025')]: {
     gap: "45px",
@@ -133,8 +114,7 @@ const NavItems=[
     {Id:3, Name:"Services", link:"/services"},
     {Id:4, Name:"Project", link:"/project"},
     {Id:5, Name:"Resources", link:"/resources"},
-    // {Id:6, Name:"Stories", link:"/story"},
-    // {Id:7, Name:"Contact ", link:"/contact"},
+    
 
   ]
 
@@ -156,9 +136,9 @@ const Navigation = () => {
       <div className={`menu ${showMenu ? 'show' : ''}`}>
       {NavItems.map((item,index) =>
       <Bod>
-< StyledLink key={index} to={item.link}>
+< Button  key={index} to={item.link}>
 {/* {item.image } */}
-  {item.Name}</ StyledLink>
+  {item.Name}</Button>
  
   </Bod>
 )}
@@ -168,7 +148,7 @@ const Navigation = () => {
         <span></span>
         <span></span>
       </div>
-      <ContactLink>Contact</ContactLink>
+      <ContactLink variant='contained'>Contact</ContactLink>
       </NavCont>
     </Box>
     </Box>

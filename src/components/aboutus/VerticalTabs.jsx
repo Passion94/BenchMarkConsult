@@ -12,21 +12,26 @@ import { cyan } from '@mui/material/colors';
 
 
 
-const RadioContainer = styled(Box)({
+const RadioContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
-});
+  width:"220px",
+  maxWidth:"220px",
+  [theme.breakpoints.down('1441')]: {
+    width:"217px",
+  },
+}));
 const RadioText = styled(Typography)(({ theme }) => ({
-  color: "white",
+ 
   letterSpacing: "normal",
   textTransform: "initial",
   fontFamily: "Ubuntu, Helvetica, Arial, sans-serif",
   fontWeight: "900",
-  fontSize: "1.2em",
-  width: "250px", // Set a fixed width for the label container
+  fontSize: "1em",
+  width: "200px", // Set a fixed width for the label container
   lineHeight: "24px",
-  marginTop:"20px",
-  marginLeft: "10px", // Add margin between radio button and text
+  marginTop:"0px",
+  marginLeft: "0px", // Add margin between radio button and text
   [theme.breakpoints.down('641')]: {
     display: "none",
   },
@@ -34,28 +39,37 @@ const RadioText = styled(Typography)(({ theme }) => ({
 
 
 const RadioTextOne = styled(Typography)(({ theme }) => ({
-  color: "white",
+ 
   letterSpacing: "normal",
   textTransform: "initial",
   fontFamily: "Ubuntu, Helvetica, Arial, sans-serif",
   fontWeight: "900",
-  fontSize: "1.2em",
-  width: "100px", // Set a fixed width for the label container
-  paddingLeft: "10px", // Add some padding for better spacing
+  fontSize: "1em",
+  maxWidth: "50px", // Set a fixed width for the label container
+  padding: "10px", // Add some padding for better spacing
   // lineHeight: "26px",
   display: "none",
+  [theme.breakpoints.down('1441')]: {
+    
+  },
   [theme.breakpoints.down('641')]: {
     display: "block",
   },
 }));
 
 const VertBox = styled(Typography)(({ theme }) => ({
-  bgcolor: 'transparent',
-  color: "white",
+  // bgcolor: 'transparent',
+  // color: "white",
   display: 'flex',
   alignItems: "center",
   maxHeight: 424,
-  width: "710px", // Adjust this width as needed
+  width: "720px", // Adjust this width as needed
+  [theme.breakpoints.down('1441')]: {
+    width: "670px",
+  },
+  [theme.breakpoints.down('1281')]: {
+    width: "645px",
+  },
   [theme.breakpoints.down('1081')]: {
     marginLeft: "-28px"
   },
@@ -101,7 +115,7 @@ function a11yProps(index) {
 const tabLabels = [
   "Project Management and Strategic Planning",
   "Software Development and Custom Solutions",
-  "AI and Data Analytics/Business Intelligence",
+  "AI and Data Analytics",
   "Cybersecurity and Risk Management",
   "Technology Infrastructure and Management",
   "IT Training and Skill Development",
@@ -110,7 +124,7 @@ const tabLabels = [
 
 const tabPanelContents = [
   [
-    "Project planning and execution and execution",
+    "Project planning and execution",
     "Scope, time, and budget management",
     "Project risk assessment and mitigation",
     "Stakeholder communication and coordination",
@@ -127,7 +141,7 @@ const tabPanelContents = [
     "Software integration and APIs",
     "Legacy system modernization",
     "Software Testing and Quality Assurance",
-    "User Experience (UX) and User Interface (UI) Design:",
+    "User Experience (UX) and User Interface (UI) Design",
   ],
   [
     "Artificial intelligence/Machine Learning",
@@ -135,6 +149,7 @@ const tabPanelContents = [
     "Data Analysis",
     "Data Engineering",
     "Data Policy/Governance",
+    "Business Intelligence",
   ],
   [
     "Security assessments and audits",
@@ -185,13 +200,13 @@ function VerticalTabs() {
                 <Radio
                   checked={value === index}
                   sx={{
-                    margin: "0px",
-                    position: "sticky",
-                    top: "0px",
-                    color: "white",
-                    '&.Mui-checked': {
-                      color: cyan[500],
-                    },
+                    marginTop: "-40px",
+                   
+                   
+                    // color: "white",
+                    // '&.Mui-checked': {
+                    //   color: cyan[500],
+                    // },
                   }}
                 />
                 <RadioText>{label}</RadioText>

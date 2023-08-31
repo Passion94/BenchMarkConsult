@@ -15,8 +15,8 @@ import { CaseOne } from '../casestudy/CaseOne'
 
 export const Home = () => {
   return (
-    <Box>
-      <Box sx={{ backgroundColor: "#1a237e"}}>
+    <Box >
+      <Box>
       <NavbarCarousal/>
      <Whatwedo/> 
       </Box>

@@ -16,6 +16,7 @@ import { Project } from './pages/projects/Project';
 
 import ProjectCaseStudy from './pages/projects/sectionTwo/ProjectCaseStudy';
 import AllCaseStudy from './pages/projects/sectionTwo/AllCaseStudy';
+import { Paper } from '@mui/material';
 
 
 
@@ -29,7 +30,7 @@ import AllCaseStudy from './pages/projects/sectionTwo/AllCaseStudy';
 
 function App() {
   return (
-
+   
 <Router>
 <Navigation/>
       <Routes>
@@ -40,16 +41,15 @@ function App() {
         <Route path="/projects/:projectId"element={<ProjectCaseStudy/>} />
         <Route path="/project" element={<Project/>} />
         <Route path="/casestudy" element={<AllCaseStudy/>} />
-        AllCaseStudy
+        
         {/* <Route path="/story" element={<ClientStories/>} /> */}
         
         
       </Routes>
       <AllFooterContents />
     </Router>
-
-
-
+   
+    
 
 
     // <Router>

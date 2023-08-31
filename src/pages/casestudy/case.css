@@ -1,7 +1,7 @@
 .slider{
     position:relative; 
-    top:44px;
-     left:-70px;
+    top:0px;
+     left:-42px;
      
 }
 
@@ -10,6 +10,15 @@
     height:345px;
 }
 
+
+@media (max-width: 1366px) {
+    .slider{
+        position:relative; 
+        top:0px;
+         left:-122px;
+         
+    }
+}
 @media (max-width: 1024px) {
     .slider{
         

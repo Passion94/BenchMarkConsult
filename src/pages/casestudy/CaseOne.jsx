@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-import { Box, Container, Typography, styled } from '@mui/material'
+import { Box, Button, Container, Typography, styled } from '@mui/material'
 import CaseCard from './CaseCard'
 import { slides } from './CaseCard';
 import { Link } from 'react-router-dom';
@@ -8,39 +8,18 @@ import { Link } from 'react-router-dom';
 
 
 const Header = styled(Typography)(({ theme }) => ({
-    color: 'white',
-    fontWeight: '600',
-    marginBottom: '30px',
-    fontSize: '2.4em',
-    fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
-    
-    lineHeight: '36px',
-    letterSpacing:"normal",
-   
-    // paddingRight:"0%",
-    fontStyle: 'normal',
-    
-    
-  
-   
-  
+  marginTop:"-260px",
 
-
-   
+  [theme.breakpoints.down('1281')]: {
+    marginTop:"-240px",
+    
+  },
   }));
 
   const Desc = styled(Typography)(({ theme }) => ({
-    color:'white',
-    
    
-    fontWeight:"500",
-    marginBottom: '30px',
-    fontSize: '1.2em',
-    lineHeight: '46px',
     
-    fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
-   
-    [theme.breakpoints.down('415')]: {
+    [theme.breakpoints.down('1281')]: {
       
       fontSize:".9em",
     },
@@ -51,23 +30,26 @@ const Header = styled(Typography)(({ theme }) => ({
     display:"flex",
     gap:"170px",
     alignItems:"center",
-    padding:" 50px 20px 50px 60px",
-     background:"transparent",
-
-     [theme.breakpoints.down('1441')]: {
+    padding:" 50px 90px 50px 76px",
+    //  background:"transparent",
+    [theme.breakpoints.down('1601')]: {
+      padding:" 50px 90px 50px 75px",
       
-      gap:"150px",
-      padding:"50 0px 50px 40px ",
+    },
+     [theme.breakpoints.down('1441')]: {
+      marginLeft:"-19px",
+      gap:"155px",
+      padding:"50 0px 50px 10px ",
     },
     [theme.breakpoints.down('1367')]: {
       
-      gap:"150px",
-      padding:"50px 0px 50px 30px ",
+      gap:"200px",
+      padding:"50px 0px 50px 62px ",
     },
     [theme.breakpoints.down('1281')]: {
       
       gap:"150px",
-      padding:"50px 0px 50px 16px ",
+      padding:"50px 0px 50px 49px ",
     },
     [theme.breakpoints.down('1025')]: {
       flexDirection:"column",
@@ -121,36 +103,36 @@ const Header = styled(Typography)(({ theme }) => ({
     },
   }));
   
-  const StyledButton = styled('button')(({ theme }) => ({
+  // const StyledButton = styled('button')(({ theme }) => ({
  
-    marginTop: '10px',
-    marginBottom:"30px",
-    border:"none",
-    color:'white',
-    borderRadius:'3px',
-    fontSize: '.8em',
-    fontWeight: '900',
-    lineHeight: '17px',
-    textDecoration: 'none',
-    textTransform: 'uppercase',
-    padding: '16px 22px',
-    background:"#5c6bc0",
-    border:"none",
-    outline:"none",
+  //   marginTop: '10px',
+  //   marginBottom:"30px",
+  //   border:"none",
+    
+  //   borderRadius:'3px',
+  //   fontSize: '.8em',
+  //   fontWeight: '900',
+  //   lineHeight: '17px',
+  //   textDecoration: 'none',
+  //   textTransform: 'uppercase',
+  //   padding: '16px 22px',
+  //   background:"#5c6bc0",
+  //   border:"none",
+  //   outline:"none",
    
-    transition: 'all 0.3s ease 0s',
-    fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
-    cursor: 'pointer',
-    // marginLeft: '42px',
+  //   transition: 'all 0.3s ease 0s',
+  //   fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
+  //   cursor: 'pointer',
   
-  }));
+  // }));
   
 
 export const CaseOne = () => {
-  const slideIndex = 0; // Index of the slide you want to access
+  const [slideIndex] = useState(0);
+ // Index of the slide you want to access
   const desc = slides[slideIndex].desc;
   return (
-    <Box sx={{ background:"#1a237e",}}>
+    <Box >
 <Container
 maxWidth="xl">
 
@@ -158,8 +140,8 @@ maxWidth="xl">
     <PortfoliContCont >
         <Container
         >
-            <Header>Case Study</Header>
-       <Desc>{desc}</Desc> 
+            <Header variant='h1'>Case Study</Header>
+       <Desc variant='body1'>{desc}</Desc> 
 
         </Container>
         <Box >
@@ -167,11 +149,17 @@ maxWidth="xl">
         </Box>
         
     </PortfoliContCont >
-    <Container sx={{ display:"flex",justifyContent:"center",}}>
-    <Link to="/casestudy"> <StyledButton>Explore all our case study</StyledButton></Link>
-    </Container>
+    {/* <Container sx={{ display:"flex",justifyContent:"center",}}>
+    <Link to="/casestudy"> <Button variant='contained'>Explore all our case study</Button></Link>
+    </Container> */}
     
     </Container>
     </Box>
   )
 }
+
+
+
+
+
+

@@ -2,14 +2,13 @@ body{
     font-family: 'Ubuntu',Helvetica,Arial,sans-serif;
     font-size: 16px;
     line-height: 26px;
-    color: rgb(58, 58, 58);
+    
     -webkit-font-smoothing: antialiased;
     word-wrap: break-word;
     font-kerning: normal;
     -ms-font-feature-settings: "kern","liga","clig","calt";
     -webkit-font-feature-settings: "kern","liga","clig","calt";
     font-feature-settings: "kern","liga","clig","calt";
-    background:#1a237e ;
     margin: 0 auto;
     /* #F7F7F7 */
 }

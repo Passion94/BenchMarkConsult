@@ -6,30 +6,28 @@ import {purple} from '@mui/material/colors';
 import { Link } from 'react-router-dom';
 
 const MainContainer = styled(Box)(({ theme }) => ({
-  marginTop:'12px', 
+  marginTop:'150px', 
   marginBottom:"100px",
-  padding:"50px 20px 50px 62px ",
+  padding:"50px 20px 50px 76px ",
   
  display:"flex",
  alignItems:"center",
-  backgroundColor: "transparent",
   
-  // rgb(0, 77, 64)
  
  
   [theme.breakpoints.down('1441')]: {
     
-    padding:"50px 20px 50px 43px ",
+    padding:"50px 0px 50px 56px ",
     
   },
   [theme.breakpoints.down('1367')]: {
     
-    padding:"50px 0px 50px 32.5px ",
+    padding:"50px 0px 50px 45px ",
     
   },
   [theme.breakpoints.down('1281')]: {
     
-    padding:"50px 10px 50px 17px ",
+    padding:"50px 0px 50px 30px ",
     
   },
   [theme.breakpoints.down('1081')]: {
@@ -133,7 +131,7 @@ const MainContainer = styled(Box)(({ theme }) => ({
 
 
 const Header = styled(Typography)(({ theme }) => ({
-  color:'white',
+  
   fontWeight: '900',
   display:"flex",
   
@@ -155,7 +153,7 @@ const Header = styled(Typography)(({ theme }) => ({
  
 }));
 const Title = styled(Typography)(({ theme }) => ({
-  color:'white',
+  // color:'white',
   
   display:"flex",
   fontWeight:"500",
@@ -181,7 +179,7 @@ const Title = styled(Typography)(({ theme }) => ({
 }));
 
 const Desc = styled(Typography)(({ theme }) => ({
-  color:'white',
+  // color:'white',
   
   display:"flex",
   fontWeight:"500",
@@ -209,7 +207,7 @@ const StyledButton = styled('button')(({ theme }) => ({
   marginTop: '10px',
   marginBottom:"30px",
   border:"0px",
-  color:'black',
+  // color:'black',
   borderRadius:'3px',
   fontSize: '.8em',
   fontWeight: '900',
@@ -217,13 +215,13 @@ const StyledButton = styled('button')(({ theme }) => ({
   textDecoration: 'none',
   textTransform: 'uppercase',
   padding: '16px 22px',
-  background:"rgb(46,234,250)",
+ 
   border:"none",
   outline:"none",
  
   transition: 'all 0.3s ease 0s',
   fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
-  cursor: 'pointer',
+ 
   // marginLeft: '42px',
 
 }));
@@ -238,37 +236,37 @@ const StyledBox = styled(Box)({
 
 export const Whatwedo = () => {
   return (
-    <Box sx={{background: "#1a237e"}}>
+    <Box>
     <Container maxWidth="xl">
     <MainContainer >
       
       <Container>
-        <Header>
+        <Typography variant='h2'>
             What we do
-        </Header>
+        </Typography>
 
         <StyledBox>
 
            
-        <Title>
+        <Typography variant='h1'>
         We are at the forefront of technological advancements.
        
-        </Title>
-        <Desc >
+        </Typography>
+        <Typography variant='body1'>
         Prehood is a global firm that empower's businesses and organizations with innovative digital 
         solutions that drive growth,efficiency, and success.
        
-        </Desc>
+        </Typography>
        
         
         </StyledBox>
         <Box >
-        <Link to="services"><StyledButton
-          variant="contained"
+        <Link to="services"><Button
+          variant="contained" 
          
         >
           Explore Our Services
-        </StyledButton> </Link>
+        </Button> </Link>
        
       
       

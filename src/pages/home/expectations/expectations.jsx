@@ -43,21 +43,22 @@ const items = [
 const ArrowButton = styled(KeyboardArrowDownOutlinedIcon)(({theme, arrowDirection }) => ({
   transform: arrowDirection ? 'rotate(180deg)' : 'rotate(0deg)',
   position: 'absolute',
-  right: '-4%', // Adjust the right position as needed
+  right: '1%', // Adjust the right position as needed
   bottom: '3px',
   display: 'block', // Display is already defined based on breakpoints
-  border: '1px solid white',
+  border: '1px solid #4B4BDD',
   height: '18px',
   minWidth: '30px',
   borderRadius: '15px',
-  color: 'RGB(45, 45, 191)',
+  color: '#4B4BDD',
   cursor: 'pointer',
+  zIndex:2,
   '&:hover':{
     backgroundColor:"#D0FFFF"
   },
   // transition: 'transform 0.3s ease',
   [theme.breakpoints.down('1441')]: {
-    right: '6.5%',
+    right: '12%',
   },
  
   [theme.breakpoints.down('1367')]: {
@@ -124,8 +125,8 @@ const WhatWrap = styled(Box)(({ theme }) => ({
   position: 'relative', // Ensure the container is relatively positioned
   marginTop: '50px',
   padding: '42px 2%',
-  backgroundColor: 'transparent',
-  // backgroundAttachment: 'local',
+ 
+  backgroundAttachment: 'local',
   overflow: 'hidden', // Hide overflow from the container
 
 
@@ -138,17 +139,18 @@ const WhatWrap = styled(Box)(({ theme }) => ({
     left: "-15px",
     width: '100%',
     height: '100%',
-    // backgroundImage: 'url("images/expectationbackground.png")',
-    // backgroundRepeat: 'no-repeat',
-    // backgroundSize: '300px',
-    // backgroundPosition: '20px 10px',
-    zIndex: -1, // Place the background behind the content
+    backgroundImage: 'url("images/expectationbackground.png")',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '300px',
+    backgroundPosition: '20px 10px',
+    zIndex:1, // Place the background behind the content
+
   },
 
   // ... (rest of the styling)
 
   [theme.breakpoints.down('3841')]: {
-    padding: " 42px 5.8%" ,
+    padding: " 42px 6.9%" ,
 
     '&::before': {
       content: '""',
@@ -157,46 +159,44 @@ const WhatWrap = styled(Box)(({ theme }) => ({
       left: "24px",
       width: '100%',
       height: '100%',
-      // backgroundImage: 'url("images/expectationbackground.png")',
+      backgroundImage: 'url("images/expectationbackground.png")',
       backgroundRepeat: 'no-repeat',
       backgroundSize: '300px',
-      backgroundPosition: '20px 10px',
-      zIndex: -1, // Place the background behind the content
+      backgroundPosition: '30px 10px',
+      zIndex: 1, // Place the background behind the content
     },
   
   },
  
-  [theme.breakpoints.down('lg')]: {
-    padding: " 42px 30px 42px 0%px" ,
-  },
+  // [theme.breakpoints.down('lg')]: {
+  //   padding: " 42px 30px 42px 0%px" ,
+  // },
 
-  [theme.breakpoints.down('md')]: {
-    padding: " 42px 10px 42px 0px" ,
-    // padding: "0px",
+  // [theme.breakpoints.down('md')]: {
+  //   padding: " 42px 10px 42px 0px" ,
+  //   // padding: "0px",
     
-  },
+  // },
 
-  [theme.breakpoints.down('sm')]: {
-    marginLeft: "-30px",
-    padding: "0px",
-    paddingRight:"0px",
-  },
+  // [theme.breakpoints.down('sm')]: {
+  //   marginLeft: "-30px",
+  //   padding: "0px",
+  //   paddingRight:"0px",
+  // },
 
-  [theme.breakpoints.down('xs')]: {
-    marginLeft: "0px",
-    padding: "0px",
-  },
-  [theme.breakpoints.down('3840')]: {
-    paddingLeft: " 12%" ,
-  },
-  [theme.breakpoints.down('3201')]: {
-    paddingLeft: " 6%" ,
-  },
+  // [theme.breakpoints.down('xs')]: {
+  //   marginLeft: "0px",
+  //   padding: "0px",
+  // },
+
+  // [theme.breakpoints.down('3201')]: {
+  //   padding: " 42px 6.9%" ,
+  // },
   [theme.breakpoints.down('1921')]: {
-    paddingLeft: " 5%" ,
+    padding: " 42px 5.9%"
   },
   [theme.breakpoints.down('1441')]: {
-    
+    padding: " 42px 5.9%",
     '&::before': {
       content: '""',
       position: 'absolute',
@@ -204,18 +204,18 @@ const WhatWrap = styled(Box)(({ theme }) => ({
       left: "0px",
       width: '100%',
       height: '100%',
-      // backgroundImage: 'url("images/expectationbackground.png")',
+      backgroundImage: 'url("images/expectationbackground.png")',
       backgroundRepeat: 'no-repeat',
       backgroundSize: '300px',
-      backgroundPosition: '20px 10px',
-      zIndex: -1, // Place the background behind the content
+      backgroundPosition:'33px 10px',
+      zIndex: 1, // Place the background behind the content
     },
   
 
 
   },
   [theme.breakpoints.down('1367')]: {
-    paddingLeft: " 4.3%" ,
+    paddingLeft: " 5.2%" ,
 
 
     '&::before': {
@@ -225,15 +225,16 @@ const WhatWrap = styled(Box)(({ theme }) => ({
       left: "-12px",
       width: '100%',
       height: '100%',
-      // backgroundImage: 'url("images/expectationbackground.png")',
+      backgroundImage: 'url("images/expectationbackground.png")',
       backgroundRepeat: 'no-repeat',
       backgroundSize: '300px',
-      backgroundPosition: '20px 10px',
-      zIndex: -1, // Place the background behind the content
+      backgroundPosition: '33px 10px',
+      zIndex: 1, // Place the background behind the content
+      
     },
   },
   [theme.breakpoints.down('1281')]: {
-    paddingLeft: " 3.3%" ,
+    paddingLeft: " 4.5%" ,
     '&::before': {
       content: '""',
       position: 'absolute',
@@ -241,11 +242,11 @@ const WhatWrap = styled(Box)(({ theme }) => ({
       left: "-25px",
       width: '100%',
       height: '100%',
-      // backgroundImage: 'url("images/expectationbackground.png")',
+      backgroundImage: 'url("images/expectationbackground.png")',
       backgroundRepeat: 'no-repeat',
       backgroundSize: '300px',
-      backgroundPosition: '20px 10px',
-      zIndex: -1, // Place the background behind the content
+      backgroundPosition: '33px 10px',
+      zIndex: 1, // Place the background behind the content
     },
   },
   [theme.breakpoints.down('1081')]: {
@@ -257,11 +258,11 @@ const WhatWrap = styled(Box)(({ theme }) => ({
       left: "-55px",
       width: '100%',
       height: '100%',
-      // backgroundImage: 'url("images/expectationbackground.png")',
+      backgroundImage: 'url("images/expectationbackground.png")',
       backgroundRepeat: 'no-repeat',
       backgroundSize: '300px',
       backgroundPosition: '20px 10px',
-      zIndex: -1, // Place the background behind the content
+      zIndex: 1, // Place the background behind the content
     },
   },
   [theme.breakpoints.down('1025')]: {
@@ -277,7 +278,7 @@ const WhatWrap = styled(Box)(({ theme }) => ({
       backgroundRepeat: 'no-repeat',
       backgroundSize: '300px',
       backgroundPosition: '20px 10px',
-      zIndex: -1, // Place the background behind the content
+      zIndex: 1, // Place the background behind the content
     },
   },
   [theme.breakpoints.down('913')]: {
@@ -293,7 +294,7 @@ const WhatWrap = styled(Box)(({ theme }) => ({
       backgroundRepeat: 'no-repeat',
       backgroundSize: '300px',
       backgroundPosition: '20px 10px',
-      zIndex: -1, // Place the background behind the content
+      zIndex: 1, // Place the background behind the content
     },
   },
   [theme.breakpoints.down('821')]: {
@@ -309,7 +310,7 @@ const WhatWrap = styled(Box)(({ theme }) => ({
       backgroundRepeat: 'no-repeat',
       backgroundSize: '300px',
       backgroundPosition: '20px 10px',
-      zIndex: -1, // Place the background behind the content
+      zIndex: 1, // Place the background behind the content
     },
   },
   [theme.breakpoints.down('811')]: {
@@ -330,7 +331,7 @@ const WhatWrap = styled(Box)(({ theme }) => ({
       backgroundRepeat: 'no-repeat',
       backgroundSize: '300px',
       backgroundPosition: '20px 10px',
-      zIndex: -1, // Place the background behind the content
+      zIndex: 1, // Place the background behind the content
     }
 
   },
@@ -352,7 +353,7 @@ const WhatWrap = styled(Box)(({ theme }) => ({
       backgroundRepeat: 'no-repeat',
       backgroundSize: '300px',
       backgroundPosition: '20px 10px',
-      zIndex: -1, // Place the background behind the content
+      zIndex: 1, // Place the background behind the content
     }
     
   },
@@ -370,7 +371,7 @@ const WhatWrap = styled(Box)(({ theme }) => ({
       backgroundRepeat: 'no-repeat',
       backgroundSize: '300px',
       backgroundPosition: '20px 10px',
-      zIndex: -1, // Place the background behind the content
+      zIndex: 1, // Place the background behind the content
     }
     
   },
@@ -387,7 +388,7 @@ const WhatWrap = styled(Box)(({ theme }) => ({
       backgroundRepeat: 'no-repeat',
       backgroundSize: '300px',
       backgroundPosition: '20px 10px',
-      zIndex: -1, // Place the background behind the content
+      zIndex: 1, // Place the background behind the content
     }
     
   },
@@ -404,7 +405,7 @@ const WhatWrap = styled(Box)(({ theme }) => ({
       backgroundRepeat: 'no-repeat',
       backgroundSize: '300px',
       backgroundPosition: '20px 10px',
-      zIndex: -1, // Place the background behind the content
+      zIndex: 1, // Place the background behind the content
     }
     
   },
@@ -416,19 +417,7 @@ const WhatWrap = styled(Box)(({ theme }) => ({
 
   
 const Title = styled(Typography)(({ theme }) => ({
-  fontWeight: '900',
-  marginBottom: '10px',
-  fontSize: '1.2em', // You can use '1.5rem' for better responsiveness across different devices
-  color: 'white',
-  letterSpacing:"normal",
-  fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
- 
 
-
-
-
-
-  
   [theme.breakpoints.down('415')]: {
     fontSize: '1.1em',
    
@@ -449,7 +438,7 @@ const TitleOne = styled(Typography)(({ theme }) => ({
   marginBottom: '65px',
   fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
   fontSize: '.9em', // You can use '1.5rem' for better responsiveness across different devices
-  color: 'white',
+  color: '#9F9F9F',
   // #9F9F9F
   paddingLeft: "24%",
   // opacity: ".5",
@@ -514,23 +503,9 @@ const TitleOne = styled(Typography)(({ theme }) => ({
 
 
 const Header = styled(Typography)(({ theme }) => ({
-  color: 'white',
-  fontWeight: '600',
-  marginBottom: '30px',
-  fontSize: '2.4em',
-  fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
-  
   lineHeight: '56px',
-  letterSpacing:"normal",
- 
-  // paddingRight:"0%",
-  fontStyle: 'normal',
-  
-  
-
   [theme.breakpoints.down('3841')]: {
     paddingRight:"50%",
-    
   },
 
   [theme.breakpoints.down('1921')]: {
@@ -585,23 +560,20 @@ const fadeIn = keyframes`
 
 const Desc = styled(Typography)(({ theme, showFullText }) => ({
   animation: `${fadeIn} 01s ease-in-out forwards`,
-  maxHeight: showFullText ? '1000px' : '48px', 
+  maxHeight: showFullText ? '1000px' : '50px', 
   transition: 'max-height 1s ease-in-out',
   padding:"0px 0px 5px 0px",
-  color: 'white',
   fontWeight: '400',
-  marginBottom: '30px',
-  fontSize: '.93em',
   lineHeight: '24px',
   letterSpacing:"0px",
-  fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
+  
  
   overflow: 'hidden',
   textOverflow: 'ellipsis',
   display: '-webkit-box',
   WebkitLineClamp: showFullText ? 'none' : 2, // Show all lines if showFullText is true
   WebkitBoxOrient: 'vertical',
-  paddingLeft:"72px",
+  // paddingLeft:"72px",
 
   
 
@@ -611,7 +583,7 @@ const Desc = styled(Typography)(({ theme, showFullText }) => ({
  
   [theme.breakpoints.down('1441')]: {
     
-    paddingLeft:"64px",
+    paddingLeft:"50px",
 
     
   },
@@ -628,32 +600,21 @@ const Desc = styled(Typography)(({ theme, showFullText }) => ({
 }));
 
 const Oxbor = styled(Box)(({ theme }) => ({
-  padding: "0 335px",
+  padding: "0 400px",
  position:"absolute",
  top:"-150px",
  left:"47px",
 
 
-  [theme.breakpoints.down('lg')]: {
-    padding: "0px 100px 0px 170px", // Adjust padding for lg screens
-  },
-  [theme.breakpoints.down('md')]: {
-    padding: "0px 40px 0px 30px", // Adjust padding for md screens
-  },
-  [theme.breakpoints.down('sm')]: {
-    padding: "0px 0px", // Adjust padding for sm screens
-  },
-  [theme.breakpoints.down('xs')]: {
-    padding: "0px 10px", // Adjust padding for xs screens
-  },
+ 
   [theme.breakpoints.down('3841')]: {
-    padding: "0 0px 0 480px", // Keep the same padding for xl screens
+    padding: "0 70px 0 480px", // Keep the same padding for xl screens
   },
   [theme.breakpoints.down('1921')]: {
     left:"55px",
   },
   [theme.breakpoints.down('1441')]: {
-    padding: "0 120px 0 480px", 
+    padding: "0 180px 0 480px", 
     left:"140px",
   },
   [theme.breakpoints.down('1367')]: {
@@ -747,13 +708,13 @@ const Expectations = () => {
   
  
   return (
-    <Box >
+    <Box sx={{background:"#F7F7F7", }} >
     <Container
     maxWidth='xl'
     >
     <WhatWrap >
    
-      <Header >What can you expect from <span style={{color:""}}>cooperation</span> with Prehood?</Header>
+      <Header variant='h1' >What can you expect from <span style={{color:""}}>cooperation</span> with Prehood?</Header >
       <TitleOne>Responsiveness. Proficiency. Courage.</TitleOne>
       <Box >
       <Container sx={{position:"relative"}}>
@@ -767,9 +728,8 @@ const Expectations = () => {
                     <CircleIcon
                       sx={{
                         padding: "0 0px 0 0", 
-                        height: "15px",
-                        width: "15px",
-                        color: "RGB(45, 45, 191)",  
+                       
+                        color: "#4B4BDD",  
                         border: "5px solid white",
                         borderRadius: "30px",
                         '@media (max-width: 641px)': {
@@ -778,9 +738,9 @@ const Expectations = () => {
                         }
                       }}
                     />
-             <Title >{item.title}</Title>
+             <Title variant='h2'>{item.title}</Title>
             </Box>
-            <Desc showFullText={openStates[index]}>{item.description}</Desc>
+            <Desc variant='body1' showFullText={openStates[index]}>{item.description}</Desc>
                   <ArrowButton
                     arrowDirection={openStates[index]}
                     onClick={() => toggleShowFullText(index)}
