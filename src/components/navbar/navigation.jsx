@@ -40,7 +40,7 @@ const ContactLink = styled(Button)(({ to }) => ({
 
   '&:hover': {
    color:"#00e5ff",
-    backgroundColor: to === "/contact" ? ' (46, 234, 200)' : 'transparent',
+   
    
   },
   '@media screen and (max-width: 913px)': {
