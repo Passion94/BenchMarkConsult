@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./Cardstack.css";
 import { Box, Button, Container, Typography, styled } from "@mui/material";
 
 const sectionsData = [
@@ -34,6 +33,21 @@ const sectionsData = [
 
 
 
+const MainContainer = styled(Box)(({ theme }) => ({
+    
+    padding:"0px 90px 90px 90px",
+  
+  }));
+const Stack = styled(Box)(({ theme }) => ({
+   marginTop:"70px",
+    width: "100%",
+    marginBottom: "100px",
+    position: "sticky",
+    
+    
+  
+  }));
+
 
 const Section = styled(Box)(({ theme }) => ({
    
@@ -48,15 +62,7 @@ const Section = styled(Box)(({ theme }) => ({
   
   }));
 
-  const Stack = styled(Box)(({ theme }) => ({
-   
-    width: "100%",
-    marginBottom: "100px",
-    position: "sticky",
-    marginBottom: "100px",
-    padding:"90px",
-  
-  }));
+ 
 
 const CardStack = () => {
   const [sectionIndex, setSectionIndex] = useState(0);
@@ -81,10 +87,13 @@ const CardStack = () => {
   }, []);
 
   return (
-    <Box>
+    <MainContainer>
+        <Typography variant="h1">Explore Our case Study</Typography>
       <Stack>
+        
         {sectionsData.map((section, index) => (
           <Section key={index} style={{ backgroundColor: section.backgroundColor }}>
+
             <Box>
               <Typography variant="h1">{section.title}</Typography>
               <Typography variant="body1">{section.content}</Typography>
@@ -104,7 +113,7 @@ const CardStack = () => {
           </Section>
         ))}
       </Stack>
-    </Box>
+    </MainContainer>
   );
 };
 
