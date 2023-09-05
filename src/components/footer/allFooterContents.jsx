@@ -5,7 +5,7 @@ import { FooterJoin } from './footerjoin'
 export const AllFooterContents = () => {
   return (
     <div>
-         <FooterJoin/>
+         {/* <FooterJoin/> */}
         {/* <Footer/> */}
        
     </div>

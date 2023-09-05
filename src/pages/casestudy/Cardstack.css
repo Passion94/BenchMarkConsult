@@ -1,0 +1,25 @@
+.stack{
+   
+    width: 100%;
+    
+    margin-bottom: 100px;
+   
+    position: sticky;
+   
+    margin-bottom: 100px;
+  }
+  
+  .section {
+    height: 500px;
+    background-color: #ccc;
+    position: sticky;
+    top: 170px;
+    padding: 50px;
+
+    display: flex;
+    gap: 100px;
+   
+    border-radius: 10px;
+
+  }
+  

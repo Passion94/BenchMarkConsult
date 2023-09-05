@@ -9,21 +9,31 @@ import { Box, Container } from '@mui/material'
 
 
 import { CaseOne } from '../casestudy/CaseOne'
+import CardStack from '../casestudy/CardStack'
+
+
+
+
 
 
 
 
 export const Home = () => {
   return (
-    <Box >
-      <Box>
+    <Box sx={{ position:"relative", height:"100vh"}}>
+      <Box >
       <NavbarCarousal/>
      <Whatwedo/> 
       </Box>
-     
+      <Expectations/>
      <Getstarted/>
-     <Expectations/> 
-     <CaseOne/>
+     
+      <CardStack/>
+     <Box sx={{marginTop:"700px"}}>
+      <Getstarted/>
+      <Getstarted/>
+      <Getstarted/>
+      </Box>
       {/* <AboutData/>
       
      

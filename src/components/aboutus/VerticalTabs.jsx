@@ -27,7 +27,7 @@ const RadioText = styled(Typography)(({ theme }) => ({
   textTransform: "initial",
   fontFamily: "Ubuntu, Helvetica, Arial, sans-serif",
   fontWeight: "900",
-  fontSize: "1em",
+  fontSize: "1.1em",
   width: "200px", // Set a fixed width for the label container
   lineHeight: "24px",
   marginTop:"0px",
@@ -62,7 +62,7 @@ const VertBox = styled(Typography)(({ theme }) => ({
   // color: "white",
   display: 'flex',
   alignItems: "center",
-  maxHeight: 424,
+  // maxHeight: 424,
   width: "720px", // Adjust this width as needed
   [theme.breakpoints.down('1441')]: {
     width: "670px",

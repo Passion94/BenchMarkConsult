@@ -8,10 +8,10 @@ import { Link } from 'react-router-dom';
 
 
 const Header = styled(Typography)(({ theme }) => ({
-  marginTop:"-260px",
+
 
   [theme.breakpoints.down('1281')]: {
-    marginTop:"-240px",
+   
     
   },
   }));
@@ -31,6 +31,7 @@ const Header = styled(Typography)(({ theme }) => ({
     gap:"170px",
     alignItems:"center",
     padding:" 50px 90px 50px 76px",
+    border:"5px solid red",
     //  background:"transparent",
     [theme.breakpoints.down('1601')]: {
       padding:" 50px 90px 50px 75px",
@@ -43,8 +44,8 @@ const Header = styled(Typography)(({ theme }) => ({
     },
     [theme.breakpoints.down('1367')]: {
       
-      gap:"200px",
-      padding:"50px 0px 50px 62px ",
+      gap:"50px",
+      margin:"50px 0px 50px 0px ",
     },
     [theme.breakpoints.down('1281')]: {
       
@@ -103,28 +104,8 @@ const Header = styled(Typography)(({ theme }) => ({
     },
   }));
   
-  // const StyledButton = styled('button')(({ theme }) => ({
- 
-  //   marginTop: '10px',
-  //   marginBottom:"30px",
-  //   border:"none",
-    
-  //   borderRadius:'3px',
-  //   fontSize: '.8em',
-  //   fontWeight: '900',
-  //   lineHeight: '17px',
-  //   textDecoration: 'none',
-  //   textTransform: 'uppercase',
-  //   padding: '16px 22px',
-  //   background:"#5c6bc0",
-  //   border:"none",
-  //   outline:"none",
-   
-  //   transition: 'all 0.3s ease 0s',
-  //   fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
-  //   cursor: 'pointer',
-  
-  // }));
+
+
   
 
 export const CaseOne = () => {

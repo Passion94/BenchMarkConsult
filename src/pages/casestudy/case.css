@@ -1,8 +1,5 @@
 .slider{
-    position:relative; 
-    top:0px;
-     left:-42px;
-     
+    
 }
 
 .caseslideimg{
@@ -13,9 +10,7 @@
 
 @media (max-width: 1366px) {
     .slider{
-        position:relative; 
-        top:0px;
-         left:-122px;
+      
          
     }
 }

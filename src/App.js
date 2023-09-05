@@ -17,6 +17,7 @@ import { Project } from './pages/projects/Project';
 import ProjectCaseStudy from './pages/projects/sectionTwo/ProjectCaseStudy';
 import AllCaseStudy from './pages/projects/sectionTwo/AllCaseStudy';
 import { Paper } from '@mui/material';
+import Navigate from './components/navbar/Navigate';
 
 
 
@@ -32,7 +33,7 @@ function App() {
   return (
    
 <Router>
-<Navigation/>
+<Navigate/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/aboutus" element={<About/>} />

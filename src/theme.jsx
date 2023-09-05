@@ -16,20 +16,20 @@ const theme = createTheme({
     typography:{
         fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
 h1:{
-    fontSize:"2rem",
+    fontSize:"2.3rem",
     fontWeight:"600",
     marginBottom:"30px",
     
     
 },
 h2:{
-    fontSize:"1.2rem",
+    fontSize:"1.5rem",
     fontWeight:"600",
     marginBottom:"30px",
     
 },
 body1:{
-    fontSize:"1rem",
+    fontSize:"1.2rem",
     lineHeight:"36px",
     fontWeight:"500",
     marginBottom: '30px',
@@ -54,11 +54,24 @@ body1:{
            
             border:"none",
             outline:"none",
-           
-            transition: 'all 0.3s ease 0s',
             fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
+            "&:hover": {
+              //you want this to be the same as the backgroundColor above
+              
+              color:"#00e5ff"
+          },
+          MuiButtonBase: {
+            defaultProps: {
+              // The props to change the default for.
+              disableRipple: true, // No more ripple, on the whole application 💣!
+            },
+          },
+         
+          },
           }
         }
       },
-}});
+});
   export default theme;
+
+ 

@@ -66,7 +66,7 @@ const Header = styled(Typography)(({ theme }) => ({
      position:"absolute",
      alignItems:"center",
       top:'170px',
-       left:"-39px",
+       left:"39px",
         cursor:"pointer",
         [theme.breakpoints.down('602')]: {
       
@@ -129,10 +129,10 @@ const ImageTextSlider = ({ slides }) => {
   return (
     <div className="slider" >
       
-        <ArrowiconContainer >
+        {/* <ArrowiconContainer >
         <KeyboardArrowLeftIcon onClick={prevSlide} sx={{borderRadius:"30px",  border:"1px solid green"}}/>
       <KeyboardArrowRightIcon onClick={nextSlide} sx={{borderRadius:"30px",  border:"1px solid green",  }}/>
-        </ArrowiconContainer >
+        </ArrowiconContainer > */}
           
       <Slide
         imageSrc={slides[currentSlideIndex].imageSrc}
@@ -141,7 +141,7 @@ const ImageTextSlider = ({ slides }) => {
         desc={slides[currentSlideIndex].desc}
 
       />
-<Link to="/casestudy"><Button variant='contained'>Explore all our case study</Button></Link>
+{/* <Link to="/casestudy"><Button variant='contained'>Explore all our case study</Button></Link> */}
     </div>
   );
 };

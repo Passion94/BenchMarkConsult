@@ -9,9 +9,26 @@ const MainContainer = styled(Box)(({ theme }) => ({
   marginTop:'150px', 
   marginBottom:"100px",
   padding:"50px 20px 50px 76px ",
-  
+  position: 'relative',
  display:"flex",
  alignItems:"center",
+//  backgroundImage: 'url("images/imageThree.jpg")',
+//  backgroundRepeat: 'no-repeat',
+//  backgroundSize: '700px',
+//  backgroundPosition: '-200px -120px',
+//  '&::before': {
+//   content: '""',
+//   position: 'absolute',
+//   top: "-50px",
+//   left: "-150px",
+//   width: '100%',
+//   height: '100%',
+//   backgroundImage: 'url("images/imageThree.jpg")',
+//   backgroundRepeat: 'no-repeat',
+//   backgroundSize: '300px',
+//   backgroundPosition: '-300px -120px',
+//   zIndex: 1,
+// },
   
  
  

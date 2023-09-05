@@ -443,6 +443,7 @@ const TitleOne = styled(Typography)(({ theme }) => ({
   paddingLeft: "24%",
   // opacity: ".5",
   textTransform:"uppercase",
+  zIndex:"99",
 
 
   
