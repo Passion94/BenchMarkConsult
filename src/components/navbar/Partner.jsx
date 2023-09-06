@@ -101,7 +101,7 @@ const Partner = () => {
             <img
               src={partner.image}
               alt={partner.name}
-              style={{ width: 100, height: 100 }}
+              style={{ width: 100, height: 100 , borderRadius:"10px"}}
             />
             <Typography variant="body1">{partner.name}</Typography>
           </PartnerContainer>

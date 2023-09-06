@@ -14,8 +14,6 @@ const ContactForm = () => {
     fullName: "",
     email: "",
     phone: "",
-    // title: "",
-    // company: "",
     description: "",
   });
 
@@ -60,117 +58,94 @@ const ContactForm = () => {
   };
 
   const isValidEmail = (email) => {
-    // Basic email validation, you can use a more complex regex
     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
     return emailRegex.test(email);
   };
 
   return (
-    <Box sx={{marginTop:"50px", padding:"50px 70px", background:"#F7F7F7"}}>
-        <Typography variant="h1" align="center">
-    Discover the right solution that solves your problem using our cutting edge technology
-    </Typography>
-    
-    <Box sx={{display:"flex", gap:"70px", alignItems:"center"}}>
-      
-        <Box >
-
-        <Container maxWidth="sm" >
-            
-      <Typography variant="h2" sx={{padding:"40px 0px 20px 0px"}} >
-      Get In touch with us today
+    <Box sx={{ marginTop: "50px", padding: "50px 70px", background: "#F7F7F7" }}>
+      <Typography variant="h1" align="center">
+        Discover the right solution that solves your problem using our cutting edge technology
       </Typography>
-      <form onSubmit={handleSubmit} style={{border: '2px solid blue', borderRadius:"10px", padding:"40px "}}>
-        <Grid container spacing={2}>
-          <Grid item xs={12}>
-            <TextField
-              fullWidth
-              label="Fullname"
-              name="fullName"
-              value={formData.fullName}
-              onChange={handleChange}
-              error={Boolean(errors.fullName)}
-              helperText={errors.fullName}
-              required
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              fullWidth
-              label="Email"
-              name="email"
-              type="email"
-              value={formData.email}
-              onChange={handleChange}
-              error={Boolean(errors.email)}
-              helperText={errors.email}
-              required
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              fullWidth
-              label="Phone"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              error={Boolean(errors.phone)}
-              helperText={errors.phone}
-              required
-            />
-          </Grid>
-          {/* <Grid item xs={12}>
-            <TextField
-              fullWidth
-              label="Title"
-              name="title"
-              value={formData.title}
-              onChange={handleChange}
-            />
-          </Grid> */}
-          {/* <Grid item xs={12}>
-            <TextField
-              fullWidth
-              label="Company"
-              name="company"
-              value={formData.company}
-              onChange={handleChange}
-            />
-          </Grid> */}
-          <Grid item xs={12}>
-            <TextField
-              fullWidth
-              label="What do you want ?"
-              name="description"
-              multiline
-              rows={4}
-              value={formData.description}
-              onChange={handleChange}
-              error={Boolean(errors.description)}
-              helperText={errors.description}
-              required
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <Button
-              type="submit"
-              variant="contained"
-              color="primary"
-              fullWidth
-            >
-              Submit
-            </Button>
-          </Grid>
-        </Grid>
-      </form>
-    </Container>
+
+      <Box sx={{ display: "flex", gap: "70px", alignItems: "center" }}>
+        <Box >
+          <Container maxWidth="sm">
+            <Typography variant="h2" sx={{ padding: "40px 0px 20px 0px" }}>
+              Get In touch with us today
+            </Typography>
+            <form onSubmit={handleSubmit} style={{ border: '2px solid blue', borderRadius: "10px", padding: "40px" }}>
+              <Grid container spacing={2}>
+                <Grid item xs={12}>
+                  <TextField
+                    fullWidth
+                    label="Fullname"
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleChange}
+                    error={Boolean(errors.fullName)}
+                    helperText={errors.fullName}
+                    required
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    fullWidth
+                    label="Email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    error={Boolean(errors.email)}
+                    helperText={errors.email}
+                    required
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    fullWidth
+                    label="Phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    error={Boolean(errors.phone)}
+                    helperText={errors.phone}
+                    required
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    fullWidth
+                    label="What do you want ?"
+                    name="description"
+                    multiline
+                    rows={4}
+                    value={formData.description}
+                    onChange={handleChange}
+                    error={Boolean(errors.description)}
+                    helperText={errors.description}
+                    required
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <Button
+                    type="submit"
+                    variant="contained"
+                    color="primary"
+                    fullWidth
+                  >
+                    Submit
+                  </Button>
+                </Grid>
+              </Grid>
+            </form>
+          </Container>
         </Box>
-        <Box>
-        <Faq/>
-        </Box> 
+        <Box style={{ maxHeight: "1000px", overflow: "hidden" }}>
+          <Faq />
         </Box>
-        </Box>
-    
+      </Box>
+    </Box>
   );
 };
 
