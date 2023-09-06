@@ -6,14 +6,10 @@ import AboutData from '../../components/aboutus/aboutusdata'
 import { Story } from '../story/story'
 import Expectations from './expectations/expectations'
 import { Box, Container } from '@mui/material'
-
-
-import { CaseOne } from '../casestudy/CaseOne'
 import CardStack from '../casestudy/CardStack'
-import Footer from '../../components/footer/FooterSection'
-import Form from '../../components/navbar/ContactForm'
 import CustomerTestimonySection from '../../components/navbar/CustomerTestimonySection '
 import Partner from '../../components/navbar/Partner'
+import ContactForm from '../../components/navbar/ContactForm'
 
 
 
@@ -33,7 +29,7 @@ export const Home = () => {
      
      
       <CardStack/>
-      {/* <Getstarted/> */}
+      <ContactForm/>
       <CustomerTestimonySection />
       <Partner/>
       {/* <Footer/> */}
