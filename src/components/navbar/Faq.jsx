@@ -73,7 +73,7 @@ const Faq = () => {
 
   return (
     <Container maxWidth="sm">
-        <Typography variant="h1" sx={{padding:"40px 0px"}}>Things you need to know</Typography>
+        <Typography variant="h1" sx={{padding:"40px 0px"}}>Frequently asked questions</Typography>
       {faqData.map((faq, index) => (
         <Accordion
           key={index}
