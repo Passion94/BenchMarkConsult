@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Box, Button, Container, Typography, styled } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const sectionsData = [
   {
@@ -38,7 +39,7 @@ const sectionsData = [
 
 const MainContainer = styled(Box)(({ theme }) => ({
     
-    padding:"70px 90px 0px 90px",
+    padding:"70px 90px 50px 90px",
   
   }));
 const Stack = styled(Box)(({ theme }) => ({
@@ -94,7 +95,7 @@ const CardStack = () => {
     
     <MainContainer>
         <Container maxWidth='xl'>
-        <Typography variant="h2" sx={{paddingBottom:"30px", display:"flex", justifyContent:"center"}}>Explore Our Case Study to have a look of our portfolios</Typography>
+        <Typography variant="h1" sx={{paddingBottom:"30px", display:"flex", justifyContent:"center"}}>Explore Our Case Study and see our portfolios</Typography>
       <Stack>
         
         {sectionsData.map((section, index) => (
@@ -115,6 +116,7 @@ const CardStack = () => {
                   alt={`Section ${index + 1}`}
                 />
                 <Typography variant="body1" color="#403F3F">{section.type}</Typography>
+                <Link to=''><Typography mt={10} align="end">Explore all our Casestudies</Typography></Link>
               </Box>
             )}
             

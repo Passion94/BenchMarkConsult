@@ -14,43 +14,43 @@ const App = () => {
     {
       name: "John Doe",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVIe4oqWfRd_ALgDUBhMIrwq-YlO4Ruxek_Q&usqp=CAU",
-      text: "This is a testimonial from John Doe. He is very happy with our product.",
+      text: "This is a testimonial from John Doe. He is very happy with our product This is a testimonial from John Doe. He is very happy with our product This is a testimonial from John Doe. He is very happy with our product.",
     },
     {
       name: "Albert Einstein",
       image: "https://i0.wp.com/businessday.ng/wp-content/uploads/2020/08/Untitled-design-2020-08-05T093040.360.png?fit=700%2C400&ssl=1",
-      text: "This is a testimonial from Albert Einstein. He is very happy with our product.",
+      text: "This is a testimonial from John Doe. He is very happy with our product This is a testimonial from Albert Einstein. He is very happy with our product This is a testimonial from John Doe. He is very happy with our product.",
     },
     {
       name: "James Bond",
       image: "https://www.kingsplace.co.uk/wp-content/uploads/2023/06/The-greatest-Generation-1-2000x1125.jpg",
-      text: "This is a testimonial from James Bond. He is very happy with our product.",
+      text: "This is a testimonial from John Doe. He is very happy with our product This is a testimonial from James Bond. He is very happy with our product This is a testimonial from John Doe. He is very happy with our product.",
     },
     {
       name: "Eriga Doe",
       image: "https://assets.justenergy.com/wp-content/uploads/2022/10/electric-shock-scientists-connects-two-electric-cables.jpeg",
-      text: "This is a testimonial from Eriga Doe. He is very happy with our product.",
+      text: "This is a testimonial from John Doe. He is very happy with our product This is a testimonial from Eriga Doe. He is very happy with our product This is a testimonial from John Doe. He is very happy with our product.",
     },
     {
       name: "Moses Pluto",
       image: "https://media.post.rvohealth.io/wp-content/uploads/2020/05/Jump_Fitness_Female_Leap-732x549-Thumbnail-732x549.jpg",
-      text: "This is a testimonial from Eriga Doe. He is very happy with our product.",
+      text: "This is a testimonial from John Doe. He is very happy with our product This is a testimonial from Eriga Doe. He is very happy with our product This is a testimonial from John Doe. He is very happy with our product.",
     },
     {
       name: "Moshhod boss",
       image: "https://upload.wikimedia.org/wikipedia/commons/b/b8/Formation_of_a_Legacy%2C_Hertiage_flight_merges_aviation_past_and_present_86-16-51-22.jpg",
-      text: "This is a testimonial from Eriga Doe. He is very happy with our product.",
+      text: "This is a testimonial from John Doe. He is very happy with our product This is a testimonial from Eriga Doe. He is very happy with our product This is a testimonial from John Doe. He is very happy with our product.",
     },
   
     {
       name: "Stunt life",
       image: "https://guardian.ng/wp-content/uploads/2018/06/Food-Shopping.jpg",
-      text: "This is a testimonial from Eriga Doe. He is very happy with our product.",
+      text: " This is a testimonial from John Doe. He is very happy with our product This is a testimonial from Eriga Doe. He is very happy with our product This is a testimonial from John Doe. He is very happy with our product.",
     },
     {
       name: "Mercy Johnson",
       image: "https://i.ytimg.com/vi/Rf1pR5aXiwo/maxresdefault.jpg",
-      text: "This is a testimonial from Eriga Doe. He is very happy with our product.",
+      text: "This is a testimonial from John Doe. He is very happy with our product This is a testimonial from Eriga Doe. He is very happy with our product This is a testimonial from John Doe. He is very happy with our product.",
     },
   ];
 
@@ -99,12 +99,17 @@ const Testimonial = ({ testimony }) => {
   const { name, image, text } = testimony;
 
   return (
-    <Box id="testimonial" textAlign="center">
+    <Box id="testimonial" textAlign="center" display={"flex"}>
+      <Box>
+      <Typography variant="body1">{text}</Typography>
+      </Box>
+      <Box>
       <img src={image} alt={name} height="200px" style={{ maxWidth: "200px%" , borderRadius:"10px"}} />
       <Typography variant="h2" gutterBottom>
         {name}
       </Typography>
-      <Typography variant="body1">{text}</Typography>
+      </Box>
+      
     </Box>
   );
 };

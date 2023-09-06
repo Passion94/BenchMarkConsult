@@ -19,6 +19,7 @@ h1:{
     fontSize:"3rem",
     fontWeight:"600",
     marginBottom:"30px",
+    color:"#555555",
     
     '@media (max-width:1367px)': {
       fontSize: "2.2rem", // Adjust the font size for small screens
@@ -31,6 +32,7 @@ h2:{
     fontSize:"1.25rem",
     fontWeight:"600",
     marginBottom:"30px",
+    color:"#555555",
     
 },
 body1:{
@@ -39,6 +41,7 @@ body1:{
     fontWeight:"500",
     marginBottom: '30px',
     fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
+    color:"#555555",
 }
     },
     components:{

@@ -67,7 +67,7 @@ const Form = () => {
 
   return (
     <Box sx={{marginTop:"50px", padding:"50px 70px", background:"#F7F7F7"}}>
-        <Typography variant="h2" sx={{display:"flex", justifyContent:"center"}}>
+        <Typography variant="h1" align="center">
     Discover the right solution that solves your problem using our cutting edge technology
     </Typography>
     
@@ -77,7 +77,7 @@ const Form = () => {
 
         <Container maxWidth="sm" >
             
-      <Typography variant="h1" sx={{padding:"40px 0px 20px 0px"}} >
+      <Typography variant="h2" sx={{padding:"40px 0px 20px 0px"}} >
       Get In touch with us today
       </Typography>
       <form onSubmit={handleSubmit} style={{border: '2px solid blue', borderRadius:"10px", padding:"40px "}}>
