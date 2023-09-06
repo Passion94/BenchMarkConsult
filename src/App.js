@@ -7,19 +7,13 @@ import { Home } from "./pages/home/home";
 import "./App.css";
 import ServicesPage from "./pages/services/servicesPage";
 import ResourcesPage from "./pages/resources/resourcesPage";
-
-import ClientStories from "./pages/clientStory/clientStories";
-import Navigation from './components/navbar/navigation';
 import { About } from './pages/about/about';
 import { Project } from './pages/projects/Project';
-
 import ProjectCaseStudy from './pages/projects/sectionTwo/ProjectCaseStudy';
 import AllCaseStudy from './pages/projects/sectionTwo/AllCaseStudy';
-import { Paper } from '@mui/material';
 import Navigate from './components/navbar/Navigate';
-
-import Form from './components/navbar/form';
-import Footer from './components/footer/footer';
+import ContactForm from './components/navbar/ContactForm';
+import FooterSection from './components/footer/FooterSection';
 
 
 
@@ -44,13 +38,13 @@ function App() {
         <Route path="/projects/:projectId"element={<ProjectCaseStudy/>} />
         <Route path="/project" element={<Project/>} />
         <Route path="/casestudy" element={<AllCaseStudy/>} />
-        <Route path="/Form" element={<Form/>} />
+        <Route path="/Form" element={<ContactForm/>} />
         
         {/* <Route path="/story" element={<ClientStories/>} /> */}
         
         
       </Routes>
-       <Footer/>
+       <FooterSection/>
     </Router>
    
     

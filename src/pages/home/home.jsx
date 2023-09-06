@@ -10,8 +10,8 @@ import { Box, Container } from '@mui/material'
 
 import { CaseOne } from '../casestudy/CaseOne'
 import CardStack from '../casestudy/CardStack'
-import Footer from '../../components/footer/footer'
-import Form from '../../components/navbar/form'
+import Footer from '../../components/footer/FooterSection'
+import Form from '../../components/navbar/ContactForm'
 import CustomerTestimonySection from '../../components/navbar/CustomerTestimonySection '
 import Partner from '../../components/navbar/Partner'
 
@@ -34,7 +34,6 @@ export const Home = () => {
      
       <CardStack/>
       {/* <Getstarted/> */}
-      <Form/>
       <CustomerTestimonySection />
       <Partner/>
       {/* <Footer/> */}

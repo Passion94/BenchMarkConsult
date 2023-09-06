@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import Faq from "./Faq";
 
-const Form = () => {
+const ContactForm = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -174,4 +174,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default ContactForm;

@@ -99,7 +99,7 @@ const Testimonial = ({ testimony }) => {
   const { name, image, text } = testimony;
 
   return (
-    <Box id="testimonial" textAlign="center" display={"flex"}>
+    <Box id="testimonial" textAlign="center" display={"flex"} gap={15}>
       <Box>
       <Typography variant="body1">{text}</Typography>
       </Box>
