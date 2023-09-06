@@ -16,20 +16,25 @@ const theme = createTheme({
     typography:{
         fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
 h1:{
-    fontSize:"2.3rem",
+    fontSize:"3rem",
     fontWeight:"600",
     marginBottom:"30px",
+    
+    '@media (max-width:1367px)': {
+      fontSize: "2.2rem", // Adjust the font size for small screens
+      marginBottom: "20px", // Adjust the margin for small screens
+    },
     
     
 },
 h2:{
-    fontSize:"1.5rem",
+    fontSize:"1.25rem",
     fontWeight:"600",
     marginBottom:"30px",
     
 },
 body1:{
-    fontSize:"1.2rem",
+    fontSize:"1.17rem",
     lineHeight:"36px",
     fontWeight:"500",
     marginBottom: '30px',

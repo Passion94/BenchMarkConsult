@@ -123,9 +123,9 @@ const ArrowButton = styled(KeyboardArrowDownOutlinedIcon)(({theme, arrowDirectio
 
 const WhatWrap = styled(Box)(({ theme }) => ({
   position: 'relative', // Ensure the container is relatively positioned
-  marginTop: '50px',
+  marginTop: '0px',
   padding: '42px 2%',
- 
+  background:"#F7F7F7",
   backgroundAttachment: 'local',
   overflow: 'hidden', // Hide overflow from the container
 
@@ -228,7 +228,7 @@ const WhatWrap = styled(Box)(({ theme }) => ({
       backgroundImage: 'url("images/expectationbackground.png")',
       backgroundRepeat: 'no-repeat',
       backgroundSize: '300px',
-      backgroundPosition: '33px 10px',
+      backgroundPosition: '57px 10px',
       zIndex: 1, // Place the background behind the content
       
     },
@@ -709,11 +709,12 @@ const Expectations = () => {
   
  
   return (
-    <Box sx={{background:"#F7F7F7", }} >
+    <Box  >
+ 
+    <WhatWrap >
     <Container
     maxWidth='xl'
     >
-    <WhatWrap >
    
       <Header variant='h1' >What can you expect from <span style={{color:""}}>cooperation</span> with Prehood?</Header >
       <TitleOne>Responsiveness. Proficiency. Courage.</TitleOne>
@@ -750,9 +751,9 @@ const Expectations = () => {
         ))}
       </Container >
       </Box>
-      
+      </Container>
     </WhatWrap>
-    </Container>
+    
     </Box>
   );
 };

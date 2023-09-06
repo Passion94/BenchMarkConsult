@@ -10,6 +10,9 @@ import { Box, Container } from '@mui/material'
 
 import { CaseOne } from '../casestudy/CaseOne'
 import CardStack from '../casestudy/CardStack'
+import Footer from '../../components/footer/Footer'
+import Form from '../../components/navbar/Form'
+import CustomerTestimonySection from '../../components/navbar/CustomerTestimonySection '
 
 
 
@@ -20,20 +23,19 @@ import CardStack from '../casestudy/CardStack'
 
 export const Home = () => {
   return (
-    <Box sx={{ position:"relative", height:"100vh"}}>
+    <Box sx={{ position:"relative"}}>
       <Box >
       <NavbarCarousal/>
      <Whatwedo/> 
       </Box>
       <Expectations/>
-     <Getstarted/>
+     
      
       <CardStack/>
-     <Box sx={{marginTop:"700px"}}>
-      <Getstarted/>
-      <Getstarted/>
-      <Getstarted/>
-      </Box>
+      {/* <Getstarted/> */}
+      <Form/>
+      <CustomerTestimonySection />
+      {/* <Footer/> */}
       {/* <AboutData/>
       
      

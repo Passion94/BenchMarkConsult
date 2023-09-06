@@ -21,7 +21,7 @@ const Title = styled(Typography)(({ theme }) => ({
   fontSize: '1em',
   zIndex:"1",
   fontStyle: "normal",
-  textTransform:"uppercase",
+  textTransform:"initial",
   position:'relative',
   fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
  
@@ -41,7 +41,7 @@ const Header = styled(Typography)(({ theme }) => ({
   fontWeight: '900',
   justifyContent: 'center',
   marginBottom: '30px',
-  fontSize: '2.5em',
+  
   paddingTop: '10px',
   lineHeight:"46px",
   fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
@@ -82,7 +82,7 @@ const Desc = styled(Typography)(({ theme }) => ({
   
   fontWeight:"500",
   marginBottom: '30px',
-  fontSize: '1.2em',
+  
   lineHeight: '26px',
   fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
   padding:" 0 600px 0 0",
@@ -186,6 +186,13 @@ const slides = [
     header: 'Solution delivery',
     description: ' Prehood is a global firm that empowers businesses and organizations with innovative digital solutions that drive growth, efficiency, and success. We are at the forefront of technological advancements.',
     buttonLabel: 'Get in touch',
+    subcategory:{
+      one:"Software development",
+      two:"Ai and Data analytics",
+      three:"Cyber Security",
+      four:"Project Management",
+      
+      }
   },
   {id:2,
     title: 'Services',
@@ -281,11 +288,11 @@ const NavbarCarousal = () => {
             <Container maxWidth="xl" >
               <Title variant='h2'>{slide.title}</Title >
               <Header variant='h1'>{slide.header}</Header>
-              <Desc  variant="h3" sx={{color:"white"}}>{slide.description}</Desc>
+              <Desc  variant="body1" sx={{color:"white"}}>{slide.description}</Desc>
               {slide.subcategory && (
                 <Box sx={{ paddingLeft: "5%" }}>
                   {Object.values(slide.subcategory).map((item, subIndex) => (
-                    <Desc  variant='h3' key={subIndex}>
+                    <Desc  variant='h2' key={subIndex}>
                       <span style={{ display: "flex", alignItems: "center", gap: "1%" }}>
                         <CircleIcon
                           sx={{ padding: "0 0px 0 0", height: "15px", width: "15px", color: "#4B4BDD",  

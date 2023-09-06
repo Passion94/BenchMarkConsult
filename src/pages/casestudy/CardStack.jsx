@@ -38,11 +38,11 @@ const sectionsData = [
 
 const MainContainer = styled(Box)(({ theme }) => ({
     
-    padding:"30px 90px 0px 90px",
+    padding:"70px 90px 0px 90px",
   
   }));
 const Stack = styled(Box)(({ theme }) => ({
-   marginTop:"70px",
+   marginTop:"0px",
     width: "100%",
    
     position: "sticky",
@@ -54,7 +54,7 @@ const Stack = styled(Box)(({ theme }) => ({
 
 const Section = styled(Box)(({ theme }) => ({
    
-    height: "600px",
+    height: "500px",
     backgroundColor: "#ccc",
     position: "sticky",
     top: "170px",
@@ -91,8 +91,10 @@ const CardStack = () => {
   }, []);
 
   return (
+    
     <MainContainer>
-        <Typography variant="h2">Explore Our Case Study to have a look of our portfolios</Typography>
+        <Container maxWidth='xl'>
+        <Typography variant="h2" sx={{paddingBottom:"30px", display:"flex", justifyContent:"center"}}>Explore Our Case Study to have a look of our portfolios</Typography>
       <Stack>
         
         {sectionsData.map((section, index) => (
@@ -115,9 +117,13 @@ const CardStack = () => {
                 <Typography variant="body1" color="#403F3F">{section.type}</Typography>
               </Box>
             )}
+            
           </Section>
+          
         ))}
+        
       </Stack>
+      </Container>
     </MainContainer>
   );
 };

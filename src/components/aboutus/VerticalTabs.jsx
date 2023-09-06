@@ -7,63 +7,52 @@ import Box from '@mui/material/Box';
 import Radio from '@mui/material/Radio';
 import { styled } from '@mui/material';
 import "./verticaltabs.css";
-import { cyan } from '@mui/material/colors';
-
-
-
 
 const RadioContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
-  width:"220px",
-  maxWidth:"220px",
+  width: "220px",
+  maxWidth: "220px",
   [theme.breakpoints.down('1441')]: {
-    width:"217px",
+    width: "217px",
   },
 }));
+
 const RadioText = styled(Typography)(({ theme }) => ({
- 
   letterSpacing: "normal",
   textTransform: "initial",
   fontFamily: "Ubuntu, Helvetica, Arial, sans-serif",
   fontWeight: "900",
   fontSize: "1.1em",
-  width: "200px", // Set a fixed width for the label container
+  marginBottom:"-5px",
+  width: "200px",
   lineHeight: "24px",
-  marginTop:"0px",
-  marginLeft: "0px", // Add margin between radio button and text
+  marginLeft: "0px",
   [theme.breakpoints.down('641')]: {
     display: "none",
   },
 }));
 
-
 const RadioTextOne = styled(Typography)(({ theme }) => ({
- 
   letterSpacing: "normal",
   textTransform: "initial",
   fontFamily: "Ubuntu, Helvetica, Arial, sans-serif",
   fontWeight: "900",
   fontSize: "1em",
-  maxWidth: "50px", // Set a fixed width for the label container
-  padding: "10px", // Add some padding for better spacing
-  // lineHeight: "26px",
+  maxWidth: "50px",
+
+  padding: "10px",
   display: "none",
-  [theme.breakpoints.down('1441')]: {
-    
-  },
+  [theme.breakpoints.down('1441')]: {},
   [theme.breakpoints.down('641')]: {
     display: "block",
   },
 }));
 
 const VertBox = styled(Typography)(({ theme }) => ({
-  // bgcolor: 'transparent',
-  // color: "white",
   display: 'flex',
   alignItems: "center",
-  // maxHeight: 424,
-  width: "720px", // Adjust this width as needed
+  width: "720px",
   [theme.breakpoints.down('1441')]: {
     width: "670px",
   },
@@ -87,11 +76,11 @@ function TabPanel(props) {
       hidden={value !== index}
       id={`vertical-tabpanel-${index}`}
       aria-labelledby={`vertical-tab-${index}`}
-      className="tab-content" /* Apply the CSS class here */
+      className="tab-content"
       {...other}
     >
       {value === index && (
-        <Box sx={{ }}>
+        <Box sx={{}}>
           {children}
         </Box>
       )}
@@ -113,13 +102,12 @@ function a11yProps(index) {
 }
 
 const tabLabels = [
-  "Project Management and Strategic Planning",
-  "Software Development and Custom Solutions",
-  "AI and Data Analytics",
-  "Cybersecurity and Risk Management",
-  "Technology Infrastructure and Management",
-  "IT Training and Skill Development",
-  
+  { label: "Project Management and Strategic Planning", margin: "-18px" },
+  { label: "Software Development and Custom Solutions", margin: "-18px"},
+  { label: "AI and Data Analytics", margin: "-27px" },
+  { label: "Cybersecurity and Risk Management", margin: "-18px" },
+  { label: "Technology Infrastructure and Management", margin: "-40px" },
+  { label: "IT Training and Skill Development", margin: "-18px" },
 ];
 
 const tabPanelContents = [
@@ -133,7 +121,6 @@ const tabPanelContents = [
     "Technology alignment with business goals",
     "Digital transformation strategy",
     "IT architecture assessment and design",
-
   ],
   [
     "Application development (web, mobile, desktop)",
@@ -167,19 +154,13 @@ const tabPanelContents = [
     "Technology training for employees",
     "Certification preparation courses",
     "IT skills workshops",
-    
   ],
 ];
-
-
-
-
-
 
 function VerticalTabs() {
   const [value, setValue] = useState(0);
 
-  const handleChange = (event, newValue) => {
+  const handleHoverChange = (newValue) => {
     setValue(newValue);
   };
 
@@ -188,28 +169,21 @@ function VerticalTabs() {
       <Tabs
         orientation="vertical"
         value={value}
-        onChange={handleChange}
         aria-label="Vertical tabs example"
         sx={{ borderColor: 'divider', alignItems: 'center' }}
       >
-        {tabLabels.map((label, index) => (
+        {tabLabels.map((tab, index) => (
           <Tab
             key={index}
             label={
-              <RadioContainer>
+              <RadioContainer onMouseEnter={() => handleHoverChange(index)}>
                 <Radio
                   checked={value === index}
                   sx={{
-                    marginTop: "-40px",
-                   
-                   
-                    // color: "white",
-                    // '&.Mui-checked': {
-                    //   color: cyan[500],
-                    // },
+                    marginTop: tab.margin,
                   }}
                 />
-                <RadioText>{label}</RadioText>
+                <RadioText>{tab.label}</RadioText>
               </RadioContainer>
             }
             {...a11yProps(index)}
@@ -219,8 +193,8 @@ function VerticalTabs() {
 
       {tabPanelContents.map((content, index) => (
         <TabPanel key={index} value={value} index={index}>
-          <ul>
-            <RadioTextOne>{tabLabels[index]}</RadioTextOne>
+          <ul style={{ position: "absolute", top: "40px" }}>
+            <RadioTextOne>{tabLabels[index].label}</RadioTextOne>
             {content.map((item, itemIndex) => (
               <li key={itemIndex} className='listitemswhatwedo'>{item}</li>
             ))}
@@ -232,7 +206,3 @@ function VerticalTabs() {
 }
 
 export default VerticalTabs;
-
-
-
-

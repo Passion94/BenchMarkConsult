@@ -77,7 +77,7 @@ const Desc = styled(Typography)(({ theme }) => ({
 
 export const FooterJoin = () => {
   return (
-    <Box sx={{marginTop:"150px", marginBottom:"150px" }}>
+    <Box sx={{marginTop:"3500px", marginBottom:"150px" }}>
       <Container
       maxWidth="xl">
         <Desc>

@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 
 import { Home } from "./pages/home/home";
 import "./App.css";
-import { AllFooterContents } from "./components/footer/allFooterContents";
 import ServicesPage from "./pages/services/servicesPage";
 import ResourcesPage from "./pages/resources/resourcesPage";
 
@@ -18,6 +17,8 @@ import ProjectCaseStudy from './pages/projects/sectionTwo/ProjectCaseStudy';
 import AllCaseStudy from './pages/projects/sectionTwo/AllCaseStudy';
 import { Paper } from '@mui/material';
 import Navigate from './components/navbar/Navigate';
+import Footer from './components/footer/Footer';
+import Form from './components/navbar/Form';
 
 
 
@@ -42,12 +43,13 @@ function App() {
         <Route path="/projects/:projectId"element={<ProjectCaseStudy/>} />
         <Route path="/project" element={<Project/>} />
         <Route path="/casestudy" element={<AllCaseStudy/>} />
+        <Route path="/Form" element={<Form/>} />
         
         {/* <Route path="/story" element={<ClientStories/>} /> */}
         
         
       </Routes>
-      <AllFooterContents />
+       <Footer/>
     </Router>
    
     
@@ -65,7 +67,7 @@ function App() {
     
     //   <AboutData/>
     //   <Story/>
-    //   <Footer/>
+     
     // </Router>
   );
 }

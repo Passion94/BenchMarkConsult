@@ -6,8 +6,8 @@ import {purple} from '@mui/material/colors';
 import { Link } from 'react-router-dom';
 
 const MainContainer = styled(Box)(({ theme }) => ({
-  marginTop:'150px', 
-  marginBottom:"100px",
+  marginTop:'70px', 
+  marginBottom:"20px",
   padding:"50px 20px 50px 76px ",
   position: 'relative',
  display:"flex",
@@ -272,6 +272,7 @@ export const Whatwedo = () => {
         <Typography variant='body1'>
         Prehood is a global firm that empower's businesses and organizations with innovative digital 
         solutions that drive growth,efficiency, and success.
+       
        
         </Typography>
        

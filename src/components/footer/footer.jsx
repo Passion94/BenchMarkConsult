@@ -1,137 +1,117 @@
-import { Box, Button, Container, Typography } from '@mui/material';
-import { styled } from '@mui/material/styles';
+import React from "react";
+import { Container, Grid, Typography, Link, styled } from "@mui/material";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 
-const FooterContainer = styled(Box)(({ theme }) => ({
-  marginTop: { xs: '100px', sm: '450px', md: '500px', lg: '250px' },
-  background: 'transparent',
-  color: 'black',
-  borderTop:"5px solid rgb(8,16,103)"
+const Foooter = styled("footer")(({ theme }) => ({
+  
+  
+  padding: "70px 0",
+}));
+
+const FooterContent = styled(Grid)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "space-between",
+}));
+
+const FooterLogo = styled(Typography)(({ theme }) => ({
+  fontSize: "24px",
+  fontWeight: "bold",
+}));
+
+const FooterLinks = styled("ul")(({ theme }) => ({
+  listStyle: "none",
+  padding: 0,
+  cursor:"pointer",
+  textDecoration:"none",
  
-
-}));
-
-const SectionOne = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  flexDirection: { xs: 'column', sm: 'row' },
-  alignItems: 'center',
-  justifyContent: 'flex-start',
-  
-  paddingBottom: '3.5em',
-  
-}));
-
-const SystemButton = styled(Button)(({ theme }) => ({
-  background: 'rgb(47, 163, 107)',
-  color: 'white',
-  borderRadius: '2px',
-  textDecoration: 'none',
-  height: '50px',
-  fontWeight: '500',
-  letterSpacing: '0.2em',
-  fontSize: '0.7em',
+  "& li": {
+    marginBottom: "10px",
+   
+   
+   
+  },
  
-  textAlign: 'center',
 }));
 
-const SectionTwo = styled(Box)(({ theme }) => ({
-paddingBottom:"20px",
-  color: 'rgb(117, 117, 117)',
-  fontSize:"1em",
-  fontWeight:"600"
-}));
-
-
-
-const FooterLinkContainer = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-around',
-  gap: '8em',
-  columnGap: '8em',
-  paddingLeft: '4.5em',
-  color: 'rgb(8,16,103)',
-  [theme.breakpoints.down('lg')]: {
-    gap: '6em',
-    columnGap: '6em',
-  },
-  [theme.breakpoints.down('md')]: {
-    gap: '4em',
-    columnGap: '4em',
-  },
-  [theme.breakpoints.down('sm')]: {
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: '2em',
-    columnGap: '0',
-    paddingLeft: '0',
+const SocialIcons = styled("div")(({ theme }) => ({
+  marginTop: "20px",
+  "& a": {
+   color:theme.palette.primary.main,
+    fontSize: "24px",
+    margin: "0 10px",
+    textDecoration: "none",
+    transition: "color 0.3s",
+    "&:hover": {
+      color: theme.palette.secondary.main,
+    },
   },
 }));
 
-
-
-
-const FooterLinks = styled(Box)(({ theme }) => ({
-  
-
-  
-}));
-
-const CopyWrite = styled(Typography)(({ theme }) => ({
-  color: 'rgb(117, 117, 117)',
-  marginTop: '4.375em',
-}));
-
-export const Footer = () => {
+const Footer = () => {
   return (
-    <FooterContainer>
-       <Box sx={{borderTop:"5px solid rgb(75,75,221)"}}></Box>
-       <Box sx={{borderTop:"5px solid rgb(46,234,250)"}}></Box>
-       <Box sx={{borderTop:"5px solid rgb(8,16,103)"}}></Box>
-      <Container sx={{marginTop:"0px", padding:"40px", overflow:"hidden"}}>
-        <SectionOne>
-          <Typography>
-            <img className="logo" src="/images/Logo.png" alt="Logo" />
-          </Typography>
-          {/* <Typography>
-            Subscribe to our newsletter:
-            <SystemButton>Subscribe</SystemButton>
-          </Typography> */}
-        </SectionOne>
-
-        <Box>
-        
-          <FooterLinkContainer>
-            <FooterLinks>
-            <SectionTwo>Sitemap</SectionTwo>
-              <Typography sx={{fontWeight:"600", color:"rgb(8,16,103)"}}>Services</Typography>
-              <Typography sx={{fontWeight:"600", color:"rgb(8,16,103)"}}>Projects</Typography>
-              <Typography sx={{fontWeight:"600", color:"rgb(8,16,103)"}}>About</Typography>
-              <Typography sx={{fontWeight:"600", color:"rgb(8,16,103)"}}>Case Study</Typography>
-             
-              <Typography sx={{fontWeight:"600", color:"rgb(8,16,103)"}}>Guidelines for your project</Typography>
-            </FooterLinks>
-            <FooterLinks>
-            <SectionTwo>Follow US</SectionTwo>
-              <Typography sx={{fontWeight:"600", color:"rgb(8,16,103)"}}>Linkdin</Typography>
-              <Typography sx={{fontWeight:"600", color:"rgb(8,16,103)"}}>Twitter</Typography>
-              <Typography sx={{fontWeight:"600", color:"rgb(8,16,103)"}}>Instagram</Typography>
-              <Typography sx={{fontWeight:"600", color:"rgb(8,16,103)"}}>Medium</Typography>
-              <Typography sx={{fontWeight:"600", color:"rgb(8,16,103)"}}>Thread</Typography>
-            </FooterLinks>
-            <Typography sx={{ color: 'rgb(117, 117, 117)' }}>
-              contact@prehood.com
-              <br />
-              Chez Prehood, 50 rue Bichat
-              75010 Paris
-              France
+    <Foooter>
+      <Container>
+        <FooterContent container spacing={4}>
+          <Grid item xs={12} sm={6} md={3}>
+            <FooterLogo variant="h5"><img src="images/Logo.png" width='130px' sx={{ display: { xs: 'none', md: 'flex', color: '#4B4BDD' }, mr: 1 }} /></FooterLogo>
+            <Typography variant="body1">
+              We are at the forefront of technological advancement
             </Typography>
-          </FooterLinkContainer>
-        </Box>
-
-        <CopyWrite>&copy; {new Date().getFullYear()} Prehood. All rights reserved.</CopyWrite>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <Typography variant="h2">Quick Links</Typography>
+            <FooterLinks>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+              <li>
+                <Link to="/services">Services</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
+            </FooterLinks>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <Typography variant="h2">Contact Us</Typography>
+            <Typography variant="body1">
+              123 Main Street
+              <br />
+              City, Country
+              <br />
+              Email: info@example.com
+              <br />
+              Phone: +1 123-456-7890
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <Typography variant="h2">Follow Us</Typography>
+            <SocialIcons>
+              <a href="#">
+                <FacebookIcon />
+              </a>
+              <a href="#">
+                <TwitterIcon />
+              </a>
+              <a href="#">
+                <LinkedInIcon />
+              </a>
+              <a href="#">
+                <InstagramIcon />
+              </a>
+            </SocialIcons>
+          </Grid>
+        </FooterContent>
       </Container>
-    </FooterContainer>
+    </Foooter>
   );
 };
+
+export default Footer;
