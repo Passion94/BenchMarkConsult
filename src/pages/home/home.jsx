@@ -10,8 +10,8 @@ import { Box, Container } from '@mui/material'
 
 import { CaseOne } from '../casestudy/CaseOne'
 import CardStack from '../casestudy/CardStack'
-import Footer from '../../components/footer/Footer'
-import Form from '../../components/navbar/Form'
+import Footer from '../../components/footer/footer'
+import Form from '../../components/navbar/form'
 import CustomerTestimonySection from '../../components/navbar/CustomerTestimonySection '
 import Partner from '../../components/navbar/Partner'
 

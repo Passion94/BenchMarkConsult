@@ -17,8 +17,9 @@ import ProjectCaseStudy from './pages/projects/sectionTwo/ProjectCaseStudy';
 import AllCaseStudy from './pages/projects/sectionTwo/AllCaseStudy';
 import { Paper } from '@mui/material';
 import Navigate from './components/navbar/Navigate';
-import Footer from './components/footer/Footer';
-import Form from './components/navbar/Form';
+
+import Form from './components/navbar/form';
+import Footer from './components/footer/footer';
 
 
 

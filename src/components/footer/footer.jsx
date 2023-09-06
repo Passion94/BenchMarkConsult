@@ -7,7 +7,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 
 const Foooter = styled("footer")(({ theme }) => ({
-  
+  background:"#F7F7F7",
   
   padding: "70px 0",
 }));
@@ -18,8 +18,7 @@ const FooterContent = styled(Grid)(({ theme }) => ({
 }));
 
 const FooterLogo = styled(Typography)(({ theme }) => ({
-  fontSize: "24px",
-  fontWeight: "bold",
+  
 }));
 
 const FooterLinks = styled("ul")(({ theme }) => ({
@@ -27,11 +26,14 @@ const FooterLinks = styled("ul")(({ theme }) => ({
   padding: 0,
   cursor:"pointer",
   textDecoration:"none",
- 
+  color:theme.palette.primary.main,
+  
   "& li": {
     marginBottom: "10px",
    
-   
+    "&:hover": {
+      color: theme.palette.secondary.main,
+    },
    
   },
  
@@ -82,11 +84,11 @@ const Footer = () => {
           <Grid item xs={12} sm={6} md={3}>
             <Typography variant="h2">Contact Us</Typography>
             <Typography variant="body1">
-              123 Main Street
+              123 Main Street London
               <br />
               City, Country
               <br />
-              Email: info@example.com
+              Email: info@prehood.com
               <br />
               Phone: +1 123-456-7890
             </Typography>
