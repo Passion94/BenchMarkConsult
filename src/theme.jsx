@@ -5,7 +5,11 @@ import zIndex from "@mui/material/styles/zIndex";
 const theme = createTheme({
     palette: {
       primary: {
-        main: "#4B4BDD", // Replace with your desired color code
+        main: "#4B4BDD",
+        first:"#e8eaf6" ,
+        second:"#c5cae9",
+        third:"#9fa8da",
+        background:"#F7F7F7",
       },
       secondary: {
         main: "#00e5ff", // Replace with your desired color code

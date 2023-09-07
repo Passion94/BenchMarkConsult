@@ -10,7 +10,8 @@ const sectionsData = [
     imageUrl:
       "https://static.vecteezy.com/system/resources/previews/004/641/880/original/illustration-of-high-school-building-school-building-free-vector.jpg",
     buttonLabel: "Explore",
-    backgroundColor: "#ffcccc", // Add a background color property
+    backgroundColor: "#5c6bc0", 
+    color:"white",
     type:"Saas, Chat Bot"
   },
   {
@@ -20,7 +21,8 @@ const sectionsData = [
     imageUrl:
       "https://www.collinsdictionary.com/images/full/school_309241295.jpg",
     buttonLabel: "Explore",
-    backgroundColor: "#ccffcc", // Add a background color property
+    backgroundColor: "#00e5ff",
+    color:"black", 
     type:"Saas, Education",
   },
   {
@@ -30,7 +32,8 @@ const sectionsData = [
     imageUrl:
       "https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2Nob29sfGVufDB8fDB8fHww&w=1000&q=80",
     buttonLabel: "Explore",
-    backgroundColor: "#ccccff", // Add a background color property
+    backgroundColor: "#304ffe", 
+    color:"white",
     type:"Saas, Assistant Chat Bot"
   },
 ];
@@ -102,9 +105,9 @@ const CardStack = () => {
           <Section key={index} style={{ backgroundColor: section.backgroundColor }}>
 
             <Box >
-              <Typography variant="h1">{section.title}</Typography>
-              <Typography variant="body1">{section.content}</Typography>
-              <Button variant="contained">{section.buttonLabel}</Button>
+              <Typography variant="h1" style={{ color: section.color }}>{section.title}</Typography>
+              <Typography variant="body1"style={{ color: section.color }}>{section.content}</Typography>
+              <Button variant="contained" >{section.buttonLabel}</Button>
             </Box>
             {section.imageUrl && (
               <Box>
@@ -115,11 +118,11 @@ const CardStack = () => {
                   src={section.imageUrl}
                   alt={`Section ${index + 1}`}
                 />
-                <Typography variant="body1" color="#403F3F">{section.type}</Typography>
+                <Typography variant="body1" style={{ color: section.color }}>{section.type}</Typography>
                 <Link to=''><Typography mt={10} align="end">Explore all our Casestudies</Typography></Link>
               </Box>
             )}
-            
+            {/* color="#403F3F"  */}
           </Section>
           
         ))}

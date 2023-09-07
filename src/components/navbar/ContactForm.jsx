@@ -6,6 +6,7 @@ import {
   Typography,
   Grid,
   Box,
+  withTheme,
 } from "@mui/material";
 import Faq from "./Faq";
 
@@ -63,21 +64,25 @@ const ContactForm = () => {
   };
 
   return (
-    <Box sx={{ marginTop: "50px", padding: "50px 70px", background: "#F7F7F7" }}>
+    <Box sx={{ marginTop: "50px", padding: "50px 70px", background: (theme) => theme.palette.primary.first}}>
+      <Container maxWidth="xl">
       <Typography variant="h1" align="center">
         Discover the right solution that solves your problem using our cutting edge technology
       </Typography>
 
-      <Box sx={{ display: "flex", gap: "70px", alignItems: "center" }}>
+      <Box sx={{ display: "flex", gap: "10px", alignItems: "center" }}>
         <Box >
-          <Container maxWidth="sm">
+          
             <Typography variant="h2" sx={{ padding: "40px 0px 20px 0px" }}>
               Get In touch with us today
             </Typography>
-            <form onSubmit={handleSubmit} style={{ border: '2px solid blue', borderRadius: "10px", padding: "40px" }}>
-              <Grid container spacing={2}>
-                <Grid item xs={12}>
+            <form onSubmit={handleSubmit} style={{border: "2px solid white" , borderRadius: "10px", padding: "30px", maxWidth:"70%", 
+            backgroundColor:"white"}}>
+              <Grid container  spacing={2}>
+                <Grid item xs={12} >
                   <TextField
+                  
+                  backgroundColor='white'
                     fullWidth
                     label="Fullname"
                     name="fullName"
@@ -101,7 +106,7 @@ const ContactForm = () => {
                     required
                   />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item xs={12} >
                   <TextField
                     fullWidth
                     label="Phone"
@@ -113,7 +118,7 @@ const ContactForm = () => {
                     required
                   />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item xs={12} >
                   <TextField
                     fullWidth
                     label="What do you want ?"
@@ -127,7 +132,7 @@ const ContactForm = () => {
                     required
                   />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item xs={12} >
                   <Button
                     type="submit"
                     variant="contained"
@@ -139,12 +144,13 @@ const ContactForm = () => {
                 </Grid>
               </Grid>
             </form>
-          </Container>
+         
         </Box>
-        <Box style={{ maxHeight: "1000px", overflow: "hidden" }}>
+        <Box style={{ maxHeight: "1000px", }}>
           <Faq />
         </Box>
       </Box>
+      </Container>
     </Box>
   );
 };

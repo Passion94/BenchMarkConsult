@@ -5,8 +5,10 @@ import {
   AccordionDetails,
   Typography,
   Container,
+  Box,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { Link } from "react-router-dom";
 
 const Faq = () => {
   const faqData = [
@@ -50,23 +52,26 @@ const Faq = () => {
   };
 
   return (
-    <Container maxWidth="sm">
-        <Typography variant="h2" sx={{padding:"40px 0px"}}>Frequently asked questions</Typography>
+    <Box>
+        <Typography variant="h2" sx={{padding:"10px 0px"}}>Frequently asked questions</Typography>
       {faqData.map((faq, index) => (
         <Accordion
+        sx={{backgroundColor:(theme) => theme.palette.primary.main}}
           key={index}
           expanded={expanded === `panel${index}`}
           onChange={handleChange(`panel${index}`)}
         >
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography variant="body1" sx={{backgroundColor:(theme) => theme.palette.primary.main, color:"white", padding:"0px 10px"}}>{faq.question}</Typography>
+          <AccordionSummary expandIcon={<ExpandMoreIcon sx={{color:(theme) => theme.palette.primary.second}} />}>
+            <Typography variant="body1" sx={{backgroundColor:(theme) => theme.palette.primary.second, color:"inherit", padding:"0px 10px"}}>{faq.question}</Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{backgroundColor:(theme) => theme.palette.primary.second}}>
             <Typography>{faq.answer}</Typography>
           </AccordionDetails>
+        
         </Accordion>
       ))}
-    </Container>
+       <Typography mt={5} variant="body1">Got more questions, click<Link>  here </Link></Typography> 
+    </Box>
   );
 };
 
