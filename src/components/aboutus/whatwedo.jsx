@@ -6,29 +6,32 @@ import {purple} from '@mui/material/colors';
 import { Link } from 'react-router-dom';
 
 const MainContainer = styled(Box)(({ theme }) => ({
-  marginTop:'70px', 
-  marginBottom:"20px",
-  padding:"50px 20px 50px 76px ",
-  position: 'relative',
- display:"flex",
- alignItems:"center",
-//  backgroundImage: 'url("images/imageThree.jpg")',
-//  backgroundRepeat: 'no-repeat',
-//  backgroundSize: '700px',
-//  backgroundPosition: '-200px -120px',
-//  '&::before': {
-//   content: '""',
-//   position: 'absolute',
-//   top: "-50px",
-//   left: "-150px",
-//   width: '100%',
-//   height: '100%',
-//   backgroundImage: 'url("images/imageThree.jpg")',
-//   backgroundRepeat: 'no-repeat',
-//   backgroundSize: '300px',
-//   backgroundPosition: '-300px -120px',
-//   zIndex: 1,
-// },
+  marginTop: '70px',
+marginBottom: '20px',
+padding: '50px 20px 50px 76px',
+position: 'relative',
+display: 'flex',
+alignItems: 'center',
+backgroundImage: 'url("images/Imagethree.jpg")',
+backgroundRepeat: 'no-repeat',
+backgroundSize: '400px',
+backgroundPosition: '250px -250px',
+'&::before': {
+  content: '""',
+  position: 'absolute',
+  top: '-50px',
+  left: '-150px',
+  width: '100%',
+  height: '100%',
+  background: 'linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("images/Imagethree.png")',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: '300px',
+  transform: 'rotate(45deg)',
+  backgroundPosition: '-300px -120px',
+  zIndex: 1,
+},
+
+  
   
  
  
