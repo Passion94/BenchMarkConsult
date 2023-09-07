@@ -54,6 +54,13 @@ const SocialIcons = styled("div")(({ theme }) => ({
 }));
 
 const FooterSection = () => {
+  const footerLinks = [
+    { label: "Home", to: "/" },
+    { label: "About", to: "/about" },
+    { label: "Services", to: "/services" },
+    { label: "Contact", to: "/contact" },
+  ];
+
   return (
     <Footer>
       <Container>
@@ -67,18 +74,15 @@ const FooterSection = () => {
           <Grid item xs={12} sm={6} md={3}>
             <Typography variant="h2">Quick Link</Typography>
             <FooterLinks>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-              <li>
-                <Link to="/services">Services</Link>
-              </li>
-              <li>
-                <Link to="/contact">Contact</Link>
-              </li>
+              {footerLinks.map((link, index) => (
+                <li key={index}>
+                  
+                    <Link  to={link.to} className="link">
+                      {link.label}
+                    </Link>
+                 
+                </li>
+              ))}
             </FooterLinks>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
@@ -117,3 +121,14 @@ const FooterSection = () => {
 };
 
 export default FooterSection;
+
+
+
+
+
+
+
+
+ 
+
+         

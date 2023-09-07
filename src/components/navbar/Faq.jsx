@@ -32,11 +32,7 @@ const Faq = () => {
         answer:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       },
-      {
-        question: "Why do we use it?",
-        answer:
-          "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-      },
+   
     
     
   
@@ -70,7 +66,7 @@ const Faq = () => {
         
         </Accordion>
       ))}
-       <Typography mt={5} variant="body1">Got more questions, click<Link>  here </Link></Typography> 
+      <Link className="link"><Typography variant="body2"> View more</Typography> </Link>
     </Box>
   );
 };
