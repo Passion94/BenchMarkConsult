@@ -46,8 +46,31 @@ body1:{
     marginBottom: '30px',
     fontFamily:"Ubuntu, Helvetica,Arial, sans-serif",
     color:"#555555",
+},
+body2:{
+  marginTop: '10px',
+  marginBottom:"15px",
+  border:"0px",
+  borderRadius:'3px',
+  fontSize: '.8em',
+  fontWeight: '900',
+  lineHeight: '17px',
+  textDecoration: 'none',
+  textTransform: 'uppercase',
+  padding: '16px 22px',
+ cursor:"pointer",
+ color: '#4B4BDD',
+  border:"none",
+  outline:"none",
+  fontFamily: "Ubuntu, Helvetica,Arial, sans-serif",
+  "&:hover": {
+    //you want this to be the same as the backgroundColor above
+    
+    color:"#00e5ff"
+},
 }
     },
+    
     components:{
       MuiButton:{
         styleOverrides:{

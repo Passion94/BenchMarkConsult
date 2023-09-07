@@ -12,3 +12,11 @@ body{
     margin: 0 auto;
     /* #F7F7F7 */
 }
+
+.link{
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}

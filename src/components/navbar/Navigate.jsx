@@ -141,13 +141,14 @@ function Navigate() {
 
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {pages.map((page) => (
-                <Button
+                <Typography variant='body2'
                   key={page}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: '#4B4BDD', display: 'block' }}
+                  sx={{  display: 'block', textDecoration:"none" }}
                 >
-                  {page}
-                </Button>
+                  <Link className='link' to="">{page}</Link>
+                  
+                </Typography>
               ))}
             </Box>
 

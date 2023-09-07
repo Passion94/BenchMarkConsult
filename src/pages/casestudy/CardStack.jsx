@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Box, Button, Container, Typography, styled } from "@mui/material";
 import { Link } from "react-router-dom";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const sectionsData = [
   {
@@ -119,7 +120,7 @@ const CardStack = () => {
                   alt={`Section ${index + 1}`}
                 />
                 <Typography variant="body1" style={{ color: section.color }}>{section.type}</Typography>
-                <Link to=''><Typography mt={10} align="end">Explore all our Casestudies</Typography></Link>
+              
               </Box>
             )}
             {/* color="#403F3F"  */}
@@ -128,6 +129,7 @@ const CardStack = () => {
         ))}
         
       </Stack>
+      <Typography variant="body2"  align="start"> <Link className="link" to=''>Explore all our Casestudies <ArrowForwardIcon/></Link></Typography>
       </Container>
     </MainContainer>
   );
