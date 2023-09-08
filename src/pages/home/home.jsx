@@ -10,6 +10,7 @@ import CardStack from '../casestudy/CardStack'
 import CustomerTestimonySection from '../../components/navbar/CustomerTestimonySection '
 import Partner from '../../components/navbar/Partner'
 import ContactForm from '../../components/navbar/ContactForm'
+import { Section } from '../../components/navbar/Section'
 
 
 
@@ -29,7 +30,7 @@ export const Home = () => {
      
      
       <CardStack/>
-      <ContactForm/>
+      <Section/>
       <CustomerTestimonySection />
       <Partner/>
       {/* <Footer/> */}

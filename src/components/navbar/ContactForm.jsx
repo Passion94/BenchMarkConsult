@@ -64,19 +64,17 @@ const ContactForm = () => {
   };
 
   return (
-    <Box sx={{ marginTop: "50px", padding: "50px 70px", background: (theme) => theme.palette.primary.first}}>
+    <Box sx={{  padding: "50px 100px 50px 70px"}}>
       <Container maxWidth="xl">
-      <Typography variant="h1" align="center">
-        Discover the right solution that solves your problem using our cutting edge technology
-      </Typography>
+    
 
-      <Box sx={{ display: "flex", gap: "10px", alignItems: "center" }}>
-        <Box >
+      <Box >
+        <Box sx={{ maxWidth:'100%'}}>
           
-            <Typography variant="h2" sx={{ padding: "40px 0px 20px 0px" }}>
-              Get In touch with us today
+            <Typography variant="h2" sx={{ padding: "5px 0px 20px 0px" }}>
+            Just provide a few details and get your personalized quote within 12 hours
             </Typography>
-            <form onSubmit={handleSubmit} style={{border: "2px solid white" , borderRadius: "10px", padding: "30px", maxWidth:"70%", 
+            <form onSubmit={handleSubmit} style={{borderRadius: "10px", padding: "30px", 
             backgroundColor:"white"}}>
               <Grid container  spacing={2}>
                 <Grid item xs={12} >
@@ -147,7 +145,7 @@ const ContactForm = () => {
          
         </Box>
         <Box style={{ maxHeight: "1000px", }}>
-          <Faq />
+          
         </Box>
       </Box>
       </Container>

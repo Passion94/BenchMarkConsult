@@ -13,6 +13,7 @@ const RadioContainer = styled(Box)(({ theme }) => ({
   alignItems: "center",
   width: "220px",
   maxWidth: "220px",
+  
   [theme.breakpoints.down('1441')]: {
     width: "217px",
   },
@@ -25,6 +26,7 @@ const RadioText = styled(Typography)(({ theme }) => ({
   fontWeight: "900",
   fontSize: "1.1em",
   marginBottom:"-5px",
+  cursor:"pointer",
   width: "200px",
   lineHeight: "24px",
   marginLeft: "0px",
@@ -40,7 +42,6 @@ const RadioTextOne = styled(Typography)(({ theme }) => ({
   fontWeight: "900",
   fontSize: "1em",
   maxWidth: "50px",
-
   padding: "10px",
   display: "none",
   [theme.breakpoints.down('1441')]: {},
@@ -160,8 +161,12 @@ const tabPanelContents = [
 function VerticalTabs() {
   const [value, setValue] = useState(0);
 
-  const handleHoverChange = (newValue) => {
+  const handleTabChange = (event, newValue) => {
     setValue(newValue);
+  };
+
+  const handleTabHover = (index) => {
+    setValue(index);
   };
 
   return (
@@ -169,6 +174,7 @@ function VerticalTabs() {
       <Tabs
         orientation="vertical"
         value={value}
+        onChange={handleTabChange}
         aria-label="Vertical tabs example"
         sx={{ borderColor: 'divider', alignItems: 'center' }}
       >
@@ -176,15 +182,17 @@ function VerticalTabs() {
           <Tab
             key={index}
             label={
-              <RadioContainer onMouseEnter={() => handleHoverChange(index)}>
-                <Radio
-                  checked={value === index}
-                  sx={{
-                    marginTop: tab.margin,
-                  }}
-                />
-                <RadioText>{tab.label}</RadioText>
-              </RadioContainer>
+              <div onMouseEnter={() => handleTabHover(index)}>
+                <RadioContainer>
+                  <Radio
+                    checked={value === index}
+                    sx={{
+                      marginTop: tab.margin,
+                    }}
+                  />
+                  <RadioText>{tab.label}</RadioText>
+                </RadioContainer>
+              </div>
             }
             {...a11yProps(index)}
           />

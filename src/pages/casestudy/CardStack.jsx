@@ -59,7 +59,7 @@ const Stack = styled(Box)(({ theme }) => ({
 
 const Section = styled(Box)(({ theme }) => ({
    
-    height: "500px",
+    height: "430px",
     backgroundColor: "#ccc",
     position: "sticky",
     top: "170px",
@@ -100,22 +100,22 @@ const CardStack = () => {
     <MainContainer>
         <Container maxWidth='xl'>
         <Typography variant="h1" sx={{paddingBottom:"30px", display:"flex", justifyContent:"center"}}>Explore Our Case Study and see our portfolios</Typography>
-      <Stack>
+      <Stack >
         
         {sectionsData.map((section, index) => (
-          <Section key={index} style={{ backgroundColor: section.backgroundColor }}>
+          <Section key={index} style={{ backgroundColor: section.backgroundColor, marginBottom:"20px" }}>
 
             <Box >
-              <Typography variant="h1" style={{ color: section.color }}>{section.title}</Typography>
+              <Typography variant="h2" style={{ color: section.color }}>{section.title}</Typography>
               <Typography variant="body1"style={{ color: section.color }}>{section.content}</Typography>
               <Button variant="contained" >{section.buttonLabel}</Button>
             </Box>
             {section.imageUrl && (
               <Box>
                 <img style={{borderRadius:"10px"}}
-                  width="460px"
+                  width="410px"
 
-                  height="360px"
+                  height="270px"
                   src={section.imageUrl}
                   alt={`Section ${index + 1}`}
                 />

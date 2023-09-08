@@ -87,23 +87,23 @@ const Partner = () => {
       dots: false,
       infinite: true,
       speed: 500,
-      slidesToShow: 8, // Number of visible slides at a time
+      slidesToShow: 9, // Number of visible slides at a time
       slidesToScroll: 1,
     };
 
     return (
       <Box>
-        <Typography variant="h1" align="center">Our partners</Typography>
+        <Typography variant="h1" align="center" sx={{marginBottom:"20px"}}>Our partners</Typography>
       <Slider {...settings}>
         
         {partners.map((partner, index) => (
-          <PartnerContainer key={index}  alignItems="center">
+          <PartnerContainer key={index}  >
             <img
               src={partner.image}
               alt={partner.name}
-              style={{ width: 100, height: 100 , borderRadius:"10px"}}
+              style={{ width: 80, height: 80 , borderRadius:"10px"}}
             />
-            <Typography variant="body1">{partner.name}</Typography>
+            <Typography variant="body1"  sx={{fontSize:"12px"}}>{partner.name}</Typography>
           </PartnerContainer>
         ))}
       </Slider>

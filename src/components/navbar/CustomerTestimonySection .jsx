@@ -1,117 +1,200 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from 'react';
 import {
-  Container,
-  Typography,
   Box,
-  Button,
-} from "@mui/material";
-import gsap from "gsap";
+  Typography,
+  Avatar,
+  IconButton,
+  Grid,
+  Container,
+} from '@mui/material';
+import { ArrowBack, ArrowForward } from '@mui/icons-material';
+import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
-const App = () => {
-  const [testimonyIndex, setTestimonyIndex] = useState(0);
 
-  const testimonies = [
-    {
-      name: "John Doe",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVIe4oqWfRd_ALgDUBhMIrwq-YlO4Ruxek_Q&usqp=CAU",
-      text: "This is a testimonial from John Doe. He is very happy with our product This is a testimonial from John Doe. He is very happy with our product This is a testimonial from John Doe. He is very happy with our product.",
-    },
-    {
-      name: "Albert Einstein",
-      image: "https://i0.wp.com/businessday.ng/wp-content/uploads/2020/08/Untitled-design-2020-08-05T093040.360.png?fit=700%2C400&ssl=1",
-      text: "This is a testimonial from John Doe. He is very happy with our product This is a testimonial from Albert Einstein. He is very happy with our product This is a testimonial from John Doe. He is very happy with our product.",
-    },
-    {
-      name: "James Bond",
-      image: "https://www.kingsplace.co.uk/wp-content/uploads/2023/06/The-greatest-Generation-1-2000x1125.jpg",
-      text: "This is a testimonial from John Doe. He is very happy with our product This is a testimonial from James Bond. He is very happy with our product This is a testimonial from John Doe. He is very happy with our product.",
-    },
-    {
-      name: "Eriga Doe",
-      image: "https://assets.justenergy.com/wp-content/uploads/2022/10/electric-shock-scientists-connects-two-electric-cables.jpeg",
-      text: "This is a testimonial from John Doe. He is very happy with our product This is a testimonial from Eriga Doe. He is very happy with our product This is a testimonial from John Doe. He is very happy with our product.",
-    },
-    {
-      name: "Moses Pluto",
-      image: "https://media.post.rvohealth.io/wp-content/uploads/2020/05/Jump_Fitness_Female_Leap-732x549-Thumbnail-732x549.jpg",
-      text: "This is a testimonial from John Doe. He is very happy with our product This is a testimonial from Eriga Doe. He is very happy with our product This is a testimonial from John Doe. He is very happy with our product.",
-    },
-    {
-      name: "Moshhod boss",
-      image: "https://upload.wikimedia.org/wikipedia/commons/b/b8/Formation_of_a_Legacy%2C_Hertiage_flight_merges_aviation_past_and_present_86-16-51-22.jpg",
-      text: "This is a testimonial from John Doe. He is very happy with our product This is a testimonial from Eriga Doe. He is very happy with our product This is a testimonial from John Doe. He is very happy with our product.",
-    },
+
+const SecondAvatar = styled(Avatar)(({ theme }) => ({
+  width: 60,
+  height: 60,
+  cursor: 'pointer',
+}));
+const testimonials = [
+  {
+    id: 1,
+    name: 'John Doe',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo.',
+    image: 'https://media.istockphoto.com/id/1207862195/photo/portrait-of-young-cheerful-african-american-woman.jpg?s=612x612&w=0&k=20&c=86-fDrR5FO1WQxTq8etA5VXV06A48DGM-wBErKc3lGM=',
+  },
+  {
+    id: 2,
+    name: 'Jane Smith',
+    description:
+      'Sed cursus auctor elit, eu gravida odio ullamcorper quis. Nulla facilisi Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo.',
+    image: 'https://images.peopleimages.com/picture/202207/2468209-happy-confident-and-smiling-business-woman-standing-with-arms-crossed-outside-at-work-alone.-portrait-of-the-face-of-one-cheerful-joyful-and-proud-female-corporate-professional-with-arms-folded--fit_400_400.jpg',
+  },
+  {
+    id: 3,
+    name: 'John Doe',
+    description:
+      'Sed cursus auctor elit, eu gravida odio ullamcorper quis. Nulla facilisi Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo.',
+    image: 'https://storage.googleapis.com/pai-images/be361ace02d14541ab68f464719a248a.jpeg',
+  },
+  {
+    id: 4,
+    name: 'Jane Smith',
+    description:
+      'Sed cursus auctor elit, eu gravida odio ullamcorper quis. Nulla facilisi Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo.',
+    image: 'https://st5.depositphotos.com/62628780/65755/i/1600/depositphotos_657556100-stock-photo-portrait-career-woman-arms-crossed.jpg',
+  },
+  {
+    id: 5,
+    name: 'John Doe',
+    description:
+      'Sed cursus auctor elit, eu gravida odio ullamcorper quis. Nulla facilisi Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo.',
+    image: 'https://st4allthings4p4ci.blob.core.windows.net/allthingshair/allthingshair/wp-content/uploads/sites/8/2020/01/17161459/Best-hairstyles-for-men-with-round-faces-two-block.jpg',
+  },
+  {
+    id: 6,
+    name: 'John Doe',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo.',
+    image: 'https://media.istockphoto.com/id/1207862195/photo/portrait-of-young-cheerful-african-american-woman.jpg?s=612x612&w=0&k=20&c=86-fDrR5FO1WQxTq8etA5VXV06A48DGM-wBErKc3lGM=',
+  },
+  {
+    id: 7,
+    name: 'Jane Smith',
+    description:
+      'Sed cursus auctor elit, eu gravida odio ullamcorper quis. Nulla facilisi Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo.',
+    image: 'https://images.peopleimages.com/picture/202207/2468209-happy-confident-and-smiling-business-woman-standing-with-arms-crossed-outside-at-work-alone.-portrait-of-the-face-of-one-cheerful-joyful-and-proud-female-corporate-professional-with-arms-folded--fit_400_400.jpg',
+  },
+  {
+    id: 8,
+    name: 'John Doe',
+    description:
+      'Sed cursus auctor elit, eu gravida odio ullamcorper quis. Nulla facilisi Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo.',
+    image: 'https://storage.googleapis.com/pai-images/be361ace02d14541ab68f464719a248a.jpeg',
+  },
+  {
+    id: 9,
+    name: 'Jane Smith',
+    description:
+      'Sed cursus auctor elit, eu gravida odio ullamcorper quis. Nulla facilisi Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo.',
+    image: 'https://st5.depositphotos.com/62628780/65755/i/1600/depositphotos_657556100-stock-photo-portrait-career-woman-arms-crossed.jpg',
+  },
+  {
+    id: 10,
+    name: 'John Doe',
+    description:
+      'Sed cursus auctor elit, eu gravida odio ullamcorper quis. Nulla facilisi Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo.',
+    image: 'https://st4allthings4p4ci.blob.core.windows.net/allthingshair/allthingshair/wp-content/uploads/sites/8/2020/01/17161459/Best-hairstyles-for-men-with-round-faces-two-block.jpg',
+  },
+  {
+    id: 11,
+    name: 'John Doe',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo.',
+    image: 'https://media.istockphoto.com/id/1207862195/photo/portrait-of-young-cheerful-african-american-woman.jpg?s=612x612&w=0&k=20&c=86-fDrR5FO1WQxTq8etA5VXV06A48DGM-wBErKc3lGM=',
+  },
+  {
+    id: 12,
+    name: 'Jane Smith',
+    description:
+      'Sed cursus auctor elit, eu gravida odio ullamcorper quis. Nulla facilisi Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo.',
+    image: 'https://images.peopleimages.com/picture/202207/2468209-happy-confident-and-smiling-business-woman-standing-with-arms-crossed-outside-at-work-alone.-portrait-of-the-face-of-one-cheerful-joyful-and-proud-female-corporate-professional-with-arms-folded--fit_400_400.jpg',
+  },
+  {
+    id: 13,
+    name: 'John Doe',
+    description:
+      'Sed cursus auctor elit, eu gravida odio ullamcorper quis. Nulla facilisi Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo.',
+    image: 'https://storage.googleapis.com/pai-images/be361ace02d14541ab68f464719a248a.jpeg',
+  },
+  {
+    id: 14,
+    name: 'Jane Smith',
+    description:
+      'Sed cursus auctor elit, eu gravida odio ullamcorper quis. Nulla facilisi Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo.',
+    image: 'https://st5.depositphotos.com/62628780/65755/i/1600/depositphotos_657556100-stock-photo-portrait-career-woman-arms-crossed.jpg',
+  },
+  {
+    id: 15,
+    name: 'John Doe',
+    description:
+      'Sed cursus auctor elit, eu gravida odio ullamcorper quis. Nulla facilisi Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget aliquet justo.',
+    image: 'https://st4allthings4p4ci.blob.core.windows.net/allthingshair/allthingshair/wp-content/uploads/sites/8/2020/01/17161459/Best-hairstyles-for-men-with-round-faces-two-block.jpg',
+  },
   
-    {
-      name: "Stunt life",
-      image: "https://guardian.ng/wp-content/uploads/2018/06/Food-Shopping.jpg",
-      text: " This is a testimonial from John Doe. He is very happy with our product This is a testimonial from Eriga Doe. He is very happy with our product This is a testimonial from John Doe. He is very happy with our product.",
-    },
-    {
-      name: "Mercy Johnson",
-      image: "https://i.ytimg.com/vi/Rf1pR5aXiwo/maxresdefault.jpg",
-      text: "This is a testimonial from John Doe. He is very happy with our product This is a testimonial from Eriga Doe. He is very happy with our product This is a testimonial from John Doe. He is very happy with our product.",
-    },
-  ];
+  // Add more testimonials here
+];
 
-  useEffect(() => {
-    const animateTestimonial = () => {
-      const testimonialElement = document.getElementById("testimonial");
 
-      gsap.to(testimonialElement, {
-        x: "-100%",
-        opacity: 0,
-        duration: 0.5,
-        ease: "power2.out",
-        onComplete: () => {
-          // After animation completion, update the index and reset position
-          setTestimonyIndex((prevIndex) => (prevIndex + 1) % testimonies.length);
-          testimonialElement.style.transform = "translateX(100%)";
-          testimonialElement.style.opacity = 0;
+const CustomerTestimonySection = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
 
-          // Animate the next testimonial
-          gsap.to(testimonialElement, {
-            x: "0%",
-            opacity: 1,
-            duration: 0.5,
-            ease: "power2.out",
-          });
-        },
-      });
-    };
+  const nextTestimonial = () => {
+    setActiveIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
+  };
 
-    const interval = setInterval(animateTestimonial, 5000); // Change testimonial every 5 seconds
+  const prevTestimonial = () => {
+    setActiveIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1));
+  };
 
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, []);
+  const handleAvatarClick = (index) => {
+    setActiveIndex(index - 1); // Subtract 1 to match the array index
+  };
+
+  // Slice the testimonials array to include only the first 10 testimonials
+  const displayedTestimonials = testimonials.slice(0, 10);
 
   return (
-    <Container maxWidth="md" sx={{padding:"40px 0px"}}>
-      <Typography variant="h1" align="center" gutterBottom sx={{padding:"30px 0px"}}>
-        Customer Testimonials
-      </Typography>
-      <Testimonial testimony={testimonies[testimonyIndex]} />
+    <Container maxWidth="md" sx={{height:"700px", marginTop:"50px"}}>
+      {/* Display the active testimonial */}
+      <Typography variant='h1' align='center'> Hear what our customer has to say</Typography>
+      <Grid container justifyContent="center" alignItems="center" sx={{height:"280px"}}>
+        <Grid item xs={12} sm={4} className="testimonial-avatar">
+          <Avatar
+            alt={testimonials[activeIndex].name}
+            src={testimonials[activeIndex].image}
+            sx={{
+              width: 120,
+              height: 120,
+            }}
+          />
+        </Grid>
+        <Grid item xs={12} sm={8} className="testimonial-details">
+          <Typography variant="h2">{testimonials[activeIndex].name}</Typography>
+          <Typography variant="body1">{testimonials[activeIndex].description}</Typography>
+        </Grid>
+      </Grid>
+
+      {/* Navigation buttons */}
+      <Box mt={2} display="flex" justifyContent="center">
+        <IconButton onClick={prevTestimonial} className="nav-button">
+          <ArrowBack />
+        </IconButton>
+        <IconButton onClick={nextTestimonial} className="nav-button">
+          <ArrowForward />
+        </IconButton>
+      </Box>
+
+      {/* Thumbnails for other testimonials */}
+      <Grid container justifyContent="center" mt={2}>
+        
+          {displayedTestimonials.map((testimonial, index) => (
+            <Grid item key={testimonial.id} className={`thumbnail ${testimonial.id === activeIndex + 1 ? 'active' : ''}`}>
+              <SecondAvatar
+                alt={testimonial.name}
+                src={testimonial.image}
+                onClick={() => handleAvatarClick(testimonial.id)}
+              />
+              
+            </Grid>
+          ))}
+       <Link to="" className="link"><Typography variant='body2'>View all testimonials</Typography></Link>
+      </Grid>
     </Container>
   );
 };
 
-const Testimonial = ({ testimony }) => {
-  const { name, image, text } = testimony;
-
-  return (
-    <Box id="testimonial" textAlign="center" display={"flex"} gap={15}>
-      <Box>
-      <Typography variant="body1">{text}</Typography>
-      </Box>
-      <Box>
-      <img src={image} alt={name} height="200px" style={{ maxWidth: "200px%" , borderRadius:"10px"}} />
-      <Typography variant="h2" gutterBottom>
-        {name}
-      </Typography>
-      </Box>
-      
-    </Box>
-  );
-};
-
-export default App;
+export default CustomerTestimonySection;
